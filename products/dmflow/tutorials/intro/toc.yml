@@ -1,0 +1,11 @@
+# domain
+- name: 建立意圖領域
+  href: domain-create.md
+- name: 實體思考邏輯
+  href: entity-logical.md
+- name: 建立需求辭典
+  href: dict-create.md
+- name: 個別意圖內容
+  href: distinct-content.md
+- name: 發布並測試
+  href: deploy-test.md
