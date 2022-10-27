@@ -75,7 +75,7 @@
 <li>圖示化展示，更直覺的了解節點跟節點的關係位置。</li>
 <li>拖曳式節點，相對於傳統cli寫程式的機器人套件，更能滿足一般使用者撰寫流程。</li>
 </ul>
-<p><img src="../../../../../images/docs/image049.png" alt=""></p>
+<p><img src="../../../../images/docs/Image049.png" alt=""></p>
 <ul>
 <li>1.新流程:用於刷新此流程，會將當前所有設定變為原來的設定包含情境以及節點。</li>
 <li>2.保存:新增、載入版本流程。</li>
@@ -92,7 +92,7 @@
 <li>13.節點設定:資源、回覆、情境、變數、收集以及調用節點設定。</li>
 </ul>
 <h2 id="保存">保存</h2>
-<p><img src="../../../../../images/docs/image124.png" alt=""></p>
+<p><img src="../../../../images/docs/Image124.png" alt=""></p>
 <ul>
 <li>1.新增新的版本。</li>
 <li>2.版本名稱、狀態(完成代表成功)、更新原因、預先載入以及是否發布</li>
@@ -105,7 +105,7 @@
 <h3 id="是否發布">是否發布</h3>
 <p>當版本勾選是否發布，則表示將發布成&quot;開發版本&quot;，可使用於測試。</p>
 <h2 id="測試">測試</h2>
-<p><img src="../../../../../images/docs/image123.png" alt=""></p>
+<p><img src="../../../../images/docs/Image123.png" alt=""></p>
 <ul>
 <li>1.輸入詢問句。</li>
 <li>2.可以直接測試該情境流程。</li>
@@ -118,7 +118,7 @@
 <h1 id="節點介紹">節點介紹</h1>
 <h2 id="開始節點">開始節點</h2>
 <p>作為該情境全局節點，影響所有節點。<br>
-<img src="../../../../../images/docs/image050.png" alt=""></p>
+<img src="../../../../images/docs/Image050.png" alt=""></p>
 <ul>
 <li>1.詢問:用於開場問話。</li>
 <li>2.模式:分為一般模式以及喚醒模式。喚醒模式，需要用戶輸入&quot;喚醒句&quot;相等才會進入。</li>
@@ -128,7 +128,7 @@
 </ul>
 <h2 id="資源節點">資源節點</h2>
 <p>可以呼叫外界資源，進行業務邏輯。<br>
-<img src="../../../../../images/docs/image051.png" alt=""></p>
+<img src="../../../../images/docs/Image051.png" alt=""></p>
 <ul>
 <li>1.參數的前綴分為config(機器人參數)、constant(常數)、conversation(單輪會話)、session(多輪會話)、slots(詞槽)、sys_user(系統使用者參數)、user(使用者參數)</li>
 <li>2.回傳值的前綴分為conversation(單輪會話)、session(多輪會話)以及、user(使用者參數)</li>
@@ -234,7 +234,7 @@
 <p>假設得到的數值是&quot;測試&quot;，則注入到conversation.test的數值將會是&quot;測試&quot;。</p>
 <h2 id="回覆節點">回覆節點</h2>
 <p>一般節點使用，可以用作提問問題或是回答問題。<br>
-<img src="../../../../../images/docs/image052.png" alt=""></p>
+<img src="../../../../images/docs/Image052.png" alt=""></p>
 <ul>
 <li>1.選擇詢問型態:目前支援單純問題。</li>
 <li>2.文字表現:目前僅支援隨機。</li>
@@ -245,7 +245,7 @@
 </ul>
 <h2 id="情境節點">情境節點</h2>
 <p>情境節點的移動。<br>
-<img src="../../../../../images/docs/image053.png" alt=""></p>
+<img src="../../../../images/docs/Image053.png" alt=""></p>
 <ul>
 <li>1.情境操作分為打斷、重新開始、重回主情境、完成、結束流程、聆聽以及跳轉。</li>
 <li>2.清除所有當前殂存的詞槽。</li>
@@ -263,7 +263,7 @@
 </ul>
 <h2 id="變數節點">變數節點</h2>
 <p>變數節點作為參數變動，賦予變數模板數值的地方。<br></p>
-<p><img src="../../../../../images/docs/image054.png" alt=""></p>
+<p><img src="../../../../images/docs/Image054.png" alt=""></p>
 <h3 id="操作型態">操作型態</h3>
 <ul>
 <li>詞槽:包含開始節點選擇的意圖詞槽。</li>
@@ -279,7 +279,7 @@
 </ul>
 <h2 id="收集節點">收集節點</h2>
 <p>收集節點為意圖型的簡單化收集詞槽。<br>
-<img src="../../../../../images/docs/image055.png" alt=""></p>
+<img src="../../../../images/docs/Image055.png" alt=""></p>
 <ul>
 <li>1.詢問</li>
 <li>2.當超過&quot;最大失敗次數&quot;，將會丟出conversation.{qaId}.fallback</li>
@@ -290,10 +290,10 @@
 </ul>
 <h2 id="調用節點">調用節點</h2>
 <p>調用不同的領域
-<img src="../../../../../images/docs/image068.png" alt="">
+<img src="../../../../images/docs/Image068.png" alt="">
 當&quot;開啟&quot;覆蓋，將會覆蓋掉本來在領域內的參數。</p>
 <h2 id="條件節點">條件節點</h2>
-<p><img src="../../../../../images/docs/image125.png" alt=""></p>
+<p><img src="../../../../images/docs/Image125.png" alt=""></p>
 <ul>
 <li>1.分支條件：分為有條件、無條件以及百分比</li>
 <li>2.優先順序：可透過優先順序去排序分支條件先後順序，若相同順序，根據節點位置坐排序。</li>

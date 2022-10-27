@@ -4,7 +4,7 @@
 ## 對話模板
 
 ### 基本介紹
-![](../../../../../images/docs/image056.png)
+![](../../../../images/docs/Image056.png)
 - 1.將會補全該領域的功能，例如：問答對的相似問題或是知識庫的實體等。
 - 2.可以將對話模板做分類，填寫分類名稱以及描述即可新增新的分類。
 - 3.會顯示所有目前支援的平台。
@@ -16,15 +16,15 @@
 ### LINE
 
 #### 文字訊息
-![](../../../../../images/docs/image074.png)
+![](../../../../images/docs/Image074.png)
 
 #### 預覽-文字訊息預覽[僅供參考]
-![](../../../../../images/docs/image082.png)
+![](../../../../images/docs/Image082.png)
 
 
 #### 快速回覆
 
-![](../../../../../images/docs/image095.png)
+![](../../../../images/docs/Image095.png)
 
 - 1.文字快速回覆
 - 2.電子信箱-回傳電子信箱
@@ -36,7 +36,7 @@
 
 
 #### 圖片訊息
-![](../../../../../images/docs/image075.png)
+![](../../../../images/docs/Image075.png)
 
 網址圖片支援JPEG或是PNG和10MB內，縮圖限制1MB，且必須為HTTPS協定。DmFlow上傳限制1MB[以系統顯示為主]內。
 
@@ -49,24 +49,24 @@
 - 6.取消圖片
 
 #### 預覽-圖片訊息預覽[僅供參考]
-![](../../../../../images/docs/image083.png)
+![](../../../../images/docs/Image083.png)
 
 #### 實際-圖片訊息預覽
-![](../../../../../images/docs/image104.png)
+![](../../../../images/docs/Image104.png)
 
 #### 影片訊息
-![](../../../../../images/docs/image076.png)
+![](../../../../images/docs/Image076.png)
 
 目前DmFlow尚未支援上傳影片功能，僅能使用網址，影片僅支援MP4且在200MB以內。且必須為HTTPS協定。
 
 #### 語音訊息
 
-![](../../../../../images/docs/image077.png)
+![](../../../../images/docs/Image077.png)
 
 目前DmFlow尚未支援上傳語音功能，僅能使用網址，語音僅支援M4A且在200MB以內。且必須為HTTPS協定。
 
 #### 圖文訊息
-![](../../../../../images/docs/image078.png)
+![](../../../../images/docs/Image078.png)
 
 [LINE官方圖文訊息介紹](https://tw.linebiz.com/manual/line-official-account/oa-manager-richmessage/)
 
@@ -76,7 +76,7 @@
 - 4.[圖文訊息-觸發動作](/products/dmflow/tutorials/docs/bot-template.html#圖文訊息-觸發動作)
 #### 圖文訊息-影片
 
-![](../../../../../images/docs/image079.png)
+![](../../../../images/docs/Image079.png)
 
 - 1.目前DmFlow尚未支援上傳影片功能，僅能使用網址，影片僅支援MP4且在200MB以內。且必須為HTTPS協定。
 - 2.預覽圖片，支援1mb以內。
@@ -92,7 +92,7 @@
 
 #### 圖文訊息-訊息文字
 
-![](../../../../../images/docs/image080.png)
+![](../../../../images/docs/Image080.png)
 
 - 1.由上方開始位置計算
 - 2.由左方開始位置計算
@@ -104,7 +104,7 @@
 
 #### 圖文訊息-開啟視窗
 
-![](../../../../../images/docs/image081.png)
+![](../../../../images/docs/Image081.png)
 
 - 1.由上方開始位置計算
 - 2.備註(當客戶端有輔助功能時做語音提醒)
@@ -115,18 +115,18 @@
 
 #### 預覽-圖文訊息預覽[僅供參考]
 
-![](../../../../../images/docs/image084.png)
+![](../../../../images/docs/Image084.png)
 
 紅色箭頭以及指向方框，為解釋填寫內容，非正式出現，影片僅用VIDEO提示位置以及高寬度，文字部分會將點擊後顯示文字標示(實際上不會出現該文字)，超連結也會將連結內容標示(實際上不會出現該連結文字)，以實際顯示為準。
 
 
 #### 實際-圖文訊息預覽
 
-![](../../../../../images/docs/image110.png)
+![](../../../../images/docs/Image110.png)
 
 #### 圖片輪播
 
-![](../../../../../images/docs/image085.png)
+![](../../../../images/docs/Image085.png)
 
 - 1.當電腦版無法顯示的時候顯示的文字。
 - 2.模板選擇"圖片輪播模組"
@@ -136,12 +136,12 @@
 包含[觸發動作-訊息文字](/products/dmflow/tutorials/docs/bot-template.html#觸發動作-訊息文字)、[觸發動作-回傳值](/products/dmflow/tutorials/docs/bot-template.html#觸發動作-回傳值)、[觸發動作-開啟視窗](/products/dmflow/tutorials/docs/bot-template.html#觸發動作-開啟視窗)
 
 #### 觸發動作-訊息文字
-![](../../../../../images/docs/image086.png)
+![](../../../../images/docs/Image086.png)
 - 1.圖片上的文字按鈕顯示之文字。
 - 2.當點擊按鈕後回傳的文字。
 
 #### 觸發動作-回傳值
-![](../../../../../images/docs/image087.png)
+![](../../../../images/docs/Image087.png)
 - 1.圖片上的文字按鈕顯示之文字。
 - 2.訊息型態分為文字以及事件。
 - 3.文字的細項僅有文字，事件的細項分為打斷事件、忽略事件、開始事件、結束事件、表格問答-下一頁、表格問答-清空過濾條件，點此[回傳值](/products/dmflow/tutorials/docs/bot-template.html#回傳值)了解回傳值的使用。
@@ -159,37 +159,37 @@
 - 6.表格問答-清空過去條件：該事件處在表格問答時適用。將過濾條件清空。
 
 #### 觸發動作-開啟視窗
-![](../../../../../images/docs/image088.png)
+![](../../../../images/docs/Image088.png)
 - 1.圖片上的文字按鈕顯示之文字。
 - 2.手機裝置跳出的webview。
 - 3.非手機裝置跳出的網頁。
 
 #### 預覽-圖片輪播預覽[僅供參考]
 
-![](../../../../../images/docs/image089.png)
+![](../../../../images/docs/Image089.png)
 
 #### 實際-圖片輪播預覽
 
-![](../../../../../images/docs/image105.png)
+![](../../../../images/docs/Image105.png)
 
 #### 確認範本
 
-![](../../../../../images/docs/image090.png)
+![](../../../../images/docs/Image090.png)
 - 1.模板選擇"確認範本"
 - 2.確認問題為二選一之詢問。
 - 3.觸發動作，可以前往[觸發動作](/products/dmflow/tutorials/docs/bot-template.html#觸發動作)了解。
 
 #### 預覽-確認範本預覽[僅供參考]
 
-![](../../../../../images/docs/image091.png)
+![](../../../../images/docs/Image091.png)
 
 #### 實際-確認範本預覽
 
-![](../../../../../images/docs/image106.png)
+![](../../../../images/docs/Image106.png)
 
 #### 按鈕範本
 
-![](../../../../../images/docs/image093.png)
+![](../../../../images/docs/Image093.png)
 
 - 1.模板選擇"按鈕範本"
 - 2.標題，可根據預覽了解放置位置。
@@ -212,40 +212,40 @@
 - contain:顯示整張圖片，未填滿以背景色填充
 
 #### 預覽-按鈕範本預覽[僅供參考]
-![](../../../../../images/docs/image092.png)
+![](../../../../images/docs/Image092.png)
 
 #### 實際-按鈕範本預覽
-![](../../../../../images/docs/image107.png)
+![](../../../../images/docs/Image107.png)
 
 #### 輪播範本
 
-![](../../../../../images/docs/image094.png)
+![](../../../../images/docs/Image094.png)
 - 1.模板選擇"輪播模組"
 - 2.圖片輪播欄位，同[按鈕範本](/products/dmflow/tutorials/docs/bot-template.html#按鈕範本)，只是可以支援複數。
 - 3.[圖片比例](/products/dmflow/tutorials/docs/bot-template.html#圖片比例)
 - 4.[圖片呈現](/products/dmflow/tutorials/docs/bot-template.html#圖片呈現)
 
 #### 預覽-輪播範本預覽[僅供參考]
-![](../../../../../images/docs/image109.png)
+![](../../../../images/docs/Image109.png)
 
 #### 實際-輪播範本預覽
-![](../../../../../images/docs/image108.png)
+![](../../../../images/docs/Image108.png)
 
 ### Facebook Messenger
 
 #### 文字及其他訊息
 
-![](../../../../../images/docs/image096.png)
+![](../../../../images/docs/Image096.png)
 
 文字以及圖片(可上傳，1mb以內)，其他如影片、音訊、檔案都僅支援網址連接。
 
 #### 實際-文字訊息預覽
 
-![](../../../../../images/docs/image112.png)
+![](../../../../images/docs/Image112.png)
 
 #### 一般範本
 
-![](../../../../../images/docs/image097.png)
+![](../../../../images/docs/Image097.png)
 
 - 1.horizontal:16:9, square:1:1
 - 2.標題，可根據預覽了解放置位置。
@@ -255,17 +255,17 @@
 - 6.觸發條件包含[連結元件、連結元件(extension)](/products/dmflow/tutorials/docs/bot-template.html#連結元件連結元件extension)以及[觸發動作-回傳值](/products/dmflow/tutorials/docs/bot-template.html#觸發動作-回傳值)。
 
 #### 預覽-一般範本預覽[僅供參考]
-![](../../../../../images/docs/image100.png)
+![](../../../../images/docs/Image100.png)
 
 #### 實際-一般範本預覽
 
-![](../../../../../images/docs/image111.png)
+![](../../../../images/docs/Image111.png)
 
 #### 連結元件、連結元件(extension)
 
 連結元件
 
-![](../../../../../images/docs/image098.png)
+![](../../../../images/docs/Image098.png)
 
 - 1.網址連結
 - 2.網址名稱
@@ -275,7 +275,7 @@
 
 [加入 Messenger 擴充套件 SDK](https://developers.facebook.com/docs/messenger-platform/webview/extensions/)
 
-![](../../../../../images/docs/image099.png)
+![](../../../../images/docs/Image099.png)
 
 - 1.網址連結
 - 2.網址名稱
@@ -284,20 +284,20 @@
 
 #### 按鈕範本
 
-![](../../../../../images/docs/image101.png)
+![](../../../../images/docs/Image101.png)
 
 - 1.詢問問題。
 - 2.按鈕元件包含[連結元件、連結元件(extension)](/products/dmflow/tutorials/docs/bot-template.html#連結元件連結元件extension)以及[觸發動作-回傳值](/products/dmflow/tutorials/docs/bot-template.html#觸發動作-回傳值)。
 
 #### 預覽-按鈕範本預覽[僅供參考]
-![](../../../../../images/docs/image102.png)
+![](../../../../images/docs/Image102.png)
 
 #### 實際-按鈕範本預覽
-![](../../../../../images/docs/image113.png)
+![](../../../../images/docs/Image113.png)
 
 ## 記憶模板
 記憶模板分為使用者參數、使用者標籤、機器人參數以及單一會話儲存。
-![](../../../../../images/docs/image058.png)
+![](../../../../images/docs/Image058.png)
 - 1.使用者參數：為儲存使用者資料的欄位。屬性包含文字、數字、時間等。
 - 2.使用者標籤：用於儲存使用者的一種標示，會顯示得到該標籤次數以及最後得到的時間。
 - 3.機器人參數：為儲存機器人永久參數，用於前綴為cofig的變數。

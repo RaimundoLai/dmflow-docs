@@ -5,7 +5,7 @@
 
 目前支援LINE以及Facebook Messenger(Meta)
 
-![](../../../../../images/docs/image118.png)
+![](../../../../images/docs/Image118.png)
 
 ## 設定
 
@@ -15,4 +15,4 @@
 - 4.密鑰:機器人流程中的資源節點若對外呼叫會提供此密鑰。
 - 5.白名單:機器人流程中的資源節點若對外呼叫會限制該URL的Domain白名單
 
-![](../../../../../images/docs/image119.png)
+![](../../../../images/docs/Image119.png)

@@ -21,7 +21,7 @@
 
 在問答對內，新建一個問答對庫，分別詢問句是工作機會[轉向 job_openning]、福利待遇[文本 準時付薪水]、公司文化[文本 做客戶喜愛且有用的產品]、介紹JAVA工程師[轉向 describe_java]以及面試JAVA工程師[轉向 java_test]，以下圖為例。
 
-![](../../../../../images/docs/image126.png)
+![](../../../../../images/docs/Image126.png)
 
 並建立問答對領域，取名為hire_faq，並與問答對庫做連結。
 
@@ -44,7 +44,7 @@ basic_info為拿取測驗者基本資料，需要的實體為
 | college    | @ANY          | 就讀大學
 | department | @ANY          | 系所
 
-![](../../../../../images/docs/image127.png)
+![](../../../../images/docs/Image127.png)
 
 hobbies為一些基本問題，需要的實體為
 
@@ -58,7 +58,7 @@ hobbies為一些基本問題，需要的實體為
 | hire_reason  | @ANY          | 聘用原因
 | resign_bool  | @ANY          | 是否有離職
 
-![](../../../../../images/docs/image128.png)
+![](../../../../images/docs/Image128.png)
 
 resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職過，會加以詢問離職原因。
 
@@ -66,18 +66,18 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 |-------          | ---------     |------
 | resign_reason   | @ANY          | 離職原因
 
-![](../../../../../images/docs/image129.png)
+![](../../../../images/docs/Image129.png)
 
 當完成意圖們後，記得進入發布做生產發布，才能供給機器人流程使用。
 
-![](../../../../../images/docs/image130.png)
+![](../../../../images/docs/Image130.png)
 
 假設需要測試，可在basic_info中的說法填寫"基本資料"，hobbies中的說法填寫"自我介紹"。
 
 測試頁面輸入"基本資料"或是"自我介紹"即可測試。
 
 
-![](../../../../../images/docs/image131.png)
+![](../../../../images/docs/Image131.png)
 
 ### 步驟三 機器人流程建置
 
@@ -88,21 +88,21 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 - email 當完成基本資料以及測試後，會需要對方提供email。
 - score 則為JAVA試驗成績。
 
-![](../../../../../images/docs/image132.png)
+![](../../../../images/docs/Image132.png)
 
 進入全局設定-領域並加入hire_int、hire_faq並在更多內點選啟用。
 
-![](../../../../../images/docs/image134.png)
+![](../../../../images/docs/Image134.png)
 
 進入全局設定-場景，將一開始想的job_openning(工作機會)、java_test(JAVA工程師測驗)、describe_java(JAVA工程師介紹)新建。
 
-![](../../../../../images/docs/image133.png)
+![](../../../../images/docs/Image133.png)
 
 開始對話流程設計。以下根據編號填寫。
 
 1.點選場景"Main"並點選"start"節點，設定預載領域(意圖)選擇hire_int。
 
-![](../../../../../images/docs/image135.png)
+![](../../../../images/docs/Image135.png)
 
 2.建立"回覆節點"輸入以下文字，記得勾選"等待用戶回覆"。
 
@@ -114,23 +114,23 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 >
 > 福利待遇
 
-![](../../../../../images/docs/image136.png)
+![](../../../../images/docs/Image136.png)
 
 3.將開始節點跟回覆節點連線，並將條件設定"intent等於greeing"。
 
-![](../../../../../images/docs/image137.png)
+![](../../../../images/docs/Image137.png)
 
 4.新增節點"調用節點"，選擇hire_faq。並將上一個回覆節點[請問您需要什麼幫忙...]節點跟此節點連線選擇"無條件"。
 
-![](../../../../../images/docs/image138.png)
+![](../../../../images/docs/Image138.png)
 
 5.新增節點"情境節點"，選擇跳轉至回覆節點[請問您需要什麼幫忙...]，並和調用節點"call_hire_faq"進行連線選擇"無條件"。
 
-![](../../../../../images/docs/image139.png)
+![](../../../../images/docs/Image139.png)
 
 從步驟1-5我們完成了情境Main的設置，如下圖。
 
-![](../../../../../images/docs/image140.png)
+![](../../../../images/docs/Image140.png)
 
 說明
 
@@ -144,15 +144,15 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 >
 >  介紹JAVA工程師
 
-![](../../../../../images/docs/image141.png)
+![](../../../../images/docs/Image141.png)
 
 7.新增節點"調用節點"，選擇hire_faq。並將上一個start節點跟此節點連線選擇"無條件"。
 
-![](../../../../../images/docs/image142.png)
+![](../../../../images/docs/Image142.png)
 
 從步驟6-7我們完成了情境job_openning的設置，如下圖。
 
-![](../../../../../images/docs/image143.png)
+![](../../../../images/docs/Image143.png)
 
 說明
 
@@ -164,11 +164,11 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 >
 > 面試JAVA工程師
 
-![](../../../../../images/docs/image144.png)
+![](../../../../images/docs/Image144.png)
 
 9.新增節點"調用節點"，選擇hire_faq。並將上一個start節點跟此節點連線選擇"無條件"。
 
-![](../../../../../images/docs/image145.png)
+![](../../../../images/docs/Image145.png)
 
 說明 
 
@@ -180,17 +180,17 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 >
 > 請輸入"準備好了"開始。
 
-![](../../../../../images/docs/image146.png)
+![](../../../../images/docs/Image146.png)
 
 11.將流程分為三大區塊分為個人資料、面試基本問答，以及測驗。
 
 下圖紅框是個人資料，藍框是基本問答。
 
-![](../../../../../images/docs/image147.png)
+![](../../../../images/docs/Image147.png)
 
 下圖是測驗。
 
-![](../../../../../images/docs/image148.png)
+![](../../../../images/docs/Image148.png)
 
 12.先新增回覆節點，輸入以下文字。，並連結start節點，條件可以選擇無條件或是有條件query=準備好了。
 
@@ -198,11 +198,11 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 >
 > 輸入"準備好了"開始
 
-![](../../../../../images/docs/image149.png)
+![](../../../../images/docs/Image149.png)
 
 13.建立"調用節點"，領域選擇hire_int，意圖選擇basic_info。與先前的"[1/3]面試"連線條件可以選擇無條件或是有條件query=準備好了。
 
-![](../../../../../images/docs/image150.png)
+![](../../../../images/docs/Image150.png)
 
 14.建立"回覆節點"，輸入以下文字。與調用節點[收集個人資料]做無條件連線。
 
@@ -210,21 +210,21 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 >
 > 輸入"準備好了"開始問答
 
-![](../../../../../images/docs/image151.png)
+![](../../../../images/docs/Image151.png)
 
 15.建立"調用節點"，領域選擇hire_int，意圖選擇hobbies。與先前的"[2/3]面試"連線條件可以選擇無條件或是有條件query=準備好了。
 
-![](../../../../../images/docs/image152.png)
+![](../../../../images/docs/Image152.png)
 
 16.建立"回覆節點"，輸入以下文字。與調用節點[介紹個人特色]做無條件連線。
 
 > 我們將考你一些關於JAVA的問題，請輸入"準備好了"開始作答。
 
-![](../../../../../images/docs/image153.png)
+![](../../../../images/docs/Image153.png)
 
 17.新增"變數節點"，並將score歸零，並與先前節點連線，條件為無條件。
 
-![](../../../../../images/docs/image154.png)
+![](../../../../images/docs/Image154.png)
 
 18.分別創建題目，題目為選選擇題，答對了加分，答錯繼續下一題。先建立"回覆節點"並跟先前"變數節點"連線，條件為無條件。
 
@@ -240,12 +240,12 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 >
 > 我不知道
 
-![](../../../../../images/docs/image155.png)
+![](../../../../images/docs/Image155.png)
 
 19.當正確答案等於[query|等於|constant|生產鏈模式]時，進入加分"變數節點"，並與前面"回覆節點"一起無條件連接到下一題。
 
-![](../../../../../images/docs/image157.png)
-![](../../../../../images/docs/image156.png)
+![](../../../../images/docs/Image157.png)
+![](../../../../images/docs/Image156.png)
 
 20.第二題到第四題重複步驟18-19分別是
 
@@ -295,17 +295,17 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 
 > 你總共得到了 分數為: ${#session.score} / 6分，測驗已結束，我們會再通知您，可否填寫您的email
 
-![](../../../../../images/docs/image158.png)
+![](../../../../images/docs/Image158.png)
 
 22.新增變數節點儲存email
 
-![](../../../../../images/docs/image159.png)
+![](../../../../images/docs/Image159.png)
 
 23.並在最後新增回覆節點，文字如下，且必須關閉"等待用戶回覆"。關閉等待用戶回覆目的是這句話算是結束，如果開啟則會等待用戶問話。
 
 > 感謝您的填寫，我們會盡快給你答覆。
 
-![](../../../../../images/docs/image160.png)
+![](../../../../images/docs/Image160.png)
 
 ### 完成
 
@@ -313,15 +313,15 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 
 當完成設置後，別忘了點選[1]儲存或[2]更新。
 
-![](../../../../../images/docs/image161.png)
+![](../../../../images/docs/Image161.png)
 
 並打開保存->編輯->勾選是否發布->更新，完成後就可以進行對話測試了。
 
-![](../../../../../images/docs/image162.png)
+![](../../../../images/docs/Image162.png)
 
 開始測試。
 
-![](../../../../../images/docs/image163.png)
+![](../../../../images/docs/Image163.png)
 
 # 接著讀
 - [日誌](/products/dmflow/tutorials/docs/bot-log.html)
