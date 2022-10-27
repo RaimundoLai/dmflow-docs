@@ -1,7 +1,7 @@
 # 申請LINE API
 
 # 架構
-DmFlow透過API與Facebook Server進行串接，並發布到messenger，提供對話機器人給用戶使用。
+DmFlow透過API與LINE Server進行串接，提供對話機器人給用戶使用。
 
 ![](../../../../images/line/Image001.png)
 
