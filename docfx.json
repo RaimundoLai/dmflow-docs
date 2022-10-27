@@ -40,7 +40,8 @@
       {
         "files": [
           "images/**",
-		  "googled3dd506f4820cbd9.html"
+		  "googled3dd506f4820cbd9.html",
+		  "sitemap.xml"
         ]
       }
     ],
