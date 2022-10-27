@@ -249,4 +249,4 @@
 
 # 接著讀
 
-- [機器人範例](/products/dmflow/tutorials/docs/bot-example.html)
+- [機器人範例](../../tutorials/docs/bot-example.html)

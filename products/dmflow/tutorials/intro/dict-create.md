@@ -6,4 +6,4 @@
 團隊人員那一列點按鈕"詳情"，新增"小明"、"阿華"、"小花A"、"小花B"等等姓名，如下圖。
 ![](../../../../../images/intro/image012.png)
 # 下一步
-- [個別意圖內容](/products/dmflow/tutorials/intro/distinct-content.html)
+- [個別意圖內容](../../tutorials/intro/distinct-content.html)

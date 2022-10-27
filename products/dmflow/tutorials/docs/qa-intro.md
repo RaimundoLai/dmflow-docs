@@ -119,7 +119,7 @@
 - 點標[2]：是否啟用該問題
 - 點標[3]：是否啟用同步辭典，如果某辭典為：番茄，同義詞：西紅柿。而問題是"你好哪裡有賣**番茄**"，此時會延伸"你好哪裡有賣**西紅柿**"。
 - 點標[4]：啟用啟動失效，會出現"生效時間"以及"失效時間"，目前必須兩個都填入值才能儲存。
-- 點標[5]：可以啟用資源外接API，需要再綁定領域後才可使用[領域資源](/products/dmflow/tutorials/docs/domain-resource.html)
+- 點標[5]：可以啟用資源外接API，需要再綁定領域後才可使用[領域資源](../../tutorials/docs/domain-resource.html)
 - 點標[6]：分類，可自訂分類，將問題整理放入。
 - 點標[7]：將用戶問題做延伸。
 - 點標[8]：平台分為通用以及開啟的渠道，答案在渠道沒開啟或是該渠道沒新增答案時，以通用為主，答案目前僅有text、template以及redirect
@@ -193,5 +193,5 @@ listOutput
 
 
 ## 接著讀
-- [領域介紹](/products/dmflow/tutorials/docs/domain-intro.html)
+- [領域介紹](../../tutorials/docs/domain-intro.html)
 

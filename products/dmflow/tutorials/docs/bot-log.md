@@ -37,4 +37,4 @@
 - 6.選擇該情境名稱，可以了解使用者進入數量且包含使用者未回話的部分，以及各階段在回覆節點觸發之數量。
 
 # 接著讀
-- [發布](/products/dmflow/tutorials/docs/bot-published.html)
+- [發布](../../tutorials/docs/bot-published.html)

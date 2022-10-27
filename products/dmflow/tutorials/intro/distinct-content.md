@@ -41,4 +41,4 @@
 ![](../../../../../images/intro/image021.png)
 
 # 下一步
-- [發布並測試](/products/dmflow/tutorials/intro/deploy-test.html)
+- [發布並測試](../../tutorials/intro/deploy-test.html)

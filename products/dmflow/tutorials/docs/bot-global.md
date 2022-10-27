@@ -58,4 +58,4 @@
 - 5.未命中，當分支條件未設置"空"時，預設的回話。
 
 # 接著讀
-- [變數以及資源管理](/products/dmflow/tutorials/docs/bot-resource.html)
+- [變數以及資源管理](../../tutorials/docs/bot-resource.html)

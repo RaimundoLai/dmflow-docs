@@ -29,7 +29,7 @@
 - 肯定:用於"前置條件"中的確認節點。
 - 否定:用於"前置條件"中的確認節點。
 
-[意圖介紹](/products/dmflow/tutorials/docs/intent-intro.html)
+[意圖介紹](../../tutorials/docs/intent-intro.html)
 ### 新增問答對
 先從知識庫裡面，新增問答對即可連接，**注意**，連接後無法刪除，如果要刪除請直接刪除整個領域。
 
@@ -48,11 +48,11 @@
 - 4.請求型態可選擇GET或POST
 - 5.Content-Type，GET可選擇URL，POST可選擇JSON或URL
 - 6.API Header:HTTP 頭欄位，前綴分為constant(常數)、context(注入上下文)、entities(詞槽)以及config(全域參數)
-- 7.參數，可以將"變數管理"的數值加入，並從[意圖介紹](/products/dmflow/tutorials/docs/intent-intro.html)注入。
+- 7.參數，可以將"變數管理"的數值加入，並從[意圖介紹](../../tutorials/docs/intent-intro.html)注入。
 - 8.回傳必須為JSON格式，並根據回傳值的格式，寫入JSON路徑，而"鍵"的來源在"變數管理"。
 
 ## 變數管理
-用於參數注入，以及回傳值設定。[意圖介紹](/products/dmflow/tutorials/docs/intent-intro.html)中的"完成"->"呼叫資源"
+用於參數注入，以及回傳值設定。[意圖介紹](../../tutorials/docs/intent-intro.html)中的"完成"->"呼叫資源"
 
 ![](../../../../images/docs/Image043.png)
 
@@ -99,4 +99,4 @@
 - fallback:沒有命中的對話。
 
 # 接著讀
-- [意圖介紹](/products/dmflow/tutorials/docs/intent-intro.html)
+- [意圖介紹](../../tutorials/docs/intent-intro.html)

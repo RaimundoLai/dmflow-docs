@@ -30,7 +30,7 @@
 - 2.電子信箱-回傳電子信箱
 - 3.手機號碼-回傳手機號碼
 - 4.按鈕文字，快速回覆文字內容。
-- 5.訊息型態包含此兩種[觸發動作-訊息文字](/products/dmflow/tutorials/docs/bot-template.html#觸發動作-訊息文字)、[觸發動作-回傳值](/products/dmflow/tutorials/docs/bot-template.html#觸發動作-回傳值)
+- 5.訊息型態包含此兩種[觸發動作-訊息文字](../../tutorials/docs/bot-template.html#觸發動作-訊息文字)、[觸發動作-回傳值](../../tutorials/docs/bot-template.html#觸發動作-回傳值)
 - 6.文字旁邊的icon
 
 
@@ -72,8 +72,8 @@
 
 - 1.網址限制10MB以下，且必須為HTTPS協定。DmFlow上傳圖片僅能1MB[以系統顯示為主]內。
 - 2.替代文字為當使用者收到此圖文訊息時，跳出的訊息文字。
-- 3.[圖文訊息-影片](/products/dmflow/tutorials/docs/bot-template.html#圖文訊息-影片)
-- 4.[圖文訊息-觸發動作](/products/dmflow/tutorials/docs/bot-template.html#圖文訊息-觸發動作)
+- 3.[圖文訊息-影片](../../tutorials/docs/bot-template.html#圖文訊息-影片)
+- 4.[圖文訊息-觸發動作](../../tutorials/docs/bot-template.html#圖文訊息-觸發動作)
 #### 圖文訊息-影片
 
 ![](../../../../images/docs/Image079.png)
@@ -88,7 +88,7 @@
 - 8.外部連結名稱
 
 #### 圖文訊息-觸發動作
-包含[圖文訊息-訊息文字](/products/dmflow/tutorials/docs/bot-template.html#圖文訊息-訊息文字)以及[圖文訊息-開啟視窗](/products/dmflow/tutorials/docs/bot-template.html#圖文訊息-開啟視窗)
+包含[圖文訊息-訊息文字](../../tutorials/docs/bot-template.html#圖文訊息-訊息文字)以及[圖文訊息-開啟視窗](../../tutorials/docs/bot-template.html#圖文訊息-開啟視窗)
 
 #### 圖文訊息-訊息文字
 
@@ -133,7 +133,7 @@
 - 3.點擊後觸發分為訊息文字、回傳值以及開啟視窗
 
 #### 觸發動作
-包含[觸發動作-訊息文字](/products/dmflow/tutorials/docs/bot-template.html#觸發動作-訊息文字)、[觸發動作-回傳值](/products/dmflow/tutorials/docs/bot-template.html#觸發動作-回傳值)、[觸發動作-開啟視窗](/products/dmflow/tutorials/docs/bot-template.html#觸發動作-開啟視窗)
+包含[觸發動作-訊息文字](../../tutorials/docs/bot-template.html#觸發動作-訊息文字)、[觸發動作-回傳值](../../tutorials/docs/bot-template.html#觸發動作-回傳值)、[觸發動作-開啟視窗](../../tutorials/docs/bot-template.html#觸發動作-開啟視窗)
 
 #### 觸發動作-訊息文字
 ![](../../../../images/docs/Image086.png)
@@ -144,7 +144,7 @@
 ![](../../../../images/docs/Image087.png)
 - 1.圖片上的文字按鈕顯示之文字。
 - 2.訊息型態分為文字以及事件。
-- 3.文字的細項僅有文字，事件的細項分為打斷事件、忽略事件、開始事件、結束事件、表格問答-下一頁、表格問答-清空過濾條件，點此[回傳值](/products/dmflow/tutorials/docs/bot-template.html#回傳值)了解回傳值的使用。
+- 3.文字的細項僅有文字，事件的細項分為打斷事件、忽略事件、開始事件、結束事件、表格問答-下一頁、表格問答-清空過濾條件，點此[回傳值](../../tutorials/docs/bot-template.html#回傳值)了解回傳值的使用。
 - 4.根據'情境節點'中的'重回主場景'，如果未填入，則一律重回Main。
 - 5.文字的詢問，此詢問將會丟入DmFlow當作用戶說話。
 - 6.當用戶點此文字按鈕後，將會顯示在自己的LINE客戶端上的文字。
@@ -177,7 +177,7 @@
 ![](../../../../images/docs/Image090.png)
 - 1.模板選擇"確認範本"
 - 2.確認問題為二選一之詢問。
-- 3.觸發動作，可以前往[觸發動作](/products/dmflow/tutorials/docs/bot-template.html#觸發動作)了解。
+- 3.觸發動作，可以前往[觸發動作](../../tutorials/docs/bot-template.html#觸發動作)了解。
 
 #### 預覽-確認範本預覽[僅供參考]
 
@@ -195,11 +195,11 @@
 - 2.標題，可根據預覽了解放置位置。
 - 3.文字訊息，可根據預覽了解放置位置。
 - 4.圖片縮圖，可根據預覽了解放置位置。
-- 5.[圖片比例](/products/dmflow/tutorials/docs/bot-template.html#圖片比例)
-- 6.[圖片呈現](/products/dmflow/tutorials/docs/bot-template.html#圖片呈現)
+- 5.[圖片比例](../../tutorials/docs/bot-template.html#圖片比例)
+- 6.[圖片呈現](../../tutorials/docs/bot-template.html#圖片呈現)
 - 7.背景顏色，當"圖片呈現"為contain時，會用此色碼填滿。
-- 8.當點擊非按鈕時觸發(包含圖片、標題以及內容)，[觸發動作](/products/dmflow/tutorials/docs/bot-template.html#觸發動作)
-- 9.[觸發動作](/products/dmflow/tutorials/docs/bot-template.html#觸發動作)
+- 8.當點擊非按鈕時觸發(包含圖片、標題以及內容)，[觸發動作](../../tutorials/docs/bot-template.html#觸發動作)
+- 9.[觸發動作](../../tutorials/docs/bot-template.html#觸發動作)
 
 #### 圖片比例
 
@@ -221,9 +221,9 @@
 
 ![](../../../../images/docs/Image094.png)
 - 1.模板選擇"輪播模組"
-- 2.圖片輪播欄位，同[按鈕範本](/products/dmflow/tutorials/docs/bot-template.html#按鈕範本)，只是可以支援複數。
-- 3.[圖片比例](/products/dmflow/tutorials/docs/bot-template.html#圖片比例)
-- 4.[圖片呈現](/products/dmflow/tutorials/docs/bot-template.html#圖片呈現)
+- 2.圖片輪播欄位，同[按鈕範本](../../tutorials/docs/bot-template.html#按鈕範本)，只是可以支援複數。
+- 3.[圖片比例](../../tutorials/docs/bot-template.html#圖片比例)
+- 4.[圖片呈現](../../tutorials/docs/bot-template.html#圖片呈現)
 
 #### 預覽-輪播範本預覽[僅供參考]
 ![](../../../../images/docs/Image109.png)
@@ -251,8 +251,8 @@
 - 2.標題，可根據預覽了解放置位置。
 - 3.副標題，可根據預覽了解放置位置。
 - 4.圖片，可根據預覽了解放置位置。
-- 5.[連結元件、連結元件(extension)](/products/dmflow/tutorials/docs/bot-template.html#連結元件連結元件extension)
-- 6.觸發條件包含[連結元件、連結元件(extension)](/products/dmflow/tutorials/docs/bot-template.html#連結元件連結元件extension)以及[觸發動作-回傳值](/products/dmflow/tutorials/docs/bot-template.html#觸發動作-回傳值)。
+- 5.[連結元件、連結元件(extension)](../../tutorials/docs/bot-template.html#連結元件連結元件extension)
+- 6.觸發條件包含[連結元件、連結元件(extension)](../../tutorials/docs/bot-template.html#連結元件連結元件extension)以及[觸發動作-回傳值](../../tutorials/docs/bot-template.html#觸發動作-回傳值)。
 
 #### 預覽-一般範本預覽[僅供參考]
 ![](../../../../images/docs/Image100.png)
@@ -287,7 +287,7 @@
 ![](../../../../images/docs/Image101.png)
 
 - 1.詢問問題。
-- 2.按鈕元件包含[連結元件、連結元件(extension)](/products/dmflow/tutorials/docs/bot-template.html#連結元件連結元件extension)以及[觸發動作-回傳值](/products/dmflow/tutorials/docs/bot-template.html#觸發動作-回傳值)。
+- 2.按鈕元件包含[連結元件、連結元件(extension)](../../tutorials/docs/bot-template.html#連結元件連結元件extension)以及[觸發動作-回傳值](../../tutorials/docs/bot-template.html#觸發動作-回傳值)。
 
 #### 預覽-按鈕範本預覽[僅供參考]
 ![](../../../../images/docs/Image102.png)
@@ -310,4 +310,4 @@
 - 4.列表：選一個欄位做主鍵，可以儲存複數欄位值。
 
 # 接著讀
-- [全局設定](/products/dmflow/tutorials/docs/bot-global.html)
+- [全局設定](../../tutorials/docs/bot-global.html)

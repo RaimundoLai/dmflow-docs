@@ -21,4 +21,4 @@
 - 3.當要關閉生產版本可以點選此按鈕。
 
 # 接著讀
-- [設置](/products/dmflow/tutorials/docs/bot-setting.html)
+- [設置](../../tutorials/docs/bot-setting.html)

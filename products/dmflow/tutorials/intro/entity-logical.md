@@ -9,4 +9,4 @@
 - 邀請成員->開始時間、會議室、受邀人
 
 # 下一步
-- [建立需求辭典](/products/dmflow/tutorials/intro/dict-create.html)
+- [建立需求辭典](../../tutorials/intro/dict-create.html)

@@ -324,4 +324,4 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 ![](../../../../images/docs/Image163.png)
 
 # 接著讀
-- [日誌](/products/dmflow/tutorials/docs/bot-log.html)
+- [日誌](../../tutorials/docs/bot-log.html)

@@ -108,4 +108,4 @@
 可直接輸入"$"會進行提示。語法同先前的模板輸出一樣。
 
 # 接著讀
-- [機器人介紹](/products/dmflow/tutorials/docs/bot-intro.html)
+- [機器人介紹](../../tutorials/docs/bot-intro.html)

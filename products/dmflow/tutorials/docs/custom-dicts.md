@@ -11,4 +11,4 @@
 ![](../../../../images/docs/Image031.png)
 
 # 接著讀
-- [知識庫介紹](/products/dmflow/tutorials/docs/qa-intro.html)
+- [知識庫介紹](../../tutorials/docs/qa-intro.html)

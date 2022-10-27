@@ -6,4 +6,4 @@
 ![](../../../../../images/intro/image002.png)
 
 # 下一步
-- [實體思考邏輯](/products/dmflow/tutorials/intro/entity-logical.html)
+- [實體思考邏輯](../../tutorials/intro/entity-logical.html)

@@ -9,4 +9,4 @@
 ![](../../../../images/docs/Image027.png)
 我們可以藉由"引用"來讓領域-意圖型態可以選擇該辭典。
 # 接著讀
-- [自定義辭典](/products/dmflow/tutorials/docs/custom-dicts.html)
+- [自定義辭典](../../tutorials/docs/custom-dicts.html)

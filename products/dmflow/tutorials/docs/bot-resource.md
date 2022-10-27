@@ -22,7 +22,7 @@
 
 ### 延伸1
 - constant:後面可放任何文字，不用理會前綴。
-- conversation、session、user以及config等。可從[模板](/products/dmflow/tutorials/docs/bot-template.html#記憶模板)中的記憶模板前往觀看。
+- conversation、session、user以及config等。可從[模板](../../tutorials/docs/bot-template.html#記憶模板)中的記憶模板前往觀看。
 ### 延伸2
 假設有一參數city=>城市
 - URL:直接作為參數&city=urlEncode(城市) 方式傳遞。
@@ -40,4 +40,4 @@ JSON路徑：範例地址回應為{"city":"城市", "obj":{"apple":"蘋果"}, "o
 - 假如我們要拿訂單則路徑為order[0]
 
 # 接著讀
-- [對話流程](/products/dmflow/tutorials/docs/bot-flow.html)
+- [對話流程](../../tutorials/docs/bot-flow.html)
