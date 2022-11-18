@@ -953,7 +953,7 @@ REQUEST JSON
 {
   "sysFields": {
     "username": "小王"
-  }
+  },
   "platform": "api"
 }
 ```

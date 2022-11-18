@@ -21,7 +21,7 @@
 
 在問答對內，新建一個問答對庫，分別詢問句是工作機會[轉向 job_openning]、福利待遇[文本 準時付薪水]、公司文化[文本 做客戶喜愛且有用的產品]、介紹JAVA工程師[轉向 describe_java]以及面試JAVA工程師[轉向 java_test]，以下圖為例。
 
-![](../../../../../images/docs/Image126.png)
+![](../../../../images/docs/Image126.png)
 
 並建立問答對領域，取名為hire_faq，並與問答對庫做連結。
 

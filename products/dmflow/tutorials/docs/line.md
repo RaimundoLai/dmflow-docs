@@ -47,4 +47,4 @@ API全名為Application Programming Interface，透過別人開出的規範，�
 
 ![](../../../../images/line/Image007.png)
 
-可以得到Channel ID、Channel secret以及Channel access token。並填寫Webhook URL即可完成。那說不定
+可以得到Channel ID、Channel secret以及Channel access token。並填寫Webhook URL即可完成。
