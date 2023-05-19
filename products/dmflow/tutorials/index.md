@@ -14,4 +14,6 @@
 ## 產品更新
 
 ## 聯絡資訊
+
+聯繫信箱：<services@communeify.com>
  
