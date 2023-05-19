@@ -1,6 +1,6 @@
 # DmFlow 文檔
 
-網址參考(https://raimundolai.github.io/dmflow-docs/)
+網址參考(https://docs.communeify.com/dmflow-docs/)
 
 用於串接LINE、Facebook Messenger平台的對話機器人DmFlow教學。
 
@@ -11,4 +11,4 @@
 - 可支持呼叫外部HTTP API。
 - 圖形化流程介面。
 
-聯繫信箱：<dmflow.service@gmail.com>
+聯繫信箱：<services@communeify.com>
