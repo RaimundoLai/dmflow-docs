@@ -1,0 +1,136 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#30003;&#35531;Facebook API </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#30003;&#35531;Facebook API ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="google-site-verification" content="wackHW3mx9OzoWNdH73Ucfx-Tgn27NaVqlQ-dzKaBfw">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="申請facebook-api">申請Facebook API</h1>
+
+<h1 id="架構">架構</h1>
+<p>DmFlow透過API與Facebook Server進行串接，並發布到messenger，提供對話機器人給用戶使用。</p>
+<p><img src="../../../../images/fbmessenger/Image008.png" alt=""></p>
+<h2 id="facebook-server">Facebook Server</h2>
+<p>Facebook 透過整合有不同的服務，可以透過DmFlow溝通Facebook的終端，去做資料交換。</p>
+<h2 id="api">API</h2>
+<p>API全名為Application Programming Interface，透過別人開出的規範，可以向其他程式做溝通。</p>
+<h2 id="開始">開始</h2>
+<p>首先，需擁有Facebook帳號，再來以下偏重於申請應用程式、設定以及審查。</p>
+<h2 id="申請">申請</h2>
+<p>先透過Facebook開發者網站進去&quot;我的應用程式&quot;。</p>
+<p><a href="https://developers.facebook.com/apps/">我的應用程式</a>如下圖。並點選&quot;建立應用程式&quot;</p>
+<p><img src="../../../../images/fbmessenger/Image001.png" alt=""></p>
+<p>選取應用程式目的(一般選擇商用)，並提供基本資訊，顯示名稱以及電子郵件信箱，兩者都可儲存後修改。</p>
+<p><img src="../../../../images/fbmessenger/Image002.png" alt=""></p>
+<p>新增後，如圖一所示點選該應用程式，進入主控台。點選&quot;設定&quot;-&gt;&quot;基本資料&quot;</p>
+<p><img src="../../../../images/fbmessenger/Image003.png" alt=""></p>
+<p>而應用程式編號，則是&quot;APP ID&quot;，應用程式密鑰，則是&quot;APP SECRET&quot;。</p>
+<h2 id="設定">設定</h2>
+<p><img src="../../../../images/fbmessenger/Image004.png" alt=""></p>
+<p>可以從商品-&gt;Messenger-&gt;設定，去查詢&quot;存取權杖&quot;[PAGE ACCESS TOKEN]，點取[3]。若尚未有粉絲專頁可點選[2]新增。</p>
+<p><img src="../../../../images/fbmessenger/Image006.png" alt=""></p>
+<p>點[1]點擊&quot;編輯回呼網址&quot;，填寫&quot;回呼網址&quot;以及&quot;驗證權杖&quot;[可隨便填寫或是去DmFlow-&gt;機器人-&gt;發布-&gt;密鑰-&gt;自動產生]，並點選[3]如下圖，勾起開放允許權限。</p>
+<p><img src="../../../../images/fbmessenger/Image005.png" alt=""></p>
+<h2 id="審查">審查</h2>
+<p>需要將該粉絲頁發布以及審核pages_messaging到進階存取權限，才能讓其他使用者使用。</p>
+<p><img src="../../../../images/fbmessenger/Image007.png" alt=""></p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © (2023) Communeify</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

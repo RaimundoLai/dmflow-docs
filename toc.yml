@@ -1,3 +1,6 @@
-- name: 對話管理系統
-  href: products/dmflow/
-  topicHref: products/dmflow/index.md
+- name: 繁體中文
+  href: tw/products/dmflow/
+  topicHref: tw/index.html
+- name: English
+  href: en/products/dmflow/
+  topicHref: en/index.html

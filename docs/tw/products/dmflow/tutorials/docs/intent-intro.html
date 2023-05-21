@@ -1,0 +1,210 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#24847;&#22294; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#24847;&#22294; ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="google-site-verification" content="wackHW3mx9OzoWNdH73Ucfx-Tgn27NaVqlQ-dzKaBfw">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="意圖">意圖</h1>
+
+<p>意圖分為六大區塊分別是觸發條件、詞槽、說法、打斷意圖、前置條件以及完成。</p>
+<h2 id="意圖型態">意圖型態</h2>
+<h3 id="無">無</h3>
+<ul>
+<li>一般意圖，單純做找尋意圖，或是填補實體的意圖型態。</li>
+</ul>
+<h3 id="重新開始">重新開始</h3>
+<ul>
+<li>當命中重新開始意圖，將會重新開始當前意圖。</li>
+</ul>
+<h3 id="離開">離開</h3>
+<ul>
+<li>當命中離開意圖，將會關閉整個意圖行為。</li>
+</ul>
+<h3 id="肯定">肯定</h3>
+<ul>
+<li>當前置節點，動作為&quot;確認&quot;時，需要肯定意圖才會跳去下一個階段。</li>
+</ul>
+<h3 id="否定">否定</h3>
+<ul>
+<li>當前置節點，動作為&quot;確認&quot;時，否定意圖會取消當前狀況。</li>
+</ul>
+<p><img src="../../../../images/docs/Image122.png" alt=""></p>
+<h2 id="觸發條件">觸發條件</h2>
+<p>觸發條件，需要填寫的格子分別為觸發型態、起始、操作、或是以及對象。</p>
+<ul>
+<li>觸發型態:目前僅支援&quot;詞槽&quot;</li>
+<li>起始:可以選擇詞槽以及正規化</li>
+<li>操作:根據詞槽會變化，為已填充、未填充、等於、不等於、大於、小於等。</li>
+<li>對象:為常數</li>
+<li>或是:在同一個組別是AND，不同組之間為OR</li>
+</ul>
+<p><img src="../../../../images/docs/Image115.png" alt=""></p>
+<h3 id="前綴">前綴</h3>
+<ul>
+<li>constant:輸入一律當字串。</li>
+<li>context:根據上下文參數做賦值，例如:資源回傳值或是非業務資源使用參數注入。</li>
+<li>entities:實體</li>
+<li>dtFormat:日期表現方法</li>
+<li>config:全域參數位於領域管理，為固定變數。</li>
+</ul>
+<h3 id="日期表現方法">日期表現方法</h3>
+<p>用於比對日期所使用的方法</p>
+<p>例如: ('=2022','=10','=17','=15','=54','') 代表是2022年10月17日15點54分</p>
+<ul>
+<li>第一格，代表年份有=+-三種符號，=為指定該年份、+為當前年加上後面數字年份，-為當前年減去後面數字年份，假設今年2022年，'-1'=&gt;2021年，'+3'=&gt;2025年</li>
+<li>第二格，代表月份有=+-三種符號，=為指定該月份、+為當前月加上後面數字月份，-為當前月減去後面數字月份，假設當前月四月，'-1'=&gt;三月，'+3'=&gt;七月</li>
+<li>... 以此類推</li>
+<li>第六格，代表星期幾僅支援=，=代表選擇當前星期的日期，1為星期一、2為星期二、...、7為星期日，當2022/10/12為星期三，'=1'=&gt;2022/10/10, '=4'=&gt;2022/10/13</li>
+</ul>
+<h4 id="日期表現用法">日期表現用法</h4>
+<ul>
+<li>可以查找當前星期是否為工作日或休假日。</li>
+<li>可以比對特定日期以及時間</li>
+<li>可以只比對日期或時間</li>
+</ul>
+<h3 id="操作">操作</h3>
+<ul>
+<li>字串:等於、不等於、已填充、未填充</li>
+<li>數字以時間:等於、不等於、已填充、未填充、、大於、小於</li>
+</ul>
+<h2 id="詞槽">詞槽</h2>
+<p>詞槽分為詞槽名稱、必填、繼承詞槽、詢問</p>
+<ul>
+<li>詞槽名稱:從&quot;顯示領域內所有詞槽&quot;按鈕做新增。</li>
+<li>引用辭典:根據引用辭典為標準。</li>
+<li>數字量詞:非當前詞槽問法，需要符合量詞定義才會擷取詞槽。</li>
+<li>必填:該詞槽是否為必要，若為必要，一定會進行詢問，若非必要，則詢問時有對應著則填補該詞槽。</li>
+<li>繼承詞槽:在不同意圖轉換，如果不同意圖有相同詞槽名稱，相會進行覆蓋。</li>
+<li>詢問:當用戶問話未完成所有實體填寫時會詢問，如果必填為否，將不會詢問。</li>
+<li>別名:舉例取得實體為地點，但是有兩個詞槽都是引用地點時，別名就要特別取用，出發時間以及抵達時間做分別。</li>
+</ul>
+<p><img src="../../../../images/docs/Image116.png" alt=""></p>
+<h2 id="說法">說法</h2>
+<p>用於訓練機器人，模擬使用者詢問的問題。</p>
+<h2 id="打斷意圖">打斷意圖</h2>
+<p>當話題屬於沒命中詞槽時，會檢查在打斷意圖中的意圖是否命中，若命中則轉跳去其他意圖。</p>
+<h2 id="前置條件">前置條件</h2>
+<p>前置條件，需要填寫的格子分別為觸發型態、起始、操作、條件群組以及對象，同觸發條件。</p>
+<p>並每個群組中有節點動作。</p>
+<p>節點動作分為確認以及跳轉，確認跟打斷意圖相似，但意圖中須包含肯定以及否定，而跳轉則是直接跳入指定意圖。</p>
+<h2 id="完成">完成</h2>
+<p>完成，需要填寫的格子分別為觸發型態、起始、操作以及對象，同觸發條件。<br>
+呼叫資源:<br></p>
+<ul>
+<li>參數:賦值根據提示填寫。</li>
+<li>回傳值:供&quot;達成條件後回答&quot;使用參數。</li>
+</ul>
+<p>其他:</p>
+<ul>
+<li>調用失敗回答區塊:當HTTP狀態不為200或諭時或其他錯誤產生的回答。</li>
+<li>回覆啟動:是否啟用&quot;達成條件回答區塊&quot;</li>
+<li>達成條件回答區塊:當滿足&quot;觸發條件&quot;們且沒有錯誤時所回答的對話。</li>
+<li>依賴意圖:當完成後會跳轉到下一個意圖。</li>
+</ul>
+<h3 id="達成條件後回答">達成條件後回答</h3>
+<p>可直接輸入&quot;$&quot;會進行提示。語法同先前的模板輸出一樣。</p>
+<h1 id="接著讀">接著讀</h1>
+<ul>
+<li><a href="../../tutorials/docs/bot-intro.html">機器人介紹</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © (2023) Communeify</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

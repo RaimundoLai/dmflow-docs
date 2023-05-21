@@ -1,0 +1,158 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>&#35722;&#25976;&#20197;&#21450;&#36039;&#28304;&#31649;&#29702; </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="&#35722;&#25976;&#20197;&#21450;&#36039;&#28304;&#31649;&#29702; ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="google-site-verification" content="wackHW3mx9OzoWNdH73Ucfx-Tgn27NaVqlQ-dzKaBfw">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="變數以及資源管理">變數以及資源管理</h1>
+
+<ul>
+<li>變數管理：資源所需參數使用。</li>
+<li>資源管理：對話流程用於資源節點使用，可以連接對外API做業務邏輯交互。</li>
+</ul>
+<h2 id="變數管理">變數管理</h2>
+<p><img src="../../../../images/docs/Image066.png" alt=""></p>
+<ul>
+<li>1.名稱：為變數名稱，以英文為取名方式。</li>
+<li>2.限制屬性分為string(字串)、number(數字)、datetime(日期時間)以及array(陣列)</li>
+<li>3.描述</li>
+<li>4.別名：目前無用途，主要目的是將該名稱轉為可辨識文字，例如：price=&gt;價格 價錢。</li>
+</ul>
+<h2 id="資源管理">資源管理</h2>
+<p><img src="../../../../images/docs/Image067.png" alt=""></p>
+<ul>
+<li>1.資源名稱：為該資源名稱，以英文為取名方式。</li>
+<li>2.描述</li>
+<li>3.請求地址：資源業務邏輯地址，注意前面已填入https協定，無須再填寫至請求地址。</li>
+<li>4.請求型態：目前僅支援GET以及POST</li>
+<li>5.Content-Type：支援URL和JSON[application/json]</li>
+<li>6.請求頭欄位：Header填寫，前綴分為constant(常數)、conversation(單輪會話）、session(多輪對話)、user(使用者參數)以及config(機器人參數)[延伸1]</li>
+<li>7.參數：會將注入參數根據Content-Type請求。[延伸2]</li>
+<li>8.回傳值：將該請求的回傳值，將當前JSON路徑[尚未支援中文]的數值注入該鍵。[延伸3]</li>
+</ul>
+<h3 id="延伸1">延伸1</h3>
+<ul>
+<li>constant:後面可放任何文字，不用理會前綴。</li>
+<li>conversation、session、user以及config等。可從<a href="../../tutorials/docs/bot-template.html#%E8%A8%98%E6%86%B6%E6%A8%A1%E6%9D%BF">模板</a>中的記憶模板前往觀看。</li>
+</ul>
+<h3 id="延伸2">延伸2</h3>
+<p>假設有一參數city=&gt;城市</p>
+<ul>
+<li>URL:直接作為參數&amp;city=urlEncode(城市) 方式傳遞。</li>
+<li>JSON:則是 {&quot;city&quot;:&quot;城市&quot;} 方式傳遞。</li>
+</ul>
+<h3 id="延伸3">延伸3</h3>
+<p>假設地址回應為{&quot;city&quot;:&quot;城市&quot;}，有一參數city=&gt;城市</p>
+<p>那JSON路徑為city，鍵選擇變數city即可。而數值將會在&quot;對話流程&quot;中的&quot;資源節點&quot;做注入。</p>
+<h3 id="json路徑教學">JSON路徑教學</h3>
+<p>JSON路徑：範例地址回應為{&quot;city&quot;:&quot;城市&quot;, &quot;obj&quot;:{&quot;apple&quot;:&quot;蘋果&quot;}, &quot;order&quot;:[&quot;訂單&quot;]}</p>
+<ul>
+<li>假如我們要拿城市則路徑為city</li>
+<li>假如我們要拿蘋果則路徑為obj['apple']</li>
+<li>假如我們要拿訂單則路徑為order[0]</li>
+</ul>
+<h1 id="接著讀">接著讀</h1>
+<ul>
+<li><a href="../../tutorials/docs/bot-flow.html">對話流程</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © (2023) Communeify</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>
