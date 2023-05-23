@@ -6,34 +6,53 @@
 
 首先先規畫要做什麼、怎麼做。
 
-- 1.思考面試過程需要填寫什麼資訊。像是個人資料、求職問題、心理測驗或是簡單測驗。
-- 2.那些需要放在意圖型，那些需要放在問答對或是知識庫或是用機器人流程設計。
-- 3.若放到意圖型，是否需要填寫實體?需要那些實體?
-- 4.機器人流程的設計問題。
+- 確定面試過程需要收集的資訊：
+  - 考慮面試過程中需要收集的各種資訊，例如個人資料（姓名、聯絡方式）、求職問題、心理測驗或簡單測驗等。
+- 決定資訊的分類方式：
+  - 根據資訊的性質和用途，將其分類到適當的節點類型中。例如，個人資料可以放在意圖型中，求職問題可以放在問答對或知識庫中，而心理測驗則可以使用機器人流程設計或意圖型。
+- 考慮意圖型和實體：
+  - 如果您決定將某些資訊放在意圖型中，則需考慮是否需要建立相應的意圖和實體。例如，如果您希望收集求職者的教育背景，可以建立一個「教育背景」意圖，並為該意圖創建相關的實體（例如學校名稱、學位等）。
+- 設計機器人流程：
+  - 對於特定的流程或問題集，您可以使用機器人流程設計來指導面試過程。這可能涉及對問題的提問和收集回答、根據回答進行相應的路由、給予回饋或指示等。確保您設計的流程能夠順利引導面試過程並收集所需的資訊。
 
-以下開始講解
 
 ### 步驟一 建立問答對
 
-我們先取用個人資料、求職問題以及簡單測試方面下手。
+在問答對節點中，點擊「新增問答對」，建立問答對庫。
+- 1.在「問題」欄位中輸入問題，例如job_openning「工作機會」。
+- 2.在「回答」欄位中輸入相應的回答或指示，例如「轉向 job_openning」。
+- 3.繼續新增其他問答對，例如「福利待遇」、「公司文化」、「介紹JAVA工程師」和「面試JAVA工程師」，並填入相應的回答或指示。
+  - 福利待遇[文本 準時付薪水]
+  - 公司文化[文本 做客戶喜愛且有用的產品]
+  - 介紹JAVA工程師[轉向 describe_java]
+  - 面試JAVA工程師[轉向 java_test]
+- 4.在右上角的「問答對領域」選單中，點擊「新增領域」。
+- 5.給這個問答對領域取名為「hire_faq」（或任意您喜歡的名稱）。
+- 6.在「問答對節點」中，選擇剛剛建立的問答對領域「hire_faq」。
 
-預想機器人場景需要job_openning(工作機會)、java_test(JAVA工程師測驗)、describe_java(JAVA工程師介紹)
+這樣就建立了一個問答對庫並連結到問答對領域「hire_faq」。您可以根據需求繼續新增其他的問答對和領域。
 
-在問答對內，新建一個問答對庫，分別詢問句是工作機會[轉向 job_openning]、福利待遇[文本 準時付薪水]、公司文化[文本 做客戶喜愛且有用的產品]、介紹JAVA工程師[轉向 describe_java]以及面試JAVA工程師[轉向 java_test]，以下圖為例。
+![](../../../../../../images/tw/bot-example-faq-exp.png "DmFlow問答對")
 
-![](../../../../images/docs/Image126.png)
-
-並建立問答對領域，取名為hire_faq，並與問答對庫做連結。
 
 ### 步驟二 建立意圖
 
-新增一個領域的意圖類，取名為hire_int。
+我們將新增一個名為 "hire_int" 的意圖類，並在其中添加以下意圖：
 
-新增意圖為"greeting"、"basic_info"、"hobbies"、"resign_bool"
-
-greeting稱為招呼意圖，說法為hi、你好、嗨、開始之類的。
-
-basic_info為拿取測驗者基本資料，需要的實體為
+- 1.意圖："greeting"，表示招呼意圖。可以包含一些招呼的說法，例如 "hi"、"你好"、"嗨"、"開始" 等。
+- 2.意圖："basic_info"，表示取得測試者的基本資料。您可以設定需要的實體，以下是一些常見的基本資料實體：
+  - 測驗者姓名
+  - 測驗者來自
+  - 工作年資
+  - 教育程度
+  - 系所
+- 3.意圖："interview"，問一些面試有關的問題，例如：
+  - 優勢
+  - 劣勢
+  - 工作/就業有遇到什麼困難地方
+  - 應徵原因
+  - 是否有離職
+- 4."resign_bool"，表示離職意圖。您可以問測試者是否有離職的意願，例如問題可以是 "你是否考慮離職？"，測試者可以回答 "是" 或 "否"。
 
 | 詞槽名     | 辭典名稱      | 說明
 |-------     | ---------     |------
@@ -44,9 +63,9 @@ basic_info為拿取測驗者基本資料，需要的實體為
 | college    | @ANY          | 就讀大學
 | department | @ANY          | 系所
 
-![](../../../../images/docs/Image127.png)
+![](../../../../../../images/tw/bot-example-basic-info-slots.png "DmFlow的basic_info詞槽")
 
-hobbies為一些基本問題，需要的實體為
+interview為一些基本問題，需要的實體為
 
 
 | 詞槽名       | 辭典名稱      | 說明
@@ -58,7 +77,7 @@ hobbies為一些基本問題，需要的實體為
 | hire_reason  | @ANY          | 聘用原因
 | resign_bool  | @ANY          | 是否有離職
 
-![](../../../../images/docs/Image128.png)
+![](../../../../../../images/tw/bot-example-interview-int.png "DmFlow的interview意圖")
 
 resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職過，會加以詢問離職原因。
 
@@ -66,45 +85,40 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 |-------          | ---------     |------
 | resign_reason   | @ANY          | 離職原因
 
-![](../../../../images/docs/Image129.png)
+![](../../../../../../images/tw/bot-example-interview-resign.png "DmFlow添加resign_reason")
 
 當完成意圖們後，記得進入發布做生產發布，才能供給機器人流程使用。
 
-![](../../../../images/docs/Image130.png)
+![](../../../../../../images/tw/bot-example-hire-int-published.png "DmFlow發布hire_int")
 
-假設需要測試，可在basic_info中的說法填寫"基本資料"，hobbies中的說法填寫"自我介紹"。
+假設需要測試，可在basic_info中的說法填寫「基本資料」，interview中的說法填寫「自我介紹」。
 
-測試頁面輸入"基本資料"或是"自我介紹"即可測試。
+測試頁面輸入「基本資料」或是「自我介紹」即可測試。
 
 
-![](../../../../images/docs/Image131.png)
+![](../../../../../../images/tw/bot-example-hire-int-test.png "DmFlow的hire_int測試")
 
 ### 步驟三 機器人流程建置
 
-新建機器人名叫"hire_bot"。
+1.建立名為 "hire_bot" 的機器人。
 
-並在記憶模板，使用者參數新增email以及單一會話儲存新增score。
+2.在記憶模板中，新增使用者參數 "email" 和單一會話儲存 "score"。
 
 - email 當完成基本資料以及測試後，會需要對方提供email。
 - score 則為JAVA試驗成績。
 
-![](../../../../images/docs/Image132.png)
+![](../../../../../../images/tw/bot-example-memory-temp.png "DmFlow記憶模板範例")
 
-進入全局設定-領域並加入hire_int、hire_faq並在更多內點選啟用。
+3.進入全局設定 -> 領域，將 "hire_int" 和 "hire_faq" 加入並啟用。
 
-![](../../../../images/docs/Image134.png)
+4.進入全局設定 -> 場景，新建 "job_openning"、"java_test" 和 "describe_java" 三個場景。
 
-進入全局設定-場景，將一開始想的job_openning(工作機會)、java_test(JAVA工程師測驗)、describe_java(JAVA工程師介紹)新建。
+![](../../../../../../images/tw/bot-example-scene-add.png "DmFlow場景範例")
 
-![](../../../../images/docs/Image133.png)
+5.開始設計對話流程，根據以下步驟進行：
 
-開始對話流程設計。以下根據編號填寫。
-
-1.點選場景"Main"並點選"start"節點，設定預載領域(意圖)選擇hire_int。
-
-![](../../../../images/docs/Image135.png)
-
-2.建立"回覆節點"輸入以下文字，記得勾選"等待用戶回覆"。
+  - 1.選擇場景 "Main"，點擊 "start" 節點，並設定預載領域 (意圖) 為 "hire_int"。
+  - 2.新增一個回覆節點，輸入以下文字並勾選 "等待用戶回覆"：
 
 > 請問您需要什麼幫忙?
 >
@@ -114,140 +128,133 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 >
 > 福利待遇
 
-![](../../../../images/docs/Image136.png)
+![](../../../../../../images/tw/bot-example-help.png "DmFlow招聘範例")
 
-3.將開始節點跟回覆節點連線，並將條件設定"intent等於greeing"。
+  - 3.將開始節點與回覆節點連接起來，並設定分支條件為 "intent 等於 greeting"。
 
-![](../../../../images/docs/Image137.png)
+![](../../../../../../images/tw/bot-example-is-greeting.png "DmFlow分支intent等於greeting")
 
-4.新增節點"調用節點"，選擇hire_faq。並將上一個回覆節點[請問您需要什麼幫忙...]節點跟此節點連線選擇"無條件"。
+  - 4.新增一個調用節點，選擇 "hire_faq"。將上一個回覆節點 (請問您需要什麼幫忙...) 節點連接到此節點，並選擇 "無條件" 分支條件。
 
-![](../../../../images/docs/Image138.png)
+![](../../../../../../images/tw/bot-example-call-hire-faq.png "DmFlow呼叫hire-faq範例")
 
-5.新增節點"情境節點"，選擇跳轉至回覆節點[請問您需要什麼幫忙...]，並和調用節點"call_hire_faq"進行連線選擇"無條件"。
+  - 5.新增一個情境節點，選擇跳轉至回覆節點 [請問您需要什麼幫忙...]，並與調用節點 "hire_faq" 連接，選擇 "無條件" 分支條件。
 
-![](../../../../images/docs/Image139.png)
+![](../../../../../../images/tw/bot-example-jump-help.png "DmFlow招聘範例")
 
-從步驟1-5我們完成了情境Main的設置，如下圖。
+6.根據上述步驟，我們已經完成了 "Main" 情境的設置。
 
-![](../../../../images/docs/Image140.png)
+![](../../../../../../images/tw/bot-example-help-end.png "DmFlow招聘範例")
 
 說明
 
-- 開始節點利用intent=greeting，可以將對方詢問"你好、hi"這一類的話再進入流程，當沒命中會跳出"未命中的回答"。我們可以在創建其他節點取代未命中，使對話更完善。
-- 利用call hire_faq可以節省很多if else的流程，當命中工作機會會跳往情境job_openning，而公司文化、福利待遇則以文本顯示。
-- 最後設置的跳轉節點，因為不管是文本或是打斷跳轉，最後會需要繼續回到詢問句才設置該節點。
+- 開始節點的設定使用了 "intent=greeting"，這樣可以將對方詢問 "你好、hi" 等類似的問候語納入對話流程中。而如果沒有命中任何意圖，系統將跳出 "未命中的回答"，您可以在後續的節點中添加其他回應，以使對話更加完善。
+- 使用 "call hire_faq" 節點可以節省許多 if-else 的判斷流程。當命中 "工作機會" 意圖時，系統會跳轉到 "job_openning" 情境，而對於 "公司文化" 和 "福利待遇"，則直接顯示相應的文本回應，而無需進行額外的處理。
+- 最後的跳轉節點的設置非常重要。無論是文本回應還是打斷跳轉，最終都需要回到詢問句的節點，這樣才能繼續進行後續的對話。請確保在設計流程時，考慮到這一點，以確保流程的連貫性和順暢性。
 
-6.進入job_openning的情境，在開始節點的詢問填寫以下。
+
+7.進入job_openning的情境，在開始節點的詢問填寫以下。
 
 >  目前有開放職位包含以下
 >
 >  介紹JAVA工程師
 
-![](../../../../images/docs/Image141.png)
+![](../../../../../../images/tw/bot-example-job-opening-start.png)
 
-7.新增節點"調用節點"，選擇hire_faq。並將上一個start節點跟此節點連線選擇"無條件"。
+8.新增節點"調用節點"，選擇hire_faq。並將上一個start節點跟此節點連線選擇"無條件"。
 
-![](../../../../images/docs/Image142.png)
-
-從步驟6-7我們完成了情境job_openning的設置，如下圖。
-
-![](../../../../images/docs/Image143.png)
+![](../../../../../../images/tw/bot-example-job-opening-call-hire_faq.png)
 
 說明
 
 - 開始節點說明"介紹JAVA工程師"會透過hire_faq讓節點前往情境describe_java。而使用者詢問公司文化等問題也會一併回答，如果想只專注於"介紹JAVA工程師"可將無條件改為有條件去限制詢問。
 
-8.進入describe_java的情境，在開始節點的詢問填寫以下。
+9.進入describe_java的情境，在開始節點的詢問填寫以下。
 
 > JAVA工程師目的在於維護與開發DmFlow相關產品。
 >
 > 面試JAVA工程師
 
-![](../../../../images/docs/Image144.png)
+![](../../../../../../images/tw/bot-example-describe-java-start.png)
 
-9.新增節點"調用節點"，選擇hire_faq。並將上一個start節點跟此節點連線選擇"無條件"。
+10.新增節點"調用節點"，選擇hire_faq。並將上一個start節點跟此節點連線選擇"無條件"。
 
-![](../../../../images/docs/Image145.png)
+![](../../../../../../images/tw/bot-example-describe-java-call-hire_faq.png)
 
-說明 
-
-- 同步驟6-7，只是詢問句改變。
-
-10.進入java_test的情境，在開始節點的詢問填寫以下。從java_test情境我們可以介紹流程如何取代意圖或是知識庫。
+11.進入java_test的情境，在開始節點的詢問填寫以下。從java_test情境我們可以介紹流程如何取代意圖或是知識庫。
 
 > 我們將會根據[1]填寫個人資料[2]工作偏好[3]JAVA基本問題 依序填寫。
 >
 > 請輸入"準備好了"開始。
 
-![](../../../../images/docs/Image146.png)
+![](../../../../../../images/tw/bot-example-java-test-start.png)
 
-11.將流程分為三大區塊分為個人資料、面試基本問答，以及測驗。
+12.將流程分為三大區塊分為個人資料、面試基本問答，以及測驗。
 
 下圖紅框是個人資料，藍框是基本問答。
 
-![](../../../../images/docs/Image147.png)
+![](../../../../../../images/tw/bot-example-java-test-flow.png)
 
-下圖是測驗。
+下圖是測驗的全流程圖。
 
-![](../../../../images/docs/Image148.png)
+![](../../../../../../images/tw/bot-example-java-test-flow-all.png)
 
-12.先新增回覆節點，輸入以下文字。，並連結start節點，條件可以選擇無條件或是有條件query=準備好了。
+13.先新增回覆節點，輸入以下文字。，並連結start節點，條件可以選擇無條件或是有條件query=準備好了。
 
 > 面試開始前我們先了解您的個人資料
 >
 > 輸入"準備好了"開始
 
-![](../../../../images/docs/Image149.png)
+![](../../../../../../images/tw/bot-example-java-test-first-reply.png)
 
-13.建立"調用節點"，領域選擇hire_int，意圖選擇basic_info。與先前的"[1/3]面試"連線條件可以選擇無條件或是有條件query=準備好了。
+14.建立"調用節點"，領域選擇hire_int，意圖選擇basic_info。與先前的"[1/3]面試"連線條件可以選擇無條件或是有條件query=準備好了。
 
-![](../../../../images/docs/Image150.png)
+![](../../../../../../images/tw/bot-example-java-test-all-001.png)
 
-14.建立"回覆節點"，輸入以下文字。與調用節點[收集個人資料]做無條件連線。
+15.建立"回覆節點"，輸入以下文字。與調用節點[收集個人資料]做無條件連線。
 
 > 為了瞭解您的工作偏好，請回答以下問題?
 >
 > 輸入"準備好了"開始問答
 
-![](../../../../images/docs/Image151.png)
+![](../../../../../../images/tw/bot-example-java-test-all-002.png)
 
-15.建立"調用節點"，領域選擇hire_int，意圖選擇hobbies。與先前的"[2/3]面試"連線條件可以選擇無條件或是有條件query=準備好了。
+16.建立"調用節點"，領域選擇hire_int，意圖選擇hobbies。與先前的"[2/3]面試"連線條件可以選擇無條件或是有條件query=準備好了。
 
-![](../../../../images/docs/Image152.png)
+![](../../../../../../images/tw/bot-example-java-test-all-003.png)
 
-16.建立"回覆節點"，輸入以下文字。與調用節點[介紹個人特色]做無條件連線。
+17.建立"回覆節點"，輸入以下文字。與調用節點[介紹個人特色]做無條件連線。
 
 > 我們將考你一些關於JAVA的問題，請輸入"準備好了"開始作答。
 
-![](../../../../images/docs/Image153.png)
+![](../../../../../../images/tw/bot-example-java-test-all-004.png)
 
-17.新增"變數節點"，並將score歸零，並與先前節點連線，條件為無條件。
+18.新增"變數節點"，並將score歸零，並與先前節點連線，條件為無條件。
 
-![](../../../../images/docs/Image154.png)
+![](../../../../../../images/tw/bot-example-java-test-all-005.png)
 
-18.分別創建題目，題目為選選擇題，答對了加分，答錯繼續下一題。先建立"回覆節點"並跟先前"變數節點"連線，條件為無條件。
+19.分別創建題目，題目為選選擇題，答對了加分，答錯繼續下一題。先建立"回覆節點"並跟先前"變數節點"連線，條件為無條件，回覆節點可採取選擇按鈕方式則不用用戶輸入訊息。
 
 > 以下哪一個不是設計模式?
 >
-> 享元模式
+> 享元模式(Flyweight Pattern)
 >
-> 單例模式
+> 單例模式(Singleton Pattern)
 >
-> 策略模式
+> 策略模式(Strategy Pattern)
 >
-> 生產鏈模式
+> 生產鏈模式(Factory Method Pattern)
 >
 > 我不知道
 
-![](../../../../images/docs/Image155.png)
+![](../../../../../../images/tw/bot-example-java-test-all-006.png)
 
-19.當正確答案等於[query|等於|constant|生產鏈模式]時，進入加分"變數節點"，並與前面"回覆節點"一起無條件連接到下一題。
+20.當正確答案等於[query|等於|constant|生產鏈模式]時，進入加分"變數節點"，並與前面"回覆節點"一起無條件連接到下一題。
 
-![](../../../../images/docs/Image157.png)
-![](../../../../images/docs/Image156.png)
+![](../../../../../../images/tw/bot-example-java-test-all-007.png)
+![](../../../../../../images/tw/bot-example-java-test-all-008.png)
 
-20.第二題到第四題重複步驟18-19分別是
+21.第二題到第四題重複步驟19-20分別是
 
 第二題
 
@@ -291,21 +298,21 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 
 有條件[query|等於|constant|C]
 
-21.新增一個回覆節點"總得分"並新增以下文字。
+22.新增一個回覆節點"總得分"並新增以下文字。
 
 > 你總共得到了 分數為: ${#session.score} / 6分，測驗已結束，我們會再通知您，可否填寫您的email
 
-![](../../../../images/docs/Image158.png)
+![](../../../../../../images/tw/bot-example-java-test-all-009.png)
 
-22.新增變數節點儲存email
+23.新增變數節點儲存email
 
-![](../../../../images/docs/Image159.png)
+![](../../../../../../images/tw/bot-example-java-test-all-010.png)
 
-23.並在最後新增回覆節點，文字如下，且必須關閉"等待用戶回覆"。關閉等待用戶回覆目的是這句話算是結束，如果開啟則會等待用戶問話。
+24.並在最後新增回覆節點，文字如下，且必須關閉"等待用戶回覆"。關閉等待用戶回覆目的是這句話算是結束，如果開啟則會等待用戶問話。
 
 > 感謝您的填寫，我們會盡快給你答覆。
 
-![](../../../../images/docs/Image160.png)
+![](../../../../../../images/tw/bot-example-java-test-all-011.png)
 
 ### 完成
 
@@ -313,15 +320,15 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 
 當完成設置後，別忘了點選[1]儲存或[2]更新。
 
-![](../../../../images/docs/Image161.png)
+![](../../../../../../images/tw/bot-example-java-test-all-012.png)
 
 並打開保存->編輯->勾選是否發布->更新，完成後就可以進行對話測試了。
 
-![](../../../../images/docs/Image162.png)
+![](../../../../../../images/tw/bot-example-java-test-all-013.png)
 
 開始測試。
 
-![](../../../../images/docs/Image163.png)
+![](../../../../../../images/tw/bot-example-java-test-all-014.png)
 
 # 接著讀
 - [日誌](../../tutorials/docs/bot-log.html)

@@ -4,5 +4,9 @@
 - name: 詳細文檔
   href: tutorials/docs/toc.yml
   topicHref: tutorials/docs/index.md
+- name: 版本
+  topicHref: version/index.md
 - name: 聯絡資訊
   topicHref: info/index.md
+- name: 切換語言
+  href: /

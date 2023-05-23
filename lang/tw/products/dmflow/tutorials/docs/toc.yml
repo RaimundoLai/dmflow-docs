@@ -29,6 +29,8 @@
   href: bot-example.md
 - name: 機器人-日誌
   href: bot-log.md
+- name: 機器人-廣播
+  href: bot-broadcast.md
 - name: 機器人-發布
   href: bot-published.md
 - name: 機器人-設置

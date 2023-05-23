@@ -12,7 +12,7 @@
           "hash": "HRoX/IBizFcPucTTjQhF/z+Rfvb9YQb0iB3c4trYqus="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -21,6 +21,50 @@
       "output": {
         "resource": {
           "relative_path": "googled3dd506f4820cbd9.html"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-flow-collect.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-flow-collect.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-flow-reply.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-flow-reply.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-flow-var.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-flow-var.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/domain-resource-param.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/domain-resource-param.png"
         }
       },
       "is_incremental": false,
@@ -49,6 +93,1601 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-broadcast-intro.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-broadcast-intro.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-basic-info-slots.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-basic-info-slots.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-call-hire-faq.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-call-hire-faq.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-describe-java-call-hire_faq.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-describe-java-call-hire_faq.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-describe-java-start.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-describe-java-start.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-faq-exp.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-faq-exp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-help-end.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-help-end.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-help.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-help.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-hire-int-published.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-hire-int-published.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-hire-int-test.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-hire-int-test.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-interview-int.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-interview-int.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-interview-resign.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-interview-resign.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-is-greeting.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-is-greeting.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-java-test-all-001.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-java-test-all-001.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-java-test-all-002.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-java-test-all-002.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-java-test-all-003.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-java-test-all-003.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-java-test-all-004.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-java-test-all-004.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-java-test-all-005.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-java-test-all-005.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-java-test-all-006.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-java-test-all-006.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-java-test-all-007.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-java-test-all-007.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-java-test-all-008.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-java-test-all-008.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-java-test-all-009.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-java-test-all-009.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-java-test-all-010.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-java-test-all-010.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-java-test-all-011.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-java-test-all-011.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-java-test-all-012.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-java-test-all-012.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-java-test-all-013.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-java-test-all-013.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-java-test-all-014.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-java-test-all-014.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-java-test-all-014png.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-java-test-all-014png.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-java-test-first-reply.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-java-test-first-reply.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-java-test-flow-all.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-java-test-flow-all.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-java-test-flow.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-java-test-flow.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-java-test-start.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-java-test-start.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-job-opening-call-hire_faq.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-job-opening-call-hire_faq.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-job-opening-start.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-job-opening-start.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-jump-help.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-jump-help.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-memory-temp.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-memory-temp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-example-scene-add.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-example-scene-add.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-flow-branch.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-flow-branch.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-flow-callfunc.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-flow-callfunc.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-flow-collect.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-flow-collect.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-flow-image.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-flow-image.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-flow-reply.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-flow-reply.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-flow-resource.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-flow-resource.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-flow-scene.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-flow-scene.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-flow-start.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-flow-start.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-flow-test.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-flow-test.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-flow-var.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-flow-var.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-flow-version.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-flow-version.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-global-faq.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-global-faq.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-global-general-ask.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-global-general-ask.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-global-intent.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-global-intent.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-global-scene.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-global-scene.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-global-tableqa.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-global-tableqa.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-log-chart.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-log-chart.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-log-filter.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-log-filter.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-log-tag.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-log-tag.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-log-view.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-log-view.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-published-api-secret.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-published-api-secret.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-published-published.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-published-published.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-resource-add.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-resource-add.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-resource-var.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-resource-var.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-setting-platforms.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-setting-platforms.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-setting-view.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-setting-view.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-audio-s.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-audio-s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-buttons-f.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-buttons-f.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-buttons-r.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-buttons-r.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-buttons-s.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-buttons-s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-card-f.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-card-f.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-card-r.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-card-r.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-card-s.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-card-s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-confirm-f.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-confirm-f.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-confirm-r.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-confirm-r.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-confirm-s.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-confirm-s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-image-f.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-image-f.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-image-r.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-image-r.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-imagecard-f.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-imagecard-f.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-imagecard-r.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-imagecard-r.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-imagecard-s-t-text.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-imagecard-s-t-text.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-imagecard-s.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-imagecard-s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-imagemap-f.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-imagemap-f.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-imagemap-r.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-imagemap-r.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-imagemap-s.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-imagemap-s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-imagemap-t-link.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-imagemap-t-link.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-imagemap-t-text.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-imagemap-t-text.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-imagemap-video.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-imagemap-video.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-quick-r.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-quick-r.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-text-f.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-text-f.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-text-s.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-text-s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-line-video-s.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-line-video-s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-link.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-link.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-ms-buttons-f.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-ms-buttons-f.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-ms-buttons-r.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-ms-buttons-r.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-ms-buttons-s.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-ms-buttons-s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-ms-link-f.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-ms-link-f.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-ms-linkext-f.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-ms-linkext-f.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-ms-temp-f.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-ms-temp-f.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-ms-temp-r.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-ms-temp-r.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-ms-temp-s.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-ms-temp-s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-ms-text-r.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-ms-text-r.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-ms-text-s.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-ms-text-s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-postback.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-postback.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/bot-template-upload-image.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/bot-template-upload-image.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/domain-resource-param.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/domain-resource-param.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intent-intro-flow.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intent-intro-flow.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intent-intro-trigger.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intent-intro-trigger.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-001.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-001.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-002.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-002.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-003.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-003.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-004.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-004.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-005.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-005.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-006.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-006.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-007.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-007.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-008.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-008.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-010.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-010.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-011.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-011.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-012.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-012.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-013.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-013.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-014.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-014.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-015.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-015.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-016.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-016.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-017.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-017.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-018.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-018.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-019.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-019.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-020.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-020.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-021.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-021.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-022.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-022.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-023.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-023.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-024.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-024.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-025.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-025.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/intro-026.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/intro-026.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/line-001.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/line-001.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/line-002.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/line-002.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/line-003.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/line-003.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/line-004.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/line-004.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/line-005.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/line-005.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/line-006.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/line-006.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/line-007.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/line-007.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/messenger-001.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/messenger-001.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/messenger-002.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/messenger-002.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/messenger-003.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/messenger-003.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/messenger-004.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/messenger-004.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/messenger-005.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/messenger-005.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/messenger-006.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/messenger-006.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/messenger-007.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/messenger-007.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/messenger-framework.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/messenger-framework.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
@@ -57,7 +1696,7 @@
           "hash": "GF/44n28ws2WGDQZtwESHqnSqni56DEYygq2KZUDni4="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -97,7 +1736,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 2,
-          "skipped_file_count": 1
+          "skipped_file_count": 2
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

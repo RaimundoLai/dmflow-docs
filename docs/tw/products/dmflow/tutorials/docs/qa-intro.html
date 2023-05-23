@@ -70,13 +70,23 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="知識庫介紹">知識庫介紹</h1>
 
-<p>此版本知識庫分為兩種，一種為&quot;知識庫&quot;，一種為&quot;問答對&quot;。</p>
-<h2 id="知識庫表格問答">知識庫[表格問答]</h2>
-<p>用戶只需要填寫實體與屬性值，不用在意意圖說法、詞槽如何填寫，快速上手。
-舉例:</p>
+<p>知識庫包含問答對以及表格問答，以下將會介紹兩者的定義以及用途。</p>
+<h2 id="表格問答">表格問答</h2>
 <ul>
-<li>實體加上屬性，如:<strong>Pixel 6</strong>的<strong>電池容量</strong>是多少?=&gt; 實體為&quot;Pixel 6&quot;，屬性為&quot;電池容量&quot;。</li>
-<li>屬性條件查詢滿足條件之實體，如:<strong>品牌</strong>是<strong>ASUS</strong>的手機有哪些?=&gt; 條件為&quot;品牌&quot;等於&quot;ASUS&quot;。</li>
+<li><p>快速回答常見問題：表格問答可以用於回答有結構性的問題。透過事先建立好的問答表格，機器人可以直接從表格中檢索相應的答案，迅速提供給用戶，節省時間和人力成本。</p>
+</li>
+<li><p>自助式問答服務：通過表格問答，用戶可以自主搜索和獲取所需的信息，而不必等待人工客服的回覆。</p>
+</li>
+<li><p>數據收集和分析：通過表格問答，可以收集用戶的輸入和反饋，將其存儲為結構化數據。這些數據可以用於進一步的分析和洞察，了解用戶需求、瞭解產品或服務的優化方向，以及改進對話機器人的效能。</p>
+</li>
+</ul>
+<h3 id="表格問答結構">表格問答結構</h3>
+<ul>
+<li>關鍵字：在搜尋的時候若命中關鍵字會顯示該搜尋的結果。</li>
+<li>數字：在搜尋的時候可以比較該數字欄位的到搜尋的結果。</li>
+<li>日期：在搜尋的時候可以比較該日期欄位的到搜尋的結果，像是出版日期、出產日期等。</li>
+<li>文本：不影響搜尋。但是根據其他條件所搜尋的結果會同時附帶此文本。</li>
+<li>是否：根據是否去搜尋結果，像是支援5G或是有WIFI嗎之類的。</li>
 </ul>
 <h3 id="支援能力">支援能力</h3>
 <table>
@@ -145,163 +155,47 @@
 </tr>
 </tbody>
 </table>
-<h3 id="何時使用表格問答">何時使用表格問答</h3>
-<p>一般搜尋只能顯示根據搜尋的&quot;文字&quot;有關的文章，例如：我要找尋作者為xxx的文章，我們無法從文字知道你想表達的問題，通常會拆分成&quot;作者&quot;、&quot;xxx&quot;，並新增一個欄位讓使用者選擇作者是誰。</p>
-<p>如果查詢的資料可以有系統的分類，則同樣問句&quot;我要找尋作者為xxx的文章&quot;，自動拆分為作者=xxx時，可以快速滿足用戶需求。</p>
-<ul>
-<li>相對於其他場景，表格問答相對維護容易。</li>
-</ul>
-<h3 id="使用流程">使用流程</h3>
-<table>
-<thead>
-<tr>
-<th>步驟</th>
-<th>必要性</th>
-<th>說明</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>v</td>
-<td>點選新增知識庫</td>
-</tr>
-<tr>
-<td>2</td>
-<td>v</td>
-<td>新增知識庫表</td>
-</tr>
-<tr>
-<td>3</td>
-<td>x</td>
-<td>修改知識庫表</td>
-</tr>
-<tr>
-<td>4</td>
-<td>v</td>
-<td>新增知識庫資料</td>
-</tr>
-<tr>
-<td>5</td>
-<td>v</td>
-<td>通過領域綁定知識庫</td>
-</tr>
-<tr>
-<td>6</td>
-<td>v</td>
-<td>發布開發版本</td>
-</tr>
-<tr>
-<td>7</td>
-<td>x</td>
-<td>測試</td>
-</tr>
-<tr>
-<td>8</td>
-<td>v</td>
-<td>發布測試版本</td>
-</tr>
-</tbody>
-</table>
-<h3 id="1新增知識庫">1.新增知識庫</h3>
-<ul>
-<li>1.點選[+]</li>
-<li>2.在&quot;新增知識庫&quot;填寫點標[1]知識庫表、點標[2]通用詞、點標[3]對應辭典</li>
-<li>3.當填寫完成後，底下的新增會亮起，並點新增。</li>
-</ul>
-<p>知識庫表：</p>
-<ul>
-<li>支援十四位小寫英文以及_(下划號)</li>
-</ul>
-<p>通用詞：</p>
-<ul>
-<li><p>通常稱呼此表存入的物件，例如汽車就是&quot;車 汽車&quot;等。用空白當作一個詞。</p>
-</li>
-<li><p>搜尋時會根據，我想找汽車或我想找車...等，去做表格問答。</p>
-</li>
-</ul>
-<p>對應辭典：</p>
-<ul>
-<li>根據現有辭典去做實體顯示。</li>
-</ul>
-<p><img src="../../../../images/docs/Image033.png" alt=""></p>
-<h3 id="2新增知識庫表">2.新增知識庫表</h3>
-<p>內容：</p>
-<ul>
-<li>唯一鍵:用英文表示唯一名稱，例如：價格通常會用price。</li>
-<li>欄位:可用空白分隔欄位，用於搜索名稱。例如：價格會用&quot;價格 多少 價錢&quot;...等。</li>
-<li>限制型態:分為&quot;關鍵字&quot;、&quot;數字&quot;、&quot;日期&quot;、&quot;文本&quot;或&quot;是否&quot;。</li>
-<li>附加條件
-<img src="../../../../images/docs/Image034.png" alt=""></li>
-</ul>
-<p>限制型態(補充):</p>
-<ul>
-<li>關鍵字：欄位屬性的值可以用於搜索。</li>
-<li>數字：如：&quot;&quot;價格&quot;(屬性)在&quot;100萬以上&quot;(值)的有那些?&quot;，會搜尋價格在100萬以上的實體。</li>
-<li>日期：可以判斷&quot;下禮拜&quot;、&quot;特定日期&quot;等問題。</li>
-<li>文本：跟關鍵字不同，無法被用於搜索。</li>
-<li>是否：判斷&quot;有沒有&quot;、&quot;是不是&quot;等問題。</li>
-</ul>
-<p>附加條件(補充):</p>
-<ul>
-<li>數字：包含了單位以及小數點。目前單位僅支援個、百、千、萬、億以及兆，主要目的但為單位轉換[但尚未實裝]，如：公斤轉克等</li>
-<li>日期：包含了時區。</li>
-</ul>
-<h3 id="3修改知識庫表">3.修改知識庫表</h3>
-<p>當進行修改時，可以發現有&quot;對話模板&quot;，假設實體為IPhone 13，價格為25900元，則系統會回傳</p>
-<pre><code>{
-  &quot;subject&quot;: {
-    &quot;name&quot;: &quot;IPhone 13&quot;,
-    &quot;price&quot;: &quot;25900&quot;
-  }
-}
-</code></pre>
-<p>模板：${#subject.name}的售價為${#subject.price}元。會顯示成&quot;IPhone 13 128G的售價為25900元&quot;。</p>
-<p><img src="../../../../images/docs/Image039.png" alt=""></p>
-<h3 id="4新增知識庫資料">4.新增知識庫資料</h3>
-<p>依照實體為列，欄位為行，依序填入對應的值即可完成資料庫。
-<img src="../../../../images/docs/Image035.png" alt=""></p>
-<h3 id="步驟58">步驟5~8</h3>
-<p>可跳至最下面，[接著讀-領域介紹]開始閱讀。</p>
 <h2 id="問答對">問答對</h2>
-<p>問答對通常是有固定的答案，如果問答對中沒有符合的<strong>答案</strong>，機器人就無法取得該答案回覆給用戶。</p>
-<h4 id="新增問答對">新增問答對</h4>
-<p>我們點選[+]，在點標[1]輸入最多十四位小寫英文以及_(下划號)，點取按鈕&quot;新增&quot;。
-<img src="../../../../images/docs/Image036.png" alt=""></p>
-<h4 id="新增問題">新增問題</h4>
+<p>問答對是指問題和對應答案的配對組合，它們的主要用途包括：</p>
 <ul>
-<li>點標[1]：輸入符合條件的用戶問題。</li>
-<li>點標[2]：是否啟用該問題</li>
-<li>點標[3]：是否啟用同步辭典，如果某辭典為：番茄，同義詞：西紅柿。而問題是&quot;你好哪裡有賣<strong>番茄</strong>&quot;，此時會延伸&quot;你好哪裡有賣<strong>西紅柿</strong>&quot;。</li>
-<li>點標[4]：啟用啟動失效，會出現&quot;生效時間&quot;以及&quot;失效時間&quot;，目前必須兩個都填入值才能儲存。</li>
-<li>點標[5]：可以啟用資源外接API，需要再綁定領域後才可使用<a href="../../tutorials/docs/domain-intro.html#%E8%B3%87%E6%BA%90%E7%AE%A1%E7%90%86">領域資源</a></li>
-<li>點標[6]：分類，可自訂分類，將問題整理放入。</li>
-<li>點標[7]：將用戶問題做延伸。</li>
-<li>點標[8]：平台分為通用以及開啟的渠道，答案在渠道沒開啟或是該渠道沒新增答案時，以通用為主，答案目前僅有text、template以及redirect
-<img src="../../../../images/docs/Image037.png" alt=""></li>
+<li><p>自動回答常見問題：問答對可用於自動回答常見問題，如產品功能、服務詳情、常見疑問等。將常見問題與相應的答案建立成問答對，可以使機器人快速且準確地回答用戶的疑問，節省人工客服的時間。</p>
+</li>
+<li><p>資訊查詢：問答對可以提供資訊查詢的功能，用戶可以輸入問題，機器人通過匹配問答對，提供相應的答案。這樣，用戶可以快速找到所需的資訊，不必浪費時間在網站搜索或諮詢人工客服。</p>
+</li>
+<li><p>技術支持：問答對可用於技術支持的場景，用戶可以提出技術問題，機器人通過匹配相關的問答對，提供解決方案或指導。這樣可以節省人工技術支持的成本，同時提供即時且準確的支持服務。</p>
+</li>
+<li><p>教育和培訓：問答對在教育和培訓領域也有應用價值，可以用於提供學習材料的問答形式，幫助學生進行學習和自測。教師或導師可以建立問答對，涵蓋學習內容的不同方面，學生可以通過與機器人的互動來檢查自己的學習進度和理解程度。</p>
+</li>
 </ul>
+<p>總結來說，問答對在自動回答、資訊查詢、技術支持和教育培訓等方面都有廣泛的應用。它們能夠提供準確、即時的答案，節省人力成本，同時提升用戶體驗和學習效果。</p>
 <h4 id="回答型態">回答型態</h4>
 <ul>
 <li>1.text :純文本</li>
 <li>2.template:模板[可透過resource回傳值注入]</li>
 <li>3.redirect:(轉向場景[須搭配Bot Flow])</li>
-</ul>
-<p>參數前綴:</p>
-<ul>
-<li>constant:表示常數，代表輸入的都當成字串處理。</li>
-<li>context:非業務資源使用參數，或是機器人流程傳遞參數使用。</li>
-<li>config:領域內管理有個&quot;全域參數&quot;，可以提供鍵(key)，一般用於有固定值的auth或是secret的字串需要提交給用戶機器做驗證。</li>
+<li>4.JSON API:使用該平台的JSON去做回覆，目前支援LINE、Messenger、Telegram。</li>
 </ul>
 <h4 id="template模板輸出詳情">template模板輸出詳情</h4>
 <ul>
-<li>context-&gt;根據回傳值的鍵(key)做輸出，例如:${#context.comfortable}。</li>
-<li>extractTime-&gt;將時間轉為字串的功能，例如:${%extractTime(#context.datetime,'yyyy年MM月dd日HH:mm','')}</li>
-<li>listOutput-&gt;將陣列轉為字串的功能，例如:${%listOutput(#context.order,'${#item_break}第${#item_index}筆:日期${#item.date}, 金額為:${#item.money};' ,'1')}</li>
+<li>context-&gt;根據回傳值的鍵(key)做輸出。</li>
+<li>extractTime-&gt;您可以將時間數值轉換為特定格式的字串。</li>
+<li>listOutput-&gt;您可以獲取回傳數值（需為陣列），並根據特定格式生成一個列表。在該列表中，每一項都包含數值中的特定屬性。</li>
 </ul>
+<p>context</p>
+<pre><code>${#context.comfortable}
+</code></pre>
+<p>在這個範例中，${#context.comfortable}代表取得回傳值中的鍵為comfortable的內容。您可以將這個指令插入到您需要的地方，以獲取相應的回傳值並進行輸出。</p>
+<p>這樣，您可以方便地根據回傳值的鍵進行相應的操作和呈現。</p>
 <p>extracTime</p>
-<p>第一個參數為回傳的數值[秒數]僅支持參數，尚未支持常數注入，第二個參數為日期格式，第三參數[尚未實裝]指定時區，預設會用機器人流程的時區。</p>
+<pre><code>${%extractTime(#context.datetime,'yyyy年MM月dd日HH:mm','')}
+</code></pre>
+<p>在這個範例中，您需要將第一個參數設置為回傳的時間數值（以秒為單位）。第二個參數則是一個字串，用於指定所需的日期格式，例如yyyy年MM月dd日HH:mm。第三個參數目前尚未實裝，預計用於指定時區，但在預設情況下，它將使用機器人流程的時區。</p>
+<p>透過使用這個優化後的指令，您可以方便地將時間數值轉換為符合指定格式的字串，以滿足您的需求。</p>
 <p>listOutput</p>
-<p>第一個參數為回傳的數值[需為array]，第二個參數為字串item_break為換行，item.xxx為當前forEach的鍵(key)，不支援nested(鑲嵌)</p>
+<pre><code>${%listOutput(#context.order,'${#br}第${#index}筆:日期${#item.date}, 金額為:${#item.money};' ,'1')}
+</code></pre>
+<p>在這個範例中，您需要將第一個參數設置為回傳的陣列數值。第二個參數則是一個字串，其中${#br}代表換行符號，${#index}代表目前迴圈的索引值，${#item.date}和${#item.money}分別代表每個項目的日期和金額屬性。</p>
+<p>藉由使用這個優化後的指令，您可以方便地生成具有特定格式的列表，以便於顯示和使用所需的數值資訊。</p>
 <p>透過下圖選擇資源，並呼叫該資源得到JSON回應為</p>
 <pre><code>{
   &quot;temperature&quot;: 16,
@@ -319,12 +213,12 @@
   &quot;comfortable&quot;: &quot;稍有寒意&quot;
 }
 </code></pre>
-<p><img src="../../../../images/docs/Image114.png" alt=""></p>
+<p><img src="../../../../../../images/tw/domain-resource-param.png" alt=""></p>
 <p>模板原本輸出</p>
 <blockquote>
 <p>舒適度:${#context.comfortable}，溫度${#context.temperature}度c
 時間${%extractTime(#context.datetime,'yyyy年MM月dd日HH:mm','')}
-${%listOutput(#context.next_d,'${#item_break}第${#item_index}筆:日期${#item.date}, 下雨機率:${#item.rain_per}%;' ,'1')}</p>
+${%listOutput(#context.next_d,'${#br}第${#index}筆:日期${#item.date}, 下雨機率:${#item.rain_per}%;' ,'1')}</p>
 </blockquote>
 <p>模板替代輸出</p>
 <blockquote>
@@ -341,6 +235,13 @@ ${%listOutput(#context.next_d,'${#item_break}第${#item_index}筆:日期${#item.
 <h2 id="接著讀">接著讀</h2>
 <ul>
 <li><a href="../../tutorials/docs/domain-intro.html">領域介紹</a></li>
+</ul>
+<h1 id="最後更新時間">最後更新時間</h1>
+<p>2023/05/22</p>
+<ul>
+<li>增加表格問答結構</li>
+<li>增加表格問答以及問答對的基本解釋</li>
+<li>將item.br以及item.index更改為br以及index。</li>
 </ul>
 </article>
           </div>

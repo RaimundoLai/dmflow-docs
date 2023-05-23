@@ -3,9 +3,9 @@
 
 ## 第三方整合
 
-目前支援LINE以及Facebook Messenger(Meta)
+目前支援LINE以及Facebook Messenger、Telegram
 
-![](../../../../images/docs/Image118.png)
+![](../../../../../../images/tw/bot-setting-platforms.png)
 
 ## 設定
 
@@ -15,4 +15,10 @@
 - 4.密鑰:機器人流程中的資源節點若對外呼叫會提供此密鑰。
 - 5.白名單:機器人流程中的資源節點若對外呼叫會限制該URL的Domain白名單
 
-![](../../../../images/docs/Image119.png)
+![](../../../../../../images/tw/bot-setting-view.png)
+
+
+# 最後更新時間
+2023/05/22
+
+- 新增Telegram

@@ -2094,6 +2094,79 @@ pm.environment.set('auth', 'Bearer '+base64);
 </tr>
 </tbody>
 </table>
+<h2 id="事件">事件</h2>
+<h3 id="使用者註冊事件">使用者註冊事件</h3>
+<p>POST /_api/v1/bot/event/register</p>
+<table>
+<thead>
+<tr>
+<th>HEADER KEY</th>
+<th>HEADER VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>{{auth}}</td>
+</tr>
+</tbody>
+</table>
+<p>REQUEST JSON</p>
+<pre><code>{
+  &quot;broad_hash_id&quot;: &quot;xxxxxxxxx&quot;,
+  &quot;platform&quot;: &quot;line&quot;,
+  &quot;userId&quot;: &quot;Uxxxxxxxxx&quot;
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>REQUEST_PATH</th>
+<th>必填</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>broad_hash_id</td>
+<td>v</td>
+<td>broad提供的id</td>
+</tr>
+<tr>
+<td>platform</td>
+<td>v</td>
+<td>分為line、messenger、api</td>
+</tr>
+<tr>
+<td>userId</td>
+<td>v</td>
+<td>client_userId</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>RESPONSE PATH</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rc</td>
+<td>回應碼，0=&gt;回應成功，不等於0為錯誤</td>
+</tr>
+<tr>
+<td>error</td>
+<td>當回應碼不為0的時候產生的錯誤訊息</td>
+</tr>
+</tbody>
+</table>
+<h1 id="最後更新時間">最後更新時間</h1>
+<p>2023/05/23</p>
+<ul>
+<li>新增&quot;使用者註冊事件&quot;</li>
+</ul>
 </article>
           </div>
           

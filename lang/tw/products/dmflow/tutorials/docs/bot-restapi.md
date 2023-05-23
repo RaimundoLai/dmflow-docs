@@ -1120,3 +1120,39 @@ RESPONSE JSON
 | data.userFields[0].description    | 記憶欄位描述
 | data.userFields[0].key            | 記憶欄位鍵
 | data.userFields[0].type           | 記憶欄位type(stringEnum, numEnum, datetimeEnum, passwdEnum)
+
+## 事件
+
+### 使用者註冊事件
+POST /_api/v1/bot/event/register
+
+
+| HEADER KEY    | HEADER VALUE
+| ------------- | -------------
+| Authorization | {{auth}}
+
+REQUEST JSON 
+
+```
+{
+  "broad_hash_id": "xxxxxxxxx",
+  "platform": "line",
+  "userId": "Uxxxxxxxxx"
+}
+```
+
+| REQUEST_PATH     | 必填 | 說明
+| -------------    | ---- |-------
+| broad_hash_id    |   v  | broad提供的id
+| platform         |   v  | 分為line、messenger、api
+| userId           |   v  | client_userId
+
+| RESPONSE PATH                     | 說明
+| --------------------------------- | --------------------------------
+| rc                                | 回應碼，0=>回應成功，不等於0為錯誤
+| error                             | 當回應碼不為0的時候產生的錯誤訊息
+
+# 最後更新時間
+2023/05/23
+
+- 新增"使用者註冊事件"
