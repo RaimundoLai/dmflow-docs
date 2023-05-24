@@ -48,7 +48,7 @@
       ],
       "dest":"../../docs/tw",
       "globalMetadataFiles":[
-         "global.json"
+         "../../global.json"
       ],
       "fileMetadataFiles":[
          
@@ -99,7 +99,7 @@
       "resource":[
          {
             "files":[
-               "images/**"
+               "../../images/**"
             ],
             "exclude":[
                "**/bin/**",

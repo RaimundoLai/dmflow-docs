@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "FVySJg7doZ+vugsPZRaOb4eZbJ/eorZxXdK8EzUyhwM="
+          "hash": "d3uQsdu5JJfO4oVNQO7Mw547U31kpN0RqhNVibfXKk0="
         }
       },
       "is_incremental": true,
@@ -65,6 +65,17 @@
       "output": {
         "resource": {
           "relative_path": "images/en/domain-resource-param.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-025.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-025.png"
         }
       },
       "is_incremental": false,
@@ -1693,7 +1704,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "GF/44n28ws2WGDQZtwESHqnSqni56DEYygq2KZUDni4="
+          "hash": "fWZ/UhpINHodpdr14ngyjaIGzYfGCJ5fyfDC+sUyHys="
         }
       },
       "is_incremental": true,

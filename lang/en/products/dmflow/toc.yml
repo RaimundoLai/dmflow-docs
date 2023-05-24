@@ -1,2 +1,5 @@
+- name: Quick Start Tutorial
+  href: tutorials/intro/toc.yml
+  topicHref: tutorials/intro/index.md
 - name: Language
   href: /

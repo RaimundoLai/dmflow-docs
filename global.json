@@ -1,5 +1,5 @@
 {
 	 "_appLogoPath": "images/logo.svg",
      "_appFaviconPath": "images/favicon.ico",
-	 "_appFooter": "<span>Copyright © (2023) Communeify</span>"
+	 "_appFooter": "<span>Copyright © <script>document.write(new Date().getFullYear());</script> Communeify</span>"
 }

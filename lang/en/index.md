@@ -7,4 +7,4 @@
 
 * Dmflow provides an intuitive graphical interface for designing and managing dialogue flows. You can easily create dialogue nodes, set up branching and logic, and define responses and answers using the visual interface. This graphical flow interface makes bot creation and management straightforward and user-friendly.
 
-For further information, please visit https://docs.communeify.com/en for more detailed content and guides.
+For further information, please visit https://docs.communeify.com/en/products/dmflow/index.html for more detailed content and guides.

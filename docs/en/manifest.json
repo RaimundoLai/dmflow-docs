@@ -4,28 +4,6 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
-      "type": "Resource",
-      "source_relative_path": "images/favicon.ico",
-      "output": {
-        "resource": {
-          "relative_path": "images/favicon.ico"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/logo.svg",
-      "output": {
-        "resource": {
-          "relative_path": "images/logo.svg"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
       "log_codes": [
         "InvalidFileLink"
       ],
@@ -34,10 +12,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "XN4mwqZAE/hca4z/+M8ii0cqZX5HfRdZtplQqL4KCdY="
+          "hash": "twIoePKcQJpQ5iT4XQw2D7HPMKkVxq74g323DmDLSho="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -49,10 +27,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/index.html",
-          "hash": "LgG1uAzMpGBPgHhjB1YgMmBVdaGGK4VKZRxoLLrpo/o="
+          "hash": "5LHJQSW7MsbSVjCcxYhBYYb7YoUxgvVRQyov54U7KnQ="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -61,10 +39,115 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/toc.html",
-          "hash": "QilexvvefY2L1cs/AL0Mz2ZPz0dGAtaaudrIiAeM9g4="
+          "hash": "KByn9ihVUGzQTstnByAwwEi5isLnH4pEFzlO27OODag="
         }
       },
       "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "products/dmflow/tutorials/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "products/dmflow/tutorials/index.html",
+          "hash": "UYcAh2rdTUympHFcUC2rOSp3jdDfJBu5FW7/Rjblb38="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "products/dmflow/tutorials/intro/deploy-test.md",
+      "output": {
+        ".html": {
+          "relative_path": "products/dmflow/tutorials/intro/deploy-test.html",
+          "hash": "7dmezy+5gsk/EBc49tyPbKOMtKb+klW0DYFeJc88Dow="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "products/dmflow/tutorials/intro/dict-create.md",
+      "output": {
+        ".html": {
+          "relative_path": "products/dmflow/tutorials/intro/dict-create.html",
+          "hash": "4zFLi16FC8vhBktAxU1hZuL08DJHGNnUEFgIckGSxTY="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "products/dmflow/tutorials/intro/distinct-content.md",
+      "output": {
+        ".html": {
+          "relative_path": "products/dmflow/tutorials/intro/distinct-content.html",
+          "hash": "x16Hb8oVNs3aH7rr6OXlHz+z46GoXIkvkr95QncgnNc="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "products/dmflow/tutorials/intro/domain-create.md",
+      "output": {
+        ".html": {
+          "relative_path": "products/dmflow/tutorials/intro/domain-create.html",
+          "hash": "OpEs8Ikxe47tCBwI870972sOJD9u8UTycJyyYMimfb4="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "products/dmflow/tutorials/intro/entity-logical.md",
+      "output": {
+        ".html": {
+          "relative_path": "products/dmflow/tutorials/intro/entity-logical.html",
+          "hash": "Zk7SJ7Ids8jkavbtNuyZwZzmlYBIOZ8J8cCeNNA+6uw="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "products/dmflow/tutorials/intro/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "products/dmflow/tutorials/intro/index.html",
+          "hash": "TnVqjnNpY+eJ5jyyxsPf5h9wpgkFKjRyWeP8vXCVSms="
+        }
+      },
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -73,7 +156,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "OVxVLsFUxakUzX6OklIjprWAy2e17bYHLjyFvygNsak="
+          "hash": "N4r2I9lHBDVVeVRDMfBOcgz1v6Bm+UGaPuswWC0ZqcU="
         }
       },
       "is_incremental": false,
@@ -92,15 +175,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 2,
-          "skipped_file_count": 2
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
+          "total_file_count": 9,
+          "skipped_file_count": 8
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
