@@ -9,3 +9,4 @@
 | API                  |[連結](../../tutorials/docs/bot-restapi.html)
 | Facebook粉絲頁設定   |[連結](../../tutorials/docs/fbmessenger.html)
 | LINE開發設定         |[連結](../../tutorials/docs/line.html)
+| Telegram開發設定     |[連結](../../tutorials/docs/telegram.html)

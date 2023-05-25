@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "d3uQsdu5JJfO4oVNQO7Mw547U31kpN0RqhNVibfXKk0="
+          "hash": "BPNOn0O4nMmX+jzVMY3DIv/c1paYlNHvTB6MpOofMqA="
         }
       },
       "is_incremental": true,
@@ -72,10 +72,318 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/en/intro-001.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-001.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-002.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-002.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-003.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-003.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-004.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-004.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-005.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-005.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-006.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-006.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-007.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-007.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-008.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-008.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-010.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-010.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-011.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-011.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-012.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-012.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-013.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-013.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-014.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-014.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-015.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-015.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-016.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-016.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-017.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-017.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-018.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-018.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-019.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-019.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-020.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-020.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-021.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-021.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-022.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-022.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-023.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-023.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-024.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-024.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/en/intro-025.png",
       "output": {
         "resource": {
           "relative_path": "images/en/intro-025.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intro-026.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intro-026.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/telegram-001.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/telegram-001.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/telegram-002.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/telegram-002.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/telegram-group-disabled-slash.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/telegram-group-disabled-slash.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/telegram-setting-page.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/telegram-setting-page.png"
         }
       },
       "is_incremental": false,
@@ -1693,6 +2001,50 @@
       "output": {
         "resource": {
           "relative_path": "images/tw/messenger-framework.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/telegram-001.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/telegram-001.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/telegram-002.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/telegram-002.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/telegram-group-disabled-slash.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/telegram-group-disabled-slash.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/telegram-setting-page.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/telegram-setting-page.png"
         }
       },
       "is_incremental": false,

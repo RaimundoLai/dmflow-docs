@@ -15,5 +15,5 @@
 
 ## 聯絡資訊
 
-聯繫信箱：<services@communeify.com>
+聯繫信箱：<service@communeify.com>
  

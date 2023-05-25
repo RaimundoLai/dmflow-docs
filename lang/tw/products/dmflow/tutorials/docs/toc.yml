@@ -43,3 +43,5 @@
   href: fbmessenger.md
 - name: 申請LINE API
   href: line.md
+- name: 申請Telegram API
+  href: telegram.md

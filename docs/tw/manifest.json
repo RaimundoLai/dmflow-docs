@@ -15,7 +15,7 @@
           "hash": "8jzHGBexroMzuoNUjMhen7P3cZhNJ+GxkGGKDJDr0ck="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -48,7 +48,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/toc.html",
-          "hash": "jkJ/kt5Zw63g/oF70gNXI7KV3unKvdXefYSFYxwIVkQ="
+          "hash": "YetID6E3q5RQisjs5IshMf2F/PgFKFoOFHbRWKUTEb0="
         }
       },
       "is_incremental": false,
@@ -270,7 +270,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/index.html",
-          "hash": "PmTW8nL4vsKWXE5IfweVKWAksltIYVAG69a1NARnHtE="
+          "hash": "d7ay703ptJay/lAsYAUiAcJwQiJyhWj4CTcjmAWxVLY="
         }
       },
       "is_incremental": true,
@@ -341,11 +341,26 @@
         "InvalidFileLink"
       ],
       "type": "Conceptual",
+      "source_relative_path": "products/dmflow/tutorials/docs/telegram.md",
+      "output": {
+        ".html": {
+          "relative_path": "products/dmflow/tutorials/docs/telegram.html",
+          "hash": "PmxXbTL2pq7/0PCyNCQWgZ3W2We5/o8swr4K9M3Md4I="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/index.md",
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/index.html",
-          "hash": "knMpCJF8qXjOvbmqUd1v/4VVoJSoMRSfzFcOpiIwF38="
+          "hash": "YdE7trArJ1STx8StbXEcIorUKR3jdzrH/QdAhw+Acx8="
         }
       },
       "is_incremental": true,
@@ -360,7 +375,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/deploy-test.html",
-          "hash": "oCdo/ejtAX0uFkCPWEfifU6m1MdVbGIbUcUTpM36Qbk="
+          "hash": "Tvx9TuiMaJiBgFCfJ3HfWR0w8++x7WbrWtMFV7D3QUc="
         }
       },
       "is_incremental": true,
@@ -478,8 +493,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 30,
-          "skipped_file_count": 29
+          "total_file_count": 31,
+          "skipped_file_count": 31
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
