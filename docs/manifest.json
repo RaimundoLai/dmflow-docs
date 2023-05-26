@@ -1,18 +1,34 @@
 {
+  "sitemap": {
+    "baseUrl": "https://docs.communeify.com/",
+    "changefreq": "weekly",
+    "priority": 1.0
+  },
   "homepages": [],
   "source_base_path": "E:/workspace/doc_obotera/docfx_project",
   "xrefmap": "xrefmap.yml",
   "files": [
+    {
+      "type": "Resource",
+      "source_relative_path": "CNAME",
+      "output": {
+        "resource": {
+          "relative_path": "CNAME"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
     {
       "type": "Conceptual",
       "source_relative_path": "README.md",
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "BPNOn0O4nMmX+jzVMY3DIv/c1paYlNHvTB6MpOofMqA="
+          "hash": "hNZljeE1Nt7uGXj3yn+rH5yawqo4AVdjqh7mRLE87ng="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -2056,18 +2072,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "fWZ/UhpINHodpdr14ngyjaIGzYfGCJ5fyfDC+sUyHys="
-        }
-      },
-      "is_incremental": true,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "sitemap.xml",
-      "output": {
-        "resource": {
-          "relative_path": "sitemap.xml"
+          "hash": "OOl8PPHBlx7xkU5nIlnwqUyrQxZpWa9qUJ0YANI2NQ4="
         }
       },
       "is_incremental": false,
@@ -2119,8 +2124,8 @@
     },
     {
       "status": {
-        "can_incremental": true,
-        "details": "Can support incremental post processing.",
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0

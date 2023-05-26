@@ -1,4 +1,5 @@
 {
+     "_appTitle": "Communeify",
 	 "_appLogoPath": "images/logo.svg",
      "_appFaviconPath": "images/favicon.ico",
 	 "_appFooter": "<span>Copyright © <script>document.write(new Date().getFullYear());</script> Communeify</span>"

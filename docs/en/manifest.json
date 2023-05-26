@@ -1,4 +1,9 @@
 {
+  "sitemap": {
+    "baseUrl": "https://docs.communeify.com/en/",
+    "changefreq": "weekly",
+    "priority": 1.0
+  },
   "homepages": [],
   "source_base_path": "E:/workspace/doc_obotera/docfx_project/lang/en",
   "xrefmap": "xrefmap.yml",
@@ -12,10 +17,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "twIoePKcQJpQ5iT4XQw2D7HPMKkVxq74g323DmDLSho="
+          "hash": "YORVznhFZKS1pJCGQj6c0xqrOZB7ffxmbDrq78t5qR0="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -24,10 +29,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/index.html",
-          "hash": "5LHJQSW7MsbSVjCcxYhBYYb7YoUxgvVRQyov54U7KnQ="
+          "hash": "sKnc6HCYNaA53eOCUU5OmpoKYr2sG0Ep/jmK2O311Nk="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -51,10 +56,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/index.html",
-          "hash": "pN8K+2tiX5dCRoGxddaLqXDglHor+CBSwpV0NMRxm0U="
+          "hash": "1iIdLU0yfdmkxAzA6gko82h3E1Qjf0SUDctykSus0mE="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -66,10 +71,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/telegram.html",
-          "hash": "1dzbtXGmkeZtB5NlXJtNq5LYA8+nXBEG1ZOhmVoNr6Q="
+          "hash": "Pd+OANzda3EWIJbmqZAVqXzTYLCP4BpduIs8sNeX2VQ="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -93,10 +98,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/index.html",
-          "hash": "UYcAh2rdTUympHFcUC2rOSp3jdDfJBu5FW7/Rjblb38="
+          "hash": "z3rEivI545CTAMhnaBnu4LVgYp4W2r8A20aZYLct3iA="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -108,10 +113,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/deploy-test.html",
-          "hash": "IgbbMrNfiwr69V94gUUhADAys+bl/bMHEaJKhM5aRF4="
+          "hash": "ta0R0t9OMUhJOsNZOvoGA7nh4ywRO6HmvuRGBFbFWoE="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -123,10 +128,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/dict-create.html",
-          "hash": "aVV56QEZxFRp4ldg+LGNnnWYEk9va6E3vGHYdHhQ6fc="
+          "hash": "Ki/0gbnA6cC8embttEMGnKINY10ucdocYt+W4sYNb7g="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -138,7 +143,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/distinct-content.html",
-          "hash": "aUiKHhviX2bGCMXne+nUzT5fOEdp6PfiX74HhKXvqaU="
+          "hash": "IGO3CTqWPp79vaqoa/K7EGpvGXpF1WTSWn+shoHX2us="
         }
       },
       "is_incremental": false,
@@ -153,10 +158,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/domain-create.html",
-          "hash": "wjXoXZAL0M0aU/kQEKWkFzd7XdZzou0ZEHyWQAUaVPI="
+          "hash": "IAyYgFMxQXkE2EL6FZIS9m6aEqxCVJoiO522wJTnW54="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -168,10 +173,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/entity-logical.html",
-          "hash": "o9+numeBUAeWiXHnw45JMclROd66BG1v9FtAxJOIzuE="
+          "hash": "9V60AkJ7VWd1F6xs8kXpyShip+oNxB084bbIjS2SDMI="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -183,10 +188,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/index.html",
-          "hash": "TnVqjnNpY+eJ5jyyxsPf5h9wpgkFKjRyWeP8vXCVSms="
+          "hash": "g5syN3d1skFxkYoIzD3/4vQGXhH4PeRxP8kGh8idEyA="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -215,7 +220,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 11,
-          "skipped_file_count": 10
+          "skipped_file_count": 11
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
@@ -228,8 +233,8 @@
     },
     {
       "status": {
-        "can_incremental": true,
-        "details": "Can support incremental post processing.",
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0

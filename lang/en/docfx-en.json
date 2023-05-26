@@ -31,7 +31,9 @@
       "resource":[
          {
             "files":[
-               "images/**"
+               "images/en/**",
+			   "images/favicon.ico",
+			   "images/logo.svg"
             ]
          }
       ],
@@ -55,7 +57,7 @@
       ],
       "template":[
          "default",
-         "templates/material"
+         "../../templates/material"
       ],
       "postProcessors":[
          
@@ -64,7 +66,12 @@
       "noLangKeyword":false,
       "keepFileLink":false,
       "cleanupCacheHistory":false,
-      "disableGitFeatures":false
+      "disableGitFeatures":false,
+	  "sitemap": {
+        "baseUrl": "https://docs.communeify.com/en",
+		"changefreq": "weekly",
+		"priority": 1.0
+	  }
    },
    "pdf":{
       "content":[

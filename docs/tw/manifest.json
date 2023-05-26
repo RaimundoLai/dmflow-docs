@@ -1,4 +1,9 @@
 {
+  "sitemap": {
+    "baseUrl": "https://docs.communeify.com/tw/",
+    "changefreq": "weekly",
+    "priority": 1.0
+  },
   "homepages": [],
   "source_base_path": "E:/workspace/doc_obotera/docfx_project/lang/tw",
   "xrefmap": "xrefmap.yml",
@@ -12,10 +17,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "8jzHGBexroMzuoNUjMhen7P3cZhNJ+GxkGGKDJDr0ck="
+          "hash": "pjICShuEyr5056+xwy2CLX5AISRaxqtxCXqtiO/TkjI="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -24,10 +29,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/index.html",
-          "hash": "xt40dMT1KXQiGVW8Ko6qBQ1vbmohqGq/g+UR1Ri/LNg="
+          "hash": "BgsQXkSOFzc0I5cb8h3j766SkmbU/UiDaXM6TQwnoUU="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -36,10 +41,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/info/index.html",
-          "hash": "L4ZyCHU/+1OKNkOJp5EWGGvhp/VFuX0CKSfZlBUsR6k="
+          "hash": "tN96hoF0WgE2M5FHB9bmhTF354VZzXQGz8YorsoJ7EE="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -63,10 +68,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-broadcast.html",
-          "hash": "SfPkWDCZEbHuqxm4yHv3Tq8U2akQptEszX6GScfHNEw="
+          "hash": "O6/kq+nbyWChG5ZGwcQlx6MvbJ5v6byHkc03V0udkBg="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -78,10 +83,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-example.html",
-          "hash": "R42xBmppzUMTLWva98r+MFcTceQw9cdFm0Ll5YrVr1U="
+          "hash": "pFGBKNrc/Ty220FA7NopVzWAuh99jNqiqt1b6jiY5G4="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -93,10 +98,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-flow.html",
-          "hash": "XdjXbPc3EWbj6thOEO/Cpb8tX201ezbHU2suUziE36I="
+          "hash": "LZ548Qml0OLhe9blFewl/Ko8fOOB/HhfMDV+o9oV3D4="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -108,10 +113,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-global.html",
-          "hash": "UgTLjNkQqXpximgXOHDgvKQ3iO3Z5eptFqDTFZPl3+k="
+          "hash": "WCHziuODpemfJ9pqpuOFV2FCE+uTzsbgFRv6aLM4fK0="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -123,10 +128,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-intro.html",
-          "hash": "05DvHF8n4pYLyo8l4wTsHGVdWi3R8w8u8M7Kg9n5rbY="
+          "hash": "/zRfcfwSNv8gksUL8b3f22gMwBdDUsgKEw3kt/tdU3I="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -138,10 +143,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-log.html",
-          "hash": "9IdiXXp6K/2012aczFEifRjYeJa4DTYMnpc2B8N+w4I="
+          "hash": "ZpkaDJ7YZRGnGHfYhE6ovYHakWx7ZfjtpixhPxbKZC8="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -153,10 +158,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-published.html",
-          "hash": "aSFMEGgf57rrwAlzLeKreRwMZUH2AKmoYx85lWdq7BU="
+          "hash": "4IYmQ06qgbMEbXVmmbpwiAc4xtgaq/c9p/GH6XL2zXk="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -168,10 +173,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-resource.html",
-          "hash": "4Nhf9tRc+QCnsRvab28EujpPZbF6O2Beh9/L/ZMJMYg="
+          "hash": "VqeJ/nu60mIUCYjvR2Mby/AFHk7lxYEy2Vrutdoq/lo="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -180,10 +185,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-restapi.html",
-          "hash": "JFtJq8L2q4zf7AKNmUK03vBAlquf2rhZe3le0y/Vm9s="
+          "hash": "jLjwIB63a8YOaThSsjV7GAQIeQKSRh7kTl1QXdEYF40="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -195,10 +200,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-setting.html",
-          "hash": "5/wbvjyXdZ6/+blhxsNTLjRGXCIYf9dGFpVcwCmXxI8="
+          "hash": "N1KpFYx+fbNF8yaKbC+eTaIr9+x9SGZhE4MjNatmSNM="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -210,10 +215,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-template.html",
-          "hash": "kJxXeag7M/kG3SEPq060qrNHTgWvBckHwzk0nDUJjIo="
+          "hash": "4CdOFNvwkTHVoX5xUAOfjMjmrYRiBKk8zIGhPSZVr8Q="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -225,10 +230,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/custom-dicts.html",
-          "hash": "H+70dXEMtszfD9eYK5JlnIWDvfj25mJrwi4sgULddbY="
+          "hash": "rrD9ezUjAp+bgmjvaHcDVyv1B/GV+yJ83tIaFy5J/AI="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -240,10 +245,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/domain-intro.html",
-          "hash": "h+LElgVzpgFwkOUMKcAb4eNvJZjugbbyIxP4DqC8zQc="
+          "hash": "LNi9TXhqRy7xaO4xoRoST82e1TXE4AUtE1U1Oo9lAGw="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -255,10 +260,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/fbmessenger.html",
-          "hash": "0ENYSSIn8vUi/ksTDy0bv+BzEI7JRg9zQ/oyfCKCxv0="
+          "hash": "TOZPXcNcNmMogUPaaTMWeG0dWGGk5+JBtrRi9F9uApM="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -270,10 +275,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/index.html",
-          "hash": "d7ay703ptJay/lAsYAUiAcJwQiJyhWj4CTcjmAWxVLY="
+          "hash": "wbAdTUf1IqVMLQjvGQbHXVKtAbZdU0dqKuXZA2GaJjk="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -285,10 +290,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/intent-intro.html",
-          "hash": "nzIERutlWiCAwrV+xf0CYf0cSW00sdS9u2legdCA5tg="
+          "hash": "YnKj+9F3M2CetLp4i/c43ufHuRZGnJVZTtv5A7TFrYE="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -300,10 +305,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/line.html",
-          "hash": "7xQPUBOdHjuOiy1k/bDyrOF5Pc81xzvnzsybE/zt42I="
+          "hash": "GKnFXSofaauqGOVXC3pijSyXI65Ehh7mfKLaChYZGpQ="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -315,10 +320,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/qa-intro.html",
-          "hash": "vfgRPrdvxH1GZS7o4zPB6B0AsquchBVqES74c7D/kEQ="
+          "hash": "Cb2FyfwrNHxO1vY7VTx6Jq2j4QShj0PrSFYPSVyuCnQ="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -330,10 +335,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/sys-dicts.html",
-          "hash": "jZvbZ8+vZ12dz+ZSORLfF4CFjkGNjFESmRnwqLHOl/8="
+          "hash": "vvNT52Rh0JPAm9xu7obNqM7B1x02PdDRyQqhdx1G91s="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -345,10 +350,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/telegram.html",
-          "hash": "PmxXbTL2pq7/0PCyNCQWgZ3W2We5/o8swr4K9M3Md4I="
+          "hash": "zL6z4nZpyrTRVrBwjhfT31g5zxrDtlIhFKJ4zDwj7Zo="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -360,10 +365,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/index.html",
-          "hash": "YdE7trArJ1STx8StbXEcIorUKR3jdzrH/QdAhw+Acx8="
+          "hash": "VG4GLNaZIsBWvXGL8CnAv1lkxNabYSVeXf/UJ/uR58o="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -375,10 +380,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/deploy-test.html",
-          "hash": "Tvx9TuiMaJiBgFCfJ3HfWR0w8++x7WbrWtMFV7D3QUc="
+          "hash": "plO05Ch9vM0ysbVgFN2dKa2hOOSc0u6c56Qithn64Z8="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -390,10 +395,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/dict-create.html",
-          "hash": "4zFLi16FC8vhBktAxU1hZuL08DJHGNnUEFgIckGSxTY="
+          "hash": "D3r84STI3qBYSWP/LtnejRfSVVsvsKqvm6x2N+/yz44="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -405,10 +410,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/distinct-content.html",
-          "hash": "x16Hb8oVNs3aH7rr6OXlHz+z46GoXIkvkr95QncgnNc="
+          "hash": "J5WEA7qEs8JoebY/d0j4kzImUxyoaxcGZq4Fib7PUkc="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -420,10 +425,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/domain-create.html",
-          "hash": "OpEs8Ikxe47tCBwI870972sOJD9u8UTycJyyYMimfb4="
+          "hash": "Sv/lXZpCoIjVPnwCUfITGu3khLHze2Z7RIEc4GQjURk="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -435,10 +440,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/entity-logical.html",
-          "hash": "Zk7SJ7Ids8jkavbtNuyZwZzmlYBIOZ8J8cCeNNA+6uw="
+          "hash": "VerHPNElEvh4+mx6ByULA81geQjCSsNpJ1lxUVBcOcM="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -450,10 +455,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/index.html",
-          "hash": "xAGrkmFwU2NTi2t3PSry+988FPa7AWEQyywCJ4Loen0="
+          "hash": "d0+PaCyyFXdnhmWVDAyqUGQgsz9L1Fd55gBekSoGmcw="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -462,10 +467,10 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/version/index.html",
-          "hash": "DOIn/221ylRVyibSQS2qXq0eQmnGW5XVzEA/57b8RMs="
+          "hash": "Slkr+YAysMUKHsM+ZJwhjJbPcgtiaiRKGTGabQ/f6Vs="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -507,8 +512,8 @@
     },
     {
       "status": {
-        "can_incremental": true,
-        "details": "Can support incremental post processing.",
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0
