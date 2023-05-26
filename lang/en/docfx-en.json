@@ -31,9 +31,7 @@
       "resource":[
          {
             "files":[
-               "images/en/**",
-			   "images/favicon.ico",
-			   "images/logo.svg"
+               "images/**"
             ]
          }
       ],

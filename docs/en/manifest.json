@@ -9,6 +9,28 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
+      "type": "Resource",
+      "source_relative_path": "images/favicon.ico",
+      "output": {
+        "resource": {
+          "relative_path": "images/favicon.ico"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/logo.svg",
+      "output": {
+        "resource": {
+          "relative_path": "images/logo.svg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "log_codes": [
         "InvalidFileLink"
       ],
@@ -17,7 +39,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "YORVznhFZKS1pJCGQj6c0xqrOZB7ffxmbDrq78t5qR0="
+          "hash": "RxfqmHq72bRBrukI+dScdwogW0aZGVbaVs1OGOkV7bg="
         }
       },
       "is_incremental": false,
@@ -41,7 +63,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/toc.html",
-          "hash": "KByn9ihVUGzQTstnByAwwEi5isLnH4pEFzlO27OODag="
+          "hash": "rH8AcGgDRNlbTJIhNOgYVmOoI4stSgs6ZS5lEKh4gDE="
         }
       },
       "is_incremental": false,
@@ -221,6 +243,13 @@
           "incrementalPhase": "build",
           "total_file_count": 11,
           "skipped_file_count": 11
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
           "can_incremental": false,
