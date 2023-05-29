@@ -158,11 +158,12 @@
 <h3 id="non-text-message-reception">Non-Text Message Reception</h3>
 <p>When receiving non-text messages in Line and Messenger, there are reserved words:</p>
 <ul>
-<li>conversation._queryType: Used to determine the type of message, such as text, image, audio, video, event, or file.</li>
-<li>conversation.@line and conversation.@fbmessenger: Enabled when receiving non-text and non-event messages from Line and Messenger platforms.</li>
+<li>conversation._message.type: Used to determine the type of message, such as text, image, audio, video, event, or file.</li>
+<li>conversaion._message: Enabled when receiving non-text and non-event messages from Line and Messenger platforms.</li>
 </ul>
 <pre><code>{
-  &quot;@line&quot;: {
+  &quot;_message&quot;: {
+    &quot;type&quot;: &quot;attachment_type&quot;,
     &quot;attachments&quot;: [
       {
         &quot;id&quot;: &quot;att_id&quot;,
@@ -175,7 +176,8 @@
 </code></pre>
 <p>If the message type is file and the platform provides the fileName and fileSize, they will be included:</p>
 <pre><code>{
-  &quot;@line&quot;: {
+  &quot;_message&quot;: {
+    &quot;type&quot;: &quot;attachment_type&quot;,
     &quot;attachments&quot;: [
       {
         &quot;id&quot;: &quot;att_id&quot;,
@@ -183,19 +185,6 @@
         &quot;type&quot;: &quot;att_type&quot;,
         &quot;fileName&quot;: &quot;fileName&quot;,
         &quot;fileSize&quot;: 10240
-      }
-    ]
-  }
-}
-</code></pre>
-<p>The same applies to conversation.@fbmessenger:</p>
-<pre><code>{
-  &quot;@fbmessenger&quot;: {
-    &quot;attachments&quot;: [
-      {
-        &quot;id&quot;: &quot;att_id&quot;,
-        &quot;url&quot;: &quot;att_url&quot;,
-        &quot;type&quot;: &quot;att_type&quot;
       }
     ]
   }
@@ -233,7 +222,7 @@
 </table>
 <p>How to use:</p>
 <ul>
-<li>When the node is a &quot;Condition Node,&quot; you can first check the type of conversation._queryType.</li>
+<li>When the node is a &quot;Condition Node,&quot; you can first check the type of conversation._message.type.</li>
 <li>Then, using a &quot;Resource Node,&quot; pass the attachments to the backend for processing.</li>
 </ul>
 <h4 id="return-value">Return Value</h4>

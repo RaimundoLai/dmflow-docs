@@ -158,11 +158,12 @@
 <h3 id="消息接收非文字類">消息接收非文字類</h3>
 <p>如果用於line和messenger接收非文字訊息時，有保留字</p>
 <ul>
-<li>conversation._queryType 用於判斷text, image, audio, video, event, file</li>
-<li>conversaion.@line 和 conversaion.@fbmessenger 接收到非text和event時啟用。</li>
+<li>conversation._message.type 用於判斷text, image, audio, video, event, file</li>
+<li>conversaion._message 接收到非text和event時啟用。</li>
 </ul>
 <pre><code>{
-  &quot;@line&quot;: {
+  &quot;_message&quot;: {
+    &quot;type&quot;: &quot;attachment_type&quot;,
     &quot;attachments&quot;: [
       {
         &quot;id&quot;: &quot;att_id&quot;,
@@ -175,7 +176,8 @@
 </code></pre>
 <p>若為file且平台有提供fileName和fileSize時，一樣會提供</p>
 <pre><code>{
-  &quot;@line&quot;: {
+  &quot;_message&quot;: {
+    &quot;type&quot;: &quot;attachment_type&quot;,
     &quot;attachments&quot;: [
       {
         &quot;id&quot;: &quot;att_id&quot;,
@@ -183,19 +185,6 @@
         &quot;type&quot;: &quot;att_type&quot;,
         &quot;fileName&quot;: &quot;fileName&quot;,
         &quot;fileSize&quot;: 10240
-      }
-    ]
-  }
-}
-</code></pre>
-<p>相同於@fbmessenger</p>
-<pre><code>{
-  &quot;@fbmessenger&quot;: {
-    &quot;attachments&quot;: [
-      {
-        &quot;id&quot;: &quot;att_id&quot;,
-        &quot;url&quot;: &quot;att_url&quot;,
-        &quot;type&quot;: &quot;att_type&quot;
       }
     ]
   }
@@ -233,7 +222,7 @@
 </table>
 <p>如何使用</p>
 <ul>
-<li>當節點為&quot;條件節點&quot;時，可以先判斷conversation._queryType 型態為何。</li>
+<li>當節點為&quot;條件節點&quot;時，可以先判斷conversation._message.type 型態為何。</li>
 <li>再透過&quot;資源節點&quot;，把attachments傳出去後端做處理。</li>
 </ul>
 <h4 id="回傳值">回傳值</h4>
@@ -328,6 +317,8 @@
 <li><a href="../../tutorials/docs/bot-example.html">機器人範例</a></li>
 </ul>
 <h1 id="最後更新時間">最後更新時間</h1>
+<p>2023/05/29</p>
+<p>更新conversation._message內容</p>
 <p>2023/05/22</p>
 <ul>
 <li>取消前綴為slots的全部前綴</li>

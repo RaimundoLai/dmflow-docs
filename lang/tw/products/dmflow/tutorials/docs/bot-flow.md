@@ -95,12 +95,13 @@
 
 如果用於line和messenger接收非文字訊息時，有保留字
 
-- conversation._queryType 用於判斷text, image, audio, video, event, file
-- conversaion.@line 和 conversaion.@fbmessenger 接收到非text和event時啟用。
+- conversation._message.type 用於判斷text, image, audio, video, event, file
+- conversaion._message 接收到非text和event時啟用。
 
 ```
 {
-  "@line": {
+  "_message": {
+    "type": "attachment_type",
     "attachments": [
       {
         "id": "att_id",
@@ -115,7 +116,8 @@
 
 ```
 {
-  "@line": {
+  "_message": {
+    "type": "attachment_type",
     "attachments": [
       {
         "id": "att_id",
@@ -129,21 +131,6 @@
 }
 ```
 
-相同於@fbmessenger
-
-```
-{
-  "@fbmessenger": {
-    "attachments": [
-      {
-        "id": "att_id",
-        "url": "att_url",
-        "type": "att_type"
-      }
-    ]
-  }
-}
-```
 |PATH       | 說明
 |---------- | ---------
 | id        | 對應平台是否提供特定id，messenger可以事前上傳檔案
@@ -154,7 +141,7 @@
 
 如何使用
 
-- 當節點為"條件節點"時，可以先判斷conversation._queryType 型態為何。
+- 當節點為"條件節點"時，可以先判斷conversation._message.type 型態為何。
 - 再透過"資源節點"，把attachments傳出去後端做處理。
 
 
@@ -252,6 +239,11 @@
 - [機器人範例](../../tutorials/docs/bot-example.html)
 
 # 最後更新時間
+
+2023/05/29
+
+更新conversation._message內容
+
 2023/05/22
 
 - 取消前綴為slots的全部前綴

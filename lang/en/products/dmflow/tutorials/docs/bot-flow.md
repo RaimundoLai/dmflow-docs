@@ -95,12 +95,13 @@ The prefixes are categorized as Bot Parameters, Constants, Conversation (single-
 
 When receiving non-text messages in Line and Messenger, there are reserved words:
 
-- conversation._queryType: Used to determine the type of message, such as text, image, audio, video, event, or file.
-- conversation.@line and conversation.@fbmessenger: Enabled when receiving non-text and non-event messages from Line and Messenger platforms.
+- conversation._message.type: Used to determine the type of message, such as text, image, audio, video, event, or file.
+- conversaion._message: Enabled when receiving non-text and non-event messages from Line and Messenger platforms.
 
 ```
 {
-  "@line": {
+  "_message": {
+    "type": "attachment_type",
     "attachments": [
       {
         "id": "att_id",
@@ -115,7 +116,8 @@ If the message type is file and the platform provides the fileName and fileSize,
 
 ```
 {
-  "@line": {
+  "_message": {
+    "type": "attachment_type",
     "attachments": [
       {
         "id": "att_id",
@@ -129,21 +131,6 @@ If the message type is file and the platform provides the fileName and fileSize,
 }
 ```
 
-The same applies to conversation.@fbmessenger:
-
-```
-{
-  "@fbmessenger": {
-    "attachments": [
-      {
-        "id": "att_id",
-        "url": "att_url",
-        "type": "att_type"
-      }
-    ]
-  }
-}
-```
 |PATH       | Description
 |---------- | ---------
 | id        | Indicates whether the platform provides a specific ID. For Messenger, files can be uploaded in advance.
@@ -154,7 +141,7 @@ The same applies to conversation.@fbmessenger:
 
 How to use:
 
-- When the node is a "Condition Node," you can first check the type of conversation._queryType.
+- When the node is a "Condition Node," you can first check the type of conversation._message.type.
 - Then, using a "Resource Node," pass the attachments to the backend for processing.
 
 
