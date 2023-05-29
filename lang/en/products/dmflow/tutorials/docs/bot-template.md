@@ -48,8 +48,8 @@ The chatbot can send images to users, allowing you to send image files for users
 ![DmFlow Upload Image](../../../../../../images/en/bot-template-upload-image.png "DmFlow Upload Image")
 
 - Image Format: DmFlow supports JPEG and PNG formats for images.
-- Image Size: The uploaded image size is limited to 1MB [according to system display-based].
-- Thumbnail Size: When displaying thumbnails, the image size is limited to 1MB [according to system display-based]. This is to ensure that thumbnails can be loaded and displayed quickly.
+- Image Size: The uploaded image size is limited to 1MB [according to DmFlow system display-based].
+- Thumbnail Size: When displaying thumbnails, the image size is limited to 1MB [according to DmFlow system display-based]. This is to ensure that thumbnails can be loaded and displayed quickly.
 
 Image URL: The URL of the image must use the HTTPS protocol to ensure security. The URL supports up to 10MB.
 
