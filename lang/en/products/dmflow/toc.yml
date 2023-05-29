@@ -1,5 +1,12 @@
 - name: Quick Start Tutorial
   href: tutorials/intro/toc.yml
   topicHref: tutorials/intro/index.md
+- name: Detailed Documentation
+  href: tutorials/docs/toc.yml
+  topicHref: tutorials/docs/index.md
+- name: Version
+  topicHref: version/index.md
+- name: Contact Information
+  topicHref: info/index.md
 - name: Home
   href: /

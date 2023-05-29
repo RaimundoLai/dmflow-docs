@@ -1,0 +1,197 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Intents | Communeify </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Intents | Communeify ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="google-site-verification" content="wackHW3mx9OzoWNdH73Ucfx-Tgn27NaVqlQ-dzKaBfw">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <meta property="docfx:appTitle" content="Communeify">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="intents">Intents</h1>
+
+<p>Intents are divided into six main sections: Trigger Condition, Slots, Utterances, Interrupt Intent, Precondition, and Completion.</p>
+<h2 id="intent-types">Intent Types</h2>
+<h3 id="none">None</h3>
+<ul>
+<li>General intent used for finding intents or populating entities.</li>
+</ul>
+<h3 id="restart">Restart</h3>
+<ul>
+<li>When triggered, restarts the execution of the current intent.</li>
+</ul>
+<h3 id="exit">Exit</h3>
+<ul>
+<li>When triggered, closes the execution of the entire intent.</li>
+</ul>
+<h3 id="yes">Yes</h3>
+<ul>
+<li>In the precondition node, when the action is set to &quot;Confirmation,&quot; affirming the intent is required to proceed to the next stage.</li>
+</ul>
+<h3 id="no">No</h3>
+<ul>
+<li>In the precondition node, when the action is set to &quot;Confirmation,&quot; denying the intent will cancel the execution of the current state.</li>
+</ul>
+<p>With these intent types, you can design different scenarios in your conversation flow, such as finding intents, restarting, exiting, yes, and no.
+<img src="../../../../../../images/en/intent-intro-flow.png" alt=""></p>
+<h2 id="trigger-condition">Trigger Condition</h2>
+<p>The trigger condition requires filling in the following fields: Trigger Type, Starting Point, Operation, and Object.</p>
+<ul>
+<li>Trigger Type: Currently only supports &quot;Slots&quot; and &quot;contexts&quot;.
+<ul>
+<li>contexts represents the result of a resource variable.</li>
+</ul>
+</li>
+<li>Start: Choose between Slots or Normalization.</li>
+<li>Operation:Varies depending on the slot, including Filled, Not Filled, Equal To, Not Equal To, Greater Than, Less Than, and other operations.</li>
+<li>Object:Constant value.</li>
+<li>Or: Within the same group is AND, while different groups are OR.</li>
+</ul>
+<p>By filling in these trigger conditions, you can define the conditions for triggering dialogue flow based on specific slot fillings or other conditions to trigger corresponding responses or actions.</p>
+<p><img src="../../../../../../images/en/intent-intro-trigger.png" alt=""></p>
+<h3 id="prefix">Prefix</h3>
+<ul>
+<li>constant:Fill in a string, time (in seconds), or number. Numbers will be treated as numerical values.</li>
+<li>context:Assign values based on context parameters, such as resource return values or injected non-business resource parameters.</li>
+<li>entities:Entities.</li>
+<li>rangeTime: Date range, can be compared using weekdays or specific dates.</li>
+<li>config:Global parameters located in the domain management, serving as fixed variables</li>
+</ul>
+<p>By filling in these fields, you can trigger specific dialogue flows based on conditions such as constants, context parameters, entities, date ranges, and more.</p>
+<h2 id="slots">Slots</h2>
+<p>Slots consist of Slot Name, Required, Inherited Slot,  and Inquiry.</p>
+<ul>
+<li>Slot Name: Add slot names from the &quot;Display all slots in the domain&quot; button.</li>
+<li>Referenced Dictionary: Set based on the standards of referenced dictionaries.</li>
+<li>Numeric Quantifier: When the slot question does not match the current slot, it needs to match the definition of the numeric quantifier to extract the slot.</li>
+<li>Required: Indicates whether the slot is required. If it is required, the slot will always be prompted. If not required, the slot will only be filled when there is corresponding information during questioning.</li>
+<li>Inherited Slot: When switching between different intents, if different intents have the same slot name, it will be overwritten.</li>
+<li>Inquiry: When a user asks a question and not all slots are filled, relevant slots will be queried. If the slot is not required, it will only be filled if there is corresponding information during questioning.</li>
+<li>Alias: If multiple slots reference the same entity, such as &quot;departure time&quot; and &quot;arrival time&quot; both referencing &quot;location,&quot; aliases need to be used to differentiate them.</li>
+</ul>
+<p>By filling in these slot-related items, you can create slots with characteristics such as slot name, referenced dictionary, numeric quantifier, requiredness, inherited slots, inquiry, and aliases.</p>
+<h2 id="utterances">Utterances</h2>
+<p>Used for training the bot by simulating questions asked by users.</p>
+<h2 id="interrupt-intent">Interrupt Intent</h2>
+<p>When the topic does not match the slot hit, it checks if there is an interrupt intent triggered. If so, it jumps to another intent.</p>
+<h2 id="precondition">Precondition</h2>
+<p>Precondition includes the following elements: Trigger Type, Starting Point, Operation, Condition Group, and Object, which are similar to trigger conditions.</p>
+<p>Each condition group has node actions.</p>
+<p>Node actions include Confirmation and Jump. Confirmation actions are similar to interrupt intents but require including affirmations and denials. Jump actions directly jump to the specified intent.</p>
+<h2 id="completion">Completion</h2>
+<p>Completion includes the following elements: Trigger Type, Starting Point, Operation, and Object, similar to trigger conditions.<br>
+Invoke Resource:<br></p>
+<ul>
+<li>Parameters: Fill in according to the prompts.</li>
+<li>Return Values: Used for &quot;Answer After Condition Is Met.&quot;</li>
+</ul>
+<p>Others:</p>
+<ul>
+<li>Failure Response Block: Provides a response when the HTTP status is not 200 or when an error occurs.</li>
+<li>Reply Activation: Enables the &quot;Answer After Condition Is Met&quot; block.</li>
+<li>Answer After Condition Is Met: The dialogue to be answered when all &quot;Trigger Conditions&quot; are met and there are no errors.</li>
+</ul>
+<h3 id="answer-after-condition-is-fulfilled">Answer After Condition Is Fulfilled</h3>
+<p>Entering &quot;$&quot; will provide a prompt. The syntax is the same as the previous template output.</p>
+<h1 id="continue-reading">Continue Reading</h1>
+<ul>
+<li><a href="../../tutorials/docs/bot-intro.html">Bot Introduction</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © <script>document.write(new Date().getFullYear());</script> Communeify</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

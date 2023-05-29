@@ -65,7 +65,7 @@ he trigger condition should meet the requirement of "Meeting subject is packed",
 
 ![](../../../../../../images/en/intro-019.png)
 
-Create two slot groups for the slots: start_time and end_time.
+Create two slot groups for the slots: started_time and ended_time.
 
 ![](../../../../../../images/en/intro-020.png)
 

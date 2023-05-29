@@ -1,0 +1,166 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Bot Resource Management | Communeify </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Bot Resource Management | Communeify ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="google-site-verification" content="wackHW3mx9OzoWNdH73Ucfx-Tgn27NaVqlQ-dzKaBfw">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <meta property="docfx:appTitle" content="Communeify">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="bot-resource-management">Bot Resource Management</h1>
+
+<ul>
+<li>Variable Management：In a conversation flow, you can use variables to manage and store parameters required for resources. Variables are used to pass resource parameters or represent return values.</li>
+<li>Resource Management：In a conversation flow, resource nodes are used to manage the use of resources and connect to external APIs to facilitate the interaction of business logic. Resource nodes can perform specific operations such as querying external APIs for data, modifying resource states, accessing external databases, etc. By using resource nodes, you can integrate with external systems within the conversation flow to provide richer and more personalized services. Resource management allows you to effectively utilize existing resources and external services to expand the functionality and capabilities of the conversation system.</li>
+</ul>
+<h2 id="variable-management">Variable Management</h2>
+<ul>
+<li>1.Name: The name of the variable, usually in English. The name should be descriptive to identify and use the variable within the conversation flow.</li>
+<li>2.Data Type: Specify the data type of the variable. Available options include:
+<ul>
+<li>String: Used to store text information.</li>
+<li>Number: Used to store numerical values.</li>
+<li>Datetime: Used to store dates and times.</li>
+<li>Boolean: Used to store true/false values.</li>
+<li>Object: Used to store complex structured data.</li>
+<li>Array: Used to store a collection of multiple values.</li>
+</ul>
+</li>
+<li>3.Description: Description and explanation of the variable. Provide detailed information to help developers understand the purpose and functionality of the variable.</li>
+<li>4.Alias (Optional): This is an optional attribute used to provide an alias for the variable, making it easier to understand and identify. For example, if the variable name is &quot;price,&quot; you can assign aliases such as &quot;how much&quot; to make it more intuitively understood within the conversation flow.</li>
+</ul>
+<h2 id="resource-management">Resource Management</h2>
+<ul>
+<li>1.Resource Name: The name of the resource, using English for naming.</li>
+<li>2.Description: Description and explanation of the resource. Provide detailed information to help developers understand the purpose and functionality of the resource.</li>
+<li>3.Request URL: The URL for the resource's business logic. Enter the complete URL and ensure that it includes the HTTPS protocol.</li>
+<li>4.Request Method: Specify the request method for the resource. Currently supports GET, POST, PATCH, PUT, and DELETE methods.</li>
+<li>5.Content-Type: Specify the content type of the request. Choose between URL encoding or JSON format (application/json).</li>
+<li>6.Request Header Fields: Fill in the header information for the request, specifying different header types based on different prefixes. Options include Constant, Conversation, Session, User Parameters, or Bot Config.</li>
+<li>7.Parameters: Fill in the corresponding parameters based on the request's Content-Type. These parameters will be injected into the request. <a href="#extension-2">Extension 2</a></li>
+<li>8.Return Value: Specify the return value for the request. You can specify the JSON path to extract and inject its value into a designated variable. <a href="#extension-3">Extension 3</a></li>
+</ul>
+<h3 id="extension-1">Extension 1</h3>
+<ul>
+<li>constant:Can include any text after the prefix without any specific requirements.</li>
+<li>session, user, config, etc.: You can refer to the Memory Template section in the<a href="../../tutorials/docs/bot-template.html#memory-template">template</a> to learn more.</li>
+</ul>
+<h3 id="extension-2">Extension 2</h3>
+<p>Suppose we have a parameter called city, which 'Taipei' represents the city name.</p>
+<ul>
+<li>URL: The parameter can be passed directly as &amp;city=urlEncode(Taipei).</li>
+<li>JSON: The parameter can be passed as {&quot;city&quot;:&quot;Taipei&quot;}.</li>
+</ul>
+<h3 id="extension-3">Extension 3</h3>
+<p>Suppose the response from the API is {&quot;city&quot;:&quot;Taipei&quot;}, and we have a parameter called city that 'Taipei' represents the city name.</p>
+<p>In this case, the JSON path would be city, and you can choose the variable city as the target for injecting the value. The injection will be done within the &quot;Resource Node&quot; in the &quot;Conversation Flow&quot;.</p>
+<h3 id="json-path-tutorial">JSON Path Tutorial</h3>
+<p>JSON Path Examples: Suppose the response is {&quot;city&quot;:&quot;Taipei&quot;, &quot;obj&quot;:{&quot;apple&quot;:&quot;Apple&quot;}, &quot;order&quot;:[&quot;Order&quot;]}</p>
+<ul>
+<li>To extract the Taipei, the JSON path would be city.</li>
+<li>To extract the Apple, the JSON path would be obj['apple'].</li>
+<li>To extract the Order, the JSON path would be order[0].</li>
+</ul>
+<h1 id="接著讀">接著讀</h1>
+<ul>
+<li><a href="../../tutorials/docs/bot-flow.html">Bot Dialogue Flow</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © <script>document.write(new Date().getFullYear());</script> Communeify</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

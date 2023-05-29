@@ -44,10 +44,32 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/en/bot-broadcast-intro.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-broadcast-intro.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/en/bot-flow-collect.png",
       "output": {
         "resource": {
           "relative_path": "images/en/bot-flow-collect.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-flow-image.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-flow-image.png"
         }
       },
       "is_incremental": false,
@@ -66,6 +88,50 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/en/bot-flow-resource.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-flow-resource.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-flow-scene.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-flow-scene.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-flow-start.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-flow-start.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-flow-test.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-flow-test.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/en/bot-flow-var.png",
       "output": {
         "resource": {
@@ -77,10 +143,582 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/en/bot-flow-version.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-flow-version.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-global-faq.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-global-faq.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-global-intent.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-global-intent.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-log-chart.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-log-chart.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-log-filter.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-log-filter.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-log-tag.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-log-tag.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-log-view.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-log-view.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-published-api-secret.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-published-api-secret.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-published-published.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-published-published.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-setting-platforms.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-setting-platforms.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-setting-view.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-setting-view.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-audio-s.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-audio-s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-buttons-f.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-buttons-f.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-buttons-r.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-buttons-r.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-buttons-s.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-buttons-s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-card-f.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-card-f.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-card-r.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-card-r.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-card-s.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-card-s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-confirm-f.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-confirm-f.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-confirm-r.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-confirm-r.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-confirm-s.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-confirm-s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-image-f.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-image-f.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-image-r.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-image-r.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-imagecard-f.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-imagecard-f.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-imagecard-r.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-imagecard-r.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-imagecard-s-t-text.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-imagecard-s-t-text.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-imagecard-s.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-imagecard-s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-imagemap-f.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-imagemap-f.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-imagemap-r.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-imagemap-r.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-imagemap-s.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-imagemap-s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-imagemap-t-link.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-imagemap-t-link.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-imagemap-t-text.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-imagemap-t-text.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-imagemap-video.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-imagemap-video.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-quick-r.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-quick-r.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-text-f.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-text-f.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-text-s.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-text-s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-line-video-s.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-line-video-s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-link.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-link.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-ms-buttons-f.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-ms-buttons-f.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-ms-buttons-r.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-ms-buttons-r.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-ms-buttons-s.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-ms-buttons-s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-ms-link-f.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-ms-link-f.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-ms-linkext-f.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-ms-linkext-f.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-ms-temp-f.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-ms-temp-f.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-ms-temp-r.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-ms-temp-r.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-ms-temp-s.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-ms-temp-s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-ms-text-r.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-ms-text-r.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-ms-text-s.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-ms-text-s.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-postback.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-postback.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/bot-template-upload-image.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/bot-template-upload-image.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/en/domain-resource-param.png",
       "output": {
         "resource": {
           "relative_path": "images/en/domain-resource-param.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intent-intro-flow.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intent-intro-flow.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/intent-intro-trigger.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/intent-intro-trigger.png"
         }
       },
       "is_incremental": false,
@@ -356,6 +994,149 @@
       "output": {
         "resource": {
           "relative_path": "images/en/intro-026.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/line-002.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/line-002.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/line-003.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/line-003.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/line-004.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/line-004.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/line-005.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/line-005.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/line-006.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/line-006.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/line-007.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/line-007.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/messenger-001.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/messenger-001.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/messenger-002.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/messenger-002.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/messenger-003.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/messenger-003.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/messenger-004.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/messenger-004.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/messenger-005.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/messenger-005.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/messenger-006.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/messenger-006.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/en/messenger-007.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/en/messenger-007.png"
         }
       },
       "is_incremental": false,
@@ -2072,7 +2853,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "QBS7mQ8HZrf6p00YYJiet2bwdvJwLp4reNIhUXEeQm0="
+          "hash": "zfwXJFgNIuXGzRq9mOv7UiJxhzNC4kCYZe0GSQUga74="
         }
       },
       "is_incremental": false,

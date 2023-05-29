@@ -92,7 +92,7 @@ REQUEST JSON
 | REQUEST_PATH  | 必填  | 型態   | 說明
 | ------------- | ----- |-----   | ----
 | branch        |   x   | ENUM   | prod、dev，若為null則為prod
-| platform      |   v   | STRING | 分為line、messenger、api
+| platform      |   v   | STRING | 分為line、messenger、api、telegram、telegram
 | userId        |   v   | STRING | 由呼叫方自行定義，可使用uuid
 | type          |   v   | ENUM   | event、text、attachment
 | scene         |   x   | STRING | 此為填寫場景名稱，預設為Main，當填寫後會根據情境節點中的"回到主情境"對應。詳情請參考"機器人流程"。
@@ -680,7 +680,7 @@ REQUEST JSON
 
 | REQUEST_PATH     | 必填 | 說明
 | -------------    | ---- |-------
-| platform         |   v  | 分為line、messenger、api
+| platform         |   v  | 分為line、messenger、api、telegram、telegram
 | appId            |   v  | line跟messenger分別對應appId, api則是'api:%s'.format(botId)，其中botId對應/_api/v1/bot/info拿到的data.id
 | index            |   v  | 索引，以0開始
 | size             |   v  | 索取的數量
@@ -824,7 +824,7 @@ RESPONSE JSON
 | data.users[0].hasImage                  | 是否有圖片，platform為line跟messenger有
 | data.users[0].id                        | 使用者DmFlow id
 | data.users[0].userId                    | 使用者的platform id
-| data.users[0].platform                  | 分為line、messenger、api
+| data.users[0].platform                  | 分為line、messenger、api、telegram
 | data.users[0].enabled                   | 是否啟用，如果line被blocked時將會關閉
 | data.users[0].username                  | 使用者名稱
 | data.users[0]tags                       | 使用者標籤
@@ -851,7 +851,7 @@ GET /_api/v1/bot/users/{userId}?platform=messenger&appId=221627843009100
 
 | 參數          | 說明
 | ------------- | -------
-| platform      | 分為line、messenger、api
+| platform      | 分為line、messenger、api、telegram
 | appId         | line跟messenger分別對應appId, api則是'api:%s'.format(botId)，其中botId對應/_api/v1/bot/info拿到的data.id
 
 #### 第二種
@@ -924,7 +924,7 @@ RESPONSE JSON
 | data.hasImage                  | 是否有圖片，platform為line跟messenger有
 | data.id                        | 使用者DmFlow id
 | data.userId                    | 使用者的platform id
-| data.platform                  | 分為line、messenger、api
+| data.platform                  | 分為line、messenger、api、telegram
 | data.enabled                   | 是否啟用，如果line被blocked時將會關閉
 | data.username                  | 使用者名稱
 | data.tags                      | 使用者標籤
@@ -960,7 +960,7 @@ REQUEST JSON
 
 | 參數          | 必填 | 型態   | 說明
 | ------------- | ---- |-----   | -------
-| platform      |  v   | ENUM   | 分為line、messenger、api
+| platform      |  v   | ENUM   | 分為line、messenger、api、telegram
 | sysFields     |  x   | OBJECT | 系統屬性
 | customFields  |  x   | ARRAY  | 客製屬性
 | tags          |  x   | ARRAY  | 標籤選擇
@@ -1144,7 +1144,7 @@ REQUEST JSON
 | REQUEST_PATH     | 必填 | 說明
 | -------------    | ---- |-------
 | broad_hash_id    |   v  | broad提供的id
-| platform         |   v  | 分為line、messenger、api
+| platform         |   v  | 分為line、messenger、api、telegram
 | userId           |   v  | client_userId
 
 | RESPONSE PATH                     | 說明

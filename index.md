@@ -3,7 +3,7 @@
 
   <select id="languageSelect" onchange="handleLanguageChange(this.value)">
     <option value="en">English</option>
-    <option value="tw">繁體中文</option>
+    <option value="tw">中文</option>
   </select>
   <button id="goButton" onclick="redirectToSelectedLanguage()">Go</button><br>
 
@@ -11,11 +11,17 @@
 
   <ul>
     <li><a href="/en/index.html">The English documentation</a></li>
-    <li><a href="/tw/index.html">繁體中文文檔</a></li>
+    <li><a href="/tw/index.html">中文文檔</a></li>
   </ul>
 </div>
 
 <div id="websiteLink"></div>
+<div>
+  <h2 id="products">Products</h2><br>
+  <ul>
+    <li><a id="dmflow_link" href="/en/products/dmflow/index.html">DmFlow(Dialog Management System)</a></li>
+  </ul>
+</div>
 
 <style>
   /* CSS */
@@ -72,10 +78,16 @@
 	var defaultSupportLang = 'Support Language';
 	var defaultMyHeader = 'Communeify Documentation';
 	var defaultGoButton = 'Go';
+	var defaultProducts = 'Products';
+	var defaultDmFlowLink = '/en/products/dmflow/index.html';
+	var defualtDmFlowLinkContent = 'DmFlow(Dialog Management System)';
     websiteLink.innerHTML = "Website Link：<a href='" + defaultUrl + "'>" + websiteUrl + "</a>";
 	document.getElementById('support_lang').innerHTML = defaultSupportLang;
     document.getElementById('myHeader').innerHTML = defaultMyHeader;
 	document.getElementById("goButton").textContent = defaultGoButton;
+	document.getElementById("products").innerHTML = defaultProducts;
+	document.getElementById("dmflow_link").setAttribute("href", defaultDmFlowLink);
+	document.getElementById("dmflow_link").textContent = defualtDmFlowLinkContent;
     if (language === 'en-US') {
 	  if(init){
         document.getElementById('languageSelect').value = 'en';
@@ -87,6 +99,9 @@
 	  document.getElementById('support_lang').innerHTML = '語系';
       document.getElementById('myHeader').innerHTML = 'Communeify 文檔';
 	  document.getElementById("goButton").textContent = "前往";
+	  document.getElementById("products").innerHTML = "產品";
+	  document.getElementById("dmflow_link").setAttribute("href", "/tw/products/dmflow/index.html");
+	  document.getElementById("dmflow_link").textContent = 'DmFlow(對話管理系統)';
 	  if(language === 'zh-TW') {
 	      defaultUrl = websiteUrl + "/lang/zh_TW";
 	  }else {

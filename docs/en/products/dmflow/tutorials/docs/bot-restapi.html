@@ -1,0 +1,1906 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Bot API | Communeify </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Bot API | Communeify ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="google-site-verification" content="wackHW3mx9OzoWNdH73Ucfx-Tgn27NaVqlQ-dzKaBfw">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <meta property="docfx:appTitle" content="Communeify">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="bot-api">Bot API</h1>
+
+<h2 id="authorization">Authorization</h2>
+<p>Every request needs to include the Authorization header.</p>
+<p>Here is a reference for the Postman pre-script.</p>
+<pre><code>pm.environment.set('secret', 'b60207f4d8abf6dd7bf14ecbb69fbc31031078456dae354fadd4939eda95e54c');
+var secret = pm.environment.get('secret');
+var body = request.data;
+if(body === undefined) {
+    body + ':';
+}else {
+    body = '';
+}
+var signature = CryptoJS.HmacSHA256(body+'6d7ffe73-e922-4009-9087-606fc42966d0'+':1666164860759:6d7ffe73-e922-4009-9087-606fc42966d1', secret).toString(CryptoJS.enc.Hex);
+var map = {'signature':'sha256='+signature, 'clientId':'6d7ffe73-e922-4009-9087-606fc42966d0','timestamp':'1666164860759', 'random':'6d7ffe73-e922-4009-9087-606fc42966d1'};
+var words = CryptoJS.enc.Utf8.parse(JSON.stringify(map));
+var base64 = CryptoJS.enc.Base64.stringify(words);
+pm.environment.set('auth', 'Bearer '+base64);
+</code></pre>
+<p>signature, clientId, timestamp, random is required.</p>
+<p>The random parameter should be a unique identifier, such as a UUID, to ensure it is only used once within a 15-minute timeframe.</p>
+<p>The timestamp parameter is used to limit the request time and should be within 15 minutes of the current timestamp to prevent replay attacks.</p>
+<h2 id="bot-details">Bot Details</h2>
+<p>To retrieve the name, description, and time zone of the bot, you can make a GET request to the appropriate endpoint.</p>
+<p>GET /_api/v1/bot/info</p>
+<table>
+<thead>
+<tr>
+<th>HEADER KEY</th>
+<th>HEADER VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>{{auth}}</td>
+</tr>
+</tbody>
+</table>
+<p>RESPONSE JSON</p>
+<pre><code>{
+  &quot;rc&quot;: 0,
+  &quot;data&quot;: {
+    &quot;id&quot;: &quot;12345678&quot;,
+    &quot;name&quot;: &quot;bot&quot;,
+    &quot;description&quot;: &quot;example&quot;,
+    &quot;locale&quot;: &quot;en_US&quot;
+  }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>RESPONSE PATH</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rc</td>
+<td>Response code. 0 =&gt; Successful response, non-zero values indicate errors.</td>
+</tr>
+<tr>
+<td>error</td>
+<td>Error message generated when the response code is non-zero.</td>
+</tr>
+<tr>
+<td>data.id</td>
+<td>Bot ID.</td>
+</tr>
+<tr>
+<td>data.name</td>
+<td>Bot name.</td>
+</tr>
+<tr>
+<td>data.description</td>
+<td>Bot description.</td>
+</tr>
+<tr>
+<td>data.locale</td>
+<td>Bot language/locale.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="bot-conversations">Bot Conversations</h2>
+<p>The graphical conversation flow of the bot, including knowledge base and question-answer pairs.</p>
+<h3 id="flow-conversations">Flow Conversations</h3>
+<p>POST /_api/v1/bot/chat</p>
+<table>
+<thead>
+<tr>
+<th>HEADER KEY</th>
+<th>HEADER VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>{{auth}}</td>
+</tr>
+</tbody>
+</table>
+<p>REQUEST JSON</p>
+<pre><code>{
+    &quot;branch&quot;: &quot;dev&quot;,
+    &quot;platform&quot;: &quot;messenger&quot;,
+    &quot;userId&quot;: &quot;8840402706055126&quot;,
+    &quot;type&quot;: &quot;text&quot;,
+    &quot;payload&quot;: {
+        &quot;query&quot;: &quot;weather&quot;,
+        &quot;type&quot;: &quot;text&quot;
+    }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>REQUEST_PATH</th>
+<th>Required</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>branch</td>
+<td>x</td>
+<td>ENUM</td>
+<td>prod, dev. If null, it is prod by default.</td>
+</tr>
+<tr>
+<td>platform</td>
+<td>v</td>
+<td>STRING</td>
+<td>Available options: line, messenger, api, telegram.</td>
+</tr>
+<tr>
+<td>userId</td>
+<td>v</td>
+<td>STRING</td>
+<td>Defined by the caller, can use UUID.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>v</td>
+<td>ENUM</td>
+<td>event、text、attachment</td>
+</tr>
+<tr>
+<td>scene</td>
+<td>x</td>
+<td>STRING</td>
+<td>The name of the scene. Default is &quot;Main&quot;. If specified, it will correspond to the &quot;Return to Main Scene&quot; in the context node. For more details, refer to &quot;Bot Flow&quot;.</td>
+</tr>
+<tr>
+<td>payload</td>
+<td>v</td>
+<td>OBJECT</td>
+<td>The message sent to DmFlow.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="payload">payload</h4>
+<p>type = text</p>
+<p>Text message</p>
+<pre><code>&quot;payload&quot;: {
+  &quot;query&quot;: &quot;xxx&quot;,
+  &quot;type&quot;: &quot;text&quot;
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>PAYLOAD_PATH</th>
+<th>Required</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>query</td>
+<td>v</td>
+<td>STRING</td>
+<td>The question/query.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>v</td>
+<td>ENUM</td>
+<td>text (currently only supports text)</td>
+</tr>
+</tbody>
+</table>
+<p>type = attachment</p>
+<p>File message</p>
+<pre><code>&quot;payload&quot;: {
+  &quot;url&quot;: &quot;xxx&quot;,
+  &quot;id&quot;: &quot;uuid&quot;,
+  &quot;name&quot;: &quot;text.txt&quot;
+  &quot;size&quot;: 10240,
+  &quot;type&quot;: &quot;file&quot;
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>PAYLOAD_PATH</th>
+<th>Required</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td>x/v</td>
+<td>STRING</td>
+<td>Either the file URL or the file ID.</td>
+</tr>
+<tr>
+<td>id</td>
+<td>x/v</td>
+<td>STRING</td>
+<td>Either the file URL or the file ID.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>v</td>
+<td>STRING</td>
+<td>The name of the file.</td>
+</tr>
+<tr>
+<td>size</td>
+<td>v</td>
+<td>NUMBER</td>
+<td>The file size.</td>
+</tr>
+</tbody>
+</table>
+<p>Image message</p>
+<pre><code>&quot;payload&quot;: {
+  &quot;url&quot;: &quot;xxx&quot;,
+  &quot;id&quot;: &quot;uuid&quot;,
+  &quot;previewImageUrl&quot;: &quot;xxx&quot;
+  &quot;type&quot;: &quot;image&quot;
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>PAYLOAD_PATH</th>
+<th>Required</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td>x/v</td>
+<td>STRING</td>
+<td>Either the image URL or the image ID.</td>
+</tr>
+<tr>
+<td>id</td>
+<td>x/v</td>
+<td>STRING</td>
+<td>Either the image URL or the image ID.</td>
+</tr>
+<tr>
+<td>previewImageUrl</td>
+<td>x</td>
+<td>STRING</td>
+<td>The thumbnail image URL.</td>
+</tr>
+</tbody>
+</table>
+<p>Video message</p>
+<pre><code>&quot;payload&quot;: {
+  &quot;url&quot;: &quot;xxx&quot;,
+  &quot;id&quot;: &quot;uuid&quot;,
+  &quot;previewImageUrl&quot;: &quot;xxx&quot;
+  &quot;type&quot;: &quot;video&quot;
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>PAYLOAD_PATH</th>
+<th>Required</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td>x/v</td>
+<td>STRING</td>
+<td>Either the video URL or the video ID.</td>
+</tr>
+<tr>
+<td>id</td>
+<td>x/v</td>
+<td>STRING</td>
+<td>Either the video URL or the video ID.</td>
+</tr>
+<tr>
+<td>previewImageUrl</td>
+<td>x</td>
+<td>STRING</td>
+<td>The thumbnail image URL.</td>
+</tr>
+</tbody>
+</table>
+<p>Audio message</p>
+<pre><code>&quot;payload&quot;: {
+  &quot;url&quot;: &quot;xxx&quot;,
+  &quot;id&quot;: &quot;uuid&quot;,
+  &quot;duration&quot;: 60
+  &quot;type&quot;: &quot;audio&quot;
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>PAYLOAD_PATH</th>
+<th>Required</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url</td>
+<td>x/v</td>
+<td>STRING</td>
+<td>Either the audio URL or the audio ID.</td>
+</tr>
+<tr>
+<td>id</td>
+<td>x/v</td>
+<td>STRING</td>
+<td>Either the audio URL or the audio ID.</td>
+</tr>
+<tr>
+<td>duration</td>
+<td>x</td>
+<td>NUMBER</td>
+<td>The duration of the audio (in seconds).</td>
+</tr>
+</tbody>
+</table>
+<p>type = event</p>
+<p>Interrupt event</p>
+<p>It interrupts the current context and starts from the specified context. After the specified context is completed, it returns to the current context to continue the process.</p>
+<pre><code>&quot;payload&quot;: {
+  &quot;context&quot;: &quot;xxx&quot;,
+  &quot;type&quot;: &quot;sleep&quot;
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>PAYLOAD_PATH</th>
+<th>Required</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>context</td>
+<td>v</td>
+<td>STRING</td>
+<td>The context to interrupt to.</td>
+</tr>
+</tbody>
+</table>
+<p>Ignore event</p>
+<p>When called, it does nothing.</p>
+<pre><code>&quot;payload&quot;: {
+  &quot;type&quot;: &quot;ignore&quot;
+}
+</code></pre>
+<p>Start event</p>
+<p>When called, it clears the current session status and starts over.</p>
+<pre><code>&quot;payload&quot;: {
+  &quot;type&quot;: &quot;start&quot;
+}
+</code></pre>
+<p>End event</p>
+<p>Similar to the &quot;Start event&quot;, but it does not ask the starting node's question again and keeps the sleep status. It should be used in conjunction with the &quot;Wake-up Mode&quot;.</p>
+<pre><code>&quot;payload&quot;: {
+  &quot;type&quot;: &quot;end&quot;
+}
+</code></pre>
+<p>RESPONSE JSON</p>
+<pre><code>{
+    &quot;rc&quot;: 0,
+    &quot;data&quot;: {
+        &quot;replies&quot;: [
+            &quot;{\&quot;text\&quot;:\&quot;The weather is nice today.\&quot;}&quot;
+        ],
+        &quot;msg_type&quot;: &quot;JSON&quot;,
+        &quot;version_id&quot;: &quot;274504579784423095&quot;,
+        &quot;fallback&quot;: false,
+        &quot;status&quot;: &quot;WAIT&quot;
+    }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>RESPONSE PATH</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rc</td>
+<td>NUMBER</td>
+<td>Response code. 0 =&gt; Successful response, non-zero values indicate errors.</td>
+</tr>
+<tr>
+<td>error</td>
+<td>STRING</td>
+<td>Error message generated when the response code is non-zero.</td>
+</tr>
+<tr>
+<td>data.replies</td>
+<td>ARRAY</td>
+<td>Array of replies/answers.</td>
+</tr>
+<tr>
+<td>data.msg_type</td>
+<td>ENUM</td>
+<td>Response type: TEXT, IMAGE, AUDIO, VIDEO, EVENT, JSON, FILE. Currently only supports JSON and TEXT.</td>
+</tr>
+<tr>
+<td>data.version_id</td>
+<td>STRING</td>
+<td>Current bot version.</td>
+</tr>
+<tr>
+<td>data.fallback</td>
+<td>BOOLEAN</td>
+<td>Whether a fallback occurred.</td>
+</tr>
+<tr>
+<td>data.status</td>
+<td>ENUM</td>
+<td>WAIT、LISTEN</td>
+</tr>
+</tbody>
+</table>
+<p>data.replies</p>
+<p>When the platform in the REQUEST is set to a dialogue template, the data.replies in the RESPONSE will output the JSON for that platform.</p>
+<p>Assuming the REQUEST platform is set to &quot;api&quot;, the response will be as follows:</p>
+<pre><code>{
+    &quot;rc&quot;: 0,
+    &quot;data&quot;: {
+        &quot;replies&quot;: [
+            &quot;The weather is nice today.&quot;
+        ],
+        &quot;msg_type&quot;: &quot;TEXT&quot;,
+        &quot;version_id&quot;: &quot;274504579784423095&quot;,
+        &quot;fallback&quot;: false,
+        &quot;status&quot;: &quot;WAIT&quot;
+    }
+}
+</code></pre>
+<p>data.status</p>
+<ul>
+<li>WAIT: Waiting for user response.</li>
+<li>LISTEN: Only listening without taking action. It should be used with the &quot;Wake-up Mode&quot; in the starting node.</li>
+</ul>
+<h3 id="qa-dialogue">Q&amp;A Dialogue</h3>
+<p>POST /_api/v1/bot/faqs/{faqId}</p>
+<table>
+<thead>
+<tr>
+<th>HEADER KEY</th>
+<th>HEADER VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>{{auth}}</td>
+</tr>
+</tbody>
+</table>
+<p>REQUEST JSON</p>
+<pre><code>{
+    &quot;text&quot;: &quot;engineer&quot;,
+    &quot;userId&quot;: &quot;12345&quot;
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>REQUEST_PATH</th>
+<th>Required</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>text</td>
+<td>v</td>
+<td>STRING</td>
+<td>The question being asked</td>
+</tr>
+<tr>
+<td>userId</td>
+<td>v</td>
+<td>STRING</td>
+<td>Defined by the caller, can use UUID</td>
+</tr>
+<tr>
+<td>bestThreshold</td>
+<td>x</td>
+<td>FLOAT</td>
+<td>0.1~1 Best answer threshold</td>
+</tr>
+<tr>
+<td>suggThreshold</td>
+<td>x</td>
+<td>FLOAT</td>
+<td>0.1~1 Suggested answer threshold</td>
+</tr>
+<tr>
+<td>timezone</td>
+<td>x</td>
+<td>NUMBER</td>
+<td>Default 800 -&gt; UTC+08:00</td>
+</tr>
+</tbody>
+</table>
+<p>RESPONSE JSON</p>
+<pre><code>{
+    &quot;rc&quot;: 0,
+    &quot;data&quot;: {
+        &quot;answer&quot;: &quot;[\&quot;job_interview\&quot;]&quot;,
+        &quot;question&quot;: &quot;Interview for Java Engineer&quot;,
+        &quot;type&quot;: &quot;REDIRECT&quot;,
+        &quot;fallback&quot;: false,
+        &quot;suggQuestions&quot;: [
+            {
+                &quot;question&quot;: &quot;Interview for Node.js Engineer&quot;,
+                &quot;answer&quot;: &quot;[\&quot;interview_nodejs\&quot;]&quot;,
+                &quot;type&quot;: &quot;REDIRECT&quot;
+            },
+            {
+                &quot;question&quot;: &quot;Introduction to Node.js Engineer&quot;,
+                &quot;answer&quot;: &quot;[\&quot;describe_nodejs\&quot;]&quot;,
+                &quot;type&quot;: &quot;REDIRECT&quot;
+            },
+            {
+                &quot;question&quot;: &quot;Introduction to Angular Engineer&quot;,
+                &quot;answer&quot;: &quot;[\&quot;describe_angular\&quot;]&quot;,
+                &quot;type&quot;: &quot;REDIRECT&quot;
+            }
+        ]
+    }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>RESPONSE_PATH</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rc</td>
+<td>NUMBER</td>
+<td>Response code, 0 =&gt; successful response, non-zero for errors</td>
+</tr>
+<tr>
+<td>error</td>
+<td>STRING</td>
+<td>Error message generated when the response code is non-zero</td>
+</tr>
+<tr>
+<td>data.answer</td>
+<td>STRING</td>
+<td>type = 'REDITECT'=&gt;'[&quot;targetContext&quot;]', type=TEXT=&gt;'answer'</td>
+</tr>
+<tr>
+<td>data.type</td>
+<td>ENUM</td>
+<td>REDIRECT、TEXT</td>
+</tr>
+<tr>
+<td>data.fallback</td>
+<td>BOOLEAN</td>
+<td>Whether it failed to find a match</td>
+</tr>
+<tr>
+<td>data.suggQuestions</td>
+<td>ARRAY</td>
+<td>If other answers exceed the suggested answer ratio, they will be displayed</td>
+</tr>
+</tbody>
+</table>
+<p>data.type</p>
+<ul>
+<li>REDIRECT =&gt; JSONARRAY STRING used for redirecting to other contextual nodes</li>
+<li>TEXT =&gt; Plain text answer</li>
+</ul>
+<p>data.suggQuestions</p>
+<table>
+<thead>
+<tr>
+<th>PATH</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>question</td>
+<td>STRING</td>
+<td>Question text</td>
+</tr>
+<tr>
+<td>answer</td>
+<td>STRING</td>
+<td>Answer text</td>
+</tr>
+<tr>
+<td>type</td>
+<td>ENUM</td>
+<td>REDIRECT、TEXT</td>
+</tr>
+</tbody>
+</table>
+<h2 id="domain-details">Domain Details</h2>
+<p>Filter based on the domain opened by the bot.</p>
+<h3 id="domains">Domains</h3>
+<p>GET /_api/v1/bot/domains?types=faqEnum&amp;types=tableqaEnum</p>
+<table>
+<thead>
+<tr>
+<th>HEADER KEY</th>
+<th>HEADER VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>{{auth}}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>types</td>
+<td>faqEnum (FAQs), tableqaEnum (Table-QAs), intentEnum (Intents)</td>
+</tr>
+</tbody>
+</table>
+<p>RESPONSE JSON</p>
+<pre><code>{
+    &quot;rc&quot;: 0,
+    &quot;data&quot;: {
+        &quot;domains&quot;: [
+            {
+                &quot;name&quot;: &quot;hire&quot;,
+                &quot;description&quot;: &quot;Interview&quot;,
+                &quot;id&quot;: &quot;267950411136516195&quot;,
+                &quot;type&quot;: &quot;faqEnum&quot;
+            },
+            {
+                &quot;name&quot;: &quot;phone&quot;,
+                &quot;description&quot;: &quot;Phone Introduction&quot;,
+                &quot;id&quot;: &quot;271530283370373185&quot;,
+                &quot;type&quot;: &quot;tableqaEnum&quot;
+            },
+            {
+                &quot;name&quot;: &quot;car&quot;,
+                &quot;description&quot;: &quot;Car Introduction&quot;,
+                &quot;id&quot;: &quot;263431310541176907&quot;,
+                &quot;type&quot;: &quot;tableqaEnum&quot;
+            }
+        ]
+    }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>RESPONSE PATH</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rc</td>
+<td>Response code, 0 =&gt; successful response, non-zero for errors</td>
+</tr>
+<tr>
+<td>error</td>
+<td>Error message generated when the response code is non-zero</td>
+</tr>
+<tr>
+<td>data.domains[0].name</td>
+<td>Domain name</td>
+</tr>
+<tr>
+<td>data.domains[0].description</td>
+<td>Domain description</td>
+</tr>
+<tr>
+<td>data.domains[0].id</td>
+<td>Domain ID</td>
+</tr>
+<tr>
+<td>data.domains[0].type</td>
+<td>Domain type</td>
+</tr>
+</tbody>
+</table>
+<h3 id="section"></h3>
+<p>FAQ List
+GET /_api/v1/bot/faqs</p>
+<table>
+<thead>
+<tr>
+<th>HEADER KEY</th>
+<th>HEADER VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>{{auth}}</td>
+</tr>
+</tbody>
+</table>
+<p>RESPONSE JSON</p>
+<pre><code>{
+    &quot;rc&quot;: 0,
+    &quot;data&quot;: {
+        &quot;faqs&quot;: [
+            {
+                &quot;name&quot;: &quot;hire&quot;,
+                &quot;description&quot;: &quot;Interview&quot;,
+                &quot;id&quot;: &quot;267950411136516195&quot;
+            }
+        ]
+    }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>RESPONSE PATH</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rc</td>
+<td>Response code, 0 =&gt; successful response, non-zero for errors</td>
+</tr>
+<tr>
+<td>error</td>
+<td>Error message generated when the response code is non-zero</td>
+</tr>
+<tr>
+<td>data.faqs[0].name</td>
+<td>Domain name</td>
+</tr>
+<tr>
+<td>data.faqs[0].description</td>
+<td>Domain description</td>
+</tr>
+<tr>
+<td>data.faqs[0].id</td>
+<td>Domain ID</td>
+</tr>
+</tbody>
+</table>
+<h3 id="table-qa-list">Table-QA List</h3>
+<p>GET /_api/v1/bot/tableqas</p>
+<table>
+<thead>
+<tr>
+<th>HEADER KEY</th>
+<th>HEADER VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>{{auth}}</td>
+</tr>
+</tbody>
+</table>
+<p>RESPONSE JSON</p>
+<pre><code>{
+    &quot;rc&quot;: 0,
+    &quot;data&quot;: {
+        &quot;tableqas&quot;: [
+            {
+                &quot;name&quot;: &quot;car&quot;,
+                &quot;description&quot;: &quot;Car Introduction&quot;,
+                &quot;id&quot;: &quot;263431310541176907&quot;
+            },
+            {
+                &quot;name&quot;: &quot;phone&quot;,
+                &quot;description&quot;: &quot;Phone Introduction&quot;,
+                &quot;id&quot;: &quot;271530283370373185&quot;
+            }
+        ]
+    }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>RESPONSE PATH</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rc</td>
+<td>Response code, 0 =&gt; successful response, non-zero for errors</td>
+</tr>
+<tr>
+<td>error</td>
+<td>Error message generated when the response code is non-zero</td>
+</tr>
+<tr>
+<td>data.tableqas[0].name</td>
+<td>Domain name</td>
+</tr>
+<tr>
+<td>data.tableqas[0].description</td>
+<td>Domain description</td>
+</tr>
+<tr>
+<td>data.tableqas[0].id</td>
+<td>Domain ID</td>
+</tr>
+</tbody>
+</table>
+<h2 id="user-details">User Details</h2>
+<h3 id="get-users">Get Users</h3>
+<p>POST /_api/v1/bot/users</p>
+<table>
+<thead>
+<tr>
+<th>HEADER KEY</th>
+<th>HEADER VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>{{auth}}</td>
+</tr>
+</tbody>
+</table>
+<p>REQUEST JSON</p>
+<pre><code>{
+  &quot;platform&quot;: &quot;api&quot;,
+  &quot;appId&quot;: &quot;api:234869230928226718&quot;,
+  &quot;index&quot;: 0,
+  &quot;size&quot;: 10
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>REQUEST_PATH</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>platform</td>
+<td>v</td>
+<td>Platform options: line, messenger, api, telegram</td>
+</tr>
+<tr>
+<td>appId</td>
+<td>v</td>
+<td>For line and messenger, provide the corresponding appId. For API, use 'api:%s'.format(botId), where botId corresponds to the data.id obtained from /_api/v1/bot/info.</td>
+</tr>
+<tr>
+<td>index</td>
+<td>v</td>
+<td>Index starting from 0</td>
+</tr>
+<tr>
+<td>size</td>
+<td>v</td>
+<td>Number of users to retrieve</td>
+</tr>
+<tr>
+<td>systemFields</td>
+<td>x</td>
+<td>System user properties</td>
+</tr>
+<tr>
+<td>customFields</td>
+<td>x</td>
+<td>Custom user properties</td>
+</tr>
+<tr>
+<td>includes</td>
+<td>x</td>
+<td>Included tags</td>
+</tr>
+<tr>
+<td>afterUpdatedTime</td>
+<td>x</td>
+<td>Retrieve users updated after a specific time</td>
+</tr>
+</tbody>
+</table>
+<p>systemFields</p>
+<p>Example:</p>
+<pre><code>{
+  &quot;platform&quot;: &quot;api&quot;,
+  &quot;appId&quot;: &quot;api:234869230928226718&quot;,
+  &quot;index&quot;: 0,
+  &quot;size&quot;: 10,
+  &quot;systemFields&quot; : {
+      &quot;username&quot;: &quot;xxx&quot;
+  }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>REQUEST_PATH</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>systemFields</td>
+<td>OBJECT</td>
+<td>Used to fill in default system properties</td>
+</tr>
+<tr>
+<td>systemFields.username</td>
+<td>STRING</td>
+<td>System username</td>
+</tr>
+</tbody>
+</table>
+<p>customFields</p>
+<p>Example:</p>
+<pre><code>{
+  &quot;platform&quot;: &quot;api&quot;,
+  &quot;appId&quot;: &quot;api:234869230928226718&quot;,
+  &quot;index&quot;: 0,
+  &quot;size&quot;: 10,
+  &quot;customFields&quot; : [
+      {
+	      &quot;key&quot;: &quot;username&quot;,
+	      &quot;op&quot;: &quot;eq&quot;,
+	      &quot;value&quot;: &quot;John&quot;
+	  }
+  ]
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>REQUEST_PATH</th>
+<th>Data Type</th>
+<th>Limit</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customFields</td>
+<td>ARRAY</td>
+<td>10</td>
+<td>Used for custom properties</td>
+</tr>
+<tr>
+<td>customFields[0].key</td>
+<td>STRING</td>
+<td></td>
+<td>Property key</td>
+</tr>
+<tr>
+<td>customFields[0].op</td>
+<td>STRING</td>
+<td></td>
+<td>Property comparison: gte (greater than or equal to), lte (less than or equal to), eq (equal to), not_eq (not equal to)</td>
+</tr>
+<tr>
+<td>customFields[0].value</td>
+<td>STRING</td>
+<td></td>
+<td>Property value; convert time to seconds, numbers must match the data type</td>
+</tr>
+</tbody>
+</table>
+<p>includes</p>
+<p>Example:</p>
+<pre><code>{
+  &quot;platform&quot;: &quot;api&quot;,
+  &quot;appId&quot;: &quot;api:234869230928226718&quot;,
+  &quot;index&quot;: 0,
+  &quot;size&quot;: 10,
+  &quot;includes&quot; : [
+      &quot;254870170810449954&quot;
+  ]
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>REQUEST_PATH</th>
+<th>Data Type</th>
+<th>Limit</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>includes</td>
+<td>ARRAY</td>
+<td>10</td>
+<td>Included tag IDs</td>
+</tr>
+</tbody>
+</table>
+<p>afterUpdatedTime</p>
+<table>
+<thead>
+<tr>
+<th>REQUEST_PATH</th>
+<th>Data Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>afterUpdatedTime</td>
+<td>Long</td>
+<td>Retrieve users updated after this time (in milliseconds)</td>
+</tr>
+</tbody>
+</table>
+<p>RESPONSE JSON</p>
+<pre><code>{
+  &quot;rc&quot;: 0,
+  &quot;data&quot;: {
+    &quot;page&quot;: {
+      &quot;total&quot;: 2,
+      &quot;size&quot;: 10,
+      &quot;index&quot;: 0
+    },
+    &quot;users&quot;: [
+      {
+        &quot;updatedTime&quot;: 1665674749,
+        &quot;createdTime&quot;: 1662800401,
+        &quot;hasImage&quot;: false,
+        &quot;id&quot;: &quot;388634744657944592&quot;,
+        &quot;fields&quot;: [
+          {
+            &quot;constraintType&quot;: &quot;datetimeEnum&quot;,
+            &quot;id&quot;: &quot;283615327961481304&quot;,
+            &quot;value&quot;: &quot;1641312000&quot;,
+            &quot;key&quot;: &quot;birthday&quot;,
+            &quot;desc&quot;: &quot;Birthday&quot;
+          },
+          {
+            &quot;constraintType&quot;: &quot;stringEnum&quot;,
+            &quot;id&quot;: &quot;478075408797933588&quot;,
+            &quot;value&quot;: &quot;John&quot;,
+            &quot;key&quot;: &quot;username&quot;,
+            &quot;desc&quot;: &quot;Username&quot;
+          }
+        ],
+        &quot;userId&quot;: &quot;5610b61ca183abb1a48de8b8955c1627&quot;,
+        &quot;platform&quot;: &quot;@api&quot;,
+        &quot;enabled&quot;: false,
+        &quot;username&quot;: &quot;John&quot;,
+        &quot;tags&quot;: [
+          {
+            &quot;id&quot;: &quot;254870170810449954&quot;
+          },
+          {
+            &quot;id&quot;: &quot;256770248043135038&quot;
+          }
+        ]
+      }
+    ]
+  }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>RESPONSE PATH</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rc</td>
+<td>Response code, 0 =&gt; successful response, non-zero for errors</td>
+</tr>
+<tr>
+<td>error</td>
+<td>Error message generated when the response code is non-zero</td>
+</tr>
+<tr>
+<td>data.page.total</td>
+<td>Total number of filtered users</td>
+</tr>
+<tr>
+<td>data.page.index</td>
+<td>Current page index</td>
+</tr>
+<tr>
+<td>data.page.size</td>
+<td>Current page size</td>
+</tr>
+<tr>
+<td>data.users[0].image</td>
+<td>User image (available for line and messenger)</td>
+</tr>
+<tr>
+<td>data.users[0].updateTime</td>
+<td>Update time (in seconds)</td>
+</tr>
+<tr>
+<td>data.users[0].createdTime</td>
+<td>Creation time (in seconds)</td>
+</tr>
+<tr>
+<td>data.users[0].hasImage</td>
+<td>Indicates if the user has an image (available for line and messenger)</td>
+</tr>
+<tr>
+<td>data.users[0].id</td>
+<td>User's DmFlow ID</td>
+</tr>
+<tr>
+<td>data.users[0].userId</td>
+<td>User's platform ID</td>
+</tr>
+<tr>
+<td>data.users[0].platform</td>
+<td>Platform options: line, messenger, api, telegram</td>
+</tr>
+<tr>
+<td>data.users[0].enabled</td>
+<td>Indicates if the user is enabled. If the user is blocked on Line, it will be disabled.</td>
+</tr>
+<tr>
+<td>data.users[0].username</td>
+<td>User's username</td>
+</tr>
+<tr>
+<td>data.users[0]tags</td>
+<td>User tags</td>
+</tr>
+<tr>
+<td>data.users[0].tags[0].id</td>
+<td>Tag ID</td>
+</tr>
+<tr>
+<td>data.users[0].fields</td>
+<td>User properties</td>
+</tr>
+<tr>
+<td>data.users[0].fields[0].constraintType</td>
+<td>datetimeEnum (datetime), stringEnum (string), numEnum (number), passwdEnum (password)</td>
+</tr>
+<tr>
+<td>data.users[0].fields[0].id</td>
+<td>Field ID</td>
+</tr>
+<tr>
+<td>data.users[0].fields[0].key</td>
+<td>Field key</td>
+</tr>
+<tr>
+<td>data.users[0].fields[0].value</td>
+<td>User's value for the field</td>
+</tr>
+<tr>
+<td>data.users[0].fields[0].desc</td>
+<td>Field description</td>
+</tr>
+</tbody>
+</table>
+<h3 id="get-user">Get User</h3>
+<p>There are two ways to retrieve user information:</p>
+<h4 id="section-1"></h4>
+<p>Method 1: Using the user's generated ID</p>
+<p>GET /_api/v1/bot/users/{userId}?platform=messenger&amp;appId=221627843009100</p>
+<table>
+<thead>
+<tr>
+<th>HEADER KEY</th>
+<th>HEADER VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>{{auth}}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>platform</td>
+<td>Platform options: line, messenger, api, telegram</td>
+</tr>
+<tr>
+<td>appId</td>
+<td>For line and messenger, provide the corresponding appId. For API, use 'api:%s'.format(botId), where botId corresponds to the data.id obtained from /_api/v1/bot/info.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="method-2-using-the-dmflow-id">Method 2: Using the DmFlow ID</h4>
+<p>GET /_api/v1/bot/users/_id/{id}</p>
+<table>
+<thead>
+<tr>
+<th>HEADER KEY</th>
+<th>HEADER VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>{{auth}}</td>
+</tr>
+</tbody>
+</table>
+<p>RESPONSE JSON</p>
+<pre><code>{
+  &quot;rc&quot;: 0,
+  &quot;data&quot;: {
+    &quot;image&quot;: &quot;{{IMAGE_PROVIDER}}/f15a4a8a28de8519e5502fbf393ed3fd&quot;,
+    &quot;updatedTime&quot;: 1665674749,
+    &quot;createdTime&quot;: 1662800401,
+    &quot;hasImage&quot;: true,
+    &quot;id&quot;: &quot;488634744657944593&quot;,
+    &quot;fields&quot;: [
+      {
+        &quot;constraintType&quot;: &quot;datetimeEnum&quot;,
+        &quot;id&quot;: &quot;283615327961481304&quot;,
+        &quot;value&quot;: &quot;1641312000&quot;,
+        &quot;key&quot;: &quot;birthday&quot;,
+        &quot;desc&quot;: &quot;Birthday&quot;
+      },
+      {
+        &quot;constraintType&quot;: &quot;stringEnum&quot;,
+        &quot;id&quot;: &quot;478075408797933588&quot;,
+        &quot;value&quot;: &quot;John&quot;,
+        &quot;key&quot;: &quot;username&quot;,
+        &quot;desc&quot;: &quot;Username&quot;
+      }
+    ],
+    &quot;userId&quot;: &quot;5610b60ca183abb1a48de8b8955c1627&quot;,
+    &quot;platform&quot;: &quot;@fbmessenger&quot;,
+    &quot;enabled&quot;: true,
+    &quot;username&quot;: &quot;John&quot;,
+    &quot;tags&quot;: [
+      {
+        &quot;lastModifiedTime&quot;: 1664382904,
+        &quot;count&quot;: &quot;2&quot;,
+        &quot;name&quot;: &quot;tag1&quot;,
+        &quot;id&quot;: &quot;254870170810449954&quot;,
+        &quot;desc&quot;: &quot;Tag 1&quot;
+      },
+      {
+        &quot;lastModifiedTime&quot;: 1664382875,
+        &quot;count&quot;: &quot;4&quot;,
+        &quot;name&quot;: &quot;tag2&quot;,
+        &quot;id&quot;: &quot;256770248043135038&quot;,
+        &quot;desc&quot;: &quot;Tag 2&quot;
+      }
+    ]
+  }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>RESPONSE PATH</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rc</td>
+<td>Response code. 0 =&gt; successful response, non-zero for errors</td>
+</tr>
+<tr>
+<td>error</td>
+<td>Error message generated when the response code is non-zero</td>
+</tr>
+<tr>
+<td>data.image</td>
+<td>User image (available for line and messenger)</td>
+</tr>
+<tr>
+<td>data.updateTime</td>
+<td>Update time (in seconds)</td>
+</tr>
+<tr>
+<td>data.createdTime</td>
+<td>Creation time (in seconds)</td>
+</tr>
+<tr>
+<td>data.hasImage</td>
+<td>Indicates if the user has an image (available for line and messenger)</td>
+</tr>
+<tr>
+<td>data.id</td>
+<td>User's DmFlow ID</td>
+</tr>
+<tr>
+<td>data.userId</td>
+<td>User's platform ID</td>
+</tr>
+<tr>
+<td>data.platform</td>
+<td>Platform options: line, messenger, api, telegram</td>
+</tr>
+<tr>
+<td>data.enabled</td>
+<td>Indicates if the user is enabled. If the user is blocked on Line, it will be disabled.</td>
+</tr>
+<tr>
+<td>data.username</td>
+<td>User's username</td>
+</tr>
+<tr>
+<td>data.tags</td>
+<td>User tags</td>
+</tr>
+<tr>
+<td>data.tags[0].lastModifiedTime</td>
+<td>Last modified time for the tag (in seconds)</td>
+</tr>
+<tr>
+<td>data.tags[0].count</td>
+<td>Number of times the tag has been assigned</td>
+</tr>
+<tr>
+<td>data.tags[0].name</td>
+<td>Tag name</td>
+</tr>
+<tr>
+<td>data.tags[0].id</td>
+<td>Tag ID</td>
+</tr>
+<tr>
+<td>data.tags[0].desc</td>
+<td>Tag description</td>
+</tr>
+<tr>
+<td>data.fields</td>
+<td>User properties</td>
+</tr>
+<tr>
+<td>data.fields[0].constraintType</td>
+<td>datetimeEnum (datetime), stringEnum (string), numEnum (number), passwdEnum (password)</td>
+</tr>
+<tr>
+<td>data.fields[0].id</td>
+<td>Memory Field ID</td>
+</tr>
+<tr>
+<td>data.fields[0].key</td>
+<td>Memory Field key</td>
+</tr>
+<tr>
+<td>data.fields[0].value</td>
+<td>Memory User's value for the field</td>
+</tr>
+<tr>
+<td>data.fields[0].desc</td>
+<td>Memory Field description</td>
+</tr>
+</tbody>
+</table>
+<h3 id="update-user">Update User</h3>
+<p>PATCH /_api/v1/bot/users/{userId}</p>
+<table>
+<thead>
+<tr>
+<th>HEADER KEY</th>
+<th>HEADER VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>{{auth}}</td>
+</tr>
+</tbody>
+</table>
+<p>REQUEST JSON</p>
+<pre><code>{
+  &quot;sysFields&quot;: {
+    &quot;username&quot;: &quot;John&quot;
+  },
+  &quot;platform&quot;: &quot;api&quot;
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>platform</td>
+<td>v</td>
+<td>ENUM</td>
+<td>Platform options: line, messenger, api, telegram</td>
+</tr>
+<tr>
+<td>sysFields</td>
+<td>x</td>
+<td>OBJECT</td>
+<td>System properties to be updated</td>
+</tr>
+<tr>
+<td>customFields</td>
+<td>x</td>
+<td>ARRAY</td>
+<td>Custom properties to be updated</td>
+</tr>
+<tr>
+<td>tags</td>
+<td>x</td>
+<td>ARRAY</td>
+<td>Tags to be assigned</td>
+</tr>
+</tbody>
+</table>
+<p>sysFields</p>
+<table>
+<thead>
+<tr>
+<th>REQUEST_PATH</th>
+<th>Required</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>sysFields</td>
+<td>v</td>
+<td>OBJECT</td>
+<td>Used to fill in the default system properties</td>
+</tr>
+<tr>
+<td>sysFields.username</td>
+<td>x</td>
+<td>STRING</td>
+<td>User's system username</td>
+</tr>
+<tr>
+<td>sysFields.enabled</td>
+<td>x</td>
+<td>BOOLEAN</td>
+<td>Indicates if the user is enabled</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code>{
+  &quot;sysFields&quot;: {
+    &quot;username&quot;: &quot;John&quot;
+  },
+  &quot;platform&quot;: &quot;api&quot;
+}
+</code></pre>
+<p>customFields</p>
+<table>
+<thead>
+<tr>
+<th>REQUEST_PATH</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>customFields</td>
+<td>OBJECT</td>
+<td>Used to fill in the custom properties</td>
+</tr>
+<tr>
+<td>customFields.xxx</td>
+<td>STRING</td>
+<td>ID of the custom field, can be found in &quot;Retrieve Memory Templates&quot;</td>
+</tr>
+</tbody>
+</table>
+<p>Example:</p>
+<pre><code>{
+  &quot;customFields&quot;: {
+    &quot;478075408797933588&quot;: &quot;John&quot;
+  },
+  &quot;platform&quot;: &quot;api&quot;
+}
+</code></pre>
+<p>tags</p>
+<p>This will replace all tags assigned to the user.</p>
+<pre><code>{
+  &quot;tags&quot;: [&quot;254870170810449954&quot;],
+  &quot;platform&quot;: &quot;api&quot;
+}
+</code></pre>
+<p>RESPONSE JSON</p>
+<pre><code>{
+    &quot;rc&quot;: 0,
+    &quot;data&quot;: {
+        &quot;success&quot;: true
+    }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>RESPONSE PATH</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rc</td>
+<td>Response code. 0 =&gt; successful response, non-zero for errors</td>
+</tr>
+<tr>
+<td>error</td>
+<td>Error message generated when the response code is non-zero</td>
+</tr>
+<tr>
+<td>data.success</td>
+<td>Indicates if the modification was successful (true)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="template-details">Template Details</h2>
+<p>Tags and user access data fields within the memory template.</p>
+<h3 id="tag-query">Tag Query</h3>
+<p>GET /_api/v1/bot/tags</p>
+<table>
+<thead>
+<tr>
+<th>HEADER KEY</th>
+<th>HEADER VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>{{auth}}</td>
+</tr>
+</tbody>
+</table>
+<p>RESPONSE JSON</p>
+<pre><code>{
+  &quot;rc&quot;: 0,
+  &quot;data&quot;: {
+    &quot;tags&quot;: [
+      {
+        &quot;name&quot;: &quot;tag1&quot;,
+        &quot;description&quot;: &quot;Tag 1&quot;,
+        &quot;id&quot;: &quot;254870170810449954&quot;
+      },
+      {
+        &quot;name&quot;: &quot;tag2&quot;,
+        &quot;description&quot;: &quot;Tag 2&quot;,
+        &quot;id&quot;: &quot;256770248043135038&quot;
+      }
+    ]
+  }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>RESPONSE PATH</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rc</td>
+<td>Response code. 0 =&gt; successful response, non-zero for errors</td>
+</tr>
+<tr>
+<td>error</td>
+<td>Error message generated when the response code is non-zero</td>
+</tr>
+<tr>
+<td>data.tags[0].name</td>
+<td>Tag name</td>
+</tr>
+<tr>
+<td>data.tags[0].description</td>
+<td>Tag description</td>
+</tr>
+<tr>
+<td>data.tags[0].id</td>
+<td>Tag ID</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user-memory-template-query">User Memory Template Query</h3>
+<p>GET /_api/v1/bot/memories</p>
+<table>
+<thead>
+<tr>
+<th>HEADER KEY</th>
+<th>HEADER VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>{{auth}}</td>
+</tr>
+</tbody>
+</table>
+<p>RESPONSE JSON</p>
+<pre><code>{
+  &quot;rc&quot;: 0,
+  &quot;data&quot;: {
+    &quot;userFields&quot;: [
+      {
+        &quot;description&quot;: &quot;Username&quot;,
+        &quot;id&quot;: &quot;478075408797933588&quot;,
+        &quot;type&quot;: &quot;stringEnum&quot;,
+        &quot;key&quot;: &quot;username&quot;
+      },
+      {
+        &quot;description&quot;: &quot;Birthday&quot;,
+        &quot;id&quot;: &quot;283615327961481304&quot;,
+        &quot;type&quot;: &quot;datetimeEnum&quot;,
+        &quot;key&quot;: &quot;birthday&quot;
+      },
+      {
+        &quot;description&quot;: &quot;Password&quot;,
+        &quot;id&quot;: &quot;477723514581819413&quot;,
+        &quot;type&quot;: &quot;passwdEnum&quot;,
+        &quot;key&quot;: &quot;passwd&quot;
+      }
+    ]
+  }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>RESPONSE PATH</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rc</td>
+<td>Response code. 0 =&gt; successful response, non-zero for errors</td>
+</tr>
+<tr>
+<td>error</td>
+<td>Error message generated when the response code is non-zero</td>
+</tr>
+<tr>
+<td>data.userFields[0].id</td>
+<td>Memory field ID</td>
+</tr>
+<tr>
+<td>data.userFields[0].description</td>
+<td>Memory field description</td>
+</tr>
+<tr>
+<td>data.userFields[0].key</td>
+<td>Memory field key</td>
+</tr>
+<tr>
+<td>data.userFields[0].type</td>
+<td>Memory field type (stringEnum, numEnum, datetimeEnum, passwdEnum)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="events">Events</h2>
+<h3 id="user-registration-event">User Registration Event</h3>
+<p>POST /_api/v1/bot/event/register</p>
+<table>
+<thead>
+<tr>
+<th>HEADER KEY</th>
+<th>HEADER VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>{{auth}}</td>
+</tr>
+</tbody>
+</table>
+<p>REQUEST JSON</p>
+<pre><code>{
+  &quot;broad_hash_id&quot;: &quot;xxxxxxxxx&quot;,
+  &quot;platform&quot;: &quot;line&quot;,
+  &quot;userId&quot;: &quot;Uxxxxxxxxx&quot;
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>REQUEST_PATH</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>broad_hash_id</td>
+<td>v</td>
+<td>Provided by broad (ID)</td>
+</tr>
+<tr>
+<td>platform</td>
+<td>v</td>
+<td>Platform options: line, messenger, api, telegram</td>
+</tr>
+<tr>
+<td>userId</td>
+<td>v</td>
+<td>Client user ID</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>RESPONSE PATH</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rc</td>
+<td>Response code. 0 =&gt; successful response, non-zero for errors</td>
+</tr>
+<tr>
+<td>error</td>
+<td>Error message generated when the response code is non-zero</td>
+</tr>
+</tbody>
+</table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © <script>document.write(new Date().getFullYear());</script> Communeify</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

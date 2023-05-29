@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Knowledge Base Introduction | Communeify </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Knowledge Base Introduction | Communeify ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="google-site-verification" content="wackHW3mx9OzoWNdH73Ucfx-Tgn27NaVqlQ-dzKaBfw">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <meta property="docfx:appTitle" content="Communeify">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="knowledge-base-introduction">Knowledge Base Introduction</h1>
+
+<p>The knowledge base consists of Question-Answer (QA) pairs and tabular QA. The following will introduce the definitions and applications of both.</p>
+<h2 id="qa-pairs">QA Pairs</h2>
+<p>QA pairs refer to the combination of questions and corresponding answers. Their main uses include:</p>
+<ul>
+<li><p>Automated responses to common questions: QA pairs can be used to automatically answer common questions about product features, service details, frequently asked questions, etc. By establishing QA pairs for common questions, the chatbot can quickly and accurately respond to user queries, saving the time of human customer support.</p>
+</li>
+<li><p>Information retrieval: QA pairs can provide information retrieval functionality where users can input questions and the chatbot matches them with relevant QA pairs to provide corresponding answers. This allows users to quickly find the information they need without wasting time searching websites or consulting human customer support.</p>
+</li>
+<li><p>Information retrieval: QA pairs can provide information retrieval functionality where users can input questions and the chatbot matches them with relevant QA pairs to provide corresponding answers. This allows users to quickly find the information they need without wasting time searching websites or consulting human customer support.</p>
+</li>
+<li><p>Education and training: QA pairs also have application value in the field of education and training. They can be used to provide learning materials in a question-and-answer format, helping students in their learning and self-assessment. Teachers or tutors can create QA pairs covering different aspects of the learning content, and students can check their learning progress and understanding by interacting with the chatbot.</p>
+</li>
+</ul>
+<p>In summary, QA pairs have wide-ranging applications in automated responses, information retrieval, technical support, education, and training. They can provide accurate and real-time answers, save manpower costs, and enhance user experience and learning effectiveness.</p>
+<h4 id="answer-types">Answer Types</h4>
+<ul>
+<li>1.text :Plain text.</li>
+<li>2.template:Templates that can inject return values through resources.</li>
+<li>3.redirect:Redirect to another scene (requires Bot Flow).</li>
+<li>4.JSON API:Use the platform's JSON to generate responses. Currently supports LINE, Messenger, and Telegram.</li>
+</ul>
+<h4 id="template-output-details">Template Output Details</h4>
+<ul>
+<li>context-&gt;Outputs based on the keys of return values.</li>
+<li>extractTime-&gt;You can convert time values into strings in specific formats.</li>
+<li>listOutput-&gt;You can retrieve return values (must be an array) and generate a list in a specific format. Each item in the list contains specific properties from the values.</li>
+</ul>
+<p>context</p>
+<pre><code>${#context.comfortable}
+</code></pre>
+<p>In this example, ${#context.comfortable} represents accessing the value of the key &quot;comfortable&quot; in the return value. You can insert this command wherever you need to retrieve the corresponding return value and output it.</p>
+<p>This allows you to conveniently perform operations and presentations based on the keys in the return value.</p>
+<p>extracTime</p>
+<pre><code>${%extractTime(#context.datetime,'yyyy-MM-dd HH:mm','')}
+</code></pre>
+<p>In this example, you need to set the first parameter as the time value returned (in seconds). The second parameter is a string that specifies the desired date format, such as 'yyyy-MM-dd HH:mm'. The third parameter is currently not implemented and is intended to specify the time zone, but by default, it will use the time zone of the bot flow.</p>
+<p>By using this optimized command, you can easily convert time values into strings that match the specified format to meet your needs.</p>
+<p>listOutput</p>
+<pre><code>${%listOutput(#context.order,'${#br}${#index}:Date: ${#item.date}, Total :${#item.money};' ,'1')}
+</code></pre>
+<p>In this example, you need to set the first parameter as the array value returned. The second parameter is a string where ${#br} represents a line break, ${#index} represents the current index of the loop, and ${#item.date} and ${#item.money} represent the date and amount properties of each item, respectively.</p>
+<p>By using this optimized command, you can easily generate a list with a specific format for displaying and using the required value information.</p>
+<p>Choose the resource through the image below and call the resource to obtain a JSON response.</p>
+<pre><code>{
+  &quot;temperature&quot;: 16,
+  &quot;datetime&quot;: &quot;1665990946&quot;,
+  &quot;next_d&quot;: [
+    {
+      &quot;rain_per&quot;: &quot;100&quot;,
+      &quot;date&quot;: &quot;2022-10-18&quot;
+    },
+    {
+      &quot;rain_per&quot;: &quot;10&quot;,
+      &quot;date&quot;: &quot;2022-10-19&quot;
+    }
+  ],
+  &quot;comfortable&quot;: &quot;Slightly chilly&quot;
+}
+</code></pre>
+<p><img src="../../../../../../images/en/domain-resource-param.png" alt=""></p>
+<p>Original template output:</p>
+<blockquote>
+<p>Comfort: ${#context.comfortable}, temperature${#context.temperature}°C
+Time:${%extractTime(#context.datetime,'yyyy-MM-dd HH:mm','')}
+${%listOutput(#context.next_d,'${#br}${#index}:Date: ${#item.date}, Rain Probability: ${#item.rain_per}%;' ,'1')}</p>
+</blockquote>
+<p>Modified template output:</p>
+<blockquote>
+<p>Comfort: Slightly chilly, temperature: 16°C
+Time: 2022-10-17 14:48</p>
+<p>1:Date:2022-10-18, Rain Probability: 100%;</p>
+<p>2:Date:2022-10-19, Rain Probability: 10%;</p>
+</blockquote>
+<p>If the passed values are not filled or an error occurs, the parameter values will be replaced with empty values.</p>
+<blockquote>
+<p>Comfort: , temperature: °C
+Time:</p>
+</blockquote>
+<h2 id="continue-reading">Continue Reading</h2>
+<ul>
+<li><a href="../../tutorials/docs/domain-intro.html">Domain Introduction</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © <script>document.write(new Date().getFullYear());</script> Communeify</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

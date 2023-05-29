@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Bot Global Settings | Communeify </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Bot Global Settings | Communeify ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="google-site-verification" content="wackHW3mx9OzoWNdH73Ucfx-Tgn27NaVqlQ-dzKaBfw">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <meta property="docfx:appTitle" content="Communeify">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="bot-global-settings">Bot Global Settings</h1>
+
+<p>The configuration of a conversation flow refers to setting up enabled domains, scenes, and generic responses in a conversational bot to ensure that the bot can understand and answer questions correctly in interactions with users.</p>
+<ul>
+<li>Enabled Domains: Ensuring that only relevant domains related to the bot's functionality are enabled, avoiding an excessive number of unnecessary domains that can lead to confusion or incorrect answers. Select suitable domains based on the purpose and goals of the bot.</li>
+<li>Scene Configuration: Dividing the conversation into different scenes to respond based on user needs and contexts. Each scene can focus on a specific topic or task, enabling the bot to provide more specialized and accurate answers.</li>
+<li>Generic Responses: Setting up generic responses for common questions or situations to provide immediate responses to users. Generic responses are pre-configured fixed answers.</li>
+</ul>
+<h2 id="domains">Domains</h2>
+<h3 id="different-domain-categories">Different Domain Categories</h3>
+<p>Intent-based, Knowledge base, and Question-Answering are three different types of conversation flow categories, each requiring different configurations to optimize the conversational experience.</p>
+<h3 id="intent-based">Intent-based</h3>
+<p>In an intent-based conversation flow, the focus is on identifying user intents and providing corresponding responses. Here are some recommendations to optimize intent-based conversations:</p>
+<ul>
+<li>Define Clear Intents: Identify possible intents that users may have and create corresponding responses for each intent.</li>
+<li>Use Entities: Utilize entities within intents to identify key information such as dates, times, locations, etc. This helps in providing more accurate answers to user queries.</li>
+</ul>
+<p><img src="../../../../../../images/en/bot-global-intent.png" alt="" title="Bot Add Domain Intent"></p>
+<ul>
+<li>1.For specific intents, you can choose to fill entities to capture key information from the user, or leave them empty and identify their intent during the conversation. This depends on the requirements and design of your conversation flow.</li>
+<li>2.In the configuration, you can choose whether to enable specific domains. Enable or disable relevant domains based on your conversation flow requirements.</li>
+<li>3.Enabling the count of missed hits depends on whether you want to track and record the number of missed hits in the conversation.</li>
+<li>4.If you want to pass variables to specific domains and forcefully inject the context of that domain, you can make the necessary settings in the configuration. This will help in sharing information and achieving more precise answers in specific conversation flows.</li>
+</ul>
+<h3 id="question-answering">Question-Answering</h3>
+<p>In a question-answering conversation flow, answers are provided based on pre-defined question-answer pairs.</p>
+<ul>
+<li>Cover Common Questions: Collect and organize common questions and provide corresponding answers.</li>
+<li>Consider Multiple Expressions: Provide multiple expressions for each question-answer pair to handle different user query variations.</li>
+</ul>
+<p><img src="../../../../../../images/en/bot-global-faq.png" alt="" title="Bot Add Domain Question-Answering"></p>
+<ul>
+<li>1.You can select specific categories for designated question-answer pairs in the configuration to classify them into specific categories. This option can be overridden to specify the category of question-answer pairs as needed.</li>
+<li>2.Based on the value in the configuration, when the similarity of an answer exceeds this value, the question is considered a user question. You can override this value in the configuration for more flexible control.</li>
+<li>3.If the similarity of an answer exceeds the configured value, the system displays other suggested questions. You can adjust this value in the configuration to meet your needs.</li>
+<li>4.Whether to enable specific domains can be configured as needed to control the enablement or disablement of domains.</li>
+<li>5.Enabling the count of missed hits depends on whether you want to track and record the number of missed hits in the conversation.</li>
+<li>7.You can pass variables to domains and forcefully inject the context of the domain to provide more specific conversation content. This can be overridden as needed to pass specific variables to domains.</li>
+</ul>
+<h2 id="scenes">Scenes</h2>
+<p>In a conversation flow, different response flows can be set up based on different scenes. Each scene can have its own independent conversation flow to meet the specific requirements of that scene. When configuring scenes, please make sure that the scene names consist only of lowercase letters (a-z) and underscores (_), in accordance with the system's naming conventions. By dividing the conversation into scenes, you can provide specific response flows and conversation experiences based on different usage scenarios.</p>
+<h2 id="general-responses">General Responses</h2>
+<p>Responses inherited by every scene.</p>
+<ul>
+<li>1.This message is usually not shown to users unless there is an abnormality in the conversation system. If you see this message, please contact the administrator for assistance.</li>
+<li>2.When the event is &quot;start,&quot; the bot will respond with the following message.</li>
+<li>3.Whenever the flow is updated, we will display the following text and restart the current conversation.</li>
+<li>4.This message is typically not shown and is used to indicate that the bot is busy processing a large number of requests from the same user.</li>
+<li>5.This message is displayed when there is no match, unless the branch condition is set to &quot;empty,&quot; in which case the default response will be used.</li>
+</ul>
+<h1 id="continue-reading">Continue Reading</h1>
+<ul>
+<li><a href="../../tutorials/docs/bot-resource.html">Bot Resource Management</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © <script>document.write(new Date().getFullYear());</script> Communeify</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

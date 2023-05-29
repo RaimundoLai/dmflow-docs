@@ -1,0 +1,422 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Templates | Communeify </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Templates | Communeify ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="google-site-verification" content="wackHW3mx9OzoWNdH73Ucfx-Tgn27NaVqlQ-dzKaBfw">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <meta property="docfx:appTitle" content="Communeify">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="templates">Templates</h1>
+
+<p>Templates are divided into Dialog Templates and Memory Templates.</p>
+<h2 id="dialog-templates">Dialog Templates</h2>
+<ul>
+<li><p>Connect Dialog Replies: Dialog templates are used to connect dialog replies from other platforms, enabling the chatbot to respond to user questions or commands in a natural way.</p>
+</li>
+<li><p>Simplify Development Process: By predefining and designing dialog templates, developers can quickly create and configure dialog flows, saving development time and costs.</p>
+</li>
+<li><p>Easy Maintenance and Modification: Dialog templates make it easier to maintain and modify dialog flows. Modifications or additions can be made to the templates without the need for extensive modifications to the entire dialog flow.</p>
+</li>
+</ul>
+<h3 id="supported-platforms">Supported Platforms</h3>
+<p>Currently, only LINE, Facebook Messenger, and Telegram are supported.</p>
+<h3 id="line">LINE</h3>
+<h4 id="text-messages">Text Messages</h4>
+<p>The chatbot can send text messages containing plain text content to users. This is the most common and basic type of message used to convey textual information.</p>
+<p><img src="../../../../../../images/en/bot-template-line-text-s.png" alt="LINE Text Messages" title="LINE Text Messages"></p>
+<h4 id="preview---text-message-preview-for-reference-only">Preview - Text Message Preview [For Reference Only]</h4>
+<p><img src="../../../../../../images/en/bot-template-line-text-f.png" alt="LINE Text Message Preview" title="LINE Text Message Preview"></p>
+<h4 id="quick-replies">Quick Replies</h4>
+<ul>
+<li>Instant Replies: Quick replies can be used to quickly respond to users without waiting for the chatbot to perform other processes or operations.</li>
+<li>Automated Replies: The chatbot can pre-configure common reply contents and quickly select the appropriate response based on the user's message content, providing immediate and personalized responses.</li>
+<li>Suggested Options: Quick replies can provide users with a set of option buttons that they can directly click to answer or perform corresponding operations, offering a more convenient way of interaction.</li>
+<li>Quick Actions: Quick replies can also be used to trigger specific actions or commands, such as subscription, search, reservation, etc. Users can directly click the buttons to perform the corresponding actions, saving input steps and time.</li>
+</ul>
+<p><img src="../../../../../../images/en/bot-template-line-quick-r.png" alt="DmFlow Quick Replies Display" title="DmFlow Quick Replies Display"></p>
+<ul>
+<li>1.Icon Beside Text: This refers to the small icon displayed beside the text or button, providing additional visual cues or identification. These icons can be used to differentiate different button options, enhancing user understanding and interaction experience.</li>
+<li>2.Object Trigger Actions: Location, Photo Carousel (scrolling through stored images on mobile), Open Window, Return Value, Camera, Time Picker, Message Text.</li>
+<li>3.Display Text: The text displayed beside the icon.</li>
+<li>4.Others: Additional information to be filled in after clicking the trigger action.
+<ul>
+<li>This includes two types: Action - Message Text and Action - Return Value. This refers to the two types of action in a message. One is message text, which directly displays text messages in the dialog box. The other is return value, which returns a value to the backend for further processing or analysis.</li>
+</ul>
+</li>
+</ul>
+<h4 id="image-messages">Image Messages</h4>
+<p>The chatbot can send images to users, allowing you to send image files for users to view the content.</p>
+<p><img src="../../../../../../images/en/bot-template-upload-image.png" alt="DmFlow Upload Image" title="DmFlow Upload Image"></p>
+<ul>
+<li>Image Format: DmFlow supports JPEG and PNG formats for images.</li>
+<li>Image Size: The uploaded image size is limited to 1MB [according to system display-based].</li>
+<li>Thumbnail Size: When displaying thumbnails, the image size is limited to 1MB [according to system display-based]. This is to ensure that thumbnails can be loaded and displayed quickly.</li>
+</ul>
+<p>Image URL: The URL of the image must use the HTTPS protocol to ensure security. The URL supports up to 10MB.</p>
+<p>Upload Image: Users can provide the URL of the image for upload. As long as there is a valid image URL, DmFlow can upload and use the image.</p>
+<ul>
+<li>1.Rotate Left: Rotate the image vertically to the left.</li>
+<li>2.Rotate Right: Rotate the image vertically to the right.</li>
+<li>3.Upload: Upload a new image.</li>
+<li>4.Zoom In: Zoom in on the image.</li>
+<li>5.Zoom Out: Zoom out the image.</li>
+<li>6.Cancel Image: Cancel the display or operation of the current image.</li>
+</ul>
+<h4 id="preview---image-message-preview-for-reference-only">Preview - Image Message Preview [For Reference Only]</h4>
+<p><img src="../../../../../../images/en/bot-template-line-image-f.png" alt="LINE Image Message" title="LINE Image Message"></p>
+<h4 id="actual-image-message-preview">Actual-Image Message Preview</h4>
+<p><img src="../../../../../../images/en/bot-template-line-image-r.png" alt="LINE Image Message Preview" title="LINE Image Message Preview"></p>
+<h4 id="video-message">Video Message</h4>
+<p>The bot can send video messages to users, allowing you to send video files for users to watch the content.</p>
+<p><img src="../../../../../../images/en/bot-template-line-video-s.png" alt="" title="DmFlow Video Message"></p>
+<ul>
+<li>URL Usage: In a reply message, only URLs can be used to reference images or videos. This means you can provide URLs for images or videos for the bot to display them in the conversation.</li>
+<li>Video Support: When referencing videos, only MP4 format videos are supported. This means you need to provide the URL of an MP4 format video file.</li>
+<li>Video Size Limit: The video file size is limited to 200MB. Make sure the video file you provide does not exceed this limit.</li>
+<li>HTTPS Protocol: For security and user privacy protection, the provided image and video URLs must use the HTTPS protocol. Ensure that the URLs you provide start with HTTPS.</li>
+</ul>
+<p>Please adhere to these restrictions and requirements to ensure that images and videos are displayed correctly and comply with relevant security standards.</p>
+<h4 id="audio-message">Audio Message</h4>
+<p>The bot can send audio messages to users, allowing users to listen to the audio content you send.</p>
+<p><img src="../../../../../../images/en/bot-template-line-audio-s.png" alt="" title="DmFlow Audio Message"></p>
+<ul>
+<li>URL Usage: In a reply message, only URLs can be used to reference audio files. This means you can provide the URL of an audio file for the bot to play the audio in the conversation.</li>
+<li>Audio Support: When referencing audio, only M4A format audio files are supported. This means you need to provide the URL of an M4A format audio file.</li>
+<li>Audio Size Limit: The audio file size is limited to 200MB. Make sure the audio file you provide does not exceed this limit.</li>
+<li>HTTPS Protocol: For security and user privacy protection, the provided audio file URL must use the HTTPS protocol. Ensure that the URL you provide starts with HTTPS.</li>
+</ul>
+<p>Please adhere to these restrictions and requirements to ensure that the audio plays correctly and complies with relevant security standards.</p>
+<h4 id="imagemap-message">Imagemap Message</h4>
+<p><img src="../../../../../../images/en/bot-template-line-imagemap-s.png" alt="" title="DmFlow Imagemap Message"></p>
+<p><a href="https://tw.linebiz.com/manual/line-official-account/oa-manager-richmessage/">Official Documentation for LINE Imagemap Message</a></p>
+<ul>
+<li>1.URL Limitation: In a reply message, the URL size is limited to below 10MB. This means that the URL you provide must point to a resource with a file size below 10MB. Additionally, for security and user privacy protection, the provided URL must use the HTTPS protocol.</li>
+<li>DmFlow Image Upload Limitation: On the DmFlow platform, the uploaded image size is limited to within 1MB (with system display being the primary). This means that the images you upload on the DmFlow platform will be limited to a size below 1MB. Please ensure that the images you upload comply with this limitation.</li>
+<li>2.Alternative Text: When a user receives an image carousel message, the alternative text is displayed when the image fails to load. This can be a text describing the image content or providing relevant information. The purpose of alternative text is to provide an alternative content to users when the image cannot be displayed.</li>
+<li>3.<a href="#imagemap-message-video">Imagemap Message Video</a></li>
+<li>4.<a href="#imagemap-message-action">Imagemap Message Action</a></li>
+</ul>
+<h4 id="imagemap-message-video">Imagemap Message Video</h4>
+<p><img src="../../../../../../images/en/bot-template-line-imagemap-video.png" alt="" title="DmFlow Imagemap Video"></p>
+<ul>
+<li>1.Video Limitation: Currently, the DmFlow platform does not support directly uploading videos. Therefore, videos can only be provided using URLs. When providing videos through URLs, the supported video format is MP4, and the size limit is within 200MB. Additionally, the provided video URL must use the HTTPS protocol.</li>
+<li>2.Image Preview: In terms of image preview, DmFlow supports image sizes up to 1MB. Please ensure that the provided image complies with this limitation.</li>
+<li>3.Horizontal Position: The horizontal position refers to the left-right position of the image or video within the message. The value of this position must be greater than 0, indicating the position counted from the left.</li>
+<li>4.Vertical Position: The vertical position refers to the top-bottom position of the image or video within the message. The value of this position must be greater than 0, indicating the position counted from the top.</li>
+<li>5.Video Width: Video width refers to the width dimension of the video displayed in the message.</li>
+<li>6.Video Height: Video height refers to the height dimension of the video displayed in the message.</li>
+<li>7.Provide External Link After Video Ends: After the video ends, you can provide an external link to the user. This can be a link pointing to another webpage or resource.</li>
+<li>8.External Link Name: The external link name refers to the displayed link text after the video ends, used to describe the content or purpose of the link.</li>
+</ul>
+<h4 id="imagemap-message-action">Imagemap Message Action</h4>
+<p>Include <a href="#imagemap-message-text">Imagemap Message Text</a> and <a href="#imagemap-message-link">Imagemap Message Link</a></p>
+<h4 id="imagemap-message-text">Imagemap Message Text</h4>
+<p><img src="../../../../../../images/en/bot-template-line-imagemap-t-text.png" alt="" title="DmFlow Imagemap Text"></p>
+<ul>
+<li>1.Calculated from the Top: It means that the vertical position of the element within the message is calculated from the top. Smaller values indicate that the element is closer to the top of the message.</li>
+<li>2.Calculated from the Left: It means that the horizontal position of the element within the message is calculated from the left. Smaller values indicate that the element is closer to the left side of the message.</li>
+<li>3.Text Display Height: It refers to the vertical height of the text within the message, i.e., the number of lines or vertical space occupied by the text.</li>
+<li>4.Display Text: It means displaying the text content within the message for the user to read.</li>
+<li>5.Text Display Width: It refers to the horizontal width of the text within the message, i.e., the number of characters or horizontal space occupied by the text.</li>
+<li>6.Note: In specific cases, when the client has accessibility features, a note function can be provided. This may include voice reminders for the text content to assist users with special needs such as visual impairments.</li>
+</ul>
+<h4 id="imagemap-message-link">Imagemap Message Link</h4>
+<p><img src="../../../../../../images/en/bot-template-line-imagemap-t-link.png" alt="" title="DmFlow Imagemap Link"></p>
+<ul>
+<li>1.Calculated from the Top: It means that the vertical position of the element within the message is calculated from the top. Smaller values indicate that the element is closer to the top of the message.</li>
+<li>2.Note: When the client has accessibility features, a note function can be provided, such as voice reminders to assist users with special needs.</li>
+<li>3.ext Display Width: It refers to the horizontal width of the text within the message, i.e., the number of characters or horizontal space occupied by the text.</li>
+<li>4.Calculated from the Left: It means that the horizontal position of the element within the message is calculated from the left. Smaller values indicate that the element is closer to the left side of the message.</li>
+<li>5.Text Display Height: It refers to the vertical height of the text within the message, i.e., the number of lines or vertical space occupied by the text.</li>
+<li>6.Link URL: It refers to the link URL that can be provided for users to click on, allowing them to access more related information or perform specific actions.</li>
+</ul>
+<h4 id="preview---imagemap-message-preview-for-reference-only">Preview - Imagemap Message Preview [For reference only]</h4>
+<p><img src="../../../../../../images/en/bot-template-line-imagemap-f.png" alt="" title="LINE Imagemap Message"></p>
+<p>The red arrows and pointing box are alignment aids. The video is represented by the &quot;VIDEO&quot; label to indicate its position and dimensions. The text section will display the text label upon clicking (the actual text will not appear), and the hyperlink will display the link content upon clicking (the actual hyperlink text will not appear). The actual display may vary.</p>
+<h4 id="actual---imagemap-message-preview">Actual - Imagemap Message Preview</h4>
+<p><img src="../../../../../../images/en/bot-template-line-imagemap-r.png" alt="" title="LINE Imagemap preview"></p>
+<h4 id="image-carousel">Image Carousel</h4>
+<p><img src="../../../../../../images/en/bot-template-line-imagecard-s.png" alt="" title="DmFlow Image Carousel"></p>
+<ul>
+<li>Text displayed when the image carousel cannot be displayed on the desktop version.</li>
+<li>Template selection: &quot;Image Carousel Module&quot;</li>
+<li>Clicking triggers actions such as displaying text, postback, or link.</li>
+</ul>
+<h4 id="trigger-actions">Trigger Actions</h4>
+<p>Include <a href="#trigger-action-text">Trigger Action Text</a>, <a href="#trigger-action-postback">Trigger Action Postback</a>, <a href="#trigger-action-link">Trigger Action Link</a></p>
+<h4 id="trigger-action-text">Trigger Action Text</h4>
+<p><img src="../../../../../../images/en/bot-template-line-imagecard-s-t-text.png" alt="" title="DmFlow Trigger Action - Text"></p>
+<ul>
+<li>1.Text displayed on the text button in the image.</li>
+<li>2.Text returned when the button is clicked.</li>
+</ul>
+<h4 id="trigger-action-postback">Trigger Action Postback</h4>
+<p><img src="../../../../../../images/en/bot-template-postback.png" alt="" title="Trigger Action - Postback"></p>
+<ul>
+<li>1.Text displayed on the text button in the image: When setting a text button on the image, you can specify the text to be displayed for each button. This text will appear on the image to guide users to take corresponding actions or obtain more information.</li>
+<li>2.Message type: Text or Event. In the conversation, you can use text or events as the message type. Text messages are used to directly show text content to users, while events trigger corresponding actions or processes.</li>
+<li>3.Details of text: It only contains the text for text details. For event details, they depend on the type of event set, such as interrupt events, ignore events, start events, end events, or wake-up events. To learn more about using return values, please refer to the <a href="../../tutorials/docs/bot-template.html#Postback%20Value">usage of postback values.</a>。</li>
+<li>5.Text inquiry: Through the conversation, you can ask users for text content and pass it to DmFlow for further processing. This allows you to interact with users in a conversational manner and perform subsequent operations based on their answers.</li>
+<li>6.When the user clicks this text button, the displayed text on their LINE client: When the user clicks the text button, the corresponding text content will be displayed on the user's LINE client. This allows you to provide relevant information or instructions to the user.</li>
+</ul>
+<h4 id="postback-value">Postback Value</h4>
+<p>Represents the data passed to DmFlow when the button is clicked. The key thing to understand is the event details:</p>
+<ul>
+<li>1.Interrupt event: When the user clicks the interrupt event, the conversation will directly jump to the specified scene. This can be used to interrupt the current conversation flow and guide the user to a specific scene or sub-flow.</li>
+<li>2.Ignore event: When the user clicks the ignore event, no response will be sent in the conversation. This is usually used to display specific data or information without triggering a backend response or other actions. It is useful for providing static content or displaying informational prompts.</li>
+<li>3.Start event: When the user clicks the start event, the current conversation can be restarted. This will reset the conversation state, allowing the user to restart the conversation flow and interact from the beginning.</li>
+<li>4.End event: When the user clicks the end event, the entire conversation flow will end. This means the conversation will not continue, and there will be no further interaction or response.</li>
+<li>5.Wake-up event: When a node enters a sleep mode, if the user clicks the wake-up event, the execution of that node will be reactivated. This is useful for nodes that have a sleep mode, and users can restart the conversation flow associated with that node by clicking the wake-up event.</li>
+</ul>
+<h4 id="trigger-action-link">Trigger Action Link</h4>
+<p><img src="../../../../../../images/en/bot-template-link.png" alt="" title="DmFlow Trigger Action - Link"></p>
+<ul>
+<li>1.Text displayed on the text button in the image: When you add text buttons on the image, these buttons will display the specified text. The text displayed when users click these buttons will be passed to the corresponding part of the conversation flow to trigger the corresponding actions or responses.</li>
+<li>2.Webview popped up on mobile devices: When users click a button in an image message, and the trigger action for that button is to open a window, if users click the button on a mobile device, a webview will pop up displaying the specified web page content. This webview can be displayed within the LINE client on the mobile device, allowing users to browse the web without leaving LINE.</li>
+<li>3.Web page opened in a new browser window on non-mobile devices: When users click a button in an image message, and the trigger action for that button is to open a window, if users click the button on a non-mobile device (such as a computer or tablet), the specified web page will be opened in a new browser window. This allows users to view and interact with the specified web page content in a separate browser window.</li>
+</ul>
+<h4 id="preview---image-carousel-preview-for-reference-only">Preview - Image Carousel Preview [for reference only]</h4>
+<p><img src="../../../../../../images/en/bot-template-line-imagecard-f.png" alt="" title="LINE Image Carousel Preview"></p>
+<h4 id="actual---image-carousel-preview">Actual - Image Carousel Preview</h4>
+<p><img src="../../../../../../images/en/bot-template-line-imagecard-r.png" alt="" title="LINE Image Carousel Preview"></p>
+<h4 id="confirm-template">Confirm Template</h4>
+<p><img src="../../../../../../images/en/bot-template-line-confirm-s.png" alt="" title="DmFlow Confirm Template"></p>
+<ul>
+<li>1.Template selection: &quot;Confirm Template&quot;: This is a predefined template used in conversations to display interactive confirmation questions and options. You can choose this template to create a message that includes a yes-or-no question and related options to guide users in making a choice.</li>
+<li>2.Confirmation question with two options: In the &quot;Confirm Template,&quot; you can set a binary question, offering two options for users to choose from. Users can select one of the options as their answer. The purpose of this question is to gather user preferences or choices between the two options.</li>
+<li>3.Trigger actions for each option: In the &quot;Confirm Template,&quot; each option can be configured with a trigger action. The trigger action defines the action to be taken when the user selects a particular option. You can configure trigger actions based on your business requirements, such as sending a specific reply message, jumping to another scene, or invoking an API. For more information on trigger actions, you can refer to the <a href="#trigger-actions">Trigger Actions</a> section.</li>
+</ul>
+<h4 id="preview---confirm-template-preview-for-reference-only">Preview - Confirm Template Preview [for reference only]</h4>
+<p><img src="../../../../../../images/en/bot-template-line-confirm-f.png" alt="" title="LINE Confirm Template Preview"></p>
+<h4 id="actual---confirm-template-preview">Actual - Confirm Template Preview</h4>
+<p><img src="../../../../../../images/en/bot-template-line-confirm-r.png" alt="" title="LINE Confirm Template Preview"></p>
+<h4 id="button-template">Button Template</h4>
+<p><img src="../../../../../../images/en/bot-template-line-buttons-s.png" alt="" title="DmFlow Button Template"></p>
+<ul>
+<li>1.Template selection: &quot;Button Template&quot;: This is a default template used to display messages with button options. You can choose this template to create a message that includes buttons for users to click and perform corresponding actions.</li>
+<li>2.Title: The title can be placed based on the preview.</li>
+<li>3.Text message: The text message can be placed based on the preview.</li>
+<li>4.Thumbnail image: The thumbnail image can be placed based on the preview.</li>
+<li>5.<a href="#image-aspect-ratio">Image aspect ratio</a></li>
+<li>6.<a href="#image-presentation">Image presentation</a></li>
+<li>7.Background color: When &quot;Image presentation&quot;</li>
+<li>8.When clicked outside the button (including image, title, and content),<a href="#trigger-actions">Trigger Action</a></li>
+<li>9.<a href="#trigger-actions">Trigger Action</a></li>
+</ul>
+<h4 id="image-aspect-ratio">Image aspect ratio</h4>
+<ul>
+<li>rectangle=1.51:1</li>
+<li>quare=1:1</li>
+</ul>
+<h4 id="image-presentation">Image presentation</h4>
+<ul>
+<li>cover:Fill the entire block, excess image is not displayed</li>
+<li>contain:Display the entire image, fill with background color if not fully filled</li>
+</ul>
+<h4 id="preview---button-template-for-reference-only">Preview - Button Template [for reference only]</h4>
+<p><img src="../../../../../../images/en/bot-template-line-buttons-f.png" alt="" title="LINE Button Template"></p>
+<h4 id="actual-preview---button-template">Actual Preview - Button Template</h4>
+<p><img src="../../../../../../images/en/bot-template-line-buttons-r.png" alt="" title="LINE Actual Preview - Button Template"></p>
+<h4 id="carousel-template">Carousel Template</h4>
+<p><img src="../../../../../../images/en/bot-template-line-card-s.png" alt="" title="DmFlow Carousel Template"></p>
+<ul>
+<li>1.Choose the &quot;Carousel Template&quot; module.</li>
+<li>2.Image carousel field, same as <a href="#button-template">Button Template</a>, but can support multiple items.</li>
+<li>3.<a href="#image-aspect-ratio">Image aspect ratio</a></li>
+<li>4.<a href="#image-presentation">Image presentation</a></li>
+</ul>
+<h4 id="preview---carousel-template-for-reference-only">Preview - Carousel Template [for reference only]</h4>
+<p><img src="../../../../../../images/en/bot-template-line-card-f.png" alt="" title="LINE Carousel Template"></p>
+<h4 id="actual-preview---carousel-template">Actual Preview - Carousel Template</h4>
+<p><img src="../../../../../.../images/en/bot-template-line-card-r.png" alt="" title="LINE Actual Preview - Carousel Template"></p>
+<h3 id="facebook-messenger">Facebook Messenger</h3>
+<h4 id="text-and-other-messages">Text and Other Messages</h4>
+<p><img src="../../../../../../images/en/bot-template-ms-text-s.png" alt="" title="DmFlow Messenger Text Message"></p>
+<p>Text and images (uploadable, within 1MB), while others such as videos, audios, and files only support URL links.</p>
+<h4 id="actual-preview---text-message">Actual Preview - Text Message</h4>
+<p><img src="../../../../../../images/en/bot-template-ms-text-r.png" alt="" title="Messenger Actual Preview - Text Message"></p>
+<h4 id="generic-template">Generic Template</h4>
+<p><img src="../../../../../../images/en/bot-template-ms-temp-s.png" alt="" title="DmFlow Generic Template"></p>
+<ul>
+<li>1.Horizontal: 16:9, Square: 1:1</li>
+<li>2.Title, placement can be understood based on the preview.</li>
+<li>3.Subtitle, placement can be understood based on the preview.</li>
+<li>4.Image, placement can be understood based on the preview.</li>
+<li>5.<a href="#link-elements-extension">Link Elements extension</a></li>
+<li>6.Trigger conditions include <a href="#link-elements-extension">Link Elements extension</a> and <a href="#trigger-action-postback">Action - Return Value</a>.</li>
+</ul>
+<h4 id="preview---generic-template-for-reference-only">Preview - Generic Template [for reference only]</h4>
+<p><img src="../../../../../../images/en/bot-template-ms-temp-f.png" alt="" title="Messenger Generic Template"></p>
+<h4 id="actual-preview---generic-template">Actual Preview - Generic Template</h4>
+<p><img src="../../../../../../images/en/bot-template-ms-temp-r.png" alt="" title="Messenger Generic Template"></p>
+<h4 id="link-elements-extension">Link Elements extension</h4>
+<p>Link Elements</p>
+<p><img src="../../../../../../images/en/bot-template-ms-link-f.png" alt="" title="DmFlow Link"></p>
+<ul>
+<li>1.URL link</li>
+<li>2.URL name</li>
+<li>3.FULL(100%)、COMPACT(50%)、TAIL(75%)</li>
+</ul>
+<p>Link Elements (extension)</p>
+<p><a href="https://developers.facebook.com/docs/messenger-platform/webview/extensions/">Add Messenger Extension SDK</a></p>
+<p><img src="../../../../../../images/en/bot-template-ms-linkext-f.png" alt="" title="DmFlow Messenger Link"></p>
+<ul>
+<li>1.URL link</li>
+<li>2.URL name</li>
+<li>3.FULL(100%)、COMPACT(50%)、TAIL(75%)</li>
+<li>4.URL for unsupported cases</li>
+</ul>
+<h4 id="button-template-1">Button Template</h4>
+<p><img src="../../../../../../images/en/bot-template-ms-buttons-s.png" alt="" title="DmFlow Button Template"></p>
+<ul>
+<li>1.Ask a question.</li>
+<li>2.Button elements include <a href="#link-elements-extension">Link Elements extension</a> and <a href="#trigger-action-postback">Action - Return Value</a>.</li>
+</ul>
+<h4 id="preview---button-template-for-reference-only-1">Preview - Button Template [for reference only]</h4>
+<p><img src="../../../../../../images/en/bot-template-ms-buttons-f.png" alt="" title="Messenger Button Template"></p>
+<h4 id="actual-preview---button-template-1">Actual Preview - Button Template</h4>
+<p><img src="../../../../../../images/en/bot-template-ms-buttons-r.png" alt="" title="Messenger Actual Preview - Button Template"></p>
+<h3 id="telegram">Telegram</h3>
+<h4 id="text-message">Text Message</h4>
+<p>The bot can send messages containing plain text content to the user. This is the most common and basic type of message used to convey textual information.</p>
+<h4 id="file-message">File Message</h4>
+<p>The bot can send files to the user. This includes various types of files such as documents, images, audio, etc. Users can click on the file message to download or view the corresponding file.</p>
+<h4 id="image-message">Image Message</h4>
+<p>The bot can send images to the user. This allows you to send image files for users to view the contents of the image.</p>
+<h4 id="voice-message">Voice Message</h4>
+<p>The bot can send voice messages to the user. Users can listen to the voice content you send.</p>
+<h4 id="video-message-1">Video Message</h4>
+<p>The bot can send videos to the user. This allows you to send video files for users to watch the video content.</p>
+<h4 id="location-message">Location Message</h4>
+<p>The bot can send location messages to the user. This allows you to share geographic coordinates of a specific location for users to view on a map.</p>
+<h4 id="multimedia-message">Multimedia Message</h4>
+<p>A multimedia message refers to a message that includes multiple media elements such as images, audio, video, etc. It can combine different media elements to provide richer and more diverse message content.</p>
+<h4 id="additional-features">Additional Features</h4>
+<p>Telegram provides the following basic features typically offered in messaging functionalities:</p>
+<ul>
+<li><p>Reply Keyboard Template: This is a menu or button template for quick replies, allowing users to easily choose predefined reply content or perform specific actions. You can build your own reply keyboard template, including selecting button styles, text content, and corresponding actions.</p>
+</li>
+<li><p>Message Formatting: You can adjust the format of messages as needed, such as using Markdown, MarkdownV2, or HTML markup languages to set text styles, bold, italic, links, etc. These markup languages allow you to better present text content, making it more readable and visually appealing.</p>
+</li>
+<li><p>Disabled Notifications: In some chat applications or platforms, you can set whether to disable or enable notification functionality. This means that when you send a message, whether the user will receive a notification or prompt. You can control whether to notify the user of new incoming messages based on your needs.</p>
+</li>
+</ul>
+<h2 id="memory-template">Memory Template</h2>
+<p>The memory template is divided into User Parameters, User Tags, Bot Config, and Single Session Storage.</p>
+<ul>
+<li>1.User Parameters: These are fields used to store user data. They can include various attributes such as text, numbers, time, etc. These parameters can be used in different stages of the conversation to record and retrieve relevant information about the user.</li>
+<li>2.User Tags: User tags are labels or markers used to tag and identify specific attributes or characteristics of the user. These tags are often associated with the user's behavior, preferences, or specific features. The bot can respond or perform specific actions based on user tags. User tags typically keep track of the number of times a tag has been applied and the last time it was applied.</li>
+<li>3.Bot Config: These are permanent parameters of the bot used to store global settings or configuration values. These parameters are typically identified with specific prefixes (e.g., &quot;config&quot;) to distinguish them from other types of parameters. Bot parameters can be used to configure the bot's behavior, adjust settings, or store global variables.</li>
+<li>4.Single Session Storage: These are fields used to temporarily store data during a single conversation. These fields can include various attributes such as text, numbers, time, lists, etc. During a specific conversation, the bot can use these fields to record, process, and retrieve information related to that conversation. Once the conversation ends, these temporary data are typically cleared or discarded.</li>
+</ul>
+<h3 id="attributes">Attributes</h3>
+<ul>
+<li>1.Text: Text parameters are used to store general text data. This can be text input by the user, responses generated by the bot, or other text messages that need to be stored. Text parameters can contain any string value, such as user names, addresses, problem descriptions, etc.</li>
+<li>2.Number: Number parameters are used to store numeric text data. This can be numbers input by the user, results calculated by the bot, or other numeric messages that need to be stored. Number parameters can be used for numeric operations, comparisons, and other number-related operations.</li>
+<li>3.Time: Time parameters are used to store date or time text data. This can be the date and time of specific events, scheduled meeting times, or other situations where time information needs to be recorded. Time parameters can be used for time comparisons, displaying date and time formats, and other time-related operations.</li>
+<li>4.List: List parameters allow storing multiple field values, with one field acting as a primary key to identify the items in the list. Lists can be used to store multiple related data, such as a user's order list, a list of items in a shopping cart, or other situations that require organizing and accessing multiple related values. List parameters facilitate easy retrieval, updating, and manipulation of specific items in the list.</li>
+</ul>
+<h1 id="continue-reading">Continue Reading</h1>
+<ul>
+<li><a href="../../tutorials/docs/bot-global.html">Bot Global Settings</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © <script>document.write(new Date().getFullYear());</script> Communeify</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>

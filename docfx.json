@@ -77,8 +77,8 @@
       "content":[
          {
             "files":[
-               "products/dmflow/**.yml",
-               "products/dmflow/**.md",
+               "lang/tw/products/dmflow/**.yml",
+               "lang/tw/products/dmflow/**.md",
                "pdf/*"
             ],
             "exclude":[

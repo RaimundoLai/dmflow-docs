@@ -1,0 +1,363 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Bot Dialogue Flow | Communeify </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Bot Dialogue Flow | Communeify ">
+    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="google-site-verification" content="wackHW3mx9OzoWNdH73Ucfx-Tgn27NaVqlQ-dzKaBfw">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <meta property="docfx:appTitle" content="Communeify">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="bot-dialogue-flow">Bot Dialogue Flow</h1>
+
+<p>Basic flow-based conversation is a method used to complement the limitations of domain-driven conversation flows. Domain-driven conversations are typically based on specific domains and are limited to knowledge and conversation flows within those domains. However, such limitations may not be able to handle certain edge cases or unknown user inputs.</p>
+<p>Basic flow-based conversation provides a flexible approach to handle unknown scenarios. It doesn't rely on specific domain knowledge but instead responds based on predefined conversation flows. This approach is commonly used to handle frequently asked questions, provide answers to common queries, or offer general guidance.</p>
+<p>Basic flow-based conversation can respond appropriately based on different user inputs and context. It can provide predefined responses, offer option choices, or guide users through specific actions. Additionally, you can incorporate conditional checks and transitions based on user responses to achieve more sophisticated conversation flows.</p>
+<p>Using basic flow-based conversation helps overcome the limitations of domain-driven conversations and provides more flexibility and breadth in conversation handling capabilities. This ensures suitable responses for various user inputs and scenario requirements, enhancing the usability and extensibility of the conversational AI system.</p>
+<h2 id="advantages">Advantages</h2>
+<ul>
+<li>Visual Representation: The use of a graphical interface provides an intuitive understanding of the relationships and positions between nodes. Through visualization, users can have a clearer understanding of the structure and logic of the conversation flow.</li>
+<li>Drag-and-Drop Nodes: Compared to traditional command-line interface (CLI) coding for chatbots, the design of drag-and-drop nodes is more user-friendly. Users can directly drag and drop nodes and configure their properties without the need for coding, making it convenient and easy to build conversation flows.</li>
+</ul>
+<p><img src="../../../../../../images/en/bot-flow-image.png" alt="" title="DmFlow Flow"></p>
+<ul>
+<li>1.New Process: Allows resetting the current flow, restoring all settings to their original state, including scenarios and nodes.</li>
+<li>2.Save: Provides functionality to add and load versioned flows, allowing saving and managing different versions of the flow.</li>
+<li>3.Update: Used to update the current version of the flow, making modifications and adjustments as needed.</li>
+<li>4.Choose Context: Allows adding, updating, deleting, and selecting scenarios through a pop-up window, facilitating the management and configuration of scenarios within the conversation flow.</li>
+<li>5.-7. Canvas Controls: Used to adjust the size and scale of the canvas and return it to the position of the starting node.</li>
+<li>8.Global Settings: Provides global options to reload and configure settings related to the chatbot.</li>
+<li>9.Full Screen: Switches to full-screen mode for better viewing and editing of the conversation flow.</li>
+<li>10.Templates: Offers memory and dialogue templates for quick construction and configuration of conversation flows.</li>
+<li>11.Test: Used to test the current chatbot flow, ensuring its proper functioning and meeting expectations.</li>
+<li>12.Stage process: Allows temporarily storing the cache of the current flow while handling other tasks, so it can be resumed later.</li>
+<li>13.Node Settings: Used to configure various properties of different nodes, such as resources, replies, scenarios, variables, and collection, to customize and configure the behavior and logic of the conversation flow.</li>
+</ul>
+<h2 id="save">Save</h2>
+<p><img src="../../../../../../images/en/bot-flow-version.png" alt="" title="DmFlow Version View"></p>
+<ul>
+<li>1.Add New Version: This feature allows creating a new version for updating and modifying the conversation flow.</li>
+<li>2.Version Properties: When creating a new version, you can fill in properties such as version name, status, update reason, preloading, and publishing settings.
+<ul>
+<li>Version Name: Assigns a unique name to the new version.</li>
+<li>Status: Indicates the status of the version. &quot;Completed&quot; means modifications have been completed successfully.</li>
+<li>Update Reason: Describes the updates or reasons for this version.</li>
+<li>Preloading: Specifies whether to preload specific settings or data when creating the version.</li>
+<li>Publish: Sets whether to publish the version for actual use.</li>
+</ul>
+</li>
+<li>3.Edit Version: Allows editing existing versions, including rewriting the update reason, modifying preloading settings, and changing the publishing status.</li>
+<li>4.Load Selected Version Script: This feature loads the conversation flow script of the selected version for editing and modification.</li>
+<li>5.Browse History: Enables viewing the historical records of past versions, allowing you to query and compare changes and modifications between different versions.</li>
+</ul>
+<h3 id="preloading">Preloading</h3>
+<p>Preloading: When the &quot;Preloading&quot; option is selected in your version, the script of that version will be prioritized and loaded when entering the conversation flow canvas for the first time, instead of the script with the latest date. This can be used to specify that a specific version's script is used from the beginning to achieve more fine-grained flow control.</p>
+<h3 id="publishing">Publishing</h3>
+<p>Publishing: When the &quot;Publish&quot; option is selected in your version, it means that the version will be published as a &quot;development version&quot; for testing purposes. Development versions are typically used for testing new features, bug fixes, or other development work. By marking a version as a &quot;development version,&quot; you can differentiate between test versions and official production versions, ensuring the stability of the production version.</p>
+<h2 id="testing">Testing</h2>
+<p><img src="../../../../../../images/en/bot-flow-test.png" alt="" title="DmFlow Bot Test"></p>
+<ul>
+<li>1.Enter Query: In the testing interface, you can input the query or prompt you want to test to check the response of the conversation flow.</li>
+<li>2.Test Scene Context: You can directly test the conversation flow of specific scenarios, allowing you to simulate the interaction between users and the bot in specific contexts.</li>
+<li>3.Platform Response Mode: You can choose different platform response modes based on the selected perspective. This can help you simulate the conversation experience on different platforms.</li>
+<li>4.Test Production Version: This feature allows you to test the published production version to ensure its proper functioning in a real environment.</li>
+<li>5.Business Resource Service: You can choose whether to enable the business resource service. If enabled, the corresponding resource nodes will be invoked for business logic interaction.</li>
+<li>6.Simulated Parameters: If you don't enable the business resource service, you can fill in simulated parameters here to simulate the parameters in actual resource requests.</li>
+<li>7.Refresh Page: This feature allows you to reload the test page to clear previous test results and settings and start a new test.</li>
+</ul>
+<h1 id="node-introduction">Node Introduction</h1>
+<h2 id="start-node">Start Node</h2>
+<p>As the global node for the scenario, it affects all nodes within the flow.<br>
+<img src="../../../../../../images/en/bot-flow-start.png" alt="" title="DmFlow Start Node"></p>
+<ul>
+<li>1.Query Node: Used for the initial greeting or opening question. It serves as the starting point of the conversation flow, where you can set the initial prompt or question.</li>
+<li>2.Mode Node: Divided into general mode and awakening mode. Awakening mode requires the user to input a specific &quot;awakening phrase&quot; to proceed to the subsequent flow.</li>
+<li>3.Preload Domain Node: This node must be an intent node and is used for usage in subsequent collection nodes. It preloads a specific domain so that the information from that domain can be used in the subsequent flow.</li>
+<li>4.Use Preloaded Domain Node: This node demonstrates how to use the preloaded domain from the &quot;Preload Domain&quot; node. This ensures that domain-related information can be used for operations in this node.</li>
+<li>5.Dialogue Template Node: This node contains templates for different channels. It is used to provide appropriate responses based on different channels. If there are different prompts for different channels, the system will automatically select the appropriate response based on the channel to respond to the user.</li>
+</ul>
+<h2 id="resource-node">Resource Node</h2>
+<p>This node is used to call external resources and perform business logic operations. You can configure the relevant properties and parameters of the resource node for resource invocation.
+<img src="../../../../../../images/en/bot-flow-resource.png" alt="" title="DmFlow資源節點"></p>
+<ul>
+<li>1.Parameter Prefix: Parameters set within the node can use different prefixes, including config (bot parameters), constant (constants), conversation (single-turn conversation), session (multi-turn conversation), sys_user (system user parameters), and user (user parameters). These prefixes are used to differentiate different types of parameters for ease of use within the node.</li>
+<li>2.Return Value Prefix: When the resource node completes its call and obtains a return value, the data of the return value can be stored in different prefixes, including conversation (single-turn conversation), session (multi-turn conversation), and user (user parameters). This allows the return value to be saved into the appropriate variables as needed for subsequent use.</li>
+<li>3.Based on the attribute of the parameter, when selecting the constant prefix, for parameters of the datetime and number types, only numbers can be entered; for parameters of the string type, any text can be entered.</li>
+</ul>
+<h3 id="prefix-introduction">Prefix Introduction</h3>
+<p>The prefixes are categorized as Bot Parameters, Constants, Conversation (single-turn), Conversation (multi-turn), System User Parameters, and User Parameters.</p>
+<ul>
+<li>Bot Parameters: You can find bot parameters in the template's memory template. These parameters are settings or information related to the entire bot.</li>
+<li>Constants: When you need to use a fixed text string as a parameter, you can choose the constant prefix.</li>
+<li>Conversation (single-turn): This prefix is mainly used in single-turn conversations.</li>
+<li>Conversation (multi-turn): In multi-turn conversations, you can use the memory templates in the template to store and retrieve information related to the current conversation.</li>
+<li>System User Parameters: The user parameters in the template's memory template provide some system-level user-related parameters. Currently, only userId, platform, and branch are available.</li>
+<li>User Parameters: You can find user parameters in the template's memory template. These parameters are information related to the user.</li>
+</ul>
+<h3 id="non-text-message-reception">Non-Text Message Reception</h3>
+<p>When receiving non-text messages in Line and Messenger, there are reserved words:</p>
+<ul>
+<li>conversation._queryType: Used to determine the type of message, such as text, image, audio, video, event, or file.</li>
+<li>conversation.@line and conversation.@fbmessenger: Enabled when receiving non-text and non-event messages from Line and Messenger platforms.</li>
+</ul>
+<pre><code>{
+  &quot;@line&quot;: {
+    &quot;attachments&quot;: [
+      {
+        &quot;id&quot;: &quot;att_id&quot;,
+        &quot;url&quot;: &quot;att_url&quot;,
+        &quot;type&quot;: &quot;att_type&quot;
+      }
+    ]
+  }
+}
+</code></pre>
+<p>If the message type is file and the platform provides the fileName and fileSize, they will be included:</p>
+<pre><code>{
+  &quot;@line&quot;: {
+    &quot;attachments&quot;: [
+      {
+        &quot;id&quot;: &quot;att_id&quot;,
+        &quot;url&quot;: &quot;att_url&quot;,
+        &quot;type&quot;: &quot;att_type&quot;,
+        &quot;fileName&quot;: &quot;fileName&quot;,
+        &quot;fileSize&quot;: 10240
+      }
+    ]
+  }
+}
+</code></pre>
+<p>The same applies to conversation.@fbmessenger:</p>
+<pre><code>{
+  &quot;@fbmessenger&quot;: {
+    &quot;attachments&quot;: [
+      {
+        &quot;id&quot;: &quot;att_id&quot;,
+        &quot;url&quot;: &quot;att_url&quot;,
+        &quot;type&quot;: &quot;att_type&quot;
+      }
+    ]
+  }
+}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>PATH</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Indicates whether the platform provides a specific ID. For Messenger, files can be uploaded in advance.</td>
+</tr>
+<tr>
+<td>url</td>
+<td>Indicates whether the platform provides a specific URL.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>text, image, audio, video, event, file</td>
+</tr>
+<tr>
+<td>fileName</td>
+<td>When the type is file and the platform provides the fileName, it will be displayed.</td>
+</tr>
+<tr>
+<td>fileSize</td>
+<td>When the type is file and the platform provides the fileSize, it will be displayed.</td>
+</tr>
+</tbody>
+</table>
+<p>How to use:</p>
+<ul>
+<li>When the node is a &quot;Condition Node,&quot; you can first check the type of conversation._queryType.</li>
+<li>Then, using a &quot;Resource Node,&quot; pass the attachments to the backend for processing.</li>
+</ul>
+<h4 id="return-value">Return Value</h4>
+<p>The JSON response from the resource can be returned to the conversation system [currently only JSON response is supported].</p>
+<p>If the obtained value is &quot;test&quot; , the injected value into conversation.test will be &quot;test&quot;.</p>
+<h2 id="reply-node">Reply Node</h2>
+<p>In the reply node, you can use it to ask questions or provide answers.<br>
+<img src="../../../../../../images/en/bot-flow-reply.png" alt="" title="DmFlow Reply Node"></p>
+<ul>
+<li>1.In this selection, you can choose the type of question. Currently, only a simple question type is supported.</li>
+<li>2.This is the textual expression of the question. The supported option is &quot;Random,&quot; which means you can set multiple different expressions for the question, and the system will randomly select one each time it is used.</li>
+<li>3.Answers: You can provide multiple answer options, and each answer has an equal probability of being selected, i.e., 1/N, where N is the total number of answers.</li>
+<li>4.Add Button: This button is used to add more answer options. Clicking on it allows you to enter a new answer button.</li>
+<li>5.Wait for User Reply: When selected, the node will wait for the user's response. During this time, the flow will pause until a response is received from the user before proceeding with the subsequent nodes.</li>
+<li>6.Interruptible: This option determines whether the node can interrupt the execution of other nodes. If this option is enabled, the node can interrupt the execution of the Start node and branch to that node.。</li>
+<li>7.Conversation Template: It is used for templates in different channels, usually used for answering questions. If different channels have different answers, you can select the corresponding answer for that channel.</li>
+</ul>
+<h2 id="scene-node">Scene Node</h2>
+<p>Characteristics of the Scene node.<br>
+<img src="../../../../../../images/en/bot-flow-scene.png" alt="" title="DmFlow Scene Node"></p>
+<ul>
+<li><p>1.The scene has the following options:</p>
+<ul>
+<li>Interrupt: Selecting this action will interrupt the execution of the current Scene node and transition to another node. You can specify the target node to transition to.</li>
+<li>Restart: Selecting this action will restart the execution of the current Scene node. This will restart the entire Scene from the beginning of the Scene node.</li>
+<li>Return to Main Scene: Selecting this action will return the execution flow to the Main Scene node. This can be used to continue execution in the Main Scene after performing specific actions in a Scene node.</li>
+<li>Complete: Selecting this action will mark the execution of the Scene node as complete. This indicates that the execution of the Scene node has finished, and the flow can proceed to the next node.</li>
+<li>End Flow: Selecting this action will end the execution of the entire flow. This will stop the execution of the flow and exit.</li>
+<li>Listen: Selecting this action will put the Scene node in a listening state, waiting for user input. Once a response is received from the user, the flow will continue execution.</li>
+<li>Jump: Selecting this action allows the flow to jump to a specified node. You can specify the target node to jump to.</li>
+</ul>
+</li>
+<li><p>2.Clear All Data in &quot;Template&quot; -&gt; &quot;Memory Template&quot; -&gt; &quot;Single Conversation Storage&quot;: This action clears all data in the Single Conversation Storage of the Memory Template. This may be necessary to clear specific conversation data.</p>
+</li>
+</ul>
+<h2 id="variable-node">Variable Node</h2>
+<p>The Variable Node is used to assign values to variable templates and allows for parameter variation.<br></p>
+<p><img src="../../../../../../images/en/bot-flow-var.png" alt="" title="DmFlow Variable Node"></p>
+<h3 id="operation-type">Operation Type</h3>
+<ul>
+<li>Variable: Selecting this operation allows you to set variables for a single session or user.</li>
+<li>System Parameter: Currently, only &quot;User Tags&quot; are supported. You can select this operation and set the value for user tags.</li>
+</ul>
+<h3 id="operations">Operations</h3>
+<ul>
+<li><p>List Append: When the variable source is a list, you can use this operation to add a new value to the list.</p>
+</li>
+<li><p>List Remove: When the variable source is a list, you can use this operation to remove a specific value from the list.</p>
+</li>
+<li><p>String Replace: When the variable source is a time or string, you can use this operation to replace a specific substring with a new value.</p>
+</li>
+<li><p>Clear String: When the variable source is a string, you can use this operation to clear the value of the string.</p>
+</li>
+<li><p>Reset to Zero: When the variable source is a number, you can use this operation to reset the number to zero.</p>
+</li>
+<li><p>Increment by One: When the variable source is a number, you can use this operation to increment the number by one.</p>
+</li>
+<li><p>Decrement by One: When the variable source is a number, you can use this operation to decrement the number by one.</p>
+</li>
+</ul>
+<h2 id="collect-node">Collect Node</h2>
+<p>The Collect Node is used to simplify the collection of intent-based slots.<br>
+<img src="../../../../../../images/en/bot-flow-collect.png" alt="" title="DmFlow Collect Node"></p>
+<ul>
+<li>1.Set the question to collect the user's answer, which is used to collect specific intent-based slots.</li>
+<li>2.Specify the maximum number of failures allowed when the user's response does not match the specified intent-based slot. Exceeding this number will trigger a fallback.</li>
+<li>3.You can choose to start the node and specify the intent-based slots in a specific domain to collect the corresponding slots.</li>
+<li>4.You can choose to start the node and specify all the slots in a domain to collect the values of all the slots at once.</li>
+<li>5.Inject standard words directly into the field.</li>
+<li>6.Inject normalized words directly into the field.</li>
+</ul>
+<h2 id="call-function-node">Call Function Node</h2>
+<p>Invoke different domains.</p>
+<h2 id="conditional-node">Conditional Node</h2>
+<ul>
+<li>1.Conditional Type:
+<ul>
+<li>Conditional: Route based on different conditions, which can be intent, variable, or query.</li>
+<li>Unconditional: Connect directly to other nodes without any conditional restrictions.</li>
+<li>Percentage: Distribute randomly to different nodes based on specified probabilities.</li>
+</ul>
+</li>
+<li>2.Priority: You can set the priority for conditional branches to determine the execution order. If multiple branches have the same priority, they will be sorted based on their position in the node.</li>
+<li>3.Trigger Condition: Used to define the condition part of the conditional branch. It can be an intent, variable, or query.</li>
+<li>4.Grouping: Conditional branches can be grouped, where branches within the same group have an AND relationship, and branches in different groups have an OR relationship. The conditions are checked based on the grouping order, and if any condition in a group is TRUE, the next node will be executed.</li>
+</ul>
+<h1 id="continue-reading">Continue Reading</h1>
+<ul>
+<li><a href="../../tutorials/docs/bot-example.html">Bot Example</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © <script>document.write(new Date().getFullYear());</script> Communeify</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+  </body>
+</html>
