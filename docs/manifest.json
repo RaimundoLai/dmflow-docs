@@ -704,17 +704,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/en/intent-intro-flow.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/en/intent-intro-flow.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "images/en/intent-intro-trigger.png",
       "output": {
         "resource": {
@@ -2343,17 +2332,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/tw/intent-intro-flow.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/tw/intent-intro-flow.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "images/tw/intent-intro-trigger.png",
       "output": {
         "resource": {
@@ -2640,17 +2618,6 @@
     },
     {
       "type": "Resource",
-      "source_relative_path": "images/tw/line-001.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/tw/line-001.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
       "source_relative_path": "images/tw/line-002.png",
       "output": {
         "resource": {
@@ -2787,17 +2754,6 @@
       "output": {
         "resource": {
           "relative_path": "images/tw/messenger-007.png"
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "images/tw/messenger-framework.png",
-      "output": {
-        "resource": {
-          "relative_path": "images/tw/messenger-framework.png"
         }
       },
       "is_incremental": false,

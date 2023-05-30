@@ -3,7 +3,19 @@
 # 架構
 DmFlow透過API與LINE Server進行串接，提供對話機器人給用戶使用。
 
-![](../../../../../../images/tw/line-001.png)
+``` mermaid
+sequenceDiagram
+    participant 用戶
+    participant LINE SERVER
+    participant DmFlow
+
+    用戶->>LINE SERVER: 發送訊息
+    LINE SERVER->>DmFlow: HTTP POST 到 webhook
+    DmFlow-->>LINE SERVER: HTTP 200 OK
+    Note over DmFlow: 處理並生成回應
+    DmFlow->>LINE SERVER: 推送/回覆訊息
+    LINE SERVER-->>用戶: 發送回應
+```
 
 ## LINE Server
 

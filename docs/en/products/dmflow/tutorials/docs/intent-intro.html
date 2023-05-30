@@ -93,8 +93,32 @@
 <ul>
 <li>In the precondition node, when the action is set to &quot;Confirmation,&quot; denying the intent will cancel the execution of the current state.</li>
 </ul>
-<p>With these intent types, you can design different scenarios in your conversation flow, such as finding intents, restarting, exiting, yes, and no.
-<img src="../../../../../../images/en/intent-intro-flow.png" alt=""></p>
+<p>With these intent types, you can design different scenarios in your conversation flow, such as finding intents, restarting, exiting, yes, and no.</p>
+<pre><code class="lang-mermaid">graph TB
+start((Start Conversation)) --&gt;|Hit Intent A| intentA[Intent A - No]
+intentA --&gt; entityA[Entity A]
+entityA --&gt; hitEntityA{Hit Entity A?}
+hitEntityA --&gt; |Hit Entity A, Proceed to Entity B| entityB[Entity B]
+hitEntityA --&gt; |Miss Entity A| intentBC{Intent B/C/Others}
+hitEntityA --&gt; |Exceed System Fallback Count| finish
+entityB --&gt; precondition{Precondition}
+precondition --&gt;|Precondition Not Met| fulfill((Fulfill))
+fulfill --&gt; finish
+precondition --&gt;|Precondition Met| intentDE{Intent D/E}
+intentDE --&gt;|Hit Intent D - Yes| intentD[Intent D - Yes]
+intentDE --&gt;|Hit Intent E - No| intentE[Intent E - No]
+intentD --&gt; intentF[Intent F - Follow-up Intent]
+intentE --&gt; |Return to Previous Intent| beforeAconfirm{Previous Intent Exists?}
+beforeAconfirm --&gt; |Exists| beforeA((Return to Previous Intent))
+beforeAconfirm --&gt; |Does Not Exist| finish
+intentBC --&gt;|Hit Intent B - Restart| restart[Intent B - Restart]
+intentBC --&gt;|Hit Intent C - Exit| prevIntent{Previous Intent Exists?}
+intentBC --&gt;|Hit Other Intent| other_intent((Other Intent))
+intentBC --&gt;|No Intent Hit| entityA
+prevIntent --&gt;|Previous Intent Exists| prevIntentLink((Go to Previous Intent))
+prevIntent --&gt;|No Previous Intent| finish((End))
+restart --&gt; start
+</code></pre>
 <h2 id="trigger-condition">Trigger Condition</h2>
 <p>The trigger condition requires filling in the following fields: Trigger Type, Starting Point, Operation, and Object.</p>
 <ul>
@@ -189,9 +213,15 @@ Invoke Resource:<br></p>
         </div>
       </footer>
     </div>
-    
     <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../../styles/main.js"></script>
-  </body>
+    <!-- mermaid support -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: false
+        });
+        mermaid.init(undefined, ".lang-mermaid");
+    </script>  </body>
 </html>

@@ -73,6 +73,18 @@
 
 <h1 id="architecture">Architecture</h1>
 <p>DmFlow integrates with the LINE Server via API to provide a chatbot for users.</p>
+<pre><code class="lang-mermaid">sequenceDiagram
+    participant User
+    participant LINE SERVER
+    participant DmFlow
+
+    User-&gt;&gt;LINE SERVER: Sends a message
+    LINE SERVER-&gt;&gt;DmFlow: HTTP POST to webhook
+    DmFlow--&gt;&gt;LINE SERVER: HTTP 200 OK
+    Note over DmFlow: Process and generate response
+    DmFlow-&gt;&gt;LINE SERVER: Push/Reply message
+    LINE SERVER--&gt;&gt;User: Sends the response
+</code></pre>
 <h2 id="line-server">LINE Server</h2>
 <p>LINE provides various services that can be accessed through DmFlow for data exchange.</p>
 <h2 id="api">API</h2>
@@ -131,9 +143,15 @@
         </div>
       </footer>
     </div>
-    
     <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../../styles/main.js"></script>
-  </body>
+    <!-- mermaid support -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: false
+        });
+        mermaid.init(undefined, ".lang-mermaid");
+    </script>  </body>
 </html>

@@ -73,6 +73,18 @@
 
 <h1 id="architecture">Architecture</h1>
 <p>DmFlow integrates with the Facebook server via API to publish the chatbot to Messenger and provide it to users for interaction.</p>
+<pre><code class="lang-mermaid">sequenceDiagram
+    participant User
+    participant MESSENGER SERVER
+    participant DmFlow
+
+    User-&gt;&gt;MESSENGER SERVER: Sends a message
+    MESSENGER SERVER-&gt;&gt;DmFlow: HTTP POST to webhook
+    DmFlow--&gt;&gt;MESSENGER SERVER: HTTP 200 OK
+    Note over DmFlow: Process and generate response
+    DmFlow-&gt;&gt;MESSENGER SERVER: Reply message
+    MESSENGER SERVER--&gt;&gt;User: Sends the response
+</code></pre>
 <h2 id="facebook-server">Facebook Server</h2>
 <p>Facebook provides various services that allow data exchange with DmFlow through API to communicate with Facebook's platform.</p>
 <h2 id="api">API</h2>
@@ -128,9 +140,15 @@
         </div>
       </footer>
     </div>
-    
     <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../../styles/main.js"></script>
-  </body>
+    <!-- mermaid support -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: false
+        });
+        mermaid.init(undefined, ".lang-mermaid");
+    </script>  </body>
 </html>

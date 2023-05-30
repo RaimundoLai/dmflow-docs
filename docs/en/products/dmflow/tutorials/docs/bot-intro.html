@@ -162,9 +162,15 @@ These templates effectively handle and manage the content within conversations, 
         </div>
       </footer>
     </div>
-    
     <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../../styles/main.js"></script>
-  </body>
+    <!-- mermaid support -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: false
+        });
+        mermaid.init(undefined, ".lang-mermaid");
+    </script>  </body>
 </html>

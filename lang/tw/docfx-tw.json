@@ -55,7 +55,8 @@
       ],
       "template":[
          "default",
-         "../../templates/material"
+         "../../templates/material",
+		 "../../templates/mermaid"
       ],
       "postProcessors":[
          

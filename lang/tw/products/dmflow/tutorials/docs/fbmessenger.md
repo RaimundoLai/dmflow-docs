@@ -3,7 +3,19 @@
 # 架構
 DmFlow透過API與Facebook Server進行串接，並發布到messenger，提供對話機器人給用戶使用。
 
-![](../../../../../../images/tw/messenger-framework.png)
+``` mermaid
+sequenceDiagram
+    participant 用戶
+    participant MESSENGER SERVER
+    participant DmFlow
+
+    用戶->>MESSENGER SERVER: 發送訊息
+    MESSENGER SERVER->>DmFlow: HTTP POST 到 webhook
+    DmFlow-->>MESSENGER SERVER: HTTP 200 OK
+    Note over DmFlow: 處理並生成回應
+    DmFlow->>MESSENGER SERVER: 回覆訊息
+    MESSENGER SERVER-->>用戶: 發送回應
+```
 
 ## Facebook Server
 

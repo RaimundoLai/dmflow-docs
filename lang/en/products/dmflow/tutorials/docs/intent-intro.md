@@ -25,7 +25,33 @@ Intents are divided into six main sections: Trigger Condition, Slots, Utterances
 - In the precondition node, when the action is set to "Confirmation," denying the intent will cancel the execution of the current state.
 
 With these intent types, you can design different scenarios in your conversation flow, such as finding intents, restarting, exiting, yes, and no.
-![](../../../../../../images/en/intent-intro-flow.png)
+
+``` mermaid
+graph TB
+start((Start Conversation)) -->|Hit Intent A| intentA[Intent A - No]
+intentA --> entityA[Entity A]
+entityA --> hitEntityA{Hit Entity A?}
+hitEntityA --> |Hit Entity A, Proceed to Entity B| entityB[Entity B]
+hitEntityA --> |Miss Entity A| intentBC{Intent B/C/Others}
+hitEntityA --> |Exceed System Fallback Count| finish
+entityB --> precondition{Precondition}
+precondition -->|Precondition Not Met| fulfill((Fulfill))
+fulfill --> finish
+precondition -->|Precondition Met| intentDE{Intent D/E}
+intentDE -->|Hit Intent D - Yes| intentD[Intent D - Yes]
+intentDE -->|Hit Intent E - No| intentE[Intent E - No]
+intentD --> intentF[Intent F - Follow-up Intent]
+intentE --> |Return to Previous Intent| beforeAconfirm{Previous Intent Exists?}
+beforeAconfirm --> |Exists| beforeA((Return to Previous Intent))
+beforeAconfirm --> |Does Not Exist| finish
+intentBC -->|Hit Intent B - Restart| restart[Intent B - Restart]
+intentBC -->|Hit Intent C - Exit| prevIntent{Previous Intent Exists?}
+intentBC -->|Hit Other Intent| other_intent((Other Intent))
+intentBC -->|No Intent Hit| entityA
+prevIntent -->|Previous Intent Exists| prevIntentLink((Go to Previous Intent))
+prevIntent -->|No Previous Intent| finish((End))
+restart --> start
+```
 
 ## Trigger Condition
 The trigger condition requires filling in the following fields: Trigger Type, Starting Point, Operation, and Object.

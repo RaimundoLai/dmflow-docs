@@ -25,7 +25,35 @@
 - 在前置節點中，當動作設置為"確認"時，否定意圖將取消當前狀態的執行。
 
 透過這些意圖型，您可以設計對話流程中的不同情境，例如尋找意圖、重新開始、離開、肯定和否定等。
-![](../../../../../../images/tw/intent-intro-flow.png)
+
+
+``` mermaid
+graph TB
+    start((開始對話)) -->|命中意圖A| intentA[意圖A-無]
+    intentA --> entityA[實體A]
+    entityA --> hitettA{是否命中實體A}
+    hitettA --> |命中實體A,進入實體B詢問| entityB[實體B]
+    hitettA --> |沒命中實體A| intentBC{進入意圖B/C/其他}
+    hitettA --> |超過系統未命中次數| finish
+    entityB --> precondition{前置條件}
+    precondition -->|未達成前置條件| fulfill((完成))
+    fulfill --> finish
+    precondition -->|達成前置條件| intentDE{進入意圖D/E}
+    intentDE -->|命中意圖D-肯定| intentD[意圖D-肯定]
+    intentDE -->|命中意圖E-否定| intentE[意圖E-否定]
+    intentD --> intentF[意圖F-接續意圖]
+    intentE --> |回到上一個意圖| beforeAconfirm{是否存在上一個意圖}
+    beforeAconfirm --> |存在意圖| beforeA((回到上一個意圖))
+    beforeAconfirm --> |不存在意圖| finish
+    intentBC -->|命中意圖B-重新開始| restart[意圖B-重新開始]
+    intentBC -->|命中意圖C-離開| prevIntent{是否存在上一個意圖}
+    intentBC -->|命中其他意圖| other_intent((其他意圖))
+    intentBC -->|未命中任何意圖| entityA
+    prevIntent -->|有上一個意圖| prevIntentLink((前往上一個意圖))
+    prevIntent -->|沒有上一個意圖| finish((結束))
+    restart --> start
+
+```
 
 ## 觸發條件
 觸發條件，需要填寫的格子分別為觸發型態、起始、操作、或是以及對象。

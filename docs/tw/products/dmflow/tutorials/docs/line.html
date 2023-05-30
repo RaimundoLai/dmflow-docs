@@ -73,7 +73,18 @@
 
 <h1 id="架構">架構</h1>
 <p>DmFlow透過API與LINE Server進行串接，提供對話機器人給用戶使用。</p>
-<p><img src="../../../../../../images/tw/line-001.png" alt=""></p>
+<pre><code class="lang-mermaid">sequenceDiagram
+    participant 用戶
+    participant LINE SERVER
+    participant DmFlow
+
+    用戶-&gt;&gt;LINE SERVER: 發送訊息
+    LINE SERVER-&gt;&gt;DmFlow: HTTP POST 到 webhook
+    DmFlow--&gt;&gt;LINE SERVER: HTTP 200 OK
+    Note over DmFlow: 處理並生成回應
+    DmFlow-&gt;&gt;LINE SERVER: 推送/回覆訊息
+    LINE SERVER--&gt;&gt;用戶: 發送回應
+</code></pre>
 <h2 id="line-server">LINE Server</h2>
 <p>LINE 透過整合有不同的服務，可以透過DmFlow溝通LINE的終端，去做資料交換。</p>
 <h2 id="api">API</h2>
@@ -132,9 +143,15 @@
         </div>
       </footer>
     </div>
-    
     <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../../styles/main.js"></script>
-  </body>
+    <!-- mermaid support -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: false
+        });
+        mermaid.init(undefined, ".lang-mermaid");
+    </script>  </body>
 </html>

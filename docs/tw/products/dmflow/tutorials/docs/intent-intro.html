@@ -93,8 +93,33 @@
 <ul>
 <li>在前置節點中，當動作設置為&quot;確認&quot;時，否定意圖將取消當前狀態的執行。</li>
 </ul>
-<p>透過這些意圖型，您可以設計對話流程中的不同情境，例如尋找意圖、重新開始、離開、肯定和否定等。
-<img src="../../../../../../images/tw/intent-intro-flow.png" alt=""></p>
+<p>透過這些意圖型，您可以設計對話流程中的不同情境，例如尋找意圖、重新開始、離開、肯定和否定等。</p>
+<pre><code class="lang-mermaid">graph TB
+    start((開始對話)) --&gt;|命中意圖A| intentA[意圖A-無]
+    intentA --&gt; entityA[實體A]
+    entityA --&gt; hitettA{是否命中實體A}
+    hitettA --&gt; |命中實體A,進入實體B詢問| entityB[實體B]
+    hitettA --&gt; |沒命中實體A| intentBC{進入意圖B/C/其他}
+    hitettA --&gt; |超過系統未命中次數| finish
+    entityB --&gt; precondition{前置條件}
+    precondition --&gt;|未達成前置條件| fulfill((完成))
+    fulfill --&gt; finish
+    precondition --&gt;|達成前置條件| intentDE{進入意圖D/E}
+    intentDE --&gt;|命中意圖D-肯定| intentD[意圖D-肯定]
+    intentDE --&gt;|命中意圖E-否定| intentE[意圖E-否定]
+    intentD --&gt; intentF[意圖F-接續意圖]
+    intentE --&gt; |回到上一個意圖| beforeAconfirm{是否存在上一個意圖}
+    beforeAconfirm --&gt; |存在意圖| beforeA((回到上一個意圖))
+    beforeAconfirm --&gt; |不存在意圖| finish
+    intentBC --&gt;|命中意圖B-重新開始| restart[意圖B-重新開始]
+    intentBC --&gt;|命中意圖C-離開| prevIntent{是否存在上一個意圖}
+    intentBC --&gt;|命中其他意圖| other_intent((其他意圖))
+    intentBC --&gt;|未命中任何意圖| entityA
+    prevIntent --&gt;|有上一個意圖| prevIntentLink((前往上一個意圖))
+    prevIntent --&gt;|沒有上一個意圖| finish((結束))
+    restart --&gt; start
+
+</code></pre>
 <h2 id="觸發條件">觸發條件</h2>
 <p>觸發條件，需要填寫的格子分別為觸發型態、起始、操作、或是以及對象。</p>
 <ul>
@@ -194,9 +219,15 @@
         </div>
       </footer>
     </div>
-    
     <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
     <script type="text/javascript" src="../../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../../styles/main.js"></script>
-  </body>
+    <!-- mermaid support -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: false
+        });
+        mermaid.init(undefined, ".lang-mermaid");
+    </script>  </body>
 </html>

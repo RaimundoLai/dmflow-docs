@@ -3,6 +3,20 @@
 # Architecture
 DmFlow integrates with the Facebook server via API to publish the chatbot to Messenger and provide it to users for interaction.
 
+``` mermaid
+sequenceDiagram
+    participant User
+    participant MESSENGER SERVER
+    participant DmFlow
+
+    User->>MESSENGER SERVER: Sends a message
+    MESSENGER SERVER->>DmFlow: HTTP POST to webhook
+    DmFlow-->>MESSENGER SERVER: HTTP 200 OK
+    Note over DmFlow: Process and generate response
+    DmFlow->>MESSENGER SERVER: Reply message
+    MESSENGER SERVER-->>User: Sends the response
+```
+
 ## Facebook Server
 
 Facebook provides various services that allow data exchange with DmFlow through API to communicate with Facebook's platform.

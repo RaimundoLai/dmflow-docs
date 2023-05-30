@@ -3,6 +3,20 @@
 # Architecture
 DmFlow integrates with the LINE Server via API to provide a chatbot for users.
 
+``` mermaid
+sequenceDiagram
+    participant User
+    participant LINE SERVER
+    participant DmFlow
+
+    User->>LINE SERVER: Sends a message
+    LINE SERVER->>DmFlow: HTTP POST to webhook
+    DmFlow-->>LINE SERVER: HTTP 200 OK
+    Note over DmFlow: Process and generate response
+    DmFlow->>LINE SERVER: Push/Reply message
+    LINE SERVER-->>User: Sends the response
+```
+
 ## LINE Server
 
 LINE provides various services that can be accessed through DmFlow for data exchange.
