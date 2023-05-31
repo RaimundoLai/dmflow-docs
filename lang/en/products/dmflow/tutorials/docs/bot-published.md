@@ -1,3 +1,8 @@
+---
+title: DmFlow Bot Publishing | DmFlow
+description: The publishing feature is used to release the production version of the chatbot for use on multiple channels. It provides a convenient way to quickly deploy and utilize the production version on different platforms.
+---
+
 # Publishing
 Publishing is used to release the production version of the bot, making it available for different channels.
 
@@ -10,11 +15,11 @@ When using DmFlow's built-in API, you need to apply for a CLIENT ID to authorize
 - 3.Expiration Days: When selecting -1, it defaults to one year expiration, with a maximum of 30 days.
 - 4.Whitelist: Domains that are allowed access to DmFlow are filtered.
 
-![](../../../../../../images/en/bot-published-api-secret.png)
+![Bot secure API](../../../../../../images/en/bot-published-api-secret.png "Bot secure API")
 
 ## Publishing
 
-![](../../../../../../images/en/bot-published-published.png)
+![Bot publishing](../../../../../../images/en/bot-published-published.png "Bot publishing")
 
 - 1.Connect to Production Version: When the development version is ready, it can be linked to the production version for deployment.
 - 2.View Current Production Version: Check the current fixed settings of the production version. Currently, only the secret key can be modified (external resource key, not the API key; for details, refer to "Settings").

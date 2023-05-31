@@ -1,3 +1,8 @@
+---
+title: DmFlow Apply for LINE API | DmFlow
+description: DmFlow integrates with LINE Server through API, enabling the use of chatbots for users.
+---
+
 # Applying for LINE API
 
 # Architecture
@@ -28,7 +33,7 @@ API stands for Application Programming Interface, which allows communication bet
 ## Getting Started
 First, you need to have a LINE account. Visit [LINE Business ID](https://account.line.biz/login)
 
-![](../../../../../../images/en/line-002.png)
+![DmFlow integrate with LINE](../../../../../../images/en/line-002.png "DmFlow integrate with LINE")
 
 ### Login with LINE Account
 You can use your regular LINE user account to log in.
@@ -40,7 +45,7 @@ If you have a business email account, you can apply using that. Provide the acco
 
 If the Messaging API is not enabled, go to Settings -> Messaging API and click on "Enable Messaging API". Enter the service provider name (you can name it as per your business; it can be changed later), and fill in the Privacy Policy URL and Terms of Use URL (optional). Confirm the details and click "OK".
 
-![](../../../../../../images/en/line-003.png)
+![DmFlow integrate with LINE](../../../../../../images/en/line-003.png "DmFlow integrate with LINE")
 
 - 1.Channel ID
 - 2.Channel Secret
@@ -51,12 +56,12 @@ If the Messaging API is not enabled, go to Settings -> Messaging API and click o
 
 Clicking on the LINE Developers link will take you to [LINE Developers](https://developers.line.biz/en/). Follow the steps shown in the screenshots below.
 
-![](../../../../../../images/en/line-004.png)
+![DmFlow integrate with LINE](../../../../../../images/en/line-004.png "DmFlow integrate with LINE")
 
-![](../../../../../../images/en/line-005.png)
+![DmFlow integrate with LINE](../../../../../../images/en/line-005.png "DmFlow integrate with LINE")
 
-![](../../../../../../images/en/line-006.png)
+![DmFlow integrate with LINE](../../../../../../images/en/line-006.png "DmFlow integrate with LINE")
 
-![](../../../../../../images/en/line-007.png)
+![DmFlow integrate with LINE](../../../../../../images/en/line-007.png "DmFlow integrate with LINE")
 
 You will obtain the Channel ID, Channel Secret, and Channel Access Token. Fill in the Webhook URL, and you are done.

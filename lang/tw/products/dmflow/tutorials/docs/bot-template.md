@@ -1,3 +1,8 @@
+---
+title: DmFlow 機器人模板 | DmFlow
+description:對話模板-用於連接其他平台的對話回覆，以實現多渠道的對話互動。記憶模板-用於儲存永久或臨時的資訊，以便後續使用或引用。這兩種模板可以根據您的需求，有效地處理和管理對話中的內容，為對話機器人提供更豐富的回應。
+---
+
 # 模板
 
 模板分為對話模板以及記憶模板。
@@ -72,7 +77,7 @@
 
 機器人可以發送影片給使用者。這使得您可以傳送影片檔案，讓使用者可以觀看影片內容。
 
-![](../../../../../../images/tw/bot-template-line-video-s.png "DmFlow影片訊息")
+![DmFlow影片訊息](../../../../../../images/tw/bot-template-line-video-s.png "DmFlow影片訊息")
 
 - 使用網址：在回覆訊息中，僅能使用網址來引用圖片或影片。這表示你可以提供圖片或影片的網址，讓機器人在對話中顯示它們。
 - 影片支援：當引用影片時，僅支援使用 MP4 格式的影片。這意味著你需要提供 MP4 格式的影片檔案的網址。
@@ -85,7 +90,7 @@
 
 機器人可以發送語音訊息給使用者。使用者可以聆聽您發送的語音內容。
 
-![](../../../../../../images/tw/bot-template-line-audio-s.png "DmFlow語音訊息")
+![DmFlow語音訊息](../../../../../../images/tw/bot-template-line-audio-s.png "DmFlow語音訊息")
 
 - 使用網址：在回覆訊息中，僅能使用網址來引用語音檔案。這表示你可以提供語音檔案的網址，讓機器人在對話中播放語音。
 - 語音支援：當引用語音時，僅支援使用 M4A 格式的語音檔案。這意味著你需要提供 M4A 格式的語音檔案的網址。
@@ -95,7 +100,7 @@
 請注意遵守這些限制和要求，以確保語音能正確播放並符合相關的安全標準。
 
 #### 圖文訊息
-![](../../../../../../images/tw/bot-template-line-imagemap-s.png "DmFlow圖文訊息")
+![DmFlow圖文訊息](../../../../../../images/tw/bot-template-line-imagemap-s.png "DmFlow圖文訊息")
 
 [LINE官方圖文訊息介紹](https://tw.linebiz.com/manual/line-official-account/oa-manager-richmessage/)
 
@@ -107,7 +112,7 @@
 
 #### 圖文訊息-影片
 
-![](../../../../../../images/tw/bot-template-line-imagemap-video.png "DmFlow圖文影片")
+![DmFlow圖文影片](../../../../../../images/tw/bot-template-line-imagemap-video.png "DmFlow圖文影片")
 
 - 1.影片限制：目前 DmFlow 平台尚未支援直接上傳影片功能，因此只能使用網址來提供影片。在使用網址提供影片時，支援的影片格式為 MP4，且大小限制在200MB以內。同時，提供的影片網址必須使用 HTTPS 協定。
 - 2.圖片預覽：在預覽圖片方面，DmFlow支援的圖片大小限制為1MB以內。請確保提供的圖片符合此限制。
@@ -123,7 +128,7 @@
 
 #### 圖文訊息-訊息文字
 
-![](../../../../../../images/tw/bot-template-line-imagemap-t-text.png "DmFlow圖文文字")
+![DmFlow圖文文字](../../../../../../images/tw/bot-template-line-imagemap-t-text.png "DmFlow圖文文字")
 
 - 1.由上方開始位置計算：指的是元素在訊息中的垂直位置是由上方開始計算的。這意味著較小的數值表示元素離訊息頂部較近。
 - 2.由左方開始位置計算：指的是元素在訊息中的水平位置是由左方開始計算的。這意味著較小的數值表示元素離訊息左側較近。
@@ -135,7 +140,7 @@
 
 #### 圖文訊息-開啟視窗
 
-![](../../../../../../images/tw/bot-template-line-imagemap-t-link.png "DmFlow圖文連結")
+![DmFlow圖文連結](../../../../../../images/tw/bot-template-line-imagemap-t-link.png "DmFlow圖文連結")
 
 - 1.由上方開始位置計算：指的是元素在訊息中的垂直位置是由上方開始計算的。較小的數值表示元素距離訊息頂部較近。
 - 2.備註：當客戶端具有輔助功能時，可以提供備註功能，例如進行語音提醒，以協助特殊需求的使用者。
@@ -146,18 +151,18 @@
 
 #### 預覽-圖文訊息預覽[僅供參考]
 
-![](../../../../../../images/tw/bot-template-line-imagemap-f.png "LINE圖文訊息")
+![LINE圖文訊息](../../../../../../images/tw/bot-template-line-imagemap-f.png "LINE圖文訊息")
 
 紅色箭頭以及指向方框為輔助對齊線，影片僅用VIDEO提示位置以及高寬度，文字部分會將點擊後顯示文字標示(實際上不會出現該文字)，超連結也會將連結內容標示(實際上不會出現該連結文字)，以實際顯示為準。
 
 
 #### 實際-圖文訊息預覽
 
-![](../../../../../../images/tw/bot-template-line-imagemap-r.png "LINE圖文訊息預覽")
+![LINE圖文訊息預覽](../../../../../../images/tw/bot-template-line-imagemap-r.png "LINE圖文訊息預覽")
 
 #### 圖片輪播
 
-![](../../../../../../images/tw/bot-template-line-imagecard-s.png "DmFlow圖片輪播")
+![DmFlow圖片輪播](../../../../../../images/tw/bot-template-line-imagecard-s.png "DmFlow圖片輪播")
 
 - 1.當電腦版無法顯示的時候顯示的文字。
 - 2.模板選擇「圖片輪播模組」
@@ -167,12 +172,12 @@
 包含[觸發動作-訊息文字](../../tutorials/docs/bot-template.html#觸發動作-訊息文字)、[觸發動作-回傳值](../../tutorials/docs/bot-template.html#觸發動作-回傳值)、[觸發動作-開啟視窗](../../tutorials/docs/bot-template.html#觸發動作-開啟視窗)
 
 #### 觸發動作-訊息文字
-![](../../../../../../images/tw/bot-template-line-imagecard-s-t-text.png "DmFlow觸發動作")
+![DmFlow觸發動作](../../../../../../images/tw/bot-template-line-imagecard-s-t-text.png "DmFlow觸發動作")
 - 1.圖片上的文字按鈕顯示之文字。
 - 2.當點擊按鈕後回傳的文字。
 
 #### 觸發動作-回傳值
-![](../../../../../../images/tw/bot-template-postback.png "DmFlow回傳值")
+![DmFlow回傳值](../../../../../../images/tw/bot-template-postback.png "DmFlow回傳值")
 - 1.圖片上的文字按鈕顯示之文字，在圖片上設置文字按鈕時，您可以為每個按鈕指定要顯示的文字。這些文字將出現在圖片上，以引導用戶進行相應的操作或獲取更多資訊。
 - 2.訊息型態分為文字以及事件，在對話中，您可以使用文字或事件作為訊息的型態。文字訊息用於直接向用戶展示文本內容，而事件則觸發相應的動作或處理。
 - 3.文字的細項僅有文字，事件的細項包括打斷事件、忽略事件、開始事件、結束事件、喚醒事件，在訊息中，文字細節僅包含要顯示的文字內容。而事件細節則根據不同的事件類型進行設置，例如打斷事件、忽略事件、開始事件、結束事件、喚醒事件等。詳細了解回傳值的使用，請參考連結[回傳值的使用](../../tutorials/docs/bot-template.html#回傳值)。
@@ -189,37 +194,37 @@
 
 #### 觸發動作-開啟視窗
 
-![](../../../../../../images/tw/bot-template-link.png "DmFlow觸發連結")
+![DmFlow觸發連結](../../../../../../images/tw/bot-template-link.png "DmFlow觸發連結")
 - 1.圖片上的文字按鈕顯示之文字：當您在圖片上添加文字按鈕時，這些按鈕將顯示您指定的文字。用戶在點擊這些按鈕時，所顯示的文字將被傳遞給對話流程中的相應部分，以觸發相應的操作或回應。
 - 2.手機裝置跳出的webview：當用戶點擊圖文訊息中的某個按鈕，並且該按鈕的觸發動作為開啟視窗時，如果用戶在手機裝置上點擊該按鈕，將會彈出一個 webview，顯示指定的網頁內容。這個 webview 可以在手機的 LINE 客戶端內顯示，讓用戶在不離開 LINE 的情況下進行網頁瀏覽。
 - 3.非手機裝置跳出的網頁：當用戶點擊圖文訊息中的某個按鈕，並且該按鈕的觸發動作為開啟視窗時，如果用戶在非手機裝置（如電腦或平板）上點擊該按鈕，將會在新的瀏覽器窗口中打開指定的網頁。這樣的操作允許用戶在獨立的瀏覽器窗口中查看和操作指定的網頁內容。
 
 #### 預覽-圖片輪播預覽[僅供參考]
 
-![](../../../../../../images/tw/bot-template-line-imagecard-f.png "LINE圖片輪播")
+![LINE圖片輪播](../../../../../../images/tw/bot-template-line-imagecard-f.png "LINE圖片輪播")
 
 #### 實際-圖片輪播預覽
 
-![](../../../../../../images/tw/bot-template-line-imagecard-r.png "LINE圖片輪播預覽")
+![LINE圖片輪播預覽](../../../../../../images/tw/bot-template-line-imagecard-r.png "LINE圖片輪播預覽")
 
 #### 確認範本
 
-![](../../../../../../images/tw/bot-template-line-confirm-s.png "DmFlow確認範本")
+![DmFlow確認範本](../../../../../../images/tw/bot-template-line-confirm-s.png "DmFlow確認範本")
 - 1.模板選擇「確認範本」：這是一種在對話中使用的預定義模板，用於顯示確認問題和選項的交互。您可以選擇該模板來創建一個包含確定性問題和相關選項的消息，以引導用戶進行選擇。
 - 2.確認問題為二選一之詢問：在「確認範本」中，您可以設置一個二選一的問題，即提供兩個選項供用戶選擇。用戶可以從提供的選項中選擇一個作為回答。這種問題的目的是獲取用戶對於兩個選項中的偏好或選擇的答案。
 - 3.：在「確認範本」中，每個選項都可以配置一個觸發動作。觸發動作定義了當用戶選擇了某個選項後應採取的操作。您可以根據業務需求配置觸發動作，例如發送一條特定的回覆消息，跳轉到另一個場景，調用API等。更多關於觸發動作的詳細資訊，您可以前往[觸發動作](../../tutorials/docs/bot-template.html#觸發動作)了解。
 
 #### 預覽-確認範本預覽[僅供參考]
 
-![](../../../../../../images/tw/bot-template-line-confirm-f.png "LINE確認範本")
+![LINE確認範本](../../../../../../images/tw/bot-template-line-confirm-f.png "LINE確認範本")
 
 #### 實際-確認範本預覽
 
-![](../../../../../../images/tw/bot-template-line-confirm-r.png "LINE確認範本預覽")
+![LINE確認範本預覽](../../../../../../images/tw/bot-template-line-confirm-r.png "LINE確認範本預覽")
 
 #### 按鈕範本
 
-![](../../../../../../images/tw/bot-template-line-buttons-s.png "DmFlow按鈕範本")
+![DmFlow按鈕範本](../../../../../../images/tw/bot-template-line-buttons-s.png "DmFlow按鈕範本")
 
 - 1.模板選擇「按鈕範本」：這是一種預設模板，用於顯示具有按鈕選項的訊息。您可以選擇此模板來創建一個包含按鈕的訊息，用戶可以點擊按鈕執行相應的操作。
 - 2.標題，可根據預覽了解放置位置。
@@ -242,40 +247,40 @@
 - contain:顯示整張圖片，未填滿以背景色填充
 
 #### 預覽-按鈕範本預覽[僅供參考]
-![](../../../../../../images/tw/bot-template-line-buttons-f.png "LINE按鈕範本")
+![LINE按鈕範本](../../../../../../images/tw/bot-template-line-buttons-f.png "LINE按鈕範本")
 
 #### 實際-按鈕範本預覽
-![](../../../../../../images/tw/bot-template-line-buttons-r.png "LINE按鈕範本預覽")
+![LINE按鈕範本預覽](../../../../../../images/tw/bot-template-line-buttons-r.png "LINE按鈕範本預覽")
 
 #### 輪播範本
 
-![](../../../../../../images/tw/bot-template-line-card-s.png "DmFlow輪播範本")
+![DmFlow輪播範本](../../../../../../images/tw/bot-template-line-card-s.png "DmFlow輪播範本")
 - 1.模板選擇"輪播模組"
 - 2.圖片輪播欄位，同[按鈕範本](../../tutorials/docs/bot-template.html#按鈕範本)，只是可以支援複數。
 - 3.[圖片比例](../../tutorials/docs/bot-template.html#圖片比例)
 - 4.[圖片呈現](../../tutorials/docs/bot-template.html#圖片呈現)
 
 #### 預覽-輪播範本預覽[僅供參考]
-![](../../../../../../images/tw/bot-template-line-card-f.png "LINE輪播範本")
+![LINE輪播範本](../../../../../../images/tw/bot-template-line-card-f.png "LINE輪播範本")
 
 #### 實際-輪播範本預覽
-![](../../../../../.../images/tw/bot-template-line-card-r.png "LINE輪播範本預覽")
+![LINE輪播範本預覽](../../../../../.../images/tw/bot-template-line-card-r.png "LINE輪播範本預覽")
 
 ### Facebook Messenger
 
 #### 文字及其他訊息
 
-![](../../../../../../images/tw/bot-template-ms-text-s.png "DmFlow文字訊息")
+![DmFlow文字訊息](../../../../../../images/tw/bot-template-ms-text-s.png "DmFlow文字訊息")
 
 文字以及圖片(可上傳，1mb以內)，其他如影片、音訊、檔案都僅支援網址連接。
 
 #### 實際-文字訊息預覽
 
-![](../../../../../../images/tw/bot-template-ms-text-r.png "Messenger文字訊息預覽")
+![Messenger文字訊息預覽](../../../../../../images/tw/bot-template-ms-text-r.png "Messenger文字訊息預覽")
 
 #### 一般範本
 
-![](../../../../../../images/tw/bot-template-ms-temp-s.png "DmFlow一般範本")
+![DmFlow一般範本](../../../../../../images/tw/bot-template-ms-temp-s.png "DmFlow一般範本")
 
 - 1.horizontal:16:9, square:1:1
 - 2.標題，可根據預覽了解放置位置。
@@ -285,17 +290,17 @@
 - 6.觸發條件包含[連結元件、連結元件(extension)](../../tutorials/docs/bot-template.html#連結元件連結元件extension)以及[觸發動作-回傳值](../../tutorials/docs/bot-template.html#觸發動作-回傳值)。
 
 #### 預覽-一般範本預覽[僅供參考]
-![](../../../../../../images/tw/bot-template-ms-temp-f.png "Messenger一般範本")
+![Messenger一般範本](../../../../../../images/tw/bot-template-ms-temp-f.png "Messenger一般範本")
 
 #### 實際-一般範本預覽
 
-![](../../../../../../images/tw/bot-template-ms-temp-r.png "Messenger一般範本預覽")
+![Messenger一般範本預覽](../../../../../../images/tw/bot-template-ms-temp-r.png "Messenger一般範本預覽")
 
 #### 連結元件、連結元件(extension)
 
 連結元件
 
-![](../../../../../../images/tw/bot-template-ms-link-f.png "DmFlow連結")
+![DmFlow連結](../../../../../../images/tw/bot-template-ms-link-f.png "DmFlow連結")
 
 - 1.網址連結
 - 2.網址名稱
@@ -305,7 +310,7 @@
 
 [加入 Messenger 擴充套件 SDK](https://developers.facebook.com/docs/messenger-platform/webview/extensions/)
 
-![](../../../../../../images/tw/bot-template-ms-linkext-f.png "DmFlow連結")
+![DmFlow連結](../../../../../../images/tw/bot-template-ms-linkext-f.png "DmFlow連結")
 
 - 1.網址連結
 - 2.網址名稱
@@ -314,16 +319,16 @@
 
 #### 按鈕範本
 
-![](../../../../../../images/tw/bot-template-ms-buttons-s.png "DmFlow按鈕範本")
+![DmFlow按鈕範本](../../../../../../images/tw/bot-template-ms-buttons-s.png "DmFlow按鈕範本")
 
 - 1.詢問問題。
 - 2.按鈕元件包含[連結元件、連結元件(extension)](../../tutorials/docs/bot-template.html#連結元件連結元件extension)以及[觸發動作-回傳值](../../tutorials/docs/bot-template.html#觸發動作-回傳值)。
 
 #### 預覽-按鈕範本預覽[僅供參考]
-![](../../../../../../images/tw/bot-template-ms-buttons-f.png "Messenger按鈕範本")
+![Messenger按鈕範本](../../../../../../images/tw/bot-template-ms-buttons-f.png "Messenger按鈕範本")
 
 #### 實際-按鈕範本預覽
-![](../../../../../../images/tw/bot-template-ms-buttons-r.png "Messenger按鈕範本預覽")
+![Messenger按鈕範本預覽](../../../../../../images/tw/bot-template-ms-buttons-r.png "Messenger按鈕範本預覽")
 
 ### Telegram
 

@@ -1,3 +1,8 @@
+---
+title: DmFlow 機器人設定 | DmFlow
+description: 用於整合第三方平台，以及該機器人基本設定。目前支援LINE以及Facebook Messenger、Telegram。
+---
+
 # 設置
 用於整合第三方平台，以及該機器人基本設定。
 
@@ -5,7 +10,7 @@
 
 目前支援LINE以及Facebook Messenger、Telegram
 
-![](../../../../../../images/tw/bot-setting-platforms.png)
+![DmFlow整合](../../../../../../images/tw/bot-setting-platforms.png "DmFlow整合")
 
 ## 設定
 
@@ -15,7 +20,7 @@
 - 4.密鑰:機器人流程中的資源節點若對外呼叫會提供此密鑰。
 - 5.白名單:機器人流程中的資源節點若對外呼叫會限制該URL的Domain白名單
 
-![](../../../../../../images/tw/bot-setting-view.png)
+![DmFlow設定](../../../../../../images/tw/bot-setting-view.png "DmFlow設定")
 
 
 # 最後更新時間

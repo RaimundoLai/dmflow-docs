@@ -1,3 +1,9 @@
+---
+title: DmFlow Dictionary Reference | DmFlow
+description: Supports referencing dictionaries.
+---
+
+
 # Dictionary - Referencing Dictionaries
 
 Currently supported dictionaries in the system:

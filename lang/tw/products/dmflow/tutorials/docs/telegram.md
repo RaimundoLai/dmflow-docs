@@ -1,3 +1,8 @@
+---
+title: DmFlow Telegram開發設定 | DmFlow
+description: Telegram開發設定。
+---
+
 # Telegram開發設定
 
 在 Telegram 上創建新機器人的步驟如下：
@@ -10,16 +15,16 @@
 - 提供所需的資訊後，BotFather 將為您的機器人生成一個 API 金鑰。請確保保持此金鑰安全，因為它用於訪問 Telegram Bot API。
 - 您的新機器人現在已經創建完成。您可以通過 BotFather 對話或使用生成的 API 金鑰通過 Telegram Bot API 訪問和管理其設定。
 
-![](../../../../../../images/tw/telegram-001.jpg "圖一")
+![DmFlow整合Telegram](../../../../../../images/tw/telegram-001.jpg "DmFlow整合Telegram")
 
 下圖紅色遮住部分為token，將其token複製。
 
-![](../../../../../../images/tw/telegram-002.jpg "圖二")
+![DmFlow整合Telegram](../../../../../../images/tw/telegram-002.jpg "DmFlow整合Telegram")
 
 如需要在群組中接收全部訊息，可透過以下去操作，一般預設只接收command "/"開頭的訊息。
 
-![](../../../../../../images/tw/telegram-group-disabled-slash.jpg)
+![DmFlow整合Telegram](../../../../../../images/tw/telegram-group-disabled-slash.jpg "DmFlow整合Telegram")
 
 進入DmFlow系統，點選你的機器人後，進入設置->第三方整合->Telegram，並將圖二的token冒號前純數字填入APP_ID，token則是填入全部"58XXXXXXXX:AAEXXXXXXXXXXEBXXXXXXX"，選取"啟用"並儲存，後台會驗證填寫是否正確。
 
-![](../../../../../../images/tw/telegram-setting-page.png)
+![DmFlow整合Telegram](../../../../../../images/tw/telegram-setting-page.png "DmFlow整合Telegram")

@@ -1,3 +1,8 @@
+---
+title: DmFlow Bot Introduction | DmFlow
+description: The chatbot section includes dialogue flow, logs, publishing, and settings.In the dialogue flow, you can design and configure the flow and logic of conversations. The log feature is used to record and track the history and statistical data of conversations. The publishing feature is used to deploy and release the chatbot to different branches. The settings section provides relevant configurations such as time zone, URL whitelist, and other chatbot settings.The combination of these features makes chatbot development and management more convenient and flexible, allowing you to easily design, track, and adjust your conversational chatbot.
+---
+
 # Bot Introduction
 
 The chatbot section includes dialogue flow, logs, publishing, and settings.

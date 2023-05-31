@@ -1,3 +1,8 @@
+---
+title: DmFlow Custom Dictionaries| DmFlow
+description: Custom dictionaries are used to store standard terms, synonyms, and regular expressions for general vocabulary.
+---
+
 # Dictionary - Custom Dictionaries
 
 Custom dictionaries are used to store standard terms, synonyms, and regular expressions for general vocabulary.

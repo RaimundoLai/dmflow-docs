@@ -1,8 +1,13 @@
+---
+title: DmFlow Intent Example-Entity Logical Thinking | DmFlow
+description: DmFlow Intent Example-Entity Logical Thinking
+---
+
 # Entity Logical Thinking
 
 When creating the following intents, it is helpful to consider the entities required for these intents. Entities will be the data we collect. See the image below:
 
-![](../../../../../../images/en/intro-003.png)
+![DmFlow Intent Example-Entity Logical Thinking](../../../../../../images/en/intro-003.png "DmFlow Intent Example-Entity Logical Thinking")
 
 We can divide them into the following entities:
 

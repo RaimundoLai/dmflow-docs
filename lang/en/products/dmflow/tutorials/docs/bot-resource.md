@@ -1,3 +1,8 @@
+---
+title: DmFlow Bot Resource Management | DmFlow
+description: In a conversation flow, resource nodes are used to manage the use of resources and connect to external APIs to facilitate the interaction of business logic.
+---
+
 # Bot Resource Management
 - Variable Management：In a conversation flow, you can use variables to manage and store parameters required for resources. Variables are used to pass resource parameters or represent return values.
 - Resource Management：In a conversation flow, resource nodes are used to manage the use of resources and connect to external APIs to facilitate the interaction of business logic. Resource nodes can perform specific operations such as querying external APIs for data, modifying resource states, accessing external databases, etc. By using resource nodes, you can integrate with external systems within the conversation flow to provide richer and more personalized services. Resource management allows you to effectively utilize existing resources and external services to expand the functionality and capabilities of the conversation system.

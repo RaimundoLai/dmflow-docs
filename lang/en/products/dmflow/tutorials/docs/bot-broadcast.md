@@ -1,3 +1,8 @@
+---
+title: DmFlow Broadcasting | DmFlow
+description: Broadcasting is used to send bulk messages to a group of users. It can be widely used for marketing, promotional activities, update notifications, and more. Here are some features and use cases of the broadcasting functionality.
+---
+
 # Broadcasting
 
 Broadcasting is used to send bulk messages to a group of users. It can be widely used for marketing, promotional activities, update notifications, and more. Here are some features and use cases of the broadcasting functionality:
@@ -14,7 +19,7 @@ Broadcasting is used to send bulk messages to a group of users. It can be widely
 
 ## Introduction
 
-![](../../../../../../images/en/bot-broadcast-intro.png)
+![DmFlow real broadcast Image](../../../../../../images/en/bot-broadcast-intro.png "DmFlow real broadcast Image")
 
 1. Channels currently supported: LINE, Messenger, Telegram.
 2. Branches: Dev (development version) and Prod (production version).

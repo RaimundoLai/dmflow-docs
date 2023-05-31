@@ -39,7 +39,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "PbNk6weQUou/6F2+gFWo123MJ4HHO0fXx0DOtcxqRfw="
+          "hash": "DnCmxtybshjIFrtwhfKJ7/f1y09E9c4HQ2/AI6tqtJg="
         }
       },
       "is_incremental": false,
@@ -51,7 +51,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/index.html",
-          "hash": "rsk6iOpGew/Eag6bimLn8LdBwPMSJmDCSOxvt68/tyc="
+          "hash": "J43LnC7taE0HFfJh4ZX8i4EPO32NYZsfj1GJfNgVcQQ="
         }
       },
       "is_incremental": false,
@@ -63,7 +63,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/info/index.html",
-          "hash": "OlfK7JOOdpthig5G8QU7TuuDpjoILYvT5O8R/YahTVQ="
+          "hash": "Z2gcrJYkT/bsfidhaS3PhvlS9orQzH//vOM/nzgMdsc="
         }
       },
       "is_incremental": false,
@@ -90,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-broadcast.html",
-          "hash": "Pd2Jc2Y4QA/j3QyvLFZMVoCv5FJR8J/TX79VJURYR9s="
+          "hash": "LkuT06UYsqYpeCIACsnLjTCQyKiKhHWeV22+g/JTjjk="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-example.html",
-          "hash": "1vubgvBfZY/9ge7rgBfN4Mc75get21oqmXqrDawioqM="
+          "hash": "iFCinVrnvqoRSJ7/od8GK4dqueuIOzqcQdHW9WgBIQU="
         }
       },
       "is_incremental": false,
@@ -120,7 +120,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-flow.html",
-          "hash": "iCPinL7ZcZT1W2Dc5VOilda77YywK6VdWlF3/Tcz0AQ="
+          "hash": "X3Isvg0vWmxWVYV/QMTESg0Ge8yRqwDXgrdyOpZmt1A="
         }
       },
       "is_incremental": false,
@@ -135,7 +135,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-global.html",
-          "hash": "A1rC61lY0xsa6U257UBCGbiT39aPrAYnRTZRszcFoiE="
+          "hash": "CUvuKwE4pJpQmueJ9TOSSi5sqyKu/zi5fSmTbi32fhg="
         }
       },
       "is_incremental": false,
@@ -150,7 +150,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-intro.html",
-          "hash": "D7qk5qd0w60LbkRAhx0gcKA3kBDcsmGGkmTRrzfkEt0="
+          "hash": "O+P7h0boXdH/HodbxIk/skS84Wk0g3vNM3lbtk8gBTM="
         }
       },
       "is_incremental": false,
@@ -165,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-log.html",
-          "hash": "DcOxwdRXygx00GOB6KjEgHq6uSZDQtbbeBqIvYOunNs="
+          "hash": "f735de/kGOvd1EIVDBdDxw/btZ+lt+pjntzyJAPruX8="
         }
       },
       "is_incremental": false,
@@ -180,7 +180,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-published.html",
-          "hash": "ld9JxcktQ0Ee9xLB+wvu5XZ7LsnG1KiPbsPNMVRnRm8="
+          "hash": "w0846s+KgiEFtj8WjC56D/DxVAXgwP298IyfFUbhJTg="
         }
       },
       "is_incremental": false,
@@ -195,7 +195,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-resource.html",
-          "hash": "gi8RlmTktS2Mf+3K5b3bZLYG6ze19VwLDhzRiYn6Dh8="
+          "hash": "awnMvfJM8x721NC91jjwwwpMTGGuwBT7v4cPUamoabg="
         }
       },
       "is_incremental": false,
@@ -207,7 +207,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-restapi.html",
-          "hash": "FPJFBJBsYUdZjU7ayH52ucJoLphdWHiNihe7dCFPSEI="
+          "hash": "sUHfu+m6/UM2vm+XCYf/GWTdRkNmKBlarK0vOA31obQ="
         }
       },
       "is_incremental": false,
@@ -222,7 +222,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-setting.html",
-          "hash": "VldsriCwaI0UqxroNCqcbW1btoXpROIRu6ZE+hRetgA="
+          "hash": "WO57JprQojUw7fg7YTmftOfcR75guY9U7W9O5+0W0Mk="
         }
       },
       "is_incremental": false,
@@ -230,14 +230,15 @@
     },
     {
       "log_codes": [
-        "InvalidFileLink"
+        "InvalidFileLink",
+        "invalid-yaml-header"
       ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/docs/bot-template.md",
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-template.html",
-          "hash": "SX+2KIDbtbprIVHyY+CtXrbWuRnvxDuoXz8JSeSy/vk="
+          "hash": "fmcXjBTSvINxcXHHOD+vewaGB2dwHtvkM+mduKa8tkI="
         }
       },
       "is_incremental": false,
@@ -252,7 +253,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/custom-dicts.html",
-          "hash": "kZMSYMqrEyj6EAUo+YoLjB3KLHG5z60chTb0UDcUc0M="
+          "hash": "e9Tjdq9V+Adf6aydORMRTRWcl0eYxd0f/TdPXwlfrts="
         }
       },
       "is_incremental": false,
@@ -267,7 +268,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/domain-intro.html",
-          "hash": "iqnkVoH1ND7eRSuCR3FDZ8FL+uIK283D+Y03c92BG/4="
+          "hash": "ReDNcBIh1x4Re9DO145OVpMt9ZHiIbD1XTvCkgqg3Gg="
         }
       },
       "is_incremental": false,
@@ -282,7 +283,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/fbmessenger.html",
-          "hash": "hlugqTnO1RwMnRaolr8OCyxbEBKI8E0RSrTMcw9s6Qo="
+          "hash": "pKNJ+o7rf6sArJhWB00gX63cSot4dMLwzldTRoLy47o="
         }
       },
       "is_incremental": false,
@@ -297,7 +298,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/index.html",
-          "hash": "0zOYQXRnPtC00PPvDSdvmLjWssWfmgEbplKOFvlN7q0="
+          "hash": "ednCyKg0hSGhO/MpZxzBko9NqLJhrlGMS1II3nJZ2p4="
         }
       },
       "is_incremental": false,
@@ -312,7 +313,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/intent-intro.html",
-          "hash": "h0MQy1uIybFtPNITNGWdQ2RBVhucf0EtInyuel+p4UY="
+          "hash": "OGQhWUOIPsV5DwnnSrZtERHPKrFm8pWJAaovipGH9Ms="
         }
       },
       "is_incremental": false,
@@ -327,7 +328,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/line.html",
-          "hash": "jmjQM7gg9Mo565Z33KAfci7gKvPI4ddnq+GEg9ayHCA="
+          "hash": "DYMBH39XZ823LK6daX1xkRoNp+aq5VqrMHC/nOVyEYE="
         }
       },
       "is_incremental": false,
@@ -342,7 +343,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/qa-intro.html",
-          "hash": "B6HndmIaqDG2qZpZp1y5/XfWSap7ufD0RmgCS9yXlUc="
+          "hash": "y1ZTgdzOhqbpONzHZuJ9NGt6hA8BEDa3xXawbF5p63k="
         }
       },
       "is_incremental": false,
@@ -357,7 +358,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/sys-dicts.html",
-          "hash": "sm2VXmIGSp0WyOtR6lgDb/Ul/4P2TOmJNM1zwUAqRuw="
+          "hash": "pTxYxVmc5+hO9MtUcJqEI3tutxCxOIXiFW8PQ8rTqVQ="
         }
       },
       "is_incremental": false,
@@ -372,7 +373,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/telegram.html",
-          "hash": "zUvdBu43Ve5NTsJdJbiRIooOFbYsoEgq3NSLsDM28R8="
+          "hash": "kKn4bHQ+vVnHJl54C/EsLQaIJud3fzJgBRSqUnY6gEI="
         }
       },
       "is_incremental": false,
@@ -387,7 +388,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/index.html",
-          "hash": "8k6w/AmrgcoGP4F4Tq6OMzp7EUrGhDn+87dGIn2s4Ac="
+          "hash": "kvaysEJ18PgXqaCRgSWZ2BrMo9QiIvXgblybcU5PJyE="
         }
       },
       "is_incremental": false,
@@ -402,7 +403,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/deploy-test.html",
-          "hash": "N/o2I74TjALySoR93xQw+6YRy5rbQsG+plPlMMPKvtM="
+          "hash": "NTKSiKph+PH93qIQ3XLBhdmlPuXpPTUXrSEK79Cs+uk="
         }
       },
       "is_incremental": false,
@@ -417,7 +418,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/dict-create.html",
-          "hash": "nUS/yrZVPS2/6ZFPUvF7HINyffvo2C36HxMZo+xwKRM="
+          "hash": "8C6G+FJlAbSfPXq07tSzSkS3AV6VaNAq/3cCZzaHhkg="
         }
       },
       "is_incremental": false,
@@ -432,7 +433,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/distinct-content.html",
-          "hash": "/LmMdd/W8EbOwhwTkdqitrkL3ObJZpQ/Gq/3dCyefDE="
+          "hash": "QPJwJrTz72z6DM9u9Yx1a9K8oxBdquqypsd99VopBQw="
         }
       },
       "is_incremental": false,
@@ -447,7 +448,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/domain-create.html",
-          "hash": "dShEEm8veStWCH1OecbFYPl+x0jytK+ZjxCYQeaRWYw="
+          "hash": "EB+MguJcl4BL0UmVnOZRz807tEnIjExGvp8tumZGrmI="
         }
       },
       "is_incremental": false,
@@ -462,7 +463,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/entity-logical.html",
-          "hash": "iigKVvptDx0omjLWp1fK711eVI6UIP7CqWksZdmSOlU="
+          "hash": "7wGo/OOsTgKNl3ItUPg0JBe7JqfPhi3Evr4OFQeBc0M="
         }
       },
       "is_incremental": false,
@@ -477,7 +478,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/index.html",
-          "hash": "bcqemR4vdEy0KWEV0amf5YsonAvvs0EexoOXQLXl36A="
+          "hash": "8K0QsXjud1By+RI2axXl9qXunBVykwYlTBgj4lxC5+A="
         }
       },
       "is_incremental": false,
@@ -489,7 +490,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/version/index.html",
-          "hash": "yAlkcGZHpTqn3NxK0xShqL6UHWjocYs7TINNXGOpxw0="
+          "hash": "9PVu7O1j521wccHZ08aS1rKPm7r51vf+uFwh/4zvN3U="
         }
       },
       "is_incremental": false,
@@ -521,7 +522,7 @@
           "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 31,
-          "skipped_file_count": 31
+          "skipped_file_count": 30
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

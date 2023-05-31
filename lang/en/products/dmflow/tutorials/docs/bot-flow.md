@@ -1,3 +1,8 @@
+---
+title: DmFlow Bot Dialogue Flow | DmFlow
+description: Using basic flow-based conversation helps overcome the limitations of domain-driven conversations and provides more flexibility and breadth in conversation handling capabilities. This ensures suitable responses for various user inputs and scenario requirements, enhancing the usability and extensibility of the conversational AI system.
+---
+
 # Bot Dialogue Flow
 
 Basic flow-based conversation is a method used to complement the limitations of domain-driven conversation flows. Domain-driven conversations are typically based on specific domains and are limited to knowledge and conversation flows within those domains. However, such limitations may not be able to handle certain edge cases or unknown user inputs.
@@ -13,7 +18,7 @@ Using basic flow-based conversation helps overcome the limitations of domain-dri
 - Visual Representation: The use of a graphical interface provides an intuitive understanding of the relationships and positions between nodes. Through visualization, users can have a clearer understanding of the structure and logic of the conversation flow.
 - Drag-and-Drop Nodes: Compared to traditional command-line interface (CLI) coding for chatbots, the design of drag-and-drop nodes is more user-friendly. Users can directly drag and drop nodes and configure their properties without the need for coding, making it convenient and easy to build conversation flows.
 
-![](../../../../../../images/en/bot-flow-image.png "DmFlow Flow")
+![DmFlow Flow](../../../../../../images/en/bot-flow-image.png "DmFlow Flow")
 - 1.New Process: Allows resetting the current flow, restoring all settings to their original state, including scenarios and nodes.
 - 2.Save: Provides functionality to add and load versioned flows, allowing saving and managing different versions of the flow.
 - 3.Update: Used to update the current version of the flow, making modifications and adjustments as needed.
@@ -28,7 +33,7 @@ Using basic flow-based conversation helps overcome the limitations of domain-dri
 
 ## Save
 
-![](../../../../../../images/en/bot-flow-version.png "DmFlow Version View")
+![DmFlow Version View](../../../../../../images/en/bot-flow-version.png "DmFlow Version View")
 
 - 1.Add New Version: This feature allows creating a new version for updating and modifying the conversation flow.
 - 2.Version Properties: When creating a new version, you can fill in properties such as version name, status, update reason, preloading, and publishing settings.
@@ -51,7 +56,7 @@ Publishing: When the "Publish" option is selected in your version, it means that
 
 ## Testing
 
-![](../../../../../../images/en/bot-flow-test.png "DmFlow Bot Test")
+![DmFlow Bot Test](../../../../../../images/en/bot-flow-test.png "DmFlow Bot Test")
 
 - 1.Enter Query: In the testing interface, you can input the query or prompt you want to test to check the response of the conversation flow.
 - 2.Test Scene Context: You can directly test the conversation flow of specific scenarios, allowing you to simulate the interaction between users and the bot in specific contexts.
@@ -66,7 +71,7 @@ Publishing: When the "Publish" option is selected in your version, it means that
 ## Start Node
 
 As the global node for the scenario, it affects all nodes within the flow.<br>
-![](../../../../../../images/en/bot-flow-start.png "DmFlow Start Node")
+![DmFlow Start Node](../../../../../../images/en/bot-flow-start.png "DmFlow Start Node")
 - 1.Query Node: Used for the initial greeting or opening question. It serves as the starting point of the conversation flow, where you can set the initial prompt or question.
 - 2.Mode Node: Divided into general mode and awakening mode. Awakening mode requires the user to input a specific "awakening phrase" to proceed to the subsequent flow.
 - 3.Preload Domain Node: This node must be an intent node and is used for usage in subsequent collection nodes. It preloads a specific domain so that the information from that domain can be used in the subsequent flow.
@@ -76,7 +81,7 @@ As the global node for the scenario, it affects all nodes within the flow.<br>
 ## Resource Node
 
 This node is used to call external resources and perform business logic operations. You can configure the relevant properties and parameters of the resource node for resource invocation.
-![](../../../../../../images/en/bot-flow-resource.png "DmFlow資源節點")
+![DmFlow resource node](../../../../../../images/en/bot-flow-resource.png "DmFlow resource node")
 - 1.Parameter Prefix: Parameters set within the node can use different prefixes, including config (bot parameters), constant (constants), conversation (single-turn conversation), session (multi-turn conversation), sys_user (system user parameters), and user (user parameters). These prefixes are used to differentiate different types of parameters for ease of use within the node.
 - 2.Return Value Prefix: When the resource node completes its call and obtains a return value, the data of the return value can be stored in different prefixes, including conversation (single-turn conversation), session (multi-turn conversation), and user (user parameters). This allows the return value to be saved into the appropriate variables as needed for subsequent use.
 - 3.Based on the attribute of the parameter, when selecting the constant prefix, for parameters of the datetime and number types, only numbers can be entered; for parameters of the string type, any text can be entered.
@@ -154,7 +159,7 @@ If the obtained value is "test" , the injected value into conversation.test will
 ## Reply Node
 
 In the reply node, you can use it to ask questions or provide answers.<br>
-![](../../../../../../images/en/bot-flow-reply.png "DmFlow Reply Node")
+![DmFlow Reply Node](../../../../../../images/en/bot-flow-reply.png "DmFlow Reply Node")
 - 1.In this selection, you can choose the type of question. Currently, only a simple question type is supported.
 - 2.This is the textual expression of the question. The supported option is "Random," which means you can set multiple different expressions for the question, and the system will randomly select one each time it is used.
 - 3.Answers: You can provide multiple answer options, and each answer has an equal probability of being selected, i.e., 1/N, where N is the total number of answers.
@@ -166,7 +171,7 @@ In the reply node, you can use it to ask questions or provide answers.<br>
 ## Scene Node
 
 Characteristics of the Scene node.<br>
-![](../../../../../../images/en/bot-flow-scene.png "DmFlow Scene Node")
+![DmFlow Scene Node](../../../../../../images/en/bot-flow-scene.png "DmFlow Scene Node")
 - 1.The scene has the following options:
   - Interrupt: Selecting this action will interrupt the execution of the current Scene node and transition to another node. You can specify the target node to transition to.
   - Restart: Selecting this action will restart the execution of the current Scene node. This will restart the entire Scene from the beginning of the Scene node.
@@ -182,7 +187,7 @@ Characteristics of the Scene node.<br>
 
 The Variable Node is used to assign values to variable templates and allows for parameter variation.<br>
 
-![](../../../../../../images/en/bot-flow-var.png "DmFlow Variable Node")
+![DmFlow Variable Node](../../../../../../images/en/bot-flow-var.png "DmFlow Variable Node")
 
 ### Operation Type
 
@@ -208,7 +213,7 @@ The Variable Node is used to assign values to variable templates and allows for 
 ## Collect Node
 
 The Collect Node is used to simplify the collection of intent-based slots.<br>
-![](../../../../../../images/en/bot-flow-collect.png "DmFlow Collect Node")
+![DmFlow Collect Node](../../../../../../images/en/bot-flow-collect.png "DmFlow Collect Node")
 - 1.Set the question to collect the user's answer, which is used to collect specific intent-based slots.
 - 2.Specify the maximum number of failures allowed when the user's response does not match the specified intent-based slot. Exceeding this number will trigger a fallback.
 - 3.You can choose to start the node and specify the intent-based slots in a specific domain to collect the corresponding slots.

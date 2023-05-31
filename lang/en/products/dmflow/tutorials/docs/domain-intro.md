@@ -1,3 +1,8 @@
+---
+title: DmFlow Domain Introduction | DmFlow
+description: The DmFlow domain is defined as a choice among Q&A pairs, table Q&A, or intent creation. It provides various rich functionalities that can be utilized by Q&A pairs, table Q&A, and intent invocation.
+---
+
 # Domain Introduction
 
 The DmFlow domain is defined as a choice among Q&A pairs, table Q&A, or intent creation. It provides various rich functionalities that can be utilized by Q&A pairs, table Q&A, and intent invocation.

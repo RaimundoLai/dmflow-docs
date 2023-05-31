@@ -1,3 +1,8 @@
+---
+title: DmFlow Knowledge Base Introduction | DmFlow
+description: The knowledge base consists of Question-Answer (QA) pairs and tabular QA. The following will introduce the definitions and applications of both.
+---
+
 # Knowledge Base Introduction
 
 The knowledge base consists of Question-Answer (QA) pairs and tabular QA. The following will introduce the definitions and applications of both.
@@ -78,7 +83,7 @@ Choose the resource through the image below and call the resource to obtain a JS
   "comfortable": "Slightly chilly"
 }
 ```
-![](../../../../../../images/en/domain-resource-param.png)
+![Domain resource](../../../../../../images/en/domain-resource-param.png "Domain resource")
 
 Original template output:
 

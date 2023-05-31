@@ -1,3 +1,8 @@
+---
+title: DmFlow Intent Introduction | DmFlow
+description: Using machine learning and natural language processing techniques, DmFlow can analyze and understand the conversations entered by users, identifying their intents. This helps the chatbot quickly grasp user needs and provide appropriate responses or perform corresponding actions.
+---
+
 # Intents
 Intents are divided into six main sections: Trigger Condition, Slots, Utterances, Interrupt Intent, Precondition, and Completion.
 
@@ -65,7 +70,7 @@ The trigger condition requires filling in the following fields: Trigger Type, St
 
 By filling in these trigger conditions, you can define the conditions for triggering dialogue flow based on specific slot fillings or other conditions to trigger corresponding responses or actions.
 
-![](../../../../../../images/en/intent-intro-trigger.png)
+![Intent Trigger](../../../../../../images/en/intent-intro-trigger.png "Intent Trigger")
 
 ### Prefix
 - constant:Fill in a string, time (in seconds), or number. Numbers will be treated as numerical values.

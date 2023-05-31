@@ -1,3 +1,9 @@
+---
+title: DmFlow Bot Templates | DmFlow
+description: Dialogue Template Used to connect with other platforms for multi-channel conversation interactions. Memory Template Used to store permanent or temporary information for future use or reference. These two templates effectively handle and manage the content in conversations, providing richer responses for chatbots.
+---
+
+
 # Templates
 
 Templates are divided into Dialog Templates and Memory Templates.
@@ -72,7 +78,7 @@ Upload Image: Users can provide the URL of the image for upload. As long as ther
 
 The bot can send video messages to users, allowing you to send video files for users to watch the content.
 
-![](../../../../../../images/en/bot-template-line-video-s.png "DmFlow Video Message")
+![DmFlow Video Message](../../../../../../images/en/bot-template-line-video-s.png "DmFlow Video Message")
 
 - URL Usage: In a reply message, only URLs can be used to reference images or videos. This means you can provide URLs for images or videos for the bot to display them in the conversation.
 - Video Support: When referencing videos, only MP4 format videos are supported. This means you need to provide the URL of an MP4 format video file.
@@ -85,7 +91,7 @@ Please adhere to these restrictions and requirements to ensure that images and v
 
 The bot can send audio messages to users, allowing users to listen to the audio content you send.
 
-![](../../../../../../images/en/bot-template-line-audio-s.png "DmFlow Audio Message")
+![DmFlow Audio Message](../../../../../../images/en/bot-template-line-audio-s.png "DmFlow Audio Message")
 
 - URL Usage: In a reply message, only URLs can be used to reference audio files. This means you can provide the URL of an audio file for the bot to play the audio in the conversation.
 - Audio Support: When referencing audio, only M4A format audio files are supported. This means you need to provide the URL of an M4A format audio file.
@@ -95,7 +101,7 @@ The bot can send audio messages to users, allowing users to listen to the audio 
 Please adhere to these restrictions and requirements to ensure that the audio plays correctly and complies with relevant security standards.
 
 #### Imagemap Message
-![](../../../../../../images/en/bot-template-line-imagemap-s.png "DmFlow Imagemap Message")
+![DmFlow Imagemap Message](../../../../../../images/en/bot-template-line-imagemap-s.png "DmFlow Imagemap Message")
 
 [Official Documentation for LINE Imagemap Message](https://tw.linebiz.com/manual/line-official-account/oa-manager-richmessage/)
 
@@ -107,7 +113,7 @@ Please adhere to these restrictions and requirements to ensure that the audio pl
 
 #### Imagemap Message Video
 
-![](../../../../../../images/en/bot-template-line-imagemap-video.png "DmFlow Imagemap Video")
+![DmFlow Imagemap Video](../../../../../../images/en/bot-template-line-imagemap-video.png "DmFlow Imagemap Video")
 
 - 1.Video Limitation: Currently, the DmFlow platform does not support directly uploading videos. Therefore, videos can only be provided using URLs. When providing videos through URLs, the supported video format is MP4, and the size limit is within 200MB. Additionally, the provided video URL must use the HTTPS protocol.
 - 2.Image Preview: In terms of image preview, DmFlow supports image sizes up to 1MB. Please ensure that the provided image complies with this limitation.
@@ -123,7 +129,7 @@ Include [Imagemap Message Text](#imagemap-message-text) and [Imagemap Message Li
 
 #### Imagemap Message Text
 
-![](../../../../../../images/en/bot-template-line-imagemap-t-text.png "DmFlow Imagemap Text")
+![DmFlow Imagemap Text](../../../../../../images/en/bot-template-line-imagemap-t-text.png "DmFlow Imagemap Text")
 
 - 1.Calculated from the Top: It means that the vertical position of the element within the message is calculated from the top. Smaller values indicate that the element is closer to the top of the message.
 - 2.Calculated from the Left: It means that the horizontal position of the element within the message is calculated from the left. Smaller values indicate that the element is closer to the left side of the message.
@@ -135,7 +141,7 @@ Include [Imagemap Message Text](#imagemap-message-text) and [Imagemap Message Li
 
 #### Imagemap Message Link
 
-![](../../../../../../images/en/bot-template-line-imagemap-t-link.png "DmFlow Imagemap Link")
+![DmFlow Imagemap Link](../../../../../../images/en/bot-template-line-imagemap-t-link.png "DmFlow Imagemap Link")
 
 - 1.Calculated from the Top: It means that the vertical position of the element within the message is calculated from the top. Smaller values indicate that the element is closer to the top of the message.
 - 2.Note: When the client has accessibility features, a note function can be provided, such as voice reminders to assist users with special needs.
@@ -146,18 +152,18 @@ Include [Imagemap Message Text](#imagemap-message-text) and [Imagemap Message Li
 
 #### Preview - Imagemap Message Preview [For reference only]
 
-![](../../../../../../images/en/bot-template-line-imagemap-f.png "LINE Imagemap Message")
+![LINE Imagemap Message](../../../../../../images/en/bot-template-line-imagemap-f.png "LINE Imagemap Message")
 
 The red arrows and pointing box are alignment aids. The video is represented by the "VIDEO" label to indicate its position and dimensions. The text section will display the text label upon clicking (the actual text will not appear), and the hyperlink will display the link content upon clicking (the actual hyperlink text will not appear). The actual display may vary.
 
 
 #### Actual - Imagemap Message Preview
 
-![](../../../../../../images/en/bot-template-line-imagemap-r.png "LINE Imagemap preview")
+![LINE Imagemap preview](../../../../../../images/en/bot-template-line-imagemap-r.png "LINE Imagemap preview")
 
 #### Image Carousel
 
-![](../../../../../../images/en/bot-template-line-imagecard-s.png "DmFlow Image Carousel")
+![DmFlow Image Carousel](../../../../../../images/en/bot-template-line-imagecard-s.png "DmFlow Image Carousel")
 
 - Text displayed when the image carousel cannot be displayed on the desktop version.
 - Template selection: "Image Carousel Module"
@@ -168,12 +174,12 @@ Include [Trigger Action Text](#trigger-action-text), [Trigger Action Postback](#
 
 #### Trigger Action Text
 
-![](../../../../../../images/en/bot-template-line-imagecard-s-t-text.png "DmFlow Trigger Action - Text")
+![DmFlow Trigger Action - Text](../../../../../../images/en/bot-template-line-imagecard-s-t-text.png "DmFlow Trigger Action - Text")
 - 1.Text displayed on the text button in the image.
 - 2.Text returned when the button is clicked.
 
 #### Trigger Action Postback
-![](../../../../../../images/en/bot-template-postback.png "Trigger Action - Postback")
+![Trigger Action - Postback](../../../../../../images/en/bot-template-postback.png "Trigger Action - Postback")
 
 - 1.Text displayed on the text button in the image: When setting a text button on the image, you can specify the text to be displayed for each button. This text will appear on the image to guide users to take corresponding actions or obtain more information.
 - 2.Message type: Text or Event. In the conversation, you can use text or events as the message type. Text messages are used to directly show text content to users, while events trigger corresponding actions or processes.
@@ -191,37 +197,37 @@ Represents the data passed to DmFlow when the button is clicked. The key thing t
 
 #### Trigger Action Link
 
-![](../../../../../../images/en/bot-template-link.png "DmFlow Trigger Action - Link")
+![DmFlow Trigger Action - Link](../../../../../../images/en/bot-template-link.png "DmFlow Trigger Action - Link")
 - 1.Text displayed on the text button in the image: When you add text buttons on the image, these buttons will display the specified text. The text displayed when users click these buttons will be passed to the corresponding part of the conversation flow to trigger the corresponding actions or responses.
 - 2.Webview popped up on mobile devices: When users click a button in an image message, and the trigger action for that button is to open a window, if users click the button on a mobile device, a webview will pop up displaying the specified web page content. This webview can be displayed within the LINE client on the mobile device, allowing users to browse the web without leaving LINE.
 - 3.Web page opened in a new browser window on non-mobile devices: When users click a button in an image message, and the trigger action for that button is to open a window, if users click the button on a non-mobile device (such as a computer or tablet), the specified web page will be opened in a new browser window. This allows users to view and interact with the specified web page content in a separate browser window.
 
 #### Preview - Image Carousel Preview [for reference only]
 
-![](../../../../../../images/en/bot-template-line-imagecard-f.png "LINE Image Carousel Preview")
+![LINE Image Carousel Preview](../../../../../../images/en/bot-template-line-imagecard-f.png "LINE Image Carousel Preview")
 
 #### Actual - Image Carousel Preview
 
-![](../../../../../../images/en/bot-template-line-imagecard-r.png "LINE Image Carousel Preview")
+![LINE Image Carousel Preview](../../../../../../images/en/bot-template-line-imagecard-r.png "LINE Image Carousel Preview")
 
 #### Confirm Template
 
-![](../../../../../../images/en/bot-template-line-confirm-s.png "DmFlow Confirm Template")
+![DmFlow Confirm Template](../../../../../../images/en/bot-template-line-confirm-s.png "DmFlow Confirm Template")
 - 1.Template selection: "Confirm Template": This is a predefined template used in conversations to display interactive confirmation questions and options. You can choose this template to create a message that includes a yes-or-no question and related options to guide users in making a choice.
 - 2.Confirmation question with two options: In the "Confirm Template," you can set a binary question, offering two options for users to choose from. Users can select one of the options as their answer. The purpose of this question is to gather user preferences or choices between the two options.
 - 3.Trigger actions for each option: In the "Confirm Template," each option can be configured with a trigger action. The trigger action defines the action to be taken when the user selects a particular option. You can configure trigger actions based on your business requirements, such as sending a specific reply message, jumping to another scene, or invoking an API. For more information on trigger actions, you can refer to the [Trigger Actions](#trigger-actions) section.
 
 #### Preview - Confirm Template Preview [for reference only]
 
-![](../../../../../../images/en/bot-template-line-confirm-f.png "LINE Confirm Template Preview")
+![LINE Confirm Template Preview](../../../../../../images/en/bot-template-line-confirm-f.png "LINE Confirm Template Preview")
 
 #### Actual - Confirm Template Preview
 
-![](../../../../../../images/en/bot-template-line-confirm-r.png "LINE Confirm Template Preview")
+![LINE Confirm Template Preview](../../../../../../images/en/bot-template-line-confirm-r.png "LINE Confirm Template Preview")
 
 #### Button Template
 
-![](../../../../../../images/en/bot-template-line-buttons-s.png "DmFlow Button Template")
+![DmFlow Button Template](../../../../../../images/en/bot-template-line-buttons-s.png "DmFlow Button Template")
 
 - 1.Template selection: "Button Template": This is a default template used to display messages with button options. You can choose this template to create a message that includes buttons for users to click and perform corresponding actions.
 - 2.Title: The title can be placed based on the preview.
@@ -244,40 +250,40 @@ Represents the data passed to DmFlow when the button is clicked. The key thing t
 - contain:Display the entire image, fill with background color if not fully filled
 
 #### Preview - Button Template [for reference only]
-![](../../../../../../images/en/bot-template-line-buttons-f.png "LINE Button Template")
+![LINE Button Template](../../../../../../images/en/bot-template-line-buttons-f.png "LINE Button Template")
 
 #### Actual Preview - Button Template
-![](../../../../../../images/en/bot-template-line-buttons-r.png "LINE Actual Preview - Button Template")
+![LINE Actual Preview - Button Template](../../../../../../images/en/bot-template-line-buttons-r.png "LINE Actual Preview - Button Template")
 
 #### Carousel Template
 
-![](../../../../../../images/en/bot-template-line-card-s.png "DmFlow Carousel Template")
+![DmFlow Carousel Template](../../../../../../images/en/bot-template-line-card-s.png "DmFlow Carousel Template")
 - 1.Choose the "Carousel Template" module.
 - 2.Image carousel field, same as [Button Template](#button-template), but can support multiple items.
 - 3.[Image aspect ratio](#image-aspect-ratio)
 - 4.[Image presentation](#image-presentation)
 
 #### Preview - Carousel Template [for reference only]
-![](../../../../../../images/en/bot-template-line-card-f.png "LINE Carousel Template")
+![LINE Carousel Template](../../../../../../images/en/bot-template-line-card-f.png "LINE Carousel Template")
 
 #### Actual Preview - Carousel Template
-![](../../../../../../images/en/bot-template-line-card-r.png "LINE Actual Preview - Carousel Template")
+![LINE Actual Preview - Carousel Template](../../../../../../images/en/bot-template-line-card-r.png "LINE Actual Preview - Carousel Template")
 
 ### Facebook Messenger
 
 #### Text and Other Messages
 
-![](../../../../../../images/en/bot-template-ms-text-s.png "DmFlow Messenger Text Message")
+![DmFlow Messenger Text Message](../../../../../../images/en/bot-template-ms-text-s.png "DmFlow Messenger Text Message")
 
 Text and images (uploadable, within 1MB), while others such as videos, audios, and files only support URL links.
 
 #### Actual Preview - Text Message
 
-![](../../../../../../images/en/bot-template-ms-text-r.png "Messenger Actual Preview - Text Message")
+![Messenger Actual Preview - Text Message](../../../../../../images/en/bot-template-ms-text-r.png "Messenger Actual Preview - Text Message")
 
 #### Generic Template
 
-![](../../../../../../images/en/bot-template-ms-temp-s.png "DmFlow Generic Template")
+![DmFlow Generic Template](../../../../../../images/en/bot-template-ms-temp-s.png "DmFlow Generic Template")
 
 - 1.Horizontal: 16:9, Square: 1:1
 - 2.Title, placement can be understood based on the preview.
@@ -287,17 +293,17 @@ Text and images (uploadable, within 1MB), while others such as videos, audios, a
 - 6.Trigger conditions include [Link Elements extension](#link-elements-extension) and [Action - Return Value](#trigger-action-postback).
 
 #### Preview - Generic Template [for reference only]
-![](../../../../../../images/en/bot-template-ms-temp-f.png "Messenger Generic Template")
+![Messenger Generic Template](../../../../../../images/en/bot-template-ms-temp-f.png "Messenger Generic Template")
 
 #### Actual Preview - Generic Template
 
-![](../../../../../../images/en/bot-template-ms-temp-r.png "Messenger Generic Template")
+![Messenger Generic Template](../../../../../../images/en/bot-template-ms-temp-r.png "Messenger Generic Template")
 
 #### Link Elements extension
 
 Link Elements
 
-![](../../../../../../images/en/bot-template-ms-link-f.png "DmFlow Link")
+![DmFlow Link](../../../../../../images/en/bot-template-ms-link-f.png "DmFlow Link")
 
 - 1.URL link
 - 2.URL name
@@ -307,7 +313,7 @@ Link Elements (extension)
 
 [Add Messenger Extension SDK](https://developers.facebook.com/docs/messenger-platform/webview/extensions/)
 
-![](../../../../../../images/en/bot-template-ms-linkext-f.png "DmFlow Messenger Link")
+![DmFlow Messenger Link](../../../../../../images/en/bot-template-ms-linkext-f.png "DmFlow Messenger Link")
 
 - 1.URL link
 - 2.URL name
@@ -316,16 +322,16 @@ Link Elements (extension)
 
 #### Button Template
 
-![](../../../../../../images/en/bot-template-ms-buttons-s.png "DmFlow Button Template")
+![DmFlow Button Template](../../../../../../images/en/bot-template-ms-buttons-s.png "DmFlow Button Template")
 
 - 1.Ask a question.
 - 2.Button elements include [Link Elements extension](#link-elements-extension) and [Action - Return Value](#trigger-action-postback).
 
 #### Preview - Button Template [for reference only]
-![](../../../../../../images/en/bot-template-ms-buttons-f.png "Messenger Button Template")
+![Messenger Button Template](../../../../../../images/en/bot-template-ms-buttons-f.png "Messenger Button Template")
 
 #### Actual Preview - Button Template
-![](../../../../../../images/en/bot-template-ms-buttons-r.png "Messenger Actual Preview - Button Template")
+![Messenger Actual Preview - Button Template](../../../../../../images/en/bot-template-ms-buttons-r.png "Messenger Actual Preview - Button Template")
 
 ### Telegram
 

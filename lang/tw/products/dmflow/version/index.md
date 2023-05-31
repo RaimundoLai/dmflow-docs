@@ -1,3 +1,8 @@
+---
+title: DmFlow 更新詳情 | DmFlow
+description: DmFlow 更新詳情。
+---
+
 # 版本更新
 
 ~ 2023.05.22

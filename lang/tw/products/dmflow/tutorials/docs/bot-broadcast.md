@@ -1,3 +1,8 @@
+---
+title: DmFlow 廣播介紹 | DmFlow
+description: 廣播用於向使用者群體發送批量訊息。它可以被廣泛應用於再行銷、推廣活動、通知更新等方面。
+---
+
 # 廣播
 
 廣播用於向使用者群體發送批量訊息。它可以被廣泛應用於再行銷、推廣活動、通知更新等方面。以下是廣播功能的一些特點和用途：
@@ -14,7 +19,7 @@
 
 ## 介紹
 
-![](../../../../../../images/tw/bot-broadcast-intro.png)
+![DmFlow廣播瀏覽圖](../../../../../../images/tw/bot-broadcast-intro.png "DmFlow廣播瀏覽圖")
 
 1. 渠道目前支援LINE、Messenger、Telegram
 2. 標籤為dev(開發版)以及prod(生產版)

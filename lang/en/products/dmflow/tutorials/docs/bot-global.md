@@ -1,3 +1,8 @@
+---
+title: DmFlow Bot Global Settings | DmFlow
+description: The configuration of a conversation flow refers to setting up enabled domains, scenes, and generic responses in a conversational bot to ensure that the bot can understand and answer questions correctly in interactions with users.
+---
+
 # Bot Global Settings
 
 The configuration of a conversation flow refers to setting up enabled domains, scenes, and generic responses in a conversational bot to ensure that the bot can understand and answer questions correctly in interactions with users.
@@ -18,7 +23,7 @@ In an intent-based conversation flow, the focus is on identifying user intents a
 - Define Clear Intents: Identify possible intents that users may have and create corresponding responses for each intent.
 - Use Entities: Utilize entities within intents to identify key information such as dates, times, locations, etc. This helps in providing more accurate answers to user queries.
 
-![](../../../../../../images/en/bot-global-intent.png "Bot Add Domain Intent")
+![Bot Add Domain Intent](../../../../../../images/en/bot-global-intent.png "Bot Add Domain Intent")
 - 1.For specific intents, you can choose to fill entities to capture key information from the user, or leave them empty and identify their intent during the conversation. This depends on the requirements and design of your conversation flow.
 - 2.In the configuration, you can choose whether to enable specific domains. Enable or disable relevant domains based on your conversation flow requirements.
 - 3.Enabling the count of missed hits depends on whether you want to track and record the number of missed hits in the conversation.
@@ -31,7 +36,7 @@ In a question-answering conversation flow, answers are provided based on pre-def
 - Cover Common Questions: Collect and organize common questions and provide corresponding answers.
 - Consider Multiple Expressions: Provide multiple expressions for each question-answer pair to handle different user query variations.
 
-![](../../../../../../images/en/bot-global-faq.png "Bot Add Domain Question-Answering")
+![Bot Add Domain Question-Answering](../../../../../../images/en/bot-global-faq.png "Bot Add Domain Question-Answering")
 - 1.You can select specific categories for designated question-answer pairs in the configuration to classify them into specific categories. This option can be overridden to specify the category of question-answer pairs as needed.
 - 2.Based on the value in the configuration, when the similarity of an answer exceeds this value, the question is considered a user question. You can override this value in the configuration for more flexible control.
 - 3.If the similarity of an answer exceeds the configured value, the system displays other suggested questions. You can adjust this value in the configuration to meet your needs.

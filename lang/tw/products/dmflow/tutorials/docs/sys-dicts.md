@@ -1,3 +1,8 @@
+---
+title: DmFlow 引用辭典 | DmFlow
+description: 支援預設辭典。
+---
+
 # 引用辭典
 目前系統支援的辭典：
 - TIME:時間詞
