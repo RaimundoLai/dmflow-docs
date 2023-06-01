@@ -1,3 +1,8 @@
+---
+title: Communeify Documentation | Communeify 文檔
+description: Communeify Document Language Product DmFlow Dialog Management Flow Chatbot | Communeify 文檔 語系 產品 DmFlow 對話管理系統 機器人
+---
+
 <div>
   <h1 id="myHeader">Communeify Documentation</h1><br>
 
@@ -10,16 +15,18 @@
   <h2 id="support_lang">Support Language</h2><br>
 
   <ul>
-    <li><a href="/en/index.html">The English documentation</a></li>
-    <li><a href="/tw/index.html">中文文檔</a></li>
+    <li><a href="/en/index.html">Communeify Product Documentation</a></li>
+    <li><a href="/tw/index.html">Communeify 產品文檔</a></li>
   </ul>
 </div>
 
-<div id="websiteLink"></div>
+<div id="websiteLink">Website Link：<a href='https://www.communeify.com/lang/en_US'>https://www.communeify.com</a></div>
+<div id="websiteLink_tw">提供官網連結：<a href='https://www.communeify.com'>https://www.communeify.com</a></div>
 <div>
   <h2 id="products">Products</h2><br>
-  <ul>
+  <ul id="product_langs">
     <li><a id="dmflow_link" href="/en/products/dmflow/index.html">DmFlow(Dialog Management System)</a></li>
+	<li id="dmflow_link_tw"><a href="/tw/products/dmflow/index.html">DmFlow(對話管理系統)</a></li>
   </ul>
 </div>
 
@@ -52,6 +59,15 @@
   }
 </style>
 <script>
+  var websiteLinkTW = document.getElementById("websiteLink_tw");
+  websiteLinkTW.style.display = "none";
+  var listProductLangs = document.getElementById("product_langs").getElementsByTagName("li");
+  for (var i = 0; i < listProductLangs.length; i++) {
+    var currentItem = listProductLangs[i];
+	if(currentItem.id === 'dmflow_link_tw') {
+	  currentItem.style.display = "none";
+	}
+  }
   function redirectToSelectedLanguage() {
     var selectedLanguage = document.getElementById('languageSelect').value;
     if (selectedLanguage === 'en') {
