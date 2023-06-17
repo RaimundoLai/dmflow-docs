@@ -89,6 +89,19 @@
 <p><img src="../../../../../../images/en/telegram-group-disabled-slash.jpg" alt="DmFlow integrate with Telegram" title="DmFlow integrate with Telegram"></p>
 <p>To configure your Telegram integration in the DmFlow system, select your bot, go to Settings -&gt; Third-Party Integrations -&gt; Telegram. Enter the numeric portion of the token before the colon (:) in the APP_ID field, and enter the complete token &quot;58XXXXXXXX:AAEXXXXXXXXXXEBXXXXXXX&quot; in the token field. Select &quot;Enable&quot; and save. The system will verify if the provided information is correct.</p>
 <p><img src="../../../../../../images/en/telegram-setting-page.png" alt="DmFlow integrate with Telegram" title="DmFlow integrate with Telegram"></p>
+<h1 id="setting-webhook">Setting Webhook</h1>
+<pre><code>https://api.telegram.org/bot{{token}}/setWebhook
+</code></pre>
+<p>token replaced {{token}}</p>
+<p>Body</p>
+<pre><code>{
+    &quot;url&quot;:&quot;{{Webhook URL}}&quot;
+}
+</code></pre>
+<p>Webhook URL replaced {{Webhook URL}}</p>
+<h1 id="delete-webhook">Delete Webhook</h1>
+<pre><code>https://api.telegram.org/bot{{token}}/deleteWebhook
+</code></pre>
 </article>
           </div>
           

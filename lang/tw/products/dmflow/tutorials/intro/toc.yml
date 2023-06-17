@@ -1,11 +1,15 @@
 # domain
-- name: 建立意圖領域
+- name: 意圖範例-建立意圖領域(1/5)
   href: domain-create.md
-- name: 實體思考邏輯
+- name: 意圖範例-實體思考邏輯(2/5)
   href: entity-logical.md
-- name: 建立需求辭典
+- name: 意圖範例-建立需求辭典(3/5)
   href: dict-create.md
-- name: 個別意圖內容
+- name: 意圖範例-個別意圖內容(4/5)
   href: distinct-content.md
-- name: 發布並測試
+- name: 意圖範例-發布並測試(5/5)
   href: deploy-test.md
+- name: 機器人範例-隨機分支
+  href: random-branch.md
+- name: 機器人範例-真人客服
+  href: human-help.md

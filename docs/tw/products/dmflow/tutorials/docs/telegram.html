@@ -89,6 +89,19 @@
 <p><img src="../../../../../../images/tw/telegram-group-disabled-slash.jpg" alt="DmFlow整合Telegram" title="DmFlow整合Telegram"></p>
 <p>進入DmFlow系統，點選你的機器人後，進入設置-&gt;第三方整合-&gt;Telegram，並將圖二的token冒號前純數字填入APP_ID，token則是填入全部&quot;58XXXXXXXX:AAEXXXXXXXXXXEBXXXXXXX&quot;，選取&quot;啟用&quot;並儲存，後台會驗證填寫是否正確。</p>
 <p><img src="../../../../../../images/tw/telegram-setting-page.png" alt="DmFlow整合Telegram" title="DmFlow整合Telegram"></p>
+<h1 id="設置webhook">設置Webhook</h1>
+<pre><code>https://api.telegram.org/bot{{token}}/setWebhook
+</code></pre>
+<p>將token取代{{token}}</p>
+<p>Body</p>
+<pre><code>{
+    &quot;url&quot;:&quot;{{Webhook URL}}&quot;
+}
+</code></pre>
+<p>將Webhook URL取代{{Webhook URL}}</p>
+<h1 id="刪除webhook">刪除Webhook</h1>
+<pre><code>https://api.telegram.org/bot{{token}}/deleteWebhook
+</code></pre>
 </article>
           </div>
           

@@ -28,3 +28,26 @@ If you want to receive all messages in a group, you can follow these steps. By d
 To configure your Telegram integration in the DmFlow system, select your bot, go to Settings -> Third-Party Integrations -> Telegram. Enter the numeric portion of the token before the colon (:) in the APP_ID field, and enter the complete token "58XXXXXXXX:AAEXXXXXXXXXXEBXXXXXXX" in the token field. Select "Enable" and save. The system will verify if the provided information is correct.
 
 ![DmFlow integrate with Telegram](../../../../../../images/en/telegram-setting-page.png "DmFlow integrate with Telegram")
+
+# Setting Webhook
+
+```
+https://api.telegram.org/bot{{token}}/setWebhook
+```
+
+token replaced {{token}}
+
+Body
+
+```
+{
+    "url":"{{Webhook URL}}"
+}
+```
+
+Webhook URL replaced {{Webhook URL}}
+
+# Delete Webhook
+```
+https://api.telegram.org/bot{{token}}/deleteWebhook
+```

@@ -75,7 +75,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/toc.html",
-          "hash": "V7JNzG2vfho40877/mS8pYA01bsMaWu1go20TV22NKw="
+          "hash": "HnS/ds3lbB+/AlpqjsJq7d1XKQ4NktzguJZjjxN9N6M="
         }
       },
       "is_incremental": false,
@@ -373,7 +373,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/telegram.html",
-          "hash": "kKn4bHQ+vVnHJl54C/EsLQaIJud3fzJgBRSqUnY6gEI="
+          "hash": "uBcH76N4SC1nZd+zyCm9SJfJDuMKtu2wUGJaMtbl5Pw="
         }
       },
       "is_incremental": false,
@@ -474,11 +474,41 @@
         "InvalidFileLink"
       ],
       "type": "Conceptual",
+      "source_relative_path": "products/dmflow/tutorials/intro/human-help.md",
+      "output": {
+        ".html": {
+          "relative_path": "products/dmflow/tutorials/intro/human-help.html",
+          "hash": "TCoivjdZPVUOUiDUApyDwaNobcTepte4Fq7li1Hvqog="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/intro/index.md",
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/index.html",
-          "hash": "8K0QsXjud1By+RI2axXl9qXunBVykwYlTBgj4lxC5+A="
+          "hash": "sIwTR0Yc2aybYkwFmOzAtPdHyMBR08MzMBaXgKucQF8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "products/dmflow/tutorials/intro/random-branch.md",
+      "output": {
+        ".html": {
+          "relative_path": "products/dmflow/tutorials/intro/random-branch.html",
+          "hash": "FNxJyBcDywTd2O12vTkCWnE4Wv2uEq7oDALnY36bjUA="
         }
       },
       "is_incremental": false,
@@ -521,8 +551,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 31,
-          "skipped_file_count": 31
+          "total_file_count": 33,
+          "skipped_file_count": 33
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

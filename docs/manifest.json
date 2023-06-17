@@ -2332,6 +2332,72 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/tw/example-date-format.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/example-date-format.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/example-human-messenger.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/example-human-messenger.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/example-human-thread.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/example-human-thread.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/example-telegram-human-agent.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/example-telegram-human-agent.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/example-telegram-human-user.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/example-telegram-human-user.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/example-telegram-human.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/example-telegram-human.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/tw/intent-intro-trigger.png",
       "output": {
         "resource": {
@@ -2754,6 +2820,17 @@
       "output": {
         "resource": {
           "relative_path": "images/tw/messenger-007.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/random-branch-example.gif",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/random-branch-example.gif"
         }
       },
       "is_incremental": false,

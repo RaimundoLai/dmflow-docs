@@ -28,3 +28,26 @@ description: Telegram開發設定。
 進入DmFlow系統，點選你的機器人後，進入設置->第三方整合->Telegram，並將圖二的token冒號前純數字填入APP_ID，token則是填入全部"58XXXXXXXX:AAEXXXXXXXXXXEBXXXXXXX"，選取"啟用"並儲存，後台會驗證填寫是否正確。
 
 ![DmFlow整合Telegram](../../../../../../images/tw/telegram-setting-page.png "DmFlow整合Telegram")
+
+# 設置Webhook
+
+```
+https://api.telegram.org/bot{{token}}/setWebhook
+```
+
+將token取代{{token}}
+
+Body
+
+```
+{
+    "url":"{{Webhook URL}}"
+}
+```
+
+將Webhook URL取代{{Webhook URL}}
+
+# 刪除Webhook
+```
+https://api.telegram.org/bot{{token}}/deleteWebhook
+```

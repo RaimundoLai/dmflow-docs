@@ -1,0 +1,392 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>DmFlow &#30495;&#20154;&#23458;&#26381; | DmFlow | Communeify </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="DmFlow &#30495;&#20154;&#23458;&#26381; | DmFlow | Communeify ">
+    <meta name="description" content="DmFlow &#30495;&#20154;&#23458;&#26381;&#65292;&#22914;&#20309;&#22312;DmFlow&#23559;&#27231;&#22120;&#20154;&#36681;&#25104;&#30495;&#20154;&#23458;&#26381;&#12290;">
+    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="google-site-verification" content="wackHW3mx9OzoWNdH73Ucfx-Tgn27NaVqlQ-dzKaBfw">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <meta property="docfx:appTitle" content="Communeify">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="真人客服">真人客服</h1>
+
+<p>如何在DmFlow將機器人轉成真人客服。</p>
+<h2 id="使用messenger渠道">使用Messenger渠道</h2>
+<p>首先我們先在config中建立messengerToken。再來在變數新增id、success。</p>
+<p><em>變數管理</em></p>
+<table>
+<thead>
+<tr>
+<th>變數名稱</th>
+<th>限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>id</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<p><em>資源創建</em></p>
+<p>name: pass_to_inbox(將控制權轉為Inbox)</p>
+<pre><code>https://graph.facebook.com/v16.0/me/pass_thread_control?access_token=${#config.messengerToken}
+</code></pre>
+<p>Request-Type : POST
+Content-Type : application/json(JSON)</p>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>鍵</th>
+<th>JSON 路徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>recipient['id']</td>
+</tr>
+</tbody>
+</table>
+<pre><code>{
+    &quot;recipient&quot;: {
+        &quot;id&quot;: &quot;&quot;
+    },
+    &quot;target_app_id&quot;: &quot;263902037430900&quot;
+}
+</code></pre>
+<p>Return</p>
+<table>
+<thead>
+<tr>
+<th>JSON 路徑</th>
+<th>鍵</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>success</td>
+</tr>
+</tbody>
+</table>
+<pre><code>{
+  &quot;success&quot;: true,
+  &quot;message&quot;: &quot;Thread control successfully passed to the target app.&quot;
+}
+</code></pre>
+<p>name: take_thread(將控制權拿回來)</p>
+<pre><code>https://graph.facebook.com/v16.0/me/take_thread_control?access_token=${#messengerToken}
+</code></pre>
+<p>Request-Type : POST
+Content-Type : application/json(JSON)</p>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>鍵</th>
+<th>JSON 路徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>recipient['id']</td>
+</tr>
+</tbody>
+</table>
+<pre><code>{
+    &quot;recipient&quot;: {
+        &quot;id&quot;: &quot;&quot;
+    }
+}
+</code></pre>
+<p>Return</p>
+<table>
+<thead>
+<tr>
+<th>JSON 路徑</th>
+<th>鍵</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>success</td>
+</tr>
+</tbody>
+</table>
+<p>name: reply(回覆機器人)</p>
+<pre><code>https://graph.facebook.com/v16.0/me/messages?access_token=${#config.messengerToken}
+</code></pre>
+<p>Request-Type : POST
+Content-Type : application/json(JSON)</p>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>鍵</th>
+<th>JSON 路徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>recipient['id']</td>
+</tr>
+</tbody>
+</table>
+<pre><code>{
+    &quot;messaging_type&quot;: &quot;RESPONSE&quot;,
+    &quot;recipient&quot;: {
+        &quot;id&quot;: &quot;&quot;
+    },
+    &quot;message&quot;: {
+        &quot;attachment&quot;: {
+            &quot;type&quot;: &quot;template&quot;,
+            &quot;payload&quot;: {
+                &quot;template_type&quot;: &quot;button&quot;,
+                &quot;text&quot;: &quot;是否切回機器人&quot;,
+                &quot;buttons&quot;: [
+                    {
+                        &quot;type&quot;: &quot;postback&quot;,
+                        &quot;title&quot;: &quot;切回機器人&quot;,
+                        &quot;payload&quot;: &quot;{\&quot;type\&quot;:\&quot;text\&quot;,\&quot;payload\&quot;:{\&quot;query\&quot;:\&quot;[wakeup]\&quot;,\&quot;type\&quot;:\&quot;text\&quot;}}&quot;
+                    }
+                ]
+            }
+        }
+    }
+}
+</code></pre>
+<p><img src="../../../../../../images/tw/example-human-thread.gif" alt="DmFlow Messenger真人客服範例" title="DmFlow Messenger真人客服範例"></p>
+<p><img src="../../../../../../images/tw/example-human-messenger.png" alt="Messenger真人客服範例" title="Messenger真人客服範例"></p>
+<p>其中判斷可以再加上rangeTime去判斷工作時間，也可以外接API做客服佇列、是否在線上等等。</p>
+<p><img src="../../../../../../images/tw/example-date-format.png" alt="DmFlow rangeTime" title="DmFlow rangeTime"></p>
+<h2 id="使用api">使用API</h2>
+<pre><code>/_api/v1/bot/chat
+</code></pre>
+<p>使用chat API可以使當前使用者進入聆聽模式。此時機器人不會回覆任何話術。</p>
+<h2 id="其他渠道">其他渠道</h2>
+<h3 id="line">LINE</h3>
+<p>可設置兩個Providers，一個負責客服、另一個以機器人問答為主。</p>
+<h3 id="telegram">Telegram</h3>
+<p>首先我們先在config中建立telegramToken。再來在變數新增id、query、callback。</p>
+<p><em>變數管理</em></p>
+<table>
+<thead>
+<tr>
+<th>變數名稱</th>
+<th>限制</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>callback</td>
+<td>string</td>
+</tr>
+<tr>
+<td>query</td>
+<td>string</td>
+</tr>
+<tr>
+<td>id</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<p><em>資源創建</em></p>
+<p>name: telegram_sendMessage(用於回覆客服用戶的問題)</p>
+<pre><code>https://api.telegram.org/bot${#config.telegramToken}/sendMessage
+</code></pre>
+<p>Request-Type : POST
+Content-Type : application/json(JSON)</p>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>鍵</th>
+<th>JSON 路徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>query</td>
+<td>text</td>
+</tr>
+<tr>
+<td>id</td>
+<td>chat_id</td>
+</tr>
+</tbody>
+</table>
+<pre><code>{
+    &quot;text&quot;: &quot;&quot;,
+    &quot;chat_id&quot;: &quot;&quot;
+}
+</code></pre>
+<p>name: telegram_forward(用於監聽用戶對話)</p>
+<pre><code>https://api.telegram.org/bot${#config.telegramToken}/sendMessage
+</code></pre>
+<p>Request-Type : POST
+Content-Type : application/json(JSON)</p>
+<p>Parameter</p>
+<table>
+<thead>
+<tr>
+<th>鍵</th>
+<th>JSON 路徑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>query</td>
+<td>text</td>
+</tr>
+<tr>
+<td>id</td>
+<td>chat_id</td>
+</tr>
+<tr>
+<td>callback</td>
+<td>reply_markup['inline_keyboard'][0][0]['callback_data']</td>
+</tr>
+</tbody>
+</table>
+<pre><code>{
+    &quot;text&quot;: &quot;&quot;,
+    &quot;chat_id&quot;: &quot;6092427840&quot;,
+    &quot;parse_mode&quot;: &quot;Markdown&quot;,
+    &quot;reply_markup&quot;: {
+        &quot;inline_keyboard&quot;: [
+            [
+                {
+                    &quot;text&quot;: &quot;回覆&quot;,
+                    &quot;callback_data&quot;: &quot;&quot;
+                }
+            ]
+        ]
+    }
+}
+</code></pre>
+<p><em>記憶模板</em></p>
+<p>單一會話儲存</p>
+<ul>
+<li>新增replyUserId(回覆使用者ID)</li>
+</ul>
+<p>在依以下機器人動態圖作範例，即可做出簡單的Telegram真人客服。</p>
+<p><img src="../../../../../../images/tw/example-telegram-human.gif" alt="DmFlow Telegram真人客服範例" title="DmFlow Telegram真人客服範例"></p>
+<p>以下是實際畫面。</p>
+<p><img src="../../../../../../images/tw/example-telegram-human-user.jpg" alt="Telegram真人客服問句" title="Telegram真人客服問句"></p>
+<p><img src="../../../../../../images/tw/example-telegram-human-agent.jpg" alt="Telegram真人客服專員" title="Telegram真人客服專員"></p>
+<p>就可以做出簡單的真人問答系統。當然，可進一步搭配API做出查詢訊息、查找FAQ等等。</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © <script>document.write(new Date().getFullYear());</script> Communeify</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+    <!-- mermaid support -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: false
+        });
+        mermaid.init(undefined, ".lang-mermaid");
+    </script>  </body>
+</html>
