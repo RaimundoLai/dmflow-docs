@@ -20,7 +20,7 @@ description: Communeify Document Language Product DmFlow Dialog Management Flow 
   </ul>
 </div>
 
-<div id="websiteLink">Website Link：<a href='https://www.communeify.com/lang/en_US'>https://www.communeify.com</a></div>
+<div id="websiteLink">Website Link：<a href='https://www.communeify.com/en'>https://www.communeify.com</a></div>
 <div id="websiteLink_tw">提供官網連結：<a href='https://www.communeify.com'>https://www.communeify.com</a></div>
 <div>
   <h2 id="products">Products</h2><br>
@@ -90,7 +90,7 @@ description: Communeify Document Language Product DmFlow Dialog Management Flow 
   function doTranslate(language, init) {
     var websiteUrl = "https://www.communeify.com";
     var websiteLink = document.getElementById("websiteLink");
-    var defaultUrl = websiteUrl + "/lang/en_US";
+    var defaultUrl = websiteUrl + "/en";
 	var defaultSupportLang = 'Support Language';
 	var defaultMyHeader = 'Communeify Documentation';
 	var defaultGoButton = 'Go';
@@ -119,9 +119,9 @@ description: Communeify Document Language Product DmFlow Dialog Management Flow 
 	  document.getElementById("dmflow_link").setAttribute("href", "/tw/products/dmflow/index.html");
 	  document.getElementById("dmflow_link").textContent = 'DmFlow(對話管理系統)';
 	  if(language === 'zh-TW') {
-	      defaultUrl = websiteUrl + "/lang/zh_TW";
+	      defaultUrl = websiteUrl + "/tw";
 	  }else {
-	      defaultUrl = websiteUrl + "/lang/zh_CN";
+	      defaultUrl = websiteUrl + "/cn";
 	  }
 	  websiteLink.innerHTML = "提供官網連結：<a href='" + defaultUrl + "'>" + websiteUrl + "</a>";
     } else {
