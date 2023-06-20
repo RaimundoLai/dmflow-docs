@@ -3,7 +3,7 @@ title: Communeify Products
 description: Dmflow is a bot product that enables the rapid deployment of question-and-answer bots across multiple channels. 
 ---
 
-## [Home](https://docs.communeify.com)
+## [Home](/)
 
 ## Products [Dmflow](products/dmflow/index.html)
 

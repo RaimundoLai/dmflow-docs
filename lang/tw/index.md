@@ -3,7 +3,7 @@ title: Communeify產品
 description: Dmflow是一個機器人產品，它提供了快速在多個渠道上線的問答機器人解決方案。透過Dmflow，您可以輕鬆建立並部署問答機器人，以提供即時的客戶服務和支援。
 ---
 
-## [回首頁](https://docs.communeify.com)
+## [回首頁](/)
 
 ## 機器人產品 [Dmflow](products/dmflow/index.html)
 

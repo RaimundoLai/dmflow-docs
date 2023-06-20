@@ -39,7 +39,19 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "DnCmxtybshjIFrtwhfKJ7/f1y09E9c4HQ2/AI6tqtJg="
+          "hash": "0+lI+s1BLdNk9dZtDgGjlA3Xq57m8MVzA7H4iOcOCtQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "privacy.md",
+      "output": {
+        ".html": {
+          "relative_path": "privacy.html",
+          "hash": "8+fLKJUud8YuM/jvGfFJm4Yai2p4zZrKBUzRS3NM8tU="
         }
       },
       "is_incremental": false,
@@ -51,7 +63,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/index.html",
-          "hash": "J43LnC7taE0HFfJh4ZX8i4EPO32NYZsfj1GJfNgVcQQ="
+          "hash": "9ug9MwrVMIkyrCzO0gm7AV6/ksSGPCkNfQuZsFQ/lj0="
         }
       },
       "is_incremental": false,
@@ -63,7 +75,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/info/index.html",
-          "hash": "Z2gcrJYkT/bsfidhaS3PhvlS9orQzH//vOM/nzgMdsc="
+          "hash": "TvJ9taM7ieoo02Bvu4Q4+BGQZmCm3+TpHV9tnBnrbg0="
         }
       },
       "is_incremental": false,
@@ -90,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-broadcast.html",
-          "hash": "LkuT06UYsqYpeCIACsnLjTCQyKiKhHWeV22+g/JTjjk="
+          "hash": "iGlFBjQeiIWg3isYNEILguuMR6K1lZ/VX6OICQBqpis="
         }
       },
       "is_incremental": false,
@@ -105,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-example.html",
-          "hash": "iFCinVrnvqoRSJ7/od8GK4dqueuIOzqcQdHW9WgBIQU="
+          "hash": "F5W3ImzuRp6PzwWQ43COSgXIHm1ZWDnr4fVJrFQL19k="
         }
       },
       "is_incremental": false,
@@ -120,7 +132,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-flow.html",
-          "hash": "X3Isvg0vWmxWVYV/QMTESg0Ge8yRqwDXgrdyOpZmt1A="
+          "hash": "/r9BvYGIWGoxylEDikhwPMB/t/gGgVmupWkxUcr6qiE="
         }
       },
       "is_incremental": false,
@@ -135,7 +147,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-global.html",
-          "hash": "CUvuKwE4pJpQmueJ9TOSSi5sqyKu/zi5fSmTbi32fhg="
+          "hash": "xrPXtZ5aAuwniE8b59TJRfPSxkOSot/B4zEAQMfKNHU="
         }
       },
       "is_incremental": false,
@@ -150,7 +162,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-intro.html",
-          "hash": "O+P7h0boXdH/HodbxIk/skS84Wk0g3vNM3lbtk8gBTM="
+          "hash": "lWsxD0bHxrUgJhMKEXaIi0u4PubkFwFdMJUepeio5Xs="
         }
       },
       "is_incremental": false,
@@ -165,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-log.html",
-          "hash": "f735de/kGOvd1EIVDBdDxw/btZ+lt+pjntzyJAPruX8="
+          "hash": "WKlsIffZdnpAisiHVo9o/QSTS9DIYz56gaLzyhwT6iw="
         }
       },
       "is_incremental": false,
@@ -180,7 +192,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-published.html",
-          "hash": "w0846s+KgiEFtj8WjC56D/DxVAXgwP298IyfFUbhJTg="
+          "hash": "XUikTBarNlcNNwLKGpJN5IjS3+EeZP4aXVBgH4iOD2s="
         }
       },
       "is_incremental": false,
@@ -195,7 +207,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-resource.html",
-          "hash": "awnMvfJM8x721NC91jjwwwpMTGGuwBT7v4cPUamoabg="
+          "hash": "AHf9fU0gvXZFx7LPXCBOlNgvON66fuDTCOY1fIEpHbE="
         }
       },
       "is_incremental": false,
@@ -207,7 +219,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-restapi.html",
-          "hash": "sUHfu+m6/UM2vm+XCYf/GWTdRkNmKBlarK0vOA31obQ="
+          "hash": "zqyMjUgKMQA6VIJCEuWqRolSd/t5a0ferg+s6TBeRgA="
         }
       },
       "is_incremental": false,
@@ -222,7 +234,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-setting.html",
-          "hash": "WO57JprQojUw7fg7YTmftOfcR75guY9U7W9O5+0W0Mk="
+          "hash": "vPu7BujE9XpWkt6VD6yBFC97qiAX1Hp+pbZ3R0E0EKU="
         }
       },
       "is_incremental": false,
@@ -238,7 +250,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/bot-template.html",
-          "hash": "fmcXjBTSvINxcXHHOD+vewaGB2dwHtvkM+mduKa8tkI="
+          "hash": "2OUUrvbohWYAstkzAzKfxFMS0U5kwRPAHQtvYfa73MM="
         }
       },
       "is_incremental": false,
@@ -253,7 +265,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/custom-dicts.html",
-          "hash": "e9Tjdq9V+Adf6aydORMRTRWcl0eYxd0f/TdPXwlfrts="
+          "hash": "mrTwAnVIsjbewu/pvURuz2fUOyVY7cKDwpfUQ5Ipj94="
         }
       },
       "is_incremental": false,
@@ -268,7 +280,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/domain-intro.html",
-          "hash": "ReDNcBIh1x4Re9DO145OVpMt9ZHiIbD1XTvCkgqg3Gg="
+          "hash": "GQ/jQNqYdTw2qxSk04y/XO4YPB2vEe8s/k8wD3wOi/0="
         }
       },
       "is_incremental": false,
@@ -283,7 +295,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/fbmessenger.html",
-          "hash": "pKNJ+o7rf6sArJhWB00gX63cSot4dMLwzldTRoLy47o="
+          "hash": "78nDzV7Z475CGJcPARjJfBZ9X3qOUuriq77MRmhzK/s="
         }
       },
       "is_incremental": false,
@@ -298,7 +310,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/index.html",
-          "hash": "ednCyKg0hSGhO/MpZxzBko9NqLJhrlGMS1II3nJZ2p4="
+          "hash": "XtdES9G75B5bAUCSlW17QRhsGLEkkegQhlPQ7GeY08k="
         }
       },
       "is_incremental": false,
@@ -313,7 +325,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/intent-intro.html",
-          "hash": "OGQhWUOIPsV5DwnnSrZtERHPKrFm8pWJAaovipGH9Ms="
+          "hash": "1A506RQ2fwKPbRWq+98j9xiulAXWihZKpyMpKgzFH64="
         }
       },
       "is_incremental": false,
@@ -328,7 +340,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/line.html",
-          "hash": "DYMBH39XZ823LK6daX1xkRoNp+aq5VqrMHC/nOVyEYE="
+          "hash": "zeeUu269RdM2n/OMiP/HRCenAGJWjF0aGINzD7+oYpE="
         }
       },
       "is_incremental": false,
@@ -343,7 +355,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/qa-intro.html",
-          "hash": "y1ZTgdzOhqbpONzHZuJ9NGt6hA8BEDa3xXawbF5p63k="
+          "hash": "ZmWdkcP5FhxWWIRbL7Q4QovmBtAWwwQqkSQBuXoASQI="
         }
       },
       "is_incremental": false,
@@ -358,7 +370,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/sys-dicts.html",
-          "hash": "pTxYxVmc5+hO9MtUcJqEI3tutxCxOIXiFW8PQ8rTqVQ="
+          "hash": "q/P0jvmfMZxea9nN6dU810SUTrmqb1Y0pUWG+/vpgk0="
         }
       },
       "is_incremental": false,
@@ -373,7 +385,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/docs/telegram.html",
-          "hash": "uBcH76N4SC1nZd+zyCm9SJfJDuMKtu2wUGJaMtbl5Pw="
+          "hash": "gv7LSy2OrCHuft5JfCFjdlV7PZE8Trf91AvVJU7EDVg="
         }
       },
       "is_incremental": false,
@@ -388,7 +400,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/index.html",
-          "hash": "kvaysEJ18PgXqaCRgSWZ2BrMo9QiIvXgblybcU5PJyE="
+          "hash": "i4Q6q3bp0IF4zWB81OQROSqbgmK8Q/MGZG6eBt3vMKI="
         }
       },
       "is_incremental": false,
@@ -403,7 +415,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/deploy-test.html",
-          "hash": "NTKSiKph+PH93qIQ3XLBhdmlPuXpPTUXrSEK79Cs+uk="
+          "hash": "4sg+aVRMSlOCLkkvFaXyoyfFMnj9k8sn9yOzJcRPx/M="
         }
       },
       "is_incremental": false,
@@ -418,7 +430,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/dict-create.html",
-          "hash": "8C6G+FJlAbSfPXq07tSzSkS3AV6VaNAq/3cCZzaHhkg="
+          "hash": "3HJJfO7Jc5H/vkJ4DGjyR4+kO0x++zTM3wNwtQWjhkE="
         }
       },
       "is_incremental": false,
@@ -433,7 +445,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/distinct-content.html",
-          "hash": "QPJwJrTz72z6DM9u9Yx1a9K8oxBdquqypsd99VopBQw="
+          "hash": "9GiJgw/hx8DzPjXyn8wtN54UnjASLukjJw62C9rec00="
         }
       },
       "is_incremental": false,
@@ -448,7 +460,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/domain-create.html",
-          "hash": "EB+MguJcl4BL0UmVnOZRz807tEnIjExGvp8tumZGrmI="
+          "hash": "d4XKSOmSmR/3q2Stt1+ETQYzovPLkK769zJMUDnFuvA="
         }
       },
       "is_incremental": false,
@@ -463,7 +475,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/entity-logical.html",
-          "hash": "7wGo/OOsTgKNl3ItUPg0JBe7JqfPhi3Evr4OFQeBc0M="
+          "hash": "QvT3GUSp9uo8s71v2LkOyzP/+6v/ixhXDE7JXbeARjQ="
         }
       },
       "is_incremental": false,
@@ -478,7 +490,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/human-help.html",
-          "hash": "TCoivjdZPVUOUiDUApyDwaNobcTepte4Fq7li1Hvqog="
+          "hash": "Q01VM5VrFC5AT+3IgWGqzmifYI5UXvsfwO2ZLa8jPCs="
         }
       },
       "is_incremental": false,
@@ -493,7 +505,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/index.html",
-          "hash": "sIwTR0Yc2aybYkwFmOzAtPdHyMBR08MzMBaXgKucQF8="
+          "hash": "W8SsR2Aq38kc1kZENMq6tlKRhNqWQhRRz8faY64ZKuA="
         }
       },
       "is_incremental": false,
@@ -508,7 +520,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/random-branch.html",
-          "hash": "FNxJyBcDywTd2O12vTkCWnE4Wv2uEq7oDALnY36bjUA="
+          "hash": "ax7NR+vlWzGhNUYpNNy+0vj9tv1ViR9vfosXVBigA7o="
         }
       },
       "is_incremental": false,
@@ -520,7 +532,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/version/index.html",
-          "hash": "9PVu7O1j521wccHZ08aS1rKPm7r51vf+uFwh/4zvN3U="
+          "hash": "5i/uow3OxpXP7+SKHmGecakunjOJYo63NS8Nxa/72tE="
         }
       },
       "is_incremental": false,
@@ -551,8 +563,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 33,
-          "skipped_file_count": 33
+          "total_file_count": 34,
+          "skipped_file_count": 34
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

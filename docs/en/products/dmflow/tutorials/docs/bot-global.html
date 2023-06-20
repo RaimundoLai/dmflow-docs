@@ -166,5 +166,97 @@
             startOnLoad: false
         });
         mermaid.init(undefined, ".lang-mermaid");
+    </script>
+    <style>
+        #cookie-notice {padding: 0.5rem 1rem; display: none; text-align: center; position: fixed; bottom: 0; width: calc(100% - 2rem); background: #222; color: rgba(255,255,255,0.8); z-index: 1000;}
+        #cookie-notice a {display: inline-block; cursor: pointer; margin-left: 0.5rem;}
+        @media (max-width: 767px) {
+            #cookie-notice span {display: block; padding-top: 3px; margin-bottom: 1rem;}
+            #cookie-notice a {position: relative; bottom: 4px;}
+        }
+    </style>
+    <div id="cookie-notice"><span id="cookie_notice">We would like to use third party cookies and scripts to improve the functionality of this website.</span><a id="cookie-notice-accept" class="btn btn-primary btn-sm">Approve</a><a href="/tw/privacy.html" class="btn btn-primary btn-sm" id="cookie-privacy">Privacy Policy</a></div>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VDL6P3EXCQ"></script>
+    <script>
+        function addAnalytics() {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-VDL6P3EXCQ');
+        }
+        var defaultLanguage = navigator.language;
+    	translateLang(defaultLanguage);
+    	function translateLang(language) {
+    	  var url = window.location.pathname;
+    	  var selectLang = '';
+          try{
+              var lang = url.split('/')[1];
+              if (lang === 'en') {
+                selectLang = 'en';
+              } else if (lang === 'tw') {
+                selectLang = 'tw';
+              } else if (lang === 'cn') {
+                selectLang = 'tw';
+              }
+          }catch(e) {
+          }
+    	  if(selectLang === '') {
+            if (language === 'zh-TW' || language === 'zh-CN') {
+    		    selectLang = 'tw';
+            } else {
+    		    selectLang = 'en';
+    	    }
+    	  }
+    	  var cookieTW = '我們希望使用第三方的Cookie和腳本來提升本網站的功能性。';
+    	  var cookieEN = 'We would like to use third party cookies and scripts to improve the functionality of this website.';
+    	  var approveTW = '允許';
+    	  var approveEN = 'Approve';
+    	  var privacyTW = '隱私權政策';
+    	  var privacyEN = 'Privacy Policy';
+    	  var cookieNoticeElement = document.getElementById('cookie_notice');
+          cookieNoticeElement.textContent = selectLang === 'en' ? cookieEN : cookieTW;
+    	  var cookieNoticeAcceptElement = document.getElementById('cookie-notice-accept');
+          cookieNoticeAcceptElement.textContent = selectLang === 'en' ? approveEN : approveTW;
+    	  var cookiePrivacyElement = document.getElementById('cookie-privacy');
+          cookiePrivacyElement.textContent = selectLang === 'en' ? privacyEN : privacyTW;
+    	  cookiePrivacyElement.href = selectLang === 'en' ? '/en/privacy.html' : '/tw/privacy.html';
+    	}
+    
+        function createCookie(name,value,days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days*24*60*60*1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
+        }
+        function eraseCookie(name) {
+            createCookie(name,"",-1);
+        }
+    
+        if(readCookie('cookie-notice-dismissed')=='true') {
+            addAnalytics();
+        } else {
+            document.getElementById('cookie-notice').style.display = 'block';
+        }
+        document.getElementById('cookie-notice-accept').addEventListener("click",function() {
+            createCookie('cookie-notice-dismissed','true',31);
+            document.getElementById('cookie-notice').style.display = 'none';
+            location.reload();
+        });
+    
     </script>  </body>
 </html>
