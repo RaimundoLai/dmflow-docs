@@ -8,7 +8,7 @@
     <title>DmFlow &#27231;&#22120;&#20154;API | DmFlow | Communeify </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="DmFlow &#27231;&#22120;&#20154;API | DmFlow | Communeify ">
-    <meta name="description" content="&#29992;&#26044;&#30452;&#25509;&#20197;&#31243;&#24335;&#30908;&#25628;&#23563;&#12289;&#20462;&#25913;&#12289;&#21034;&#38500;DmFlow&#20839;&#37096;&#36039;&#26009;&#12290;">
+    <meta name="description" content="API&#30340;&#29992;&#36884;&#26159;&#20197;&#31243;&#24335;&#30908;&#25628;&#23563;&#12289;&#20462;&#25913;&#21644;&#21034;&#38500;DmFlow&#20839;&#37096;&#36039;&#26009;&#12290;&#36879;&#36942;API&#65292;&#24744;&#21487;&#20197;&#20197;&#31243;&#24335;&#21270;&#30340;&#26041;&#24335;&#33287;DmFlow&#36039;&#26009;&#36914;&#34892;&#20114;&#21205;&#65292;&#23526;&#29694;&#28961;&#32299;&#25972;&#21512;&#21644;&#33258;&#21205;&#21270;&#30340;&#36039;&#26009;&#31649;&#29702;&#12290;&#25552;&#39640;&#25928;&#29575;&#12289;&#22686;&#24375;&#29983;&#29986;&#21147;&#65292;&#20805;&#20998;&#30332;&#25582;DmFlow&#20839;&#37096;&#36039;&#26009;&#30340;&#25033;&#29992;&#28507;&#21147;&#12290;">
     <meta name="generator" content="docfx 2.58.9.0">
     <meta name="google-site-verification" content="wackHW3mx9OzoWNdH73Ucfx-Tgn27NaVqlQ-dzKaBfw">
     
@@ -1250,7 +1250,6 @@ pm.environment.set('auth', 'Bearer '+base64);
 <p>REQUEST JSON</p>
 <pre><code>{
   &quot;platform&quot;: &quot;api&quot;,
-  &quot;appId&quot;: &quot;api:234869230928226718&quot;,
   &quot;index&quot;: 0,
   &quot;size&quot;: 10
 }
@@ -1268,11 +1267,6 @@ pm.environment.set('auth', 'Bearer '+base64);
 <td>platform</td>
 <td>v</td>
 <td>分為line、messenger、api、telegram、telegram</td>
-</tr>
-<tr>
-<td>appId</td>
-<td>v</td>
-<td>line跟messenger分別對應appId, api則是'api:%s'.format(botId)，其中botId對應/_api/v1/bot/info拿到的data.id</td>
 </tr>
 <tr>
 <td>index</td>
@@ -1310,7 +1304,6 @@ pm.environment.set('auth', 'Bearer '+base64);
 <p>範例：</p>
 <pre><code>{
   &quot;platform&quot;: &quot;api&quot;,
-  &quot;appId&quot;: &quot;api:234869230928226718&quot;,
   &quot;index&quot;: 0,
   &quot;size&quot;: 10,
   &quot;systemFields&quot; : {
@@ -1343,7 +1336,6 @@ pm.environment.set('auth', 'Bearer '+base64);
 <p>範例：</p>
 <pre><code>{
   &quot;platform&quot;: &quot;api&quot;,
-  &quot;appId&quot;: &quot;api:234869230928226718&quot;,
   &quot;index&quot;: 0,
   &quot;size&quot;: 10,
   &quot;customFields&quot; : [
@@ -1395,7 +1387,6 @@ pm.environment.set('auth', 'Bearer '+base64);
 <p>範例：</p>
 <pre><code>{
   &quot;platform&quot;: &quot;api&quot;,
-  &quot;appId&quot;: &quot;api:234869230928226718&quot;,
   &quot;index&quot;: 0,
   &quot;size&quot;: 10,
   &quot;includes&quot; : [
@@ -1587,7 +1578,7 @@ pm.environment.set('auth', 'Bearer '+base64);
 <h3 id="獲取使用者">獲取使用者</h3>
 <p>第一種userId是客戶產生的ID，第二種查詢是以DmFlow分發的ID做查詢</p>
 <h4 id="第一種">第一種</h4>
-<p>GET /_api/v1/bot/users/{userId}?platform=messenger&amp;appId=221627843009100</p>
+<p>GET /_api/v1/bot/users/{userId}?platform=messenger</p>
 <table>
 <thead>
 <tr>
@@ -1613,10 +1604,6 @@ pm.environment.set('auth', 'Bearer '+base64);
 <tr>
 <td>platform</td>
 <td>分為line、messenger、api、telegram</td>
-</tr>
-<tr>
-<td>appId</td>
-<td>line跟messenger分別對應appId, api則是'api:%s'.format(botId)，其中botId對應/_api/v1/bot/info拿到的data.id</td>
 </tr>
 </tbody>
 </table>
@@ -1783,6 +1770,164 @@ pm.environment.set('auth', 'Bearer '+base64);
 <tr>
 <td>data.fields[0].desc</td>
 <td>記憶欄位描述</td>
+</tr>
+</tbody>
+</table>
+<h3 id="用戶對話-第一種">用戶對話-第一種</h3>
+<p>GET /_api/v1/bot/users/{userId}/conversations</p>
+<table>
+<thead>
+<tr>
+<th>HEADER KEY</th>
+<th>HEADER VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>{{auth}}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>參數</th>
+<th>必填</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>platform</td>
+<td>v</td>
+<td>分為line、messenger、api、telegram</td>
+</tr>
+<tr>
+<td>size</td>
+<td>v</td>
+<td>數量</td>
+</tr>
+<tr>
+<td>page</td>
+<td>v</td>
+<td>索引從0開始</td>
+</tr>
+<tr>
+<td>branch</td>
+<td>x</td>
+<td>預設prod，分為dev、prod</td>
+</tr>
+<tr>
+<td>from_type</td>
+<td>x</td>
+<td>可以過濾該訊息來自哪裡，此為分頁查找完畢才過濾，數量會低於size，分為API, USER, BOT, THIRD_PARTY</td>
+</tr>
+<tr>
+<td>msg_type</td>
+<td>x</td>
+<td>可以過濾該訊息類型，此為分頁查找完畢才過濾，數量會低於size，分為text, image, audio, video, json, event, none, html, files, file, redirect</td>
+</tr>
+</tbody>
+</table>
+<h3 id="用戶對話-第二種">用戶對話-第二種</h3>
+<p>GET /_api/v1/bot/users/_id/{id}/conversations</p>
+<table>
+<thead>
+<tr>
+<th>HEADER KEY</th>
+<th>HEADER VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>{{auth}}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>參數</th>
+<th>必填</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>size</td>
+<td>v</td>
+<td>數量</td>
+</tr>
+<tr>
+<td>page</td>
+<td>v</td>
+<td>索引從0開始</td>
+</tr>
+<tr>
+<td>from_type</td>
+<td>x</td>
+<td>可以過濾該訊息來自哪裡，此為分頁查找完畢才過濾，數量會低於size，分為API, USER, BOT, THIRD_PARTY</td>
+</tr>
+<tr>
+<td>msg_type</td>
+<td>x</td>
+<td>可以過濾該訊息類型，此為分頁查找完畢才過濾，數量會低於size，分為text, image, audio, video, json, event, none, html, files, file, redirect</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>RESPONSE PATH</th>
+<th>說明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rc</td>
+<td>回應碼，0=&gt;回應成功，不等於0為錯誤</td>
+</tr>
+<tr>
+<td>error</td>
+<td>當回應碼不為0的時候產生的錯誤訊息</td>
+</tr>
+<tr>
+<td>data.messages</td>
+<td>為陣列</td>
+</tr>
+<tr>
+<td>data.messages[0].from</td>
+<td>from_type</td>
+</tr>
+<tr>
+<td>data.messages[0].type</td>
+<td>msg_type</td>
+</tr>
+<tr>
+<td>data.messages[0].content</td>
+<td>訊息內容</td>
+</tr>
+<tr>
+<td>data.messages[0].createTime</td>
+<td>訊息創建時間</td>
+</tr>
+<tr>
+<td>data.total</td>
+<td>所有訊息總共有多少</td>
+</tr>
+<tr>
+<td>data.cur_page</td>
+<td>當前索引</td>
+</tr>
+<tr>
+<td>data.total_page</td>
+<td>所有索引共多少</td>
+</tr>
+<tr>
+<td>data.size</td>
+<td>當前顯示訊息數量</td>
 </tr>
 </tbody>
 </table>
@@ -2165,6 +2310,10 @@ pm.environment.set('auth', 'Bearer '+base64);
 </tbody>
 </table>
 <h1 id="最後更新時間">最後更新時間</h1>
+<p>2023/06/20</p>
+<ul>
+<li>刪除所有API需要appId的參數，一律以系統內部設置為主。</li>
+</ul>
 <p>2023/05/23</p>
 <ul>
 <li>新增&quot;使用者註冊事件&quot;</li>

@@ -1,6 +1,6 @@
 ---
 title: DmFlow 機器人API | DmFlow
-description: 用於直接以程式碼搜尋、修改、刪除DmFlow內部資料。
+description: "API的用途是以程式碼搜尋、修改和刪除DmFlow內部資料。透過API，您可以以程式化的方式與DmFlow資料進行互動，實現無縫整合和自動化的資料管理。提高效率、增強生產力，充分發揮DmFlow內部資料的應用潛力。"
 ---
 
 # 機器人API
@@ -677,7 +677,6 @@ REQUEST JSON
 ```
 {
   "platform": "api",
-  "appId": "api:234869230928226718",
   "index": 0,
   "size": 10
 }
@@ -686,7 +685,6 @@ REQUEST JSON
 | REQUEST_PATH     | 必填 | 說明
 | -------------    | ---- |-------
 | platform         |   v  | 分為line、messenger、api、telegram、telegram
-| appId            |   v  | line跟messenger分別對應appId, api則是'api:%s'.format(botId)，其中botId對應/_api/v1/bot/info拿到的data.id
 | index            |   v  | 索引，以0開始
 | size             |   v  | 索取的數量
 | systemFields     |   x  | 系統使用者屬性
@@ -700,7 +698,6 @@ systemFields
 ```
 {
   "platform": "api",
-  "appId": "api:234869230928226718",
   "index": 0,
   "size": 10,
   "systemFields" : {
@@ -720,7 +717,6 @@ customFields
 ```
 {
   "platform": "api",
-  "appId": "api:234869230928226718",
   "index": 0,
   "size": 10,
   "customFields" : [
@@ -746,7 +742,6 @@ includes
 ```
 {
   "platform": "api",
-  "appId": "api:234869230928226718",
   "index": 0,
   "size": 10,
   "includes" : [
@@ -848,7 +843,7 @@ RESPONSE JSON
 
 #### 第一種
 
-GET /_api/v1/bot/users/{userId}?platform=messenger&appId=221627843009100
+GET /_api/v1/bot/users/{userId}?platform=messenger
 
 | HEADER KEY    | HEADER VALUE
 | ------------- | -------------
@@ -857,7 +852,6 @@ GET /_api/v1/bot/users/{userId}?platform=messenger&appId=221627843009100
 | 參數          | 說明
 | ------------- | -------
 | platform      | 分為line、messenger、api、telegram
-| appId         | line跟messenger分別對應appId, api則是'api:%s'.format(botId)，其中botId對應/_api/v1/bot/info拿到的data.id
 
 #### 第二種
 
@@ -944,6 +938,52 @@ RESPONSE JSON
 | data.fields[0].key             | 記憶欄位鍵
 | data.fields[0].value           | 記憶欄位使用者值
 | data.fields[0].desc            | 記憶欄位描述
+
+### 用戶對話-第一種
+
+GET /_api/v1/bot/users/{userId}/conversations
+
+| HEADER KEY    | HEADER VALUE
+| ------------- | -------------
+| Authorization | {{auth}}
+
+| 參數          | 必填   | 說明
+| ------------- | -------|------ 
+| platform      |    v   | 分為line、messenger、api、telegram
+| size          |    v   | 數量
+| page          |    v   | 索引從0開始
+| branch        |    x   | 預設prod，分為dev、prod
+| from_type     |    x   | 可以過濾該訊息來自哪裡，此為分頁查找完畢才過濾，數量會低於size，分為API, USER, BOT, THIRD_PARTY
+| msg_type      |    x   | 可以過濾該訊息類型，此為分頁查找完畢才過濾，數量會低於size，分為text, image, audio, video, json, event, none, html, files, file, redirect
+
+### 用戶對話-第二種
+
+GET /_api/v1/bot/users/_id/{id}/conversations
+
+| HEADER KEY    | HEADER VALUE
+| ------------- | -------------
+| Authorization | {{auth}}
+
+| 參數          | 必填   | 說明
+| ------------- | -------|------ 
+| size          |    v   | 數量
+| page          |    v   | 索引從0開始
+| from_type     |    x   | 可以過濾該訊息來自哪裡，此為分頁查找完畢才過濾，數量會低於size，分為API, USER, BOT, THIRD_PARTY
+| msg_type      |    x   | 可以過濾該訊息類型，此為分頁查找完畢才過濾，數量會低於size，分為text, image, audio, video, json, event, none, html, files, file, redirect
+
+| RESPONSE PATH                  | 說明
+| ------------------------------ | -------
+| rc                             | 回應碼，0=>回應成功，不等於0為錯誤
+| error                          | 當回應碼不為0的時候產生的錯誤訊息
+| data.messages                  | 為陣列
+| data.messages[0].from          | from_type
+| data.messages[0].type          | msg_type
+| data.messages[0].content       | 訊息內容
+| data.messages[0].createTime    | 訊息創建時間
+| data.total                     | 所有訊息總共有多少
+| data.cur_page                  | 當前索引
+| data.total_page                | 所有索引共多少
+| data.size                      | 當前顯示訊息數量
 
 ### 修改使用者
 PATCH /_api/v1/bot/users/{userId}
@@ -1158,6 +1198,10 @@ REQUEST JSON
 | error                             | 當回應碼不為0的時候產生的錯誤訊息
 
 # 最後更新時間
+2023/06/20
+
+- 刪除所有API需要appId的參數，一律以系統內部設置為主。
+
 2023/05/23
 
 - 新增"使用者註冊事件"

@@ -8,7 +8,7 @@
     <title>DmFlow Bot API | DmFlow | Communeify </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="DmFlow Bot API | DmFlow | Communeify ">
-    <meta name="description" content="Used to programmatically search, modify, and delete internal data in DmFlow.">
+    <meta name="description" content="The API is designed for programmatically searching, modifying, and deleting internal data within DmFlow. With the API, you can interact with DmFlow data in a programmatic way, enabling seamless integration and automated data management. Boost efficiency, enhance productivity, and unlock the full potential of internal data in DmFlow.">
     <meta name="generator" content="docfx 2.58.9.0">
     <meta name="google-site-verification" content="wackHW3mx9OzoWNdH73Ucfx-Tgn27NaVqlQ-dzKaBfw">
     
@@ -953,7 +953,6 @@ GET /_api/v1/bot/faqs</p>
 <p>REQUEST JSON</p>
 <pre><code>{
   &quot;platform&quot;: &quot;api&quot;,
-  &quot;appId&quot;: &quot;api:234869230928226718&quot;,
   &quot;index&quot;: 0,
   &quot;size&quot;: 10
 }
@@ -971,11 +970,6 @@ GET /_api/v1/bot/faqs</p>
 <td>platform</td>
 <td>v</td>
 <td>Platform options: line, messenger, api, telegram</td>
-</tr>
-<tr>
-<td>appId</td>
-<td>v</td>
-<td>For line and messenger, provide the corresponding appId. For API, use 'api:%s'.format(botId), where botId corresponds to the data.id obtained from /_api/v1/bot/info.</td>
 </tr>
 <tr>
 <td>index</td>
@@ -1013,7 +1007,6 @@ GET /_api/v1/bot/faqs</p>
 <p>Example:</p>
 <pre><code>{
   &quot;platform&quot;: &quot;api&quot;,
-  &quot;appId&quot;: &quot;api:234869230928226718&quot;,
   &quot;index&quot;: 0,
   &quot;size&quot;: 10,
   &quot;systemFields&quot; : {
@@ -1046,7 +1039,6 @@ GET /_api/v1/bot/faqs</p>
 <p>Example:</p>
 <pre><code>{
   &quot;platform&quot;: &quot;api&quot;,
-  &quot;appId&quot;: &quot;api:234869230928226718&quot;,
   &quot;index&quot;: 0,
   &quot;size&quot;: 10,
   &quot;customFields&quot; : [
@@ -1098,7 +1090,6 @@ GET /_api/v1/bot/faqs</p>
 <p>Example:</p>
 <pre><code>{
   &quot;platform&quot;: &quot;api&quot;,
-  &quot;appId&quot;: &quot;api:234869230928226718&quot;,
   &quot;index&quot;: 0,
   &quot;size&quot;: 10,
   &quot;includes&quot; : [
@@ -1291,7 +1282,7 @@ GET /_api/v1/bot/faqs</p>
 <p>There are two ways to retrieve user information:</p>
 <h4 id="section-1"></h4>
 <p>Method 1: Using the user's generated ID</p>
-<p>GET /_api/v1/bot/users/{userId}?platform=messenger&amp;appId=221627843009100</p>
+<p>GET /_api/v1/bot/users/{userId}?platform=messenger</p>
 <table>
 <thead>
 <tr>
@@ -1316,11 +1307,7 @@ GET /_api/v1/bot/faqs</p>
 <tbody>
 <tr>
 <td>platform</td>
-<td>Platform options: line, messenger, api, telegram</td>
-</tr>
-<tr>
-<td>appId</td>
-<td>For line and messenger, provide the corresponding appId. For API, use 'api:%s'.format(botId), where botId corresponds to the data.id obtained from /_api/v1/bot/info.</td>
+<td>Platform options: line, messenger, api, telegram/_api/v1/bot/info.</td>
 </tr>
 </tbody>
 </table>
@@ -1487,6 +1474,164 @@ GET /_api/v1/bot/faqs</p>
 <tr>
 <td>data.fields[0].desc</td>
 <td>Memory Field description</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user-conversation---type-1">User Conversation - Type 1</h3>
+<p>GET /_api/v1/bot/users/{userId}/conversations</p>
+<table>
+<thead>
+<tr>
+<th>HEADER KEY</th>
+<th>HEADER VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>{{auth}}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>platform</td>
+<td>v</td>
+<td>Available platforms: line, messenger, api, telegram</td>
+</tr>
+<tr>
+<td>size</td>
+<td>v</td>
+<td>Number of conversations</td>
+</tr>
+<tr>
+<td>page</td>
+<td>v</td>
+<td>Page index starting from 0</td>
+</tr>
+<tr>
+<td>branch</td>
+<td>x</td>
+<td>Default is &quot;prod&quot;, options: dev, prod</td>
+</tr>
+<tr>
+<td>from_type</td>
+<td>x</td>
+<td>Filter conversations based on the source (API, USER, BOT, THIRD_PARTY). Filtering is applied after pagination, so the number of conversations may be less than the specified size.</td>
+</tr>
+<tr>
+<td>msg_type</td>
+<td>x</td>
+<td>Filter conversations based on message type (text, image, audio, video, json, event, none, html, files, file, redirect). Filtering is applied after pagination, so the number of conversations may be less than the specified size.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="user-conversation---type-2">User Conversation - Type 2</h3>
+<p>GET /_api/v1/bot/users/_id/{id}/conversations</p>
+<table>
+<thead>
+<tr>
+<th>HEADER KEY</th>
+<th>HEADER VALUE</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authorization</td>
+<td>{{auth}}</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>size</td>
+<td>v</td>
+<td>Number of conversations</td>
+</tr>
+<tr>
+<td>page</td>
+<td>v</td>
+<td>Page index starting from 0</td>
+</tr>
+<tr>
+<td>from_type</td>
+<td>x</td>
+<td>Filter conversations based on the source (API, USER, BOT, THIRD_PARTY). Filtering is applied after pagination, so the number of conversations may be less than the specified size.</td>
+</tr>
+<tr>
+<td>msg_type</td>
+<td>x</td>
+<td>Filter conversations based on message type (text, image, audio, video, json, event, none, html, files, file, redirect). Filtering is applied after pagination, so the number of conversations may be less than the specified size.</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>RESPONSE PATH</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>rc</td>
+<td>Response code. 0 =&gt; Success, non-zero =&gt; Error</td>
+</tr>
+<tr>
+<td>error</td>
+<td>Error message generated when the response code is non-zero</td>
+</tr>
+<tr>
+<td>data.messages</td>
+<td>Array of messages</td>
+</tr>
+<tr>
+<td>data.messages[0].from</td>
+<td>Source type (from_type)</td>
+</tr>
+<tr>
+<td>data.messages[0].type</td>
+<td>Message type (msg_type)</td>
+</tr>
+<tr>
+<td>data.messages[0].content</td>
+<td>Message content</td>
+</tr>
+<tr>
+<td>data.messages[0].createTime</td>
+<td>Message creation time</td>
+</tr>
+<tr>
+<td>data.total</td>
+<td>Total number of messages</td>
+</tr>
+<tr>
+<td>data.cur_page</td>
+<td>Current page index</td>
+</tr>
+<tr>
+<td>data.total_page</td>
+<td>Total number of pages</td>
+</tr>
+<tr>
+<td>data.size</td>
+<td>Number of messages currently displayed</td>
 </tr>
 </tbody>
 </table>

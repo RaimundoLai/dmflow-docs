@@ -1,6 +1,6 @@
 ---
 title: DmFlow Bot API | DmFlow
-description: Used to programmatically search, modify, and delete internal data in DmFlow.
+description: "The API is designed for programmatically searching, modifying, and deleting internal data within DmFlow. With the API, you can interact with DmFlow data in a programmatic way, enabling seamless integration and automated data management. Boost efficiency, enhance productivity, and unlock the full potential of internal data in DmFlow."
 ---
 
 # Bot API
@@ -504,7 +504,6 @@ REQUEST JSON
 ```
 {
   "platform": "api",
-  "appId": "api:234869230928226718",
   "index": 0,
   "size": 10
 }
@@ -513,7 +512,6 @@ REQUEST JSON
 | REQUEST_PATH     | Required| Description
 | -------------    | ----    |-------
 | platform         |   v     | Platform options: line, messenger, api, telegram
-| appId            |   v     | For line and messenger, provide the corresponding appId. For API, use 'api:%s'.format(botId), where botId corresponds to the data.id obtained from /_api/v1/bot/info.
 | index            |   v     | Index starting from 0
 | size             |   v     | Number of users to retrieve
 | systemFields     |   x     | System user properties
@@ -527,7 +525,6 @@ Example:
 ```
 {
   "platform": "api",
-  "appId": "api:234869230928226718",
   "index": 0,
   "size": 10,
   "systemFields" : {
@@ -547,7 +544,6 @@ Example:
 ```
 {
   "platform": "api",
-  "appId": "api:234869230928226718",
   "index": 0,
   "size": 10,
   "customFields" : [
@@ -573,7 +569,6 @@ Example:
 ```
 {
   "platform": "api",
-  "appId": "api:234869230928226718",
   "index": 0,
   "size": 10,
   "includes" : [
@@ -677,7 +672,7 @@ There are two ways to retrieve user information:
 #### 
 Method 1: Using the user's generated ID
 
-GET /_api/v1/bot/users/{userId}?platform=messenger&appId=221627843009100
+GET /_api/v1/bot/users/{userId}?platform=messenger
 
 | HEADER KEY    | HEADER VALUE
 | ------------- | -------------
@@ -685,8 +680,7 @@ GET /_api/v1/bot/users/{userId}?platform=messenger&appId=221627843009100
 
 | Parameter     | Description
 | ------------- | -------
-| platform      | Platform options: line, messenger, api, telegram
-| appId         | For line and messenger, provide the corresponding appId. For API, use 'api:%s'.format(botId), where botId corresponds to the data.id obtained from /_api/v1/bot/info.
+| platform      | Platform options: line, messenger, api, telegram/_api/v1/bot/info.
 
 #### Method 2: Using the DmFlow ID
 
@@ -773,6 +767,52 @@ RESPONSE JSON
 | data.fields[0].key             | Memory Field key
 | data.fields[0].value           | Memory User's value for the field
 | data.fields[0].desc            | Memory Field description
+
+### User Conversation - Type 1
+
+GET /_api/v1/bot/users/{userId}/conversations
+
+| HEADER KEY    | HEADER VALUE
+| ------------- | -------------
+| Authorization | {{auth}}
+
+| Parameter     | Required| Description
+| ------------- | ------- |------ 
+| platform      |    v    | Available platforms: line, messenger, api, telegram
+| size          |    v    | Number of conversations
+| page          |    v    | Page index starting from 0
+| branch        |    x    | Default is "prod", options: dev, prod
+| from_type     |    x    | Filter conversations based on the source (API, USER, BOT, THIRD_PARTY). Filtering is applied after pagination, so the number of conversations may be less than the specified size.
+| msg_type      |    x    | Filter conversations based on message type (text, image, audio, video, json, event, none, html, files, file, redirect). Filtering is applied after pagination, so the number of conversations may be less than the specified size.
+
+### User Conversation - Type 2
+
+GET /_api/v1/bot/users/_id/{id}/conversations
+
+| HEADER KEY    | HEADER VALUE
+| ------------- | -------------
+| Authorization | {{auth}}
+
+| Parameter     | Required | Description
+| ------------- | -------  |------ 
+| size          |    v     | Number of conversations
+| page          |    v     | Page index starting from 0
+| from_type     |    x     | Filter conversations based on the source (API, USER, BOT, THIRD_PARTY). Filtering is applied after pagination, so the number of conversations may be less than the specified size.
+| msg_type      |    x     | Filter conversations based on message type (text, image, audio, video, json, event, none, html, files, file, redirect). Filtering is applied after pagination, so the number of conversations may be less than the specified size.
+
+| RESPONSE PATH                  | Description
+| ------------------------------ | -------
+| rc                             | Response code. 0 => Success, non-zero => Error
+| error                          | Error message generated when the response code is non-zero
+| data.messages                  | Array of messages
+| data.messages[0].from          | Source type (from_type)
+| data.messages[0].type          | Message type (msg_type)
+| data.messages[0].content       | Message content
+| data.messages[0].createTime    | Message creation time
+| data.total                     | Total number of messages
+| data.cur_page                  | Current page index
+| data.total_page                | Total number of pages
+| data.size                      | Number of messages currently displayed
 
 ### Update User
 PATCH /_api/v1/bot/users/{userId}
