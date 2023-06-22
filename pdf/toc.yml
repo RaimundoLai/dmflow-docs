@@ -1,8 +1,0 @@
-- name: 快速入門教學
-  href: ../lang/tw/products/dmflow/tutorials/intro/toc.yml
-  topicHref: tutorials/intro/index.md
-- name: 詳細文檔
-  href: ../lang/tw/products/dmflow/tutorials/docs/toc.yml
-  topicHref: tutorials/docs/index.md
-- name: 聯絡資訊
-  topicHref: ../lang/tw/products/dmflow/info/index.md

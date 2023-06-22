@@ -2886,7 +2886,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "Kpgc/HavBmfyPcSdxKVosHnTIpZoHHZhPYwVyj2i8Cs="
+          "hash": "Afis7nM88BuGZnSeeyhjNtwpP5d5LzPRn3/8ybBK+vs="
         }
       },
       "is_incremental": false,
@@ -2908,17 +2908,19 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because config changed.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "ConfigChanged"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 2,
-          "skipped_file_count": 2
+          "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

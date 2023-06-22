@@ -102,8 +102,7 @@ description:對話模板-用於連接其他平台的對話回覆，以實現多�
 #### 圖文訊息
 ![DmFlow圖文訊息](../../../../../../images/tw/bot-template-line-imagemap-s.png "DmFlow圖文訊息")
 
-[LINE官方圖文訊息介紹](https://tw.linebiz.com/manual/line-official-account/oa-manager-richmessage/)
-
+<a href="https://tw.linebiz.com/manual/line-official-account/oa-manager-richmessage/" target="_blank">LINE官方圖文訊息介紹</a>
 - 1.網址限制：在回覆訊息中，網址的大小限制為10MB以下。這表示你所提供的網址必須指向檔案大小在10MB以下的資源。同時，為了安全性和保護使用者的隱私，提供的網址必須使用 HTTPS 協定。
   - DmFlow上傳圖片限制：在 DmFlow 平台上，上傳的圖片大小限制為1MB[以DmFlow系統顯示為主]以內。這表示你在 DmFlow 平台上上傳的圖片將被限制在1MB以下的大小。請確保你上傳的圖片符合此限制。
 - 2.替代文字：當使用者收到圖文訊息時，替代文字是顯示在圖片無法載入時所顯示的文字。這可以是一段描述圖片內容或提供相關資訊的文字。替代文字的目的是在圖片無法顯示時提供一個替代的內容給使用者。
@@ -308,7 +307,7 @@ description:對話模板-用於連接其他平台的對話回覆，以實現多�
 
 連結元件(extension)
 
-[加入 Messenger 擴充套件 SDK](https://developers.facebook.com/docs/messenger-platform/webview/extensions/)
+<a href="https://developers.facebook.com/docs/messenger-platform/webview/extensions/" target="_blank">加入 Messenger 擴充套件 SDK</a>
 
 ![DmFlow連結](../../../../../../images/tw/bot-template-ms-linkext-f.png "DmFlow連結")
 

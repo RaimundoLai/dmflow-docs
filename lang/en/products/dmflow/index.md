@@ -20,3 +20,7 @@ No questions have been collected at the moment.
 ## Product Updates
 
 ## Contact Information
+
+Email: <service@communeify.com>
+
+Communeify Official website: [Communeify.com](https://communeify.com/en/)

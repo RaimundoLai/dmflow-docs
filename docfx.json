@@ -80,7 +80,10 @@
             "files":[
                "lang/tw/products/dmflow/**.yml",
                "lang/tw/products/dmflow/**.md",
-               "pdf/*"
+			   "lang/en/products/dmflow/**.yml",
+               "lang/en/products/dmflow/**.md",
+               "pdf/tw/*",
+               "pdf/en/*"
             ],
             "exclude":[
                "**/bin/**",
@@ -91,7 +94,10 @@
             ]
          },
          {
-            "files":"pdf/toc.yml"
+            "files":"pdf/tw/toc.yml"
+         },
+         {
+            "files":"pdf/en/toc.yml"
          }
       ],
       "resource":[

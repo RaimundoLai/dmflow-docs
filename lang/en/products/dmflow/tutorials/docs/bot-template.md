@@ -103,7 +103,7 @@ Please adhere to these restrictions and requirements to ensure that the audio pl
 #### Imagemap Message
 ![DmFlow Imagemap Message](../../../../../../images/en/bot-template-line-imagemap-s.png "DmFlow Imagemap Message")
 
-[Official Documentation for LINE Imagemap Message](https://tw.linebiz.com/manual/line-official-account/oa-manager-richmessage/)
+<a href="https://tw.linebiz.com/manual/line-official-account/oa-manager-richmessage/" target="_blank">Official Documentation for LINE Imagemap Message</a>
 
 - 1.URL Limitation: In a reply message, the URL size is limited to below 10MB. This means that the URL you provide must point to a resource with a file size below 10MB. Additionally, for security and user privacy protection, the provided URL must use the HTTPS protocol.
   - DmFlow Image Upload Limitation: On the DmFlow platform, the uploaded image size is limited to within 1MB (with DmFlow system display being the primary). This means that the images you upload on the DmFlow platform will be limited to a size below 1MB. Please ensure that the images you upload comply with this limitation.
@@ -311,7 +311,7 @@ Link Elements
 
 Link Elements (extension)
 
-[Add Messenger Extension SDK](https://developers.facebook.com/docs/messenger-platform/webview/extensions/)
+<a href="https://developers.facebook.com/docs/messenger-platform/webview/extensions/" target="_blank">Add Messenger Extension SDK</a>
 
 ![DmFlow Messenger Link](../../../../../../images/en/bot-template-ms-linkext-f.png "DmFlow Messenger Link")
 

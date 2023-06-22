@@ -1,0 +1,8 @@
+- name: Quick Start Tutorial
+  href: ../../lang/en/products/dmflow/tutorials/intro/toc.yml
+  topicHref: ../../lang/en/products/dmflow/tutorials/intro/index.md
+- name: Detailed Documentation
+  href: ../../lang/en/products/dmflow/tutorials/docs/toc.yml
+  topicHref: ../../lang/en/products/dmflow/tutorials/docs/index.md
+- name: Contact Information
+  href:  ../../lang/en/products/dmflow/info/index.md

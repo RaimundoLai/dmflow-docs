@@ -20,5 +20,7 @@ description: DmFlow的教學文檔，可以更了解此平台如何滿足你的�
 
 ## 聯絡資訊
 
-聯繫信箱：<service@communeify.com>
+信箱：<service@communeify.com>
+
+Communeify 官網: [Communeify.com](https://communeify.com)
  

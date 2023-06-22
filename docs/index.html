@@ -77,8 +77,8 @@
     <li><a href="/tw/index.html">Communeify 產品文檔</a></li>
   </ul>
 </div>
-<div id="websiteLink">Website Link：<a href='https://www.communeify.com/en'>https://www.communeify.com</a></div>
-<div id="websiteLink_tw">提供官網連結：<a href='https://www.communeify.com'>https://www.communeify.com</a></div>
+<div id="websiteLink">Website Link：<a href='https://www.communeify.com/en' target="_blank">https://www.communeify.com</a></div>
+<div id="websiteLink_tw">提供官網連結：<a href='https://www.communeify.com' target="_blank">https://www.communeify.com</a></div>
 <div>
   <h2 id="products">Products</h2><br>
   <ul id="product_langs">
@@ -153,7 +153,7 @@
 	var defaultProducts = 'Products';
 	var defaultDmFlowLink = '/en/products/dmflow/index.html';
 	var defualtDmFlowLinkContent = 'DmFlow(Dialog Management System)';
-    websiteLink.innerHTML = "Website Link：<a href='" + defaultUrl + "'>" + websiteUrl + "</a>";
+    websiteLink.innerHTML = "Website Link：<a href='" + defaultUrl + "' target='_blank'>" + websiteUrl + "</a>";
 	document.getElementById('support_lang').innerHTML = defaultSupportLang;
     document.getElementById('myHeader').innerHTML = defaultMyHeader;
 	document.getElementById("goButton").textContent = defaultGoButton;
@@ -179,7 +179,7 @@
 	  }else {
 	      defaultUrl = websiteUrl + "/cn";
 	  }
-	  websiteLink.innerHTML = "提供官網連結：<a href='" + defaultUrl + "'>" + websiteUrl + "</a>";
+	  websiteLink.innerHTML = "提供官網連結：<a href='" + defaultUrl + "' target='_blank'>" + websiteUrl + "</a>";
     } else {
 	  if(init){
         document.getElementById('languageSelect').value = 'en';
