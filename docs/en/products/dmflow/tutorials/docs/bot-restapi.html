@@ -74,24 +74,55 @@
 
 <h2 id="authorization">Authorization</h2>
 <p>Every request needs to include the Authorization header.</p>
+<p>The composition is as follows: <method>&lt;URL_PATH&gt;&lt;QUERY_STRING&gt;&lt;REQUEST_BODY&gt;:&lt;CLIENT_ID&gt;:&lt;TIME_STAMP&gt;:&lt;RANDOM_VALUE&gt;<p>
+<ul>
+<li>METHOD: Can be one of the following: GET, POST, PATCH, PUT, DELETE (uppercase).</li>
+<li>QUERY_STRING: Sorted in ascending order based on the keys. If keys are the same, sort by values.</li>
+<li>REQUEST_BODY: If the METHOD is POST, PATCH, or PUT, there might be a REQUEST_DATA. Otherwise, leave it empty.</li>
+<li>CLIENT_ID: The CLIENT_ID provided by DMFlow.</li>
+<li>TIMESTAMP: The current time used for checking expiration.</li>
+<li>RANDOM_VALUE: Used to check if the operation is repeated. UUID is commonly used.</li>
+</ul>
 <p>Here is a reference for the Postman pre-script.</p>
-<pre><code>pm.environment.set('secret', 'b60207f4d8abf6dd7bf14ecbb69fbc31031078456dae354fadd4939eda95e54c');
-var secret = pm.environment.get('secret');
-var body = request.data;
-if(body === undefined) {
-    body + ':';
-}else {
-    body = '';
+<pre><code>var uuid = require('uuid');
+const secretKey = 'a60207f4d8abf6ee7bf14ecaa69fbb310310784abdae354fadd4939eda95e54c';
+const clientId = '6d7ffe73-e922-4011-9057-606fc42966d8';
+
+const isJsonContent = pm.request.headers.get('Content-Type') === 'application/json';
+
+let requestData = pm.request.method.toUpperCase() + pm.request.url.getPath();
+
+const queryString = pm.request.url.query;
+if (queryString) {
+    const queryParams = queryString.toObject();
+    const sortedParams = Object.entries(queryParams)
+        .sort(([key1, value1], [key2, value2]) =&gt; key1.localeCompare(key2));
+    const queryStringBuilder = [];
+    sortedParams.forEach(([paramName, paramValues]) =&gt; {
+        if (!Array.isArray(paramValues)) {
+            paramValues = [paramValues];
+        }
+        paramValues.sort();
+        paramValues.forEach((value) =&gt; {
+            queryStringBuilder.push(`${paramName}=${value}`);
+        });
+    });
+
+    requestData += queryStringBuilder.join('&amp;')
 }
-var signature = CryptoJS.HmacSHA256(body+'6d7ffe73-e922-4009-9087-606fc42966d0'+':1666164860759:6d7ffe73-e922-4009-9087-606fc42966d1', secret).toString(CryptoJS.enc.Hex);
-var map = {'signature':'sha256='+signature, 'clientId':'6d7ffe73-e922-4009-9087-606fc42966d0','timestamp':'1666164860759', 'random':'6d7ffe73-e922-4009-9087-606fc42966d1'};
+if (isJsonContent) {
+    requestData += request.data;
+}
+
+const timestamp = Math.floor(Date.now() / 1000);
+const randomValue = uuid.v4();
+requestData += (':' + clientId + ':' + timestamp + ':' + randomValue);
+const signature = CryptoJS.HmacSHA256(requestData, secretKey).toString(CryptoJS.enc.Hex);
+var map = { 'signature': 'sha256=' + signature, 'clientId': clientId, 'timestamp': timestamp, 'random': randomValue };
 var words = CryptoJS.enc.Utf8.parse(JSON.stringify(map));
 var base64 = CryptoJS.enc.Base64.stringify(words);
-pm.environment.set('auth', 'Bearer '+base64);
+pm.environment.set('auth', 'Bearer ' + base64);
 </code></pre>
-<p>signature, clientId, timestamp, random is required.</p>
-<p>The random parameter should be a unique identifier, such as a UUID, to ensure it is only used once within a 15-minute timeframe.</p>
-<p>The timestamp parameter is used to limit the request time and should be within 15 minutes of the current timestamp to prevent replay attacks.</p>
 <h2 id="bot-details">Bot Details</h2>
 <p>To retrieve the name, description, and time zone of the bot, you can make a GET request to the appropriate endpoint.</p>
 <p>GET /_api/v1/bot/info</p>
@@ -2013,7 +2044,7 @@ GET /_api/v1/bot/faqs</p>
 </tr>
 </tbody>
 </table>
-</article>
+</method></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
