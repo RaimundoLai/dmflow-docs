@@ -87,7 +87,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/toc.html",
-          "hash": "HnS/ds3lbB+/AlpqjsJq7d1XKQ4NktzguJZjjxN9N6M="
+          "hash": "ROGnmX/upz2HeNTuwp30zN8iVa1r+iiYNqaMmmP/0M8="
         }
       },
       "is_incremental": false,
@@ -415,7 +415,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/deploy-test.html",
-          "hash": "4sg+aVRMSlOCLkkvFaXyoyfFMnj9k8sn9yOzJcRPx/M="
+          "hash": "h2fWMJJaroR/QvPtLkKyU7tCIqxZZIJ7t4BqGUmTEGU="
         }
       },
       "is_incremental": false,
@@ -430,7 +430,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/dict-create.html",
-          "hash": "3HJJfO7Jc5H/vkJ4DGjyR4+kO0x++zTM3wNwtQWjhkE="
+          "hash": "mn4LiocX805PxWM924HvrdFTySkXQQJf9qFO1uY1P4Y="
         }
       },
       "is_incremental": false,
@@ -486,11 +486,26 @@
         "InvalidFileLink"
       ],
       "type": "Conceptual",
+      "source_relative_path": "products/dmflow/tutorials/intro/faq-covid-example.md",
+      "output": {
+        ".html": {
+          "relative_path": "products/dmflow/tutorials/intro/faq-covid-example.html",
+          "hash": "l86T9Jw79k1rMTFdYhxdw1WdwAcPv1/cAhieed1JHWI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/intro/human-help.md",
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/human-help.html",
-          "hash": "Q01VM5VrFC5AT+3IgWGqzmifYI5UXvsfwO2ZLa8jPCs="
+          "hash": "oTscWaWgHsm2SWPxYWJOgEKYK2TQM+r9oXoZ5C6XiIM="
         }
       },
       "is_incremental": false,
@@ -505,7 +520,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/index.html",
-          "hash": "W8SsR2Aq38kc1kZENMq6tlKRhNqWQhRRz8faY64ZKuA="
+          "hash": "thpl6hwcLIYC5RTy2H4UQEYy5cBDJcLQ7JhhGDHYoOk="
         }
       },
       "is_incremental": false,
@@ -520,7 +535,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/random-branch.html",
-          "hash": "ax7NR+vlWzGhNUYpNNy+0vj9tv1ViR9vfosXVBigA7o="
+          "hash": "KYeocUszfpAmq2Yo7UaZmAcxGnZaPOarh0ZS46vYX7Q="
         }
       },
       "is_incremental": false,
@@ -563,8 +578,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 34,
-          "skipped_file_count": 33
+          "total_file_count": 35,
+          "skipped_file_count": 31
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

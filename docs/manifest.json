@@ -33,6 +33,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "files/xlsx/faq-covid-19.xlsx",
+      "output": {
+        "resource": {
+          "relative_path": "files/xlsx/faq-covid-19.xlsx"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "googled3dd506f4820cbd9.html",
       "output": {
         "resource": {
@@ -2314,6 +2325,28 @@
       "output": {
         "resource": {
           "relative_path": "images/tw/bot-template-upload-image.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/domain-example-covid-test.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/domain-example-covid-test.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/domain-example-covid-upload.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/domain-example-covid-upload.png"
         }
       },
       "is_incremental": false,

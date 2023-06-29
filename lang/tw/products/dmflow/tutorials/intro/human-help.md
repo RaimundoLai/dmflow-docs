@@ -1,11 +1,11 @@
 ---
-title: DmFlow 真人客服 | DmFlow
-description: DmFlow 真人客服，如何在DmFlow將機器人轉成真人客服。
+title: Communeify DmFlow 真人客服-讓機器人躍升為有情有義的對話夥伴
+description: 如何在 DmFlow 中將機器人轉換成真人客服。透過 DmFlow 平台，瞭解如何結合自動化機器人與真人客服功能，提供更加人性化和互動性強的對話體驗。
 ---
 
-# 真人客服
+# 真人客服-讓機器人躍升為有情有義的對話夥伴
 
-如何在DmFlow將機器人轉成真人客服。
+如何在 DmFlow 中將機器人轉換成真人客服。透過 DmFlow 平台，瞭解如何結合自動化機器人與真人客服功能，提供更加人性化和互動性強的對話體驗。
 
 ## 使用Messenger渠道
 
@@ -235,3 +235,8 @@ Parameter
 
 就可以做出簡單的真人問答系統。當然，可進一步搭配API做出查詢訊息、查找FAQ等等。
 
+# 了解更多
+
+[Communeify官方](https://communeify.com/)
+
+- 進入官網後，允許Cookie後即會跳出連線真人的聊天視窗，或是可以有問題可以從信箱問<service@communeify.com>
