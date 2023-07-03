@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Communeify DmFlow &#24120;&#35211;&#21839;&#38988;&#35299;&#31572;&#65292;&#20171;&#32057;&#21839;&#31572;&#23565;&#22914;&#20309;&#35299;&#27770;&#21839;&#38988;&#12290; | Communeify </title>
+    <title>Communeify DmFlow &#20171;&#32057;&#22914;&#20309;&#20351;&#29992;&#34920;&#26684;&#21839;&#31572;&#35299;&#27770;&#21839;&#38988; | Communeify </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Communeify DmFlow &#24120;&#35211;&#21839;&#38988;&#35299;&#31572;&#65292;&#20171;&#32057;&#21839;&#31572;&#23565;&#22914;&#20309;&#35299;&#27770;&#21839;&#38988;&#12290; | Communeify ">
-    <meta name="description" content="Communeify DmFlow&#24120;&#35211;&#21839;&#38988;&#35299;&#31572;&#65288;FAQ&#65289;&#65292;&#35443;&#32048;&#20171;&#32057;&#30637;&#22914;&#20309;&#36890;&#36942;&#21839;&#31572;&#23565;&#35299;&#27770;&#21839;&#38988;&#12290;&#20102;&#35299;&#22914;&#20309;&#21033;&#29992;&#21839;&#31572;&#23565;&#24555;&#36895;&#35299;&#31572;&#24120;&#35211;&#21839;&#38988;&#65292;&#25552;&#20379;&#28310;&#30906;&#30340;&#35299;&#27770;&#26041;&#26696;&#12290;&#20778;&#21270;&#21839;&#38988;&#35299;&#27770;&#27969;&#31243;&#65292;&#25552;&#21319;&#29992;&#25142;&#28415;&#24847;&#24230;&#12290;">
+    <meta name="title" content="Communeify DmFlow &#20171;&#32057;&#22914;&#20309;&#20351;&#29992;&#34920;&#26684;&#21839;&#31572;&#35299;&#27770;&#21839;&#38988; | Communeify ">
+    <meta name="description" content="&#20351;&#29992;Communeify DmFlow&#30340;&#34920;&#26684;&#21839;&#31572;&#21151;&#33021;&#65292;&#36629;&#39686;&#35299;&#27770;&#21839;&#38988;&#21644;&#29554;&#21462;&#25152;&#38656;&#20449;&#24687;&#12290;&#24555;&#36895;&#22238;&#31572;&#29992;&#25142;&#30340;&#21839;&#38988;&#65292;&#20006;&#25552;&#20379;&#26377;&#37341;&#23565;&#24615;&#30340;&#35299;&#27770;&#26041;&#26696;&#12290;&#21152;&#24555;&#21839;&#38988;&#35299;&#27770;&#36895;&#24230;&#65292;&#25552;&#21319;&#29992;&#25142;&#28415;&#24847;&#24230;&#12290;">
     <meta name="generator" content="docfx 2.58.9.0">
     <meta name="google-site-verification" content="wackHW3mx9OzoWNdH73Ucfx-Tgn27NaVqlQ-dzKaBfw">
     
@@ -70,39 +70,43 @@
         <div class="article row grid-right">
           <div class="col-md-10">
             <article class="content wrap" id="_content" data-uid="">
-<h1 id="covid-19-常見問題解答介紹問答對應用範例">COVID-19 常見問題解答，介紹問答對應用範例</h1>
+<h1 id="介紹如何使用表格問答解決問題">介紹如何使用表格問答解決問題</h1>
 
-<blockquote>
-<p>這些範例僅供參考，請注意不要將其視為正確的操作方式。始終依靠權威的衛生機構和專業醫療人員的指導，以確保您和他人的安全和健康。</p>
-</blockquote>
-<h1 id="資料數據">資料數據</h1>
-<p><a href="https://github.com/sunlab-osu/covid-faq" target="_blank">covid-faq</a></p>
-<pre><code>@inproceedings{zhang2021cough,
-    title = &quot;{COUGH}: A Challenge Dataset and Models for {COVID}-19 {FAQ} Retrieval&quot;,
-    author = &quot;Zhang, Xinliang Frederick  and
-      Sun, Heming  and
-      Yue, Xiang  and
-      Lin, Simon  and
-      Sun, Huan&quot;,
-    booktitle = &quot;Proceedings of the 2021 Conference on Empirical Methods in Natural Language Processing, {EMNLP} 2021&quot;,
-    year = &quot;2021&quot;,
-    pages = &quot;3759--3769&quot;,
-}
+<p>可以先準備資料</p>
+<p>目前測試資料包含</p>
+<pre><code>資料來源
+
+https://c.8891.com.tw/
 </code></pre>
-<h1 id="資料處理">資料處理</h1>
+<p>將資料轉成DmFlow需求的excel格式，縮圖直接用上述資料來源網址，如使用無法顯示，請再告知。</p>
 <ul>
-<li>使用data/FAQ_Bank.csv檔案。</li>
-<li>過濾找出language為zh並將簡體轉為繁體。</li>
-<li>下載DmFlow需要的上傳格式範例，並整理成DmFlow所需要的格式需求。</li>
-<li>即可得到下面的excel檔案。</li>
+<li><a href="../../../../../../files/xlsx/car.xlsx" title="car.xlsx">car.xlsx</a> 上傳到汽車資料庫的資料</li>
+<li><a href="../../../../../../files/xlsx/car-dict.xlsx" title="car-dict.xlsx">car-dict.xlsx</a> 汽車實體資料</li>
+<li><a href="../../../../../../files/xlsx/car-kind-name.xlsx" title="car-kind-name.xlsx">car-kind-name.xlsx</a> 汽車車型資料</li>
 </ul>
-<p><a href="../../../../../../files/xlsx/faq-covid-19.xlsx" title="DmFlow 問答對上傳COVID-19檔案">DmFlow 問答對上傳檔案</a></p>
-<h1 id="檔案上傳">檔案上傳</h1>
-<p><img src="../../../../../../images/tw/domain-example-covid-upload.png" alt="DmFlow 問答對上傳檔案" title="DmFlow 問答對上傳檔案"></p>
-<p>透過&quot;領域連結&quot;、&quot;發布&quot;完畢後即可測試，並導入到機器人裡面。以下圖片是測試畫面。</p>
-<p><img src="../../../../../../images/tw/domain-example-covid-test.png" alt="DmFlow 問答對測試" title="DmFlow 問答對測試"></p>
-<h1 id="結論">結論</h1>
-<p>問答對運用簡單的上傳功能，可以滿足對話需求。您只需使用問答對的單輪問答格式，即可建立基本的問答對話。雖然您仍然可以透過分類的方式創造多輪問答，但目前建議以單輪問答為主，以提供更直接和精確的回答。透過這種方式，您可以輕鬆地上傳問答對，並快速應對用戶的提問需求。</p>
+<h1 id="1準備schema">1.準備Schema</h1>
+<p><img src="../../../../../../images/tw/tableqa-example/car-schema.png" alt="DmFlow 汽車Schema" title="DmFlow 汽車Schema"></p>
+<h1 id="2上傳汽車實體">2.上傳汽車實體</h1>
+<p>使用 <a href="../../../../../../files/xlsx/car-dict.xlsx" title="car-dict.xlsx">car-dict.xlsx</a> 上傳汽車實體</p>
+<p><img src="../../../../../../images/tw/tableqa-example/car-entity.png" alt="DmFlow 汽車實體" title="DmFlow 汽車實體"></p>
+<h1 id="3上傳其他關鍵字實體">3.上傳其他關鍵字實體</h1>
+<p>如果有關鍵字，使用到空格，或其他特殊符號的文字，可以透過關鍵字實體解決搜尋不到的問題。</p>
+<p>使用 <a href="../../../../../../files/xlsx/car-kind-name.xlsx" title="car-kind-name.xlsx">car-kind-name.xlsx</a> 上傳汽車車型</p>
+<p><img src="../../../../../../images/tw/tableqa-example/car-type.png" alt="DmFlow 汽車車型" title="DmFlow 汽車車型"></p>
+<h1 id="4上傳汽車資料庫">4.上傳汽車資料庫</h1>
+<p>然後上傳 <a href="../../../../../../files/xlsx/car.xlsx" title="car.xlsx">car.xlsx</a></p>
+<p><img src="../../../../../../images/tw/tableqa-example/car-data.png" alt="DmFlow 汽車資料庫" title="DmFlow 汽車資料庫"></p>
+<h1 id="5連接領域即可直接測試">5.連接領域，即可直接測試。</h1>
+<p><img src="../../../../../../images/tw/tableqa-example/car-test.png" alt="DmFlow 汽車測試" title="DmFlow 汽車測試"></p>
+<p>還有其他強大功能，可以直接前往查看<a href="../../tutorials/docs/qa-intro.html">表格問答</a></p>
+<h1 id="6如何串連第三方渠道">6.如何串連第三方渠道</h1>
+<p>直接使用對話模板，分別綁定實體對話(命中實體)以及搜尋對話(搜尋實體)，並發布生產版本。</p>
+<h2 id="如何使用">如何使用</h2>
+<ul>
+<li>1.直接運用API可以直接呼叫此模板</li>
+<li>2.運用機器人調用節點，直接部屬到LINE或其他第三方渠道即可。</li>
+</ul>
+<p><img src="../../../../../../images/tw/tableqa-example/car-line-display.png" alt="DmFlow LINE顯示汽車" title="DmFlow LINE顯示汽車"></p>
 <h1 id="了解更多">了解更多</h1>
 <p><a href="https://communeify.com/">Communeify官方</a></p>
 <ul>

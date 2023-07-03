@@ -33,6 +33,39 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "files/xlsx/car-dict.xlsx",
+      "output": {
+        "resource": {
+          "relative_path": "files/xlsx/car-dict.xlsx"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "files/xlsx/car-kind-name.xlsx",
+      "output": {
+        "resource": {
+          "relative_path": "files/xlsx/car-kind-name.xlsx"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "files/xlsx/car.xlsx",
+      "output": {
+        "resource": {
+          "relative_path": "files/xlsx/car.xlsx"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "files/xlsx/faq-covid-19.xlsx",
       "output": {
         "resource": {
@@ -2864,6 +2897,72 @@
       "output": {
         "resource": {
           "relative_path": "images/tw/random-branch-example.gif"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/tableqa-example/car-data.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/tableqa-example/car-data.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/tableqa-example/car-entity.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/tableqa-example/car-entity.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/tableqa-example/car-line-display.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/tableqa-example/car-line-display.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/tableqa-example/car-schema.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/tableqa-example/car-schema.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/tableqa-example/car-test.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/tableqa-example/car-test.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/tableqa-example/car-type.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/tableqa-example/car-type.png"
         }
       },
       "is_incremental": false,
