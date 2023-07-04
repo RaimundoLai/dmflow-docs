@@ -1,6 +1,7 @@
 ---
 title: DmFlow Intent Introduction | DmFlow
 description: Using machine learning and natural language processing techniques, DmFlow can analyze and understand the conversations entered by users, identifying their intents. This helps the chatbot quickly grasp user needs and provide appropriate responses or perform corresponding actions.
+use_mermaid: true
 ---
 
 # Intents

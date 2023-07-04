@@ -1,6 +1,7 @@
 ---
 title: DmFlow Applying for Facebook API | DmFlow
 description: DmFlow integrates with the Facebook server via API to publish the chatbot to Messenger and provide it to users for interaction.
+use_mermaid: true
 ---
 
 # Applying for Facebook API

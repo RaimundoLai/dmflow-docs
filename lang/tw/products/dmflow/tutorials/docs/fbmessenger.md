@@ -1,6 +1,7 @@
 ---
 title: DmFlow 申請Facebook API | DmFlow
 description: DmFlow透過API與Facebook Server進行串接，並發布到messenger，提供對話機器人給用戶使用。
+use_mermaid: true
 ---
 
 # 申請Facebook API

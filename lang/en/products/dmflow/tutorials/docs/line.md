@@ -1,6 +1,7 @@
 ---
 title: DmFlow Apply for LINE API | DmFlow
 description: DmFlow integrates with LINE Server through API, enabling the use of chatbots for users.
+use_mermaid: true
 ---
 
 # Applying for LINE API

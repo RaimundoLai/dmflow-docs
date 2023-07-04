@@ -1,6 +1,7 @@
 ---
 title: DmFlow 申請LINE API | DmFlow
 description: DmFlow透過API與LINE Server進行串接，提供對話機器人給用戶使用。
+use_mermaid: true
 ---
 
 # 申請LINE API
