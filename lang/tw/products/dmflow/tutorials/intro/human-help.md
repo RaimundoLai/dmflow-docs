@@ -143,7 +143,9 @@ Parameter
 
 ### LINE
 
-可設置兩個Providers，一個負責客服、另一個以機器人問答為主。
+可直接在LINE OA設定。不過記得用戶需要再"情境節點-聆聽"才能讓用戶不觸發機器人自動回話。
+
+![DmFlow 真人客服](../../../../../../images/tw/line-deskhelp.png "DmFlow LINE 真人客服")
 
 ### Telegram
 
@@ -239,4 +241,4 @@ Parameter
 
 [Communeify官方](https://communeify.com/)
 
-- 進入官網後，允許Cookie後即會跳出連線真人的聊天視窗，或是可以有問題可以從信箱問<service@communeify.com>
+- 進入官網後，可以線上直接回覆，或是可以有問題可以從信箱問<service@communeify.com>

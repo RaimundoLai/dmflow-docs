@@ -1,0 +1,635 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Communeify DmFlow LINE&#24115;&#34399;&#36899;&#25509; | Communeify </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Communeify DmFlow LINE&#24115;&#34399;&#36899;&#25509; | Communeify ">
+    <meta name="description" content="&#20102;&#35299;&#22914;&#20309;&#22312;Communeify DmFlow&#20013;&#36899;&#25509;LINE&#24115;&#34399;&#65292;&#36879;&#36942;LINE Messaging API&#23526;&#29694;&#21363;&#26178;&#36890;&#35338;&#21644;&#20114;&#21205;&#21151;&#33021;&#12290;&#24314;&#31435;&#24375;&#22823;&#30340;LINE&#32842;&#22825;&#27231;&#22120;&#20154;&#65292;&#25552;&#20379;&#20491;&#20154;&#21270;&#30340;&#20351;&#29992;&#32773;&#39636;&#39511;&#65292;&#21152;&#24375;&#33287;&#29992;&#25142;&#30340;&#20114;&#21205;&#12290;">
+    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="google-site-verification" content="wackHW3mx9OzoWNdH73Ucfx-Tgn27NaVqlQ-dzKaBfw">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <meta property="docfx:appTitle" content="Communeify">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="如何快速建立連結">如何快速建立連結</h1>
+
+<blockquote>
+<p>此範例因為測試需求，使用的是Google Apps Script，如果要正式使用可使用其他方式如firebase或自定義伺服器完成以下教學。</p>
+</blockquote>
+<p>大致流程如下：</p>
+<pre><code class="lang-mermaid">sequenceDiagram
+    User-&gt;&gt;DmFlow: 您好
+    DmFlow--&gt;&gt;User: 您好，您尚未綁定帳號
+    User-&gt;&gt;DmFlow: 綁定帳號
+    DmFlow--&gt;&gt;User: 提供綁定帳號網址
+    User-&gt;&gt;Login: 點擊綁定帳號網址
+    User-&gt;&gt;Login: 輸入帳號密碼
+    Login--&gt;&gt;User: 資訊正確提供LINE帳號連接網址
+    User-&gt;&gt;Login: 點擊LINE帳號連接網址
+    Login-&gt;&gt;LINE: 告訴LINE這個使用者要綁定
+    LINE--&gt;&gt;DmFlow: accountLink event
+    DmFlow-&gt;&gt;User: 告知使用者已經綁定帳號
+</code></pre>
+<h2 id="步驟一建立需求的檔案">步驟一：建立需求的檔案</h2>
+<p>首先我們先建立index.html</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+  &lt;base target=&quot;_top&quot;&gt;
+  &lt;style&gt;
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    input[type=&quot;text&quot;],
+    input[type=&quot;password&quot;] {
+      width: 200px;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;h1&gt;Login&lt;/h1&gt;
+  &lt;input type=&quot;text&quot; id=&quot;username&quot; placeholder=&quot;Username&quot; autocomplete=&quot;off&quot; required&gt;&lt;br&gt;
+  &lt;input type=&quot;password&quot; id=&quot;password&quot; placeholder=&quot;Password&quot; autocomplete=&quot;off&quot; required&gt;&lt;br&gt;
+  &lt;input type=&quot;hidden&quot; id=&quot;linkToken&quot; value=&quot;&quot;&gt;&lt;br&gt;
+  &lt;button onclick=&quot;login()&quot;&gt;Login&lt;/button&gt;
+  &lt;a href=&quot;#&quot; id=&quot;account-link&quot; style=&quot;display: none;&quot;&gt;Account Link&lt;/a&gt;
+  &lt;script&gt;
+    function login() {
+        var username = document.getElementById(&quot;username&quot;).value;
+        var password = document.getElementById(&quot;password&quot;).value;
+        var linkToken = document.getElementById(&quot;linkToken&quot;).value;
+      }
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<p>程式碼.gs</p>
+<pre><code>function doGet(request) {
+  return HtmlService.createHtmlOutputFromFile(&quot;index&quot;);
+}
+</code></pre>
+<h2 id="步驟二開始撰寫gs">步驟二：開始撰寫gs</h2>
+<p>我們需要login的邏輯並開始撰寫</p>
+<p>先開啟Google spreadsheets並建立欄位為username, password, nonce, user_id</p>
+<p>可以填寫你要的使用者，我在裡面建立了帳號為howard、密碼為123456</p>
+<table>
+<thead>
+<tr>
+<th>username</th>
+<th>password</th>
+<th>nonce</th>
+<th>user_id</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>howard</td>
+<td>123456</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>根據網址，即可拿到你的Spreadsheet的ID，記得如果只要使用Login頁面，可以將存取只能給自己使用，但因為此範例最後面需要用到DmFlow的資源節點，所以需要開放給所有知道連結的人。</p>
+<pre><code>https://docs.google.com/spreadsheets/d/{{你的Spreadsheet ID}}/edit#gid=0
+</code></pre>
+<pre><code>function login(username, password, linkToken) {
+  var id = '{{你的Spreadsheet ID}}';
+  var spreadsheet = SpreadsheetApp.openById(id);
+  var sheet = spreadsheet.getSheets()[0];
+  var data = sheet.getDataRange().getValues();
+
+  for (var i = 1; i &lt; data.length; i++) {
+    var storedUsername = data[i][0];
+    var storedPassword = data[i][1];
+    if (storedUsername === username &amp;&amp; storedPassword == password) {
+      var nonce = createNonce(16);
+      var cell = sheet.getRange(&quot;C&quot; + (i + 1));
+      cell.setValue(nonce);
+      var redirectUrl = `https://access.line.me/dialog/bot/accountLink?linkToken=${linkToken}&amp;nonce=${nonce}`;
+      return { success: true, redirectUrl };
+    }
+  }
+  return { sucess: false };
+}
+
+
+function createNonce(length) {
+  var text = &quot;&quot;;
+  var possible = &quot;ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789&quot;;
+  for (var i = 0; i &lt; length; i++) {
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+  }
+  return text;
+}
+</code></pre>
+<p>並更改index.html</p>
+<pre><code>  &lt;script&gt;
+    function login() {
+        var username = document.getElementById(&quot;username&quot;).value;
+        var password = document.getElementById(&quot;password&quot;).value;
+        var linkToken = document.getElementById(&quot;linkToken&quot;).value;
+        google.script.run.withSuccessHandler(handleLoginResult).login(username, password, linkToken);
+      }
+      function handleLoginResult(result) {
+        if(result){
+          if(result.success){
+            alert(&quot;Login successful!&quot;);
+            if(result.redirectUrl) {
+              var linkElement = document.getElementById('account-link');
+                  linkElement.style.display = &quot;inline&quot;;
+                  linkElement.href = result.redirectUrl;
+            }
+          }else {
+            alert(&quot;Login failed! Please check your credentials.&quot;);
+          }
+        }
+      }
+      google.script.url.getLocation(function(location) {
+        var hiddenValue = location.parameter[&quot;linkToken&quot;];
+        document.getElementById(&quot;linkToken&quot;).value = hiddenValue;
+      });
+  &lt;/script&gt;
+</code></pre>
+<p>即可完成簡單的登入頁面。</p>
+<p>此為index.html完整版</p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+
+&lt;head&gt;
+  &lt;base target=&quot;_top&quot;&gt;
+  &lt;style&gt;
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-top: 0;
+    }
+
+    input[type=&quot;text&quot;],
+    input[type=&quot;password&quot;] {
+      width: 200px;
+      padding: 10px;
+      margin: 10px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;h1&gt;Login&lt;/h1&gt;
+  &lt;input type=&quot;text&quot; id=&quot;username&quot; placeholder=&quot;Username&quot; autocomplete=&quot;off&quot; required&gt;&lt;br&gt;
+  &lt;input type=&quot;password&quot; id=&quot;password&quot; placeholder=&quot;Password&quot; autocomplete=&quot;off&quot; required&gt;&lt;br&gt;
+  &lt;input type=&quot;hidden&quot; id=&quot;linkToken&quot; value=&quot;&quot;&gt;&lt;br&gt;
+  &lt;button onclick=&quot;login()&quot;&gt;Login&lt;/button&gt;
+  &lt;a href=&quot;#&quot; id=&quot;account-link&quot; style=&quot;display: none;&quot;&gt;Account Link&lt;/a&gt;
+  &lt;script&gt;
+    function login() {
+        var username = document.getElementById(&quot;username&quot;).value;
+        var password = document.getElementById(&quot;password&quot;).value;
+        var linkToken = document.getElementById(&quot;linkToken&quot;).value;
+        google.script.run.withSuccessHandler(handleLoginResult).login(username, password, linkToken);
+      }
+      function handleLoginResult(result) {
+        if(result){
+          if(result.success){
+            alert(&quot;Login successful!&quot;);
+            if(result.redirectUrl) {
+              var linkElement = document.getElementById('account-link');
+                  linkElement.style.display = &quot;inline&quot;;
+                  linkElement.href = result.redirectUrl;
+            }
+          }else {
+            alert(&quot;Login failed! Please check your credentials.&quot;);
+          }
+        }
+      }
+      google.script.url.getLocation(function(location) {
+        var hiddenValue = location.parameter[&quot;linkToken&quot;];
+        document.getElementById(&quot;linkToken&quot;).value = hiddenValue;
+      });
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h2 id="步驟三寫入userid">步驟三：寫入userId</h2>
+<p>有兩種方式寫入userId</p>
+<ul>
+<li>1.直接在轉login的頁面的時候，可以直接攜帶userId</li>
+<li>2.透過DmFlow資源節點去觸發寫入userId</li>
+</ul>
+<p>在此舉立第二種範例。</p>
+<p>我們在 程式碼.gs新增以下程式碼</p>
+<p>將新增一個資源。</p>
+<pre><code>{
+  &quot;action&quot;: &quot;updateUserId&quot;,
+  &quot;userId&quot;: &quot;xxxx&quot;,
+  &quot;nonce&quot;: &quot;xxxx&quot;
+}
+</code></pre>
+<pre><code>function writeUserId(userId, nonce) {
+  var id = '{{你的Spreadsheet ID}}';
+  var spreadsheet = SpreadsheetApp.openById(id);
+  var sheet = spreadsheet.getSheets()[0];
+  var data = sheet.getDataRange().getValues();
+
+  for (var i = 1; i &lt; data.length; i++) {
+    var storedNonce = data[i][2];
+    if (storedNonce === nonce) {
+      var cell = sheet.getRange(&quot;D&quot; + (i + 1));
+      cell.setValue(userId);
+      return { success: true };
+    }
+  }
+  return { sucess: false };
+}
+
+function doPost(e) {
+  var param = JSON.parse(e.postData.contents);
+  let action = param.action;
+  var result = {};
+  if (action === 'updateUserId') {
+    let userId = param.userId;
+    let nonce = param.nonce;
+    result = writeUserId(userId, nonce);
+  }
+  return ContentService.createTextOutput(JSON.stringify(result))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+</code></pre>
+<p>於是可以先新增部屬作業。</p>
+<h2 id="步驟四回到dmflow做設定">步驟四：回到DmFlow做設定</h2>
+<p>我們先來看最終成果圖。</p>
+<p><img src="../../../../../../images/tw/line-accountlink/line-al-dmflow.png" alt="DmFlow LINE帳號連接成果圖" title="DmFlow LINE帳號連接成果圖"></p>
+<ul>
+<li><p>首先現在&quot;使用者參數&quot;新增一個nonce作為是否已經連接帳號的根據。並在&quot;機器人參數&quot;新增lineToken，數值為Bearer {{line access token}}</p>
+</li>
+<li><p>先建立變數節點</p>
+<ul>
+<li>link_token: 屬性: string，用途是呼叫LINE linkToken後需要回傳linkToken</li>
+<li>nonce: 屬性: string，用於查詢user Spreadsheet的nonce去比對帳號。</li>
+<li>user_id: 屬性: string，用於修改user Spreadsheet的userId。</li>
+</ul>
+</li>
+<li><p>在資源節點新增兩個分別是</p>
+</li>
+</ul>
+<ol>
+<li>line_linkToken 用於綁定帳號</li>
+</ol>
+<pre><code>因預設為HTTPS所以不用打https://
+Request URL: api.line.me/v2/bot/user/${#sys_user.userId}/linkToken
+Method: POST
+Content-Type: JSON
+Headers: Authorization: config.lineToken
+RESPONSE
+{
+ &quot;linkToken&quot;: &quot;xxxx&quot;
+}
+</code></pre>
+<ol start="2">
+<li>updateUserId 用於更新userId</li>
+</ol>
+<pre><code>Request URL: script.google.com/macros/s/{{生產部屬的ID}}/exec
+Method: POST
+Content-Type: JSON
+REQUEST PAYLOAD:
+{
+    &quot;action&quot;: &quot;updateUserId&quot;,
+    &quot;nonce&quot;: &quot;&quot;,
+    &quot;userId&quot;: &quot;&quot;
+}
+請求參數新增nonce和user_id(請求參數鍵要改成userId，否則無法取代REQUEST PAYLOAD的userId)
+RESPONSE
+{
+ &quot;success&quot;: true or false
+}
+填寫完後點擊新增或修改，重進一次修改資源，可以點擊測試直接測試該資源。
+</code></pre>
+<ul>
+<li>回到DmFlow圖形</li>
+</ul>
+<p>每個節點的用途可以從這裡了解。<a href="../../tutorials/docs/bot-flow.html">DmFlow 機器人對話流程</a></p>
+<p>ID 4 回覆節點
+用途：為了回覆使用者未綁定帳號的問句。</p>
+<pre><code>文本：尚未綁定帳號
+選項：綁定帳號(回傳文本:綁定帳號)
+</code></pre>
+<p>Start -&gt; ID 4 條件節點
+用途：平台必須是LINE且nonce屬於尚未填充的狀態。</p>
+<pre><code>條件為
+  sys_user.platform = constant @line
+  user.nonce 未填充
+</code></pre>
+<p>ID 5 資源節點
+用途：向LINE Server去拿取linkToken。</p>
+<pre><code>選取line_linkToken
+回傳值：
+  link_token-&gt;conversation.linkToken
+</code></pre>
+<p>ID 4 -&gt; ID 5 條件節點
+用途：假設回覆等於綁定帳號則移動到綁定帳號節點。</p>
+<pre><code>條件為
+  query = constant 綁定帳號
+</code></pre>
+<p>ID 8 回覆節點
+用途：拿到linkToken後顯示前端login頁面，並帶linkToken數值。生產部屬的ID為自己的ID請勿複製貼上。</p>
+<pre><code>文本：https://script.google.com/macros/s/{{生產部屬的ID}}/exec?linkToken=${#conversation.linkToken}
+</code></pre>
+<p>ID 5 -&gt; ID 8 條件節點
+用途：假設拿到linkToken直接前往回覆輸出連結。</p>
+<pre><code>條件為無條件
+</code></pre>
+<p>ID 16 變數節點
+用途：我們接收到Account Link事件後可以拿到nonce。</p>
+<pre><code>user nonce 字串取代 前綴:conversation,目標:_message.payload.nonce 
+</code></pre>
+<p>ID 8 -&gt; ID 16 條件節點
+用途：當前端登入完成且完成帳號連結後，LINE Server會提供給DmFlow 事件為Account Link的事件。</p>
+<pre><code>條件為
+  conversation._message.type = constant accountLink
+</code></pre>
+<p>ID 19 資源節點
+用途：調用updateUserId將nonce相符的帳號更新他的userId</p>
+<pre><code>選取updateUserId
+參數：
+  nonce-&gt;user.nonce
+  user_id-&gt;sys_user.userId
+回傳值：
+  success-&gt;conversation.success
+</code></pre>
+<p>ID 16 -&gt; ID 19 條件節點
+用途：Account Link事件後可以拿到nonce和result，可以先判斷result是否為ok或failed，但此範例不判斷。
+條件為無條件</p>
+<p>ID 9 回覆節點
+用途：最後需要顯示解除綁定的訊息。</p>
+<pre><code>文本：已綁定帳號
+選項：取消綁定(回傳文本:取消綁定)
+</code></pre>
+<p>Start -&gt; ID 9 條件節點
+用途：使用者回答取消綁定且渠道為LINE的時候觸發</p>
+<pre><code>條件為
+  query = constant 取消綁定
+  sys_user.platform = constant @line
+</code></pre>
+<p>ID 11 變數節點
+用途：將user.nonce清除</p>
+<pre><code>user nonce 字串清空
+</code></pre>
+<p>ID 9 -&gt; ID 11 條件節點
+用途：當使用者選擇選項為取消綁定或直接說出取消綁定的時候觸發。</p>
+<pre><code>條件為
+query = constant 取消綁定
+</code></pre>
+<p>ID 13 回覆節點
+用途：用於回覆使用者綁定已取消了，下一次使用者需要重新綁定才能繼續問話。</p>
+<pre><code>文本：綁定已取消
+關閉等待用戶回覆
+</code></pre>
+<h2 id="步驟五測試">步驟五：測試</h2>
+<p>在LINE整合填寫Channel ID和secret和access token，可參考<a href="../../tutorials/docs/line.html">DmFlow LINE整合</a></p>
+<p>並根據開發版、生產版做發布即可測試。可參考<a href="../../tutorials/docs/bot-published.html">DmFlow 發布</a></p>
+<p>成果：</p>
+<p><img src="../../../../../../images/tw/line-accountlink/line-al-preview.jpg" alt="LINE帳號連接" title="DmFlow LINE帳號連接"></p>
+<p>點擊連結後跳去登入頁面。</p>
+<p><img src="../../../../../../images/tw/line-accountlink/line-al-login.jpg" alt="Login頁面" title="DmFlow Login頁面"></p>
+<p>登入成功後顯示Account Link的連結</p>
+<p><img src="../../../../../../images/tw/line-accountlink/line-al-success.jpg" alt="Login成功" title="DmFlow Login成功"></p>
+<p>點完連結後，會出現連接畫面，此時LINE Server會丟account Link event給DmFlow，DmFlow會顯示以綁定帳號。</p>
+<p><img src="../../../../../../images/tw/line-accountlink/line-al-connect.jpg" alt="Login後呼叫LINE" title="Login後呼叫LINE"></p>
+<blockquote>
+<p>最後若是此範例完畢，記得管理部屬作業將該程序封存，讓程序下線，避免已經綁定信用卡的使用者造成不必要的費用問題。</p>
+</blockquote>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © <script>document.write(new Date().getFullYear());</script> Communeify</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+    <!-- mermaid support -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: false
+        });
+        mermaid.init(undefined, ".lang-mermaid");
+    </script>
+    <style>
+        #cookie-notice {padding: 0.5rem 1rem; display: none; text-align: center; position: fixed; bottom: 0; width: calc(100% - 2rem); background: #222; color: rgba(255,255,255,0.8); z-index: 1000;}
+        #cookie-notice a {display: inline-block; cursor: pointer; margin-left: 0.5rem;}
+        @media (max-width: 767px) {
+            #cookie-notice span {display: block; padding-top: 3px; margin-bottom: 1rem;}
+            #cookie-notice a {position: relative; bottom: 4px;}
+        }
+    </style>
+    <div id="cookie-notice"><span id="cookie_notice">We would like to use third party cookies and scripts to improve the functionality of this website.</span><a id="cookie-notice-accept" class="btn btn-primary btn-sm">Approve</a><a href="/tw/privacy.html" class="btn btn-primary btn-sm" id="cookie-privacy">Privacy Policy</a></div>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VDL6P3EXCQ"></script>
+    <script>
+        function addAnalytics() {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-VDL6P3EXCQ');
+        }
+        var defaultLanguage = navigator.language;
+    	translateLang(defaultLanguage);
+    	function translateLang(language) {
+    	  var url = window.location.pathname;
+    	  var selectLang = '';
+          try{
+              var lang = url.split('/')[1];
+              if (lang === 'en') {
+                selectLang = 'en';
+              } else if (lang === 'tw') {
+                selectLang = 'tw';
+              } else if (lang === 'cn') {
+                selectLang = 'tw';
+              }
+          }catch(e) {
+          }
+    	  if(selectLang === '') {
+            if (language === 'zh-TW' || language === 'zh-CN') {
+    		    selectLang = 'tw';
+            } else {
+    		    selectLang = 'en';
+    	    }
+    	  }
+    	  var cookieTW = '我們希望使用第三方的Cookie和腳本來提升本網站的功能性。';
+    	  var cookieEN = 'We would like to use third party cookies and scripts to improve the functionality of this website.';
+    	  var approveTW = '允許';
+    	  var approveEN = 'Approve';
+    	  var privacyTW = '隱私權政策';
+    	  var privacyEN = 'Privacy Policy';
+    	  var cookieNoticeElement = document.getElementById('cookie_notice');
+          cookieNoticeElement.textContent = selectLang === 'en' ? cookieEN : cookieTW;
+    	  var cookieNoticeAcceptElement = document.getElementById('cookie-notice-accept');
+          cookieNoticeAcceptElement.textContent = selectLang === 'en' ? approveEN : approveTW;
+    	  var cookiePrivacyElement = document.getElementById('cookie-privacy');
+          cookiePrivacyElement.textContent = selectLang === 'en' ? privacyEN : privacyTW;
+    	  cookiePrivacyElement.href = selectLang === 'en' ? '/en/privacy.html' : '/tw/privacy.html';
+    	}
+    
+        function createCookie(name,value,days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days*24*60*60*1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
+        }
+        function eraseCookie(name) {
+            createCookie(name,"",-1);
+        }
+    
+        if(readCookie('cookie-notice-dismissed')=='true') {
+            addAnalytics();
+        } else {
+            document.getElementById('cookie-notice').style.display = 'block';
+        }
+        document.getElementById('cookie-notice-accept').addEventListener("click",function() {
+            createCookie('cookie-notice-dismissed','true',31);
+            document.getElementById('cookie-notice').style.display = 'none';
+            location.reload();
+        });
+    
+    </script>  </body>
+</html>

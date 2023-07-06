@@ -20,4 +20,4 @@ description: DmFlow 應用於用戶回應、A/B測試和抽籤抽獎等用途。
 
 [Communeify官方](https://communeify.com/)
 
-- 進入官網後，允許Cookie後即會跳出連線真人的聊天視窗，或是可以有問題可以從信箱問<service@communeify.com>
+- 進入官網後，可以線上直接回覆，或是可以有問題可以從信箱問<service@communeify.com>

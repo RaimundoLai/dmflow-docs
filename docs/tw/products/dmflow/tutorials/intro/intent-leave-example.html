@@ -1,0 +1,766 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Communeify DmFlow &#24847;&#22294;&#31684;&#20363;&#65292;&#35373;&#35336;&#19968;&#20491;&#35531;&#20551;&#31995;&#32113; | Communeify </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Communeify DmFlow &#24847;&#22294;&#31684;&#20363;&#65292;&#35373;&#35336;&#19968;&#20491;&#35531;&#20551;&#31995;&#32113; | Communeify ">
+    <meta name="description" content="&#35373;&#35336;&#21644;&#23526;&#29694;&#35531;&#20551;&#31995;&#32113;&#30340;&#27493;&#39519;&#65292;&#20351;&#29992; Communeify DmFlow &#24179;&#21488;&#65292;&#27083;&#24314;&#19968;&#20491;&#33258;&#21205;&#21270;&#30340;&#20551;&#26399;&#30003;&#35531;&#31995;&#32113;&#12290;&#29992;&#25142;&#21487;&#20197;&#36629;&#39686;&#25552;&#20132;&#35531;&#20551;&#35531;&#27714;&#65292;&#20006;&#29554;&#24471;&#33258;&#21205;&#34389;&#29702;&#21644;&#35352;&#37636;&#20551;&#26399;&#20449;&#24687;&#30340;&#21151;&#33021;&#12290;">
+    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="google-site-verification" content="wackHW3mx9OzoWNdH73Ucfx-Tgn27NaVqlQ-dzKaBfw">
+    
+    <link rel="shortcut icon" href="../../../../images/favicon.ico">
+    <meta property="docfx:appTitle" content="Communeify">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.css">
+    <link rel="stylesheet" href="../../../../styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
+    <meta property="docfx:navrel" content="../../../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    
+    
+  </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../../../index.html">
+                <img id="logo" class="svg" src="../../../../images/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="設計和實現請假系統的步驟">設計和實現請假系統的步驟</h1>
+
+<h2 id="主要流程">主要流程</h2>
+<pre><code class="lang-mermaid">flowchart LR
+    A[&quot;員工登入綁定&quot;]
+    B[&quot;員工申請休假&quot;]
+    C[&quot;主管批准休假&quot;]
+    D[&quot;通知團隊&quot;]
+    A --&gt; B --&gt; C --&gt; D
+</code></pre>
+<h2 id="次要流程">次要流程</h2>
+<ul>
+<li>查詢紀錄</li>
+<li>取消請假</li>
+</ul>
+<p>(本章節將不會探討次要流程的設計)</p>
+<h1 id="使用意圖設計申請休假">使用意圖設計申請休假</h1>
+<p>先創建辭典</p>
+<p>leave_type</p>
+<ul>
+<li>特休;特休假</li>
+<li>病假</li>
+<li>事假</li>
+<li>其他</li>
+</ul>
+<p>另外仍有防疫照顧假、喪假、防疫隔離假、謀職假、婚假、產檢假、產假、安胎假、育嬰留職停薪、陪產假、公傷病假、公假、家庭照顧假、生理假等可自行添加。</p>
+<p>1.創建詞槽</p>
+<table>
+<thead>
+<tr>
+<th>詞槽</th>
+<th>引用詞典</th>
+<th>別名</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>leave</td>
+<td>leave_type</td>
+<td>請假</td>
+</tr>
+<tr>
+<td>reason</td>
+<td>@ANY</td>
+<td>請假原因</td>
+</tr>
+<tr>
+<td>leave_from</td>
+<td>@TIME</td>
+<td>請假開始時間</td>
+</tr>
+<tr>
+<td>leave_end</td>
+<td>@TIME</td>
+<td>請假結束時間</td>
+</tr>
+</tbody>
+</table>
+<p>2.將說法填入</p>
+<pre><code>我想請{leave}從{leave_from}到{leave_end}
+我想從{leave_from}開始請假
+我想請假從{leave_from}到{leave_end}
+我想請假
+我想請{leave}
+</code></pre>
+<p>3.如果要加上確認</p>
+<p>確認要再添加yes以及no的意圖，建立完成後，接續問法如下</p>
+<pre><code>您好再向您確認一下以下資訊是否正確。
+請假名稱:${#entities.leave.value}
+請假開始時間:${%extractTime(#entities.leave_from.norm,'yyyy-MM-dd HH:mm:ss','')}
+請假結束時間:${%extractTime(#entities.leave_end.norm,'yyyy-MM-dd HH:mm:ss','')}
+</code></pre>
+<p>如果命中yes意圖則會導向完成。
+如果命中no意圖則會直接結束對話。
+如果命中其他意圖會進行其他意圖對話。</p>
+<p>4.完成</p>
+<p>提交主管審核，得透過resource使用API對外交互。</p>
+<pre><code>您好，將為您提交請假申請給主管審核。
+請假名稱:${#entities.leave.value}
+請假開始時間:${%extractTime(#entities.leave_from.norm,'yyyy-MM-dd HH:mm:ss','')}
+請假結束時間:${%extractTime(#entities.leave_end.norm,'yyyy-MM-dd HH:mm:ss','')}
+</code></pre>
+<h1 id="如何向對外交互">如何向對外交互</h1>
+<p>此範例將由Google Apps Script作為範例。</p>
+<p>我們可以先透過Login的方式，定義是用者的權限。
+我們可以透過下一章的<a href="../../tutorials/intro/line-accountlink.html">LINE平台-帳號連結</a></p>
+<p>我們在帳號連結得到的資料是</p>
+<table>
+<thead>
+<tr>
+<th>username</th>
+<th>password</th>
+<th>nonce</th>
+<th>user_id</th>
+</tr>
+</thead>
+</table>
+<p>新增一個欄位叫manager這邊放上主管的user_id</p>
+<table>
+<thead>
+<tr>
+<th>username</th>
+<th>password</th>
+<th>nonce</th>
+<th>user_id</th>
+<th>manager</th>
+</tr>
+</thead>
+</table>
+<p>直接自己把自己連接的userId填寫到manager即可，在此略過建立主管、主管註冊、主管登入等步驟。</p>
+<p>也就是說你可以參考以下填寫。</p>
+<table>
+<thead>
+<tr>
+<th>username</th>
+<th>password</th>
+<th>nonce</th>
+<th>user_id</th>
+<th>manager</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>howard</td>
+<td>123456</td>
+<td>xxxx</td>
+<td>U1234XXX</td>
+<td>U1234XXX</td>
+</tr>
+</tbody>
+</table>
+<p>我們在上面第四點的完成部分&quot;您好，將為您提交請假申請給主管審核。&quot;，所以必須將獲得的資料建立在另一個Spreadsheets，於是我們新增第二個工作表。欄位如下。</p>
+<table>
+<thead>
+<tr>
+<th>id</th>
+<th>user_id</th>
+<th>leave</th>
+<th>leave_from</th>
+<th>leave_end</th>
+<th>reason</th>
+<th>audit</th>
+</tr>
+</thead>
+</table>
+<p>其中audit為true or false，為當前假期是否審核過。</p>
+<p>於是在程式碼.gs由此寫下</p>
+<pre><code>function searchUser(userId) {
+  var id = '{{你的Spreadsheet ID}}';
+  var spreadsheet = SpreadsheetApp.openById(id);
+  var sheet = spreadsheet.getSheets()[0];
+  var data = sheet.getDataRange().getValues();
+
+  for (var i = 1; i &lt; data.length; i++) {
+    var storeUserId = data[i][3];
+    if (storeUserId === userId) {
+      return { success: true, user: data[i] };
+    }
+  }
+  return { sucess: false };
+}
+
+function sendMessageToManager(userId, user, lineToken, leave, leave_from, leave_end, reason, leave_id) {
+  const username = user[0];
+  const managerId = user[4];
+  const endpoint = 'https://api.line.me/v2/bot/message/push';
+  var message = {
+    to: managerId, messages: [
+      {
+        type: 'template',
+        altText: '員工請假通知',
+        template: {
+          type: 'buttons',
+          text: `員工帳號:${username}
+請假:${leave}
+請假開始:${formatTimestamp(leave_from)}
+請假結束:${formatTimestamp(leave_end)}
+請假原因:${reason}`,
+          actions: [
+            { type: 'postback', label: '核准請假', data: `/allowed_leave &quot;${leave_id}&quot; ` }
+          ]
+        }
+      }
+    ]
+  };
+  var options = {
+    method: 'post',
+    headers: {
+      'Content-Type': 'application/json',
+      'Authorization': lineToken
+    },
+    payload: JSON.stringify(message)
+  };
+  var response = UrlFetchApp.fetch(endpoint, options);
+  Logger.log('LINE push message sent. Response code: ' + response.getResponseCode());
+}
+
+function createLeave(userId, leave, leave_from, leave_end, reason, audit) {
+  var id = '{{你的Spreadsheet ID}}';
+  var spreadsheet = SpreadsheetApp.openById(id);
+  var sheet = spreadsheet.getSheets()[1];
+  var uniqueID = Utilities.getUuid();
+  var rowData = [uniqueID, userId, leave, leave_from, leave_end, reason, audit];
+  sheet.appendRow(rowData);
+  return { success: true, id: uniqueID };
+}
+
+function updateLeaveAudit(leaveId, notify, lineToken) {
+  if (leaveId) {
+    var id = '{{你的Spreadsheet ID}}';
+    var spreadsheet = SpreadsheetApp.openById(id);
+    var sheet = spreadsheet.getSheets()[1];
+    var data = sheet.getDataRange().getValues();
+    for (var i = 1; i &lt; data.length; i++) {
+      var storeId = data[i][0];
+      if (storeId === leaveId) {
+        let audit = data[i][6];
+        if (audit === false) {
+          var cell = sheet.getRange(&quot;G&quot; + (i + 1));
+          cell.setValue(true);
+          var userId = data[i][1];
+          if (notify &amp;&amp; lineToken) {
+            const leave = data[i][2];
+            const leave_from = data[i][3];
+            const leave_end = data[i][4];
+            const reason = data[i][5];
+            const r = searchUser(userId);
+            const endpoint = 'https://api.line.me/v2/bot/message/push';
+            var message = {
+              to: userId, messages: [
+                {
+                  type: 'text',
+                  text: `員工帳號:${r.user[0]} 已審核請假
+請假:${leave}
+請假開始:${formatTimestamp(leave_from)}
+請假結束:${formatTimestamp(leave_end)}
+請假原因:${reason}`
+                }
+              ]
+            };
+            var options = {
+              method: 'post',
+              headers: {
+                'Content-Type': 'application/json',
+                'Authorization': lineToken
+              },
+              payload: JSON.stringify(message)
+            }; var response = UrlFetchApp.fetch(endpoint, options);
+            Logger.log('LINE push message sent. Response code: ' + response.getResponseCode());
+          }
+        } else {
+          return { success: false }
+        }
+        break;
+      }
+    }
+  }
+  return { success: true }
+}
+function doPost(e) {
+  var param = JSON.parse(e.postData.contents);
+  let action = param.action;
+  var result = {};
+  if (action === 'createLeave') {
+    let userId = param.userId;
+    let leave = param.leave;
+    let leave_from = param.leave_from;
+    let leave_end = param.leave_end;
+    let reason = param.reason;
+    let notify = param.notify;
+    let lineToken = param.lineToken;
+    let audit = false;
+    result = createLeave(userId, leave, leave_from, leave_end, reason, audit);
+    if (userId &amp;&amp; notify &amp;&amp; lineToken) {
+      const r = searchUser(userId);
+      if (r.user[4] &amp;&amp; notify &amp;&amp; lineToken) {
+        sendMessageToManager(userId, r.user, lineToken, leave, leave_from, leave_end, reason, result.id);
+      }
+    }
+  }else if (action === 'updateLeave') {
+    let id = param.id;
+    let notify = param.notify;
+    let lineToken = param.lineToken;
+    result = updateLeaveAudit(id, notify, lineToken);
+  }
+  Logger.log(result);
+  return ContentService.createTextOutput(JSON.stringify(result))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+</code></pre>
+<p>分別新增二個action分別是createLeave、updateLeave</p>
+<ul>
+<li>createLeave：新增請假原因，其中notify跟lineToken是因為在測試領域的時候，不應該通知主管，需整合機器人流程才可執行。lineToken包含&quot;Bearer &quot;</li>
+<li>updateLeave：將指定id的leave中的audit轉為true</li>
+</ul>
+<p>新增好兩個action後，繼續完成領域資源。</p>
+<h1 id="領域資源設定">領域資源設定</h1>
+<p>建立變數分別是</p>
+<table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>屬性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>notify</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>reason</td>
+<td>string</td>
+</tr>
+<tr>
+<td>leave_end</td>
+<td>datetime</td>
+</tr>
+<tr>
+<td>leave_from</td>
+<td>datetime</td>
+</tr>
+<tr>
+<td>leave</td>
+<td>string</td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>string</td>
+</tr>
+<tr>
+<td>line_token</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<p>建立資源</p>
+<pre><code>資源名稱: saveLeave
+URL:script.google.com/macros/s/{{生產部屬的ID}}/exec
+Method: POST
+Content-Type: JSON
+</code></pre>
+<p>參數</p>
+<table>
+<thead>
+<tr>
+<th>鍵</th>
+<th>path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>user_id</td>
+<td>userId</td>
+</tr>
+<tr>
+<td>leave</td>
+<td></td>
+</tr>
+<tr>
+<td>leave_from</td>
+<td></td>
+</tr>
+<tr>
+<td>leave_end</td>
+<td></td>
+</tr>
+<tr>
+<td>reason</td>
+<td></td>
+</tr>
+<tr>
+<td>notify</td>
+<td></td>
+</tr>
+<tr>
+<td>line_token</td>
+<td>lineToken</td>
+</tr>
+</tbody>
+</table>
+<pre><code>{
+    &quot;action&quot;: &quot;createLeave&quot;,
+    &quot;userId&quot;: &quot;&quot;,
+    &quot;leave&quot;: &quot;&quot;,
+    &quot;leave_from&quot;: &quot;&quot;,
+    &quot;leave_end&quot;: &quot;&quot;,
+    &quot;reason&quot;: &quot;&quot;,
+    &quot;notify&quot;: &quot;notify&quot;,
+    &quot;lineToken&quot;: &quot;&quot;
+}
+</code></pre>
+<p>notify是指要不要通知主管。</p>
+<p>回傳值</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>鍵</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>success</td>
+</tr>
+</tbody>
+</table>
+<p><img src="../../../../../../images/tw/line-accountlink/line-al-fulfill-resource.png" alt="DmFlow 領域完成資源" title="DmFlow 領域完成資源"></p>
+<h1 id="回到dmflow做流程">回到DmFlow做流程</h1>
+<p>1.可以先在config.lineToken 新增line token，以Bearer xxxx(此範例未將Bearer拆開)</p>
+<p>2.新增變數</p>
+<table>
+<thead>
+<tr>
+<th>名稱</th>
+<th>屬性</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>notify</td>
+<td>bool</td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>string</td>
+</tr>
+<tr>
+<td>leave_id</td>
+<td>string</td>
+</tr>
+</tbody>
+</table>
+<p>3.建立資源</p>
+<pre><code>資源名稱: updateLeave
+URL:script.google.com/macros/s/{{生產部屬的ID}}/exec
+Method: POST
+Content-Type: JSON
+</code></pre>
+<p>參數</p>
+<table>
+<thead>
+<tr>
+<th>鍵</th>
+<th>path</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>leave_id</td>
+<td>id</td>
+</tr>
+<tr>
+<td>notify</td>
+<td></td>
+</tr>
+<tr>
+<td>line_token</td>
+<td>lineToken</td>
+</tr>
+</tbody>
+</table>
+<pre><code>{
+    &quot;action&quot;: &quot;updateLeave&quot;,
+    &quot;notify&quot;: false,
+    &quot;lineToken&quot;: &quot;&quot;,
+    &quot;id&quot;: &quot;&quot;
+}
+notify是指要不要通知使用者審核已經過了。
+</code></pre>
+<p>回傳值</p>
+<table>
+<thead>
+<tr>
+<th>JSON Path</th>
+<th>鍵</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>success</td>
+</tr>
+</tbody>
+</table>
+<p>4.領域設定</p>
+<p>開啟請假領域並添加傳遞變數分別為</p>
+<table>
+<thead>
+<tr>
+<th>鍵</th>
+<th>前綴</th>
+<th>值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>notify</td>
+<td>constant</td>
+<td>true</td>
+</tr>
+<tr>
+<td>lineToken</td>
+<td>config</td>
+<td>lineToken</td>
+</tr>
+</tbody>
+</table>
+<p>5.新增allowed_leave 場景</p>
+<p><img src="../../../../../../images/tw/line-accountlink/line-al-dmflow-allowed_leave.png" alt="DmFlow allowed_leave場景" title="DmFlow allowed_leave場景"></p>
+<p>ID 3 資源節點</p>
+<pre><code>選取updateLeave
+參數：
+  notify-&gt;constant true
+  leave_id-&gt;conversation._params.0
+  line_token-&gt;config.lineToken
+回傳值：
+  success-&gt;success
+</code></pre>
+<p>Start-&gt;ID 3 條件節點</p>
+<pre><code>條件為
+  conversation._params.0 已填充
+  sys_user.platform = constant @line
+</code></pre>
+<p>ID 6 回覆節點</p>
+<pre><code>文本：已審核成功
+取消等待用戶回覆
+</code></pre>
+<p>ID 8 回覆節點</p>
+<pre><code>文本：該員工已經審核過了
+取消等待用戶回覆
+</code></pre>
+<p>ID 3-&gt;ID 6 條件節點</p>
+<pre><code>條件為
+  conversation.success = constant true
+</code></pre>
+<p>ID 3-&gt;ID 8 條件節點</p>
+<pre><code>條件為
+  conversation.success = constant false
+</code></pre>
+<p>並在主節點，隨便放下調用節點，並選取請假領域即可。</p>
+<p>6.更新並發布</p>
+<p>實際畫面：</p>
+<p>使用者要求請假</p>
+<p><img src="../../../../../../images/tw/line-accountlink/line-al-leave-request-preview.jpg" alt="DmFlow 使用者要求請假" title="DmFlow 使用者要求請假"></p>
+<p>審核者畫面</p>
+<p><img src="../../../../../../images/tw/line-accountlink/line-al-leave-response-preview.jpg" alt="DmFlow 審核者畫面" title="DmFlow 審核者畫面"></p>
+<blockquote>
+<p>最後若是此範例完畢，記得管理部屬作業將該程序封存，讓程序下線，避免已經綁定信用卡的使用者造成不必要的費用問題。</p>
+</blockquote>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In This Article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            <span>Copyright © <script>document.write(new Date().getFullYear());</script> Communeify</span>
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../../../styles/main.js"></script>
+    <!-- mermaid support -->
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.2.0/dist/mermaid.min.js"></script>
+    <script>
+        mermaid.initialize({
+            startOnLoad: false
+        });
+        mermaid.init(undefined, ".lang-mermaid");
+    </script>
+    <style>
+        #cookie-notice {padding: 0.5rem 1rem; display: none; text-align: center; position: fixed; bottom: 0; width: calc(100% - 2rem); background: #222; color: rgba(255,255,255,0.8); z-index: 1000;}
+        #cookie-notice a {display: inline-block; cursor: pointer; margin-left: 0.5rem;}
+        @media (max-width: 767px) {
+            #cookie-notice span {display: block; padding-top: 3px; margin-bottom: 1rem;}
+            #cookie-notice a {position: relative; bottom: 4px;}
+        }
+    </style>
+    <div id="cookie-notice"><span id="cookie_notice">We would like to use third party cookies and scripts to improve the functionality of this website.</span><a id="cookie-notice-accept" class="btn btn-primary btn-sm">Approve</a><a href="/tw/privacy.html" class="btn btn-primary btn-sm" id="cookie-privacy">Privacy Policy</a></div>
+    <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-VDL6P3EXCQ"></script>
+    <script>
+        function addAnalytics() {
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-VDL6P3EXCQ');
+        }
+        var defaultLanguage = navigator.language;
+    	translateLang(defaultLanguage);
+    	function translateLang(language) {
+    	  var url = window.location.pathname;
+    	  var selectLang = '';
+          try{
+              var lang = url.split('/')[1];
+              if (lang === 'en') {
+                selectLang = 'en';
+              } else if (lang === 'tw') {
+                selectLang = 'tw';
+              } else if (lang === 'cn') {
+                selectLang = 'tw';
+              }
+          }catch(e) {
+          }
+    	  if(selectLang === '') {
+            if (language === 'zh-TW' || language === 'zh-CN') {
+    		    selectLang = 'tw';
+            } else {
+    		    selectLang = 'en';
+    	    }
+    	  }
+    	  var cookieTW = '我們希望使用第三方的Cookie和腳本來提升本網站的功能性。';
+    	  var cookieEN = 'We would like to use third party cookies and scripts to improve the functionality of this website.';
+    	  var approveTW = '允許';
+    	  var approveEN = 'Approve';
+    	  var privacyTW = '隱私權政策';
+    	  var privacyEN = 'Privacy Policy';
+    	  var cookieNoticeElement = document.getElementById('cookie_notice');
+          cookieNoticeElement.textContent = selectLang === 'en' ? cookieEN : cookieTW;
+    	  var cookieNoticeAcceptElement = document.getElementById('cookie-notice-accept');
+          cookieNoticeAcceptElement.textContent = selectLang === 'en' ? approveEN : approveTW;
+    	  var cookiePrivacyElement = document.getElementById('cookie-privacy');
+          cookiePrivacyElement.textContent = selectLang === 'en' ? privacyEN : privacyTW;
+    	  cookiePrivacyElement.href = selectLang === 'en' ? '/en/privacy.html' : '/tw/privacy.html';
+    	}
+    
+        function createCookie(name,value,days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days*24*60*60*1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+        function readCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for(var i=0;i < ca.length;i++) {
+                var c = ca[i];
+                while (c.charAt(0)==' ') c = c.substring(1,c.length);
+                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+            }
+            return null;
+        }
+        function eraseCookie(name) {
+            createCookie(name,"",-1);
+        }
+    
+        if(readCookie('cookie-notice-dismissed')=='true') {
+            addAnalytics();
+        } else {
+            document.getElementById('cookie-notice').style.display = 'block';
+        }
+        document.getElementById('cookie-notice-accept').addEventListener("click",function() {
+            createCookie('cookie-notice-dismissed','true',31);
+            document.getElementById('cookie-notice').style.display = 'none';
+            location.reload();
+        });
+    
+    </script>  </body>
+</html>

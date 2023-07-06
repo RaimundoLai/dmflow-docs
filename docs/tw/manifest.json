@@ -87,7 +87,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/toc.html",
-          "hash": "Va6zvea//6LENl/eziN1AxJNJKhSgomUQ/YksGK44kw="
+          "hash": "YWmxY4Reo2+jWoeQW+MnS7W5Qnq2/QLd2lBcIa3E1Ew="
         }
       },
       "is_incremental": false,
@@ -415,7 +415,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/deploy-test.html",
-          "hash": "y7ppS10ltH14DqnvAM2WH/Cr5xx6YnXCFQvFRoUy+xc="
+          "hash": "shyPj5Za2IEU9HakOAsy31ykEJek/A/iaLqpFvgluDA="
         }
       },
       "is_incremental": false,
@@ -490,7 +490,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/faq-covid-example.html",
-          "hash": "5QmWNQ4PVs71qK+zdJ2EqoeTuqlXICmEI5RgXd84eyc="
+          "hash": "cUOHVWMKElKCE2ieKNHqDNNNARv2+oSrukR9hoinLcY="
         }
       },
       "is_incremental": false,
@@ -505,7 +505,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/human-help.html",
-          "hash": "cOaeQIu0b4tZlHQoCSm2XGhPnY/hXoracNNh15uQL88="
+          "hash": "TEgFCWtmLwjZVPNh02s0ZHCAHYNBVUdqeehFv3dmjB4="
         }
       },
       "is_incremental": false,
@@ -520,7 +520,37 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/index.html",
-          "hash": "Bex3ZCb8ng9FKF4uhOBifmm994PD3L5smwsz0q2iQdI="
+          "hash": "OG5NBFfWRcqerdOGT6cAoBpzAnIDRUVZvMUVUxKbyPs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "products/dmflow/tutorials/intro/intent-leave-example.md",
+      "output": {
+        ".html": {
+          "relative_path": "products/dmflow/tutorials/intro/intent-leave-example.html",
+          "hash": "MD9czGNIihwIhEexn+D898SW9XuaGXOuxznS1ODcZEg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Conceptual",
+      "source_relative_path": "products/dmflow/tutorials/intro/line-accountlink.md",
+      "output": {
+        ".html": {
+          "relative_path": "products/dmflow/tutorials/intro/line-accountlink.html",
+          "hash": "ehDkyIyCNMkbv8CmC8gF8DN4VH4jrRhX9QgwDd+HTnQ="
         }
       },
       "is_incremental": false,
@@ -535,7 +565,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/random-branch.html",
-          "hash": "eVmI/8kTYgLa95aMqqy5U2bn6qg+EIJYw7QTkJ+5cp4="
+          "hash": "ungGccr4aauLwvLKUp/CvpFeTQWw0oH5hA9G8QP6Fuk="
         }
       },
       "is_incremental": false,
@@ -550,7 +580,7 @@
       "output": {
         ".html": {
           "relative_path": "products/dmflow/tutorials/intro/tableqa-car-example.html",
-          "hash": "d6/SXEFZAPc4qNgQFWKjuHNjDpmf614OrPTg4jwrb04="
+          "hash": "ZQuHpAs0iKCYE6nG3nsDgVW9/4dNZX6Zv8bNQkgw0ek="
         }
       },
       "is_incremental": false,
@@ -593,8 +623,8 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build",
-          "total_file_count": 36,
-          "skipped_file_count": 35
+          "total_file_count": 38,
+          "skipped_file_count": 37
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,

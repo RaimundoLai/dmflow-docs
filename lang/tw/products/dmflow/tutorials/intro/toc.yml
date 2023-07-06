@@ -17,3 +17,7 @@
   href: faq-covid-example.md
 - name: 表格問答範例-汽車
   href: tableqa-car-example.md
+- name: 意圖範例-請假系統
+  href: intent-leave-example.md
+- name: LINE平台-帳號連結
+  href: line-accountlink.md

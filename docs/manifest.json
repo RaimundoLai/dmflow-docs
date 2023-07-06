@@ -2816,6 +2816,116 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "images/tw/line-accountlink/line-al-connect.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/line-accountlink/line-al-connect.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/line-accountlink/line-al-dmflow-allowed_leave.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/line-accountlink/line-al-dmflow-allowed_leave.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/line-accountlink/line-al-dmflow.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/line-accountlink/line-al-dmflow.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/line-accountlink/line-al-fulfill-resource.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/line-accountlink/line-al-fulfill-resource.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/line-accountlink/line-al-leave-request-preview.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/line-accountlink/line-al-leave-request-preview.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/line-accountlink/line-al-leave-response-preview.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/line-accountlink/line-al-leave-response-preview.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/line-accountlink/line-al-login.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/line-accountlink/line-al-login.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/line-accountlink/line-al-preview.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/line-accountlink/line-al-preview.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/line-accountlink/line-al-success.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/line-accountlink/line-al-success.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tw/line-deskhelp.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tw/line-deskhelp.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "images/tw/messenger-001.png",
       "output": {
         "resource": {

@@ -11,11 +11,10 @@ description: 使用Communeify DmFlow的表格問答功能，輕鬆解決問題�
 
 ```
 資料來源
-
 https://c.8891.com.tw/
 ```
 
-將資料轉成DmFlow需求的excel格式，縮圖直接用上述資料來源網址，如使用無法顯示，請再告知。
+將資料轉成DmFlow需求的excel格式，縮圖直接用上述資料來源網址，如使用無法顯示或資料來源有問題請寄信到<service@communeify.com>告知。
 
 - [car.xlsx](../../../../../../files/xlsx/car.xlsx "car.xlsx") 上傳到汽車資料庫的資料
 - [car-dict.xlsx](../../../../../../files/xlsx/car-dict.xlsx "car-dict.xlsx") 汽車實體資料
@@ -67,4 +66,4 @@ https://c.8891.com.tw/
 
 [Communeify官方](https://communeify.com/)
 
-- 進入官網後，允許Cookie後即會跳出連線真人的聊天視窗，或是可以有問題可以從信箱問<service@communeify.com>
+- 進入官網後，可以線上直接回覆，或是可以有問題可以從信箱問<service@communeify.com>
