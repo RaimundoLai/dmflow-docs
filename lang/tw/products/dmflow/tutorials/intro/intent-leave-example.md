@@ -381,6 +381,7 @@ notify是指要不要通知使用者審核已經過了。
 | ------   | ---------  | -------
 | notify   | constant	| true	
 | lineToken| config	    | lineToken	
+| userId   | sys_user   | userId
 
 5.新增allowed_leave 場景
 

@@ -585,6 +585,11 @@ notify是指要不要通知使用者審核已經過了。
 <td>config</td>
 <td>lineToken</td>
 </tr>
+<tr>
+<td>userId</td>
+<td>sys_user</td>
+<td>userId</td>
+</tr>
 </tbody>
 </table>
 <p>5.新增allowed_leave 場景</p>
@@ -750,10 +755,20 @@ notify是指要不要通知使用者審核已經過了。
         function eraseCookie(name) {
             createCookie(name,"",-1);
         }
+    	function isEuCountry(language) {
+          var euCountries = ['de', 'fr', 'it', 'es', 'pt', 'nl', 'sv', 'fi', 'da'];
+      
+          var countryCode = language.substring(0, 2).toLowerCase();
+          return euCountries.includes(countryCode);
+        }
+    	var isEuUser = isEuCountry(navigator.language || navigator.userLanguage);
     
         if(readCookie('cookie-notice-dismissed')=='true') {
             addAnalytics();
-        } else {
+        } else if(!isEuUser) {
+    	    addAnalytics();
+    		document.getElementById('cookie-notice').style.display = 'block';
+    	} else {
             document.getElementById('cookie-notice').style.display = 'block';
         }
         document.getElementById('cookie-notice-accept').addEventListener("click",function() {
