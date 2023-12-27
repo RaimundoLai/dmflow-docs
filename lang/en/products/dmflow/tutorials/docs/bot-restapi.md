@@ -9,11 +9,8 @@ description: "The API is designed for programmatically searching, modifying, and
 
 Every request needs to include the Authorization header.
 
-The composition is as follows: <METHOD><URL_PATH><QUERY_STRING><REQUEST_BODY>:<CLIENT_ID>:<TIME_STAMP>:<RANDOM_VALUE>
+The composition is as follows: <CLIENT_ID>:<TIME_STAMP>:<NONCE>
 
-- METHOD: Can be one of the following: GET, POST, PATCH, PUT, DELETE (uppercase).
-- QUERY_STRING: Sorted in ascending order based on the keys. If keys are the same, sort by values.
-- REQUEST_BODY: If the METHOD is POST, PATCH, or PUT, there might be a REQUEST_DATA. Otherwise, leave it empty.
 - CLIENT_ID: The CLIENT_ID provided by DMFlow.
 - TIMESTAMP: The current time used for checking expiration.
 - RANDOM_VALUE: Used to check if the operation is repeated. UUID is commonly used.
@@ -25,37 +22,11 @@ var uuid = require('uuid');
 const secretKey = 'a60207f4d8abf6ee7bf14ecaa69fbb310310784abdae354fadd4939eda95e54c';
 const clientId = '6d7ffe73-e922-4011-9057-606fc42966d8';
 
-const isJsonContent = pm.request.headers.get('Content-Type') === 'application/json';
-
-let requestData = pm.request.method.toUpperCase() + pm.request.url.getPath();
-
-const queryString = pm.request.url.query;
-if (queryString) {
-    const queryParams = queryString.toObject();
-    const sortedParams = Object.entries(queryParams)
-        .sort(([key1, value1], [key2, value2]) => key1.localeCompare(key2));
-    const queryStringBuilder = [];
-    sortedParams.forEach(([paramName, paramValues]) => {
-        if (!Array.isArray(paramValues)) {
-            paramValues = [paramValues];
-        }
-        paramValues.sort();
-        paramValues.forEach((value) => {
-            queryStringBuilder.push(`${paramName}=${value}`);
-        });
-    });
-
-    requestData += queryStringBuilder.join('&')
-}
-if (isJsonContent) {
-    requestData += request.data;
-}
-
 const timestamp = Math.floor(Date.now() / 1000);
 const randomValue = uuid.v4();
-requestData += (':' + clientId + ':' + timestamp + ':' + randomValue);
+requestData += (clientId + ':' + timestamp + ':' + randomValue);
 const signature = CryptoJS.HmacSHA256(requestData, secretKey).toString(CryptoJS.enc.Hex);
-var map = { 'signature': 'sha256=' + signature, 'clientId': clientId, 'timestamp': timestamp, 'random': randomValue };
+var map = { 'signature': 'sha256=' + signature, 'clientId': clientId, 'timestamp': timestamp, 'nonce': randomValue };
 var words = CryptoJS.enc.Utf8.parse(JSON.stringify(map));
 var base64 = CryptoJS.enc.Base64.stringify(words);
 pm.environment.set('auth', 'Bearer ' + base64);

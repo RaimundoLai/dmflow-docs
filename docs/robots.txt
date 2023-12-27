@@ -1,0 +1,6 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://docs.communeify.com/sitemap.xml
+Sitemap: https://docs.communeify.com/tw/sitemap.xml
+Sitemap: https://docs.communeify.com/en/sitemap.xml

@@ -118,15 +118,14 @@ article h4 {
   background-color: #fff;
 }
 
-.navbar-inverse {
-  background-color: var(--header-bg-color);
+
+.container .navbar-inverse {
   z-index: 100;
 }
 
 .navbar-inverse .navbar-nav > li > a,
 .navbar-inverse .navbar-text {
   color: var(--header-ft-color);
-  background-color: var(--header-bg-color);
   border-bottom: 3px solid transparent;
   padding-bottom: 12px;
   transition: 350ms;
@@ -135,7 +134,6 @@ article h4 {
 .navbar-inverse .navbar-nav > li > a:focus,
 .navbar-inverse .navbar-nav > li > a:hover {
   color: var(--header-ft-color);
-  background-color: var(--header-bg-color);
   border-bottom: 3px solid white;
 }
 
@@ -143,7 +141,6 @@ article h4 {
 .navbar-inverse .navbar-nav > .active > a:focus,
 .navbar-inverse .navbar-nav > .active > a:hover {
   color: var(--header-ft-color);
-  background-color: var(--header-bg-color);
   border-bottom: 3px solid white;
 }
 

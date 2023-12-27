@@ -22,6 +22,8 @@ description: Communeify Document Language Product DmFlow Dialog Management Flow 
 
 <div id="websiteLink">Website Link：<a href='https://www.communeify.com/en' target="_blank">https://www.communeify.com</a></div>
 <div id="websiteLink_tw">提供官網連結：<a href='https://www.communeify.com' target="_blank">https://www.communeify.com</a></div>
+<div id="websiteLink_start">MVP產品試用：<a href='https://communeify.com/start' target="_blank">https://communeify.com/start</a></div>
+<div id="websiteLink_start_en">MVP Product Trial：<a href='https://communeify.com/en/start' target="_blank">https://communeify.com/en/start</a></div>
 <div>
   <h2 id="products">Products</h2><br>
   <ul id="product_langs">

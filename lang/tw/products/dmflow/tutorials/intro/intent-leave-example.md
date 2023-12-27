@@ -134,6 +134,19 @@ function searchUser(userId) {
   return { sucess: false };
 }
 
+function formatTimestamp(timestamp) {
+  var date = new Date(timestamp * 1000);
+  var year = date.getFullYear();
+  var month = ('0' + (date.getMonth() + 1)).slice(-2);
+  var day = ('0' + date.getDate()).slice(-2);
+  var hours = ('0' + date.getHours()).slice(-2);
+  var minutes = ('0' + date.getMinutes()).slice(-2);
+  var seconds = ('0' + date.getSeconds()).slice(-2);
+
+  var formattedDate = year + '-' + month + '-' + day + ' ' + hours + ':' + minutes + ':' + seconds;
+  return formattedDate;
+}
+
 function sendMessageToManager(userId, user, lineToken, leave, leave_from, leave_end, reason, leave_id) {
   const username = user[0];
   const managerId = user[4];

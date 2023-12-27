@@ -4,8 +4,7 @@
     "changefreq": "weekly",
     "priority": 1.0
   },
-  "homepages": [],
-  "source_base_path": "E:/workspace/doc_obotera/docfx_project/lang/en",
+  "source_base_path": "D:/workspace/doc_obotera/docfx_project/lang/en",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -16,7 +15,6 @@
           "relative_path": "images/favicon.ico"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -27,22 +25,16 @@
           "relative_path": "images/logo.svg"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
-          "relative_path": "index.html",
-          "hash": "GNqSwZUMFSVowyBMaLrJSUs4HVFGPU/O2nO5EPFI0Bs="
+          "relative_path": "index.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -50,11 +42,9 @@
       "source_relative_path": "privacy.md",
       "output": {
         ".html": {
-          "relative_path": "privacy.html",
-          "hash": "rzaBe1NASLZqfuClnEp8B01YZ7W3FZ0EeSXnMY12cEM="
+          "relative_path": "privacy.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -62,11 +52,9 @@
       "source_relative_path": "products/dmflow/index.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/index.html",
-          "hash": "kXJMhOy3KE+wiUmrfz7vr980uApbjkcmW/+a/Y/9+bc="
+          "relative_path": "products/dmflow/index.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -74,11 +62,9 @@
       "source_relative_path": "products/dmflow/info/index.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/info/index.html",
-          "hash": "mx0fPe8WvZEWljzPlopU4qX2p6IjnJecJt93OFlQLTw="
+          "relative_path": "products/dmflow/info/index.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -86,131 +72,92 @@
       "source_relative_path": "products/dmflow/toc.yml",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/toc.html",
-          "hash": "PCg4vcIhFLzU7k8bkxmKh6Qo39v9Bq6Kfr3rqSGrd9E="
+          "relative_path": "products/dmflow/toc.html"
+        },
+        ".json": {
+          "relative_path": "products/dmflow/toc.json"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/docs/bot-broadcast.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/docs/bot-broadcast.html",
-          "hash": "URmT8V4Xck3wIqudZK5PeOPFp6PziZBycPdEwOBpv64="
+          "relative_path": "products/dmflow/tutorials/docs/bot-broadcast.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/docs/bot-example.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/docs/bot-example.html",
-          "hash": "i3Xp3vESmThpnefQcR54TCnQuMobaJFirh54fju1CFg="
+          "relative_path": "products/dmflow/tutorials/docs/bot-example.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/docs/bot-flow.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/docs/bot-flow.html",
-          "hash": "4jl5fGaWeKmPJNPXISKDFgDP4MDhrmkJVzVwKGdcxR8="
+          "relative_path": "products/dmflow/tutorials/docs/bot-flow.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/docs/bot-global.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/docs/bot-global.html",
-          "hash": "PXqozX0OmN6+m6uskY5h2iCtwxsR3Q7WjnqzX/INvgI="
+          "relative_path": "products/dmflow/tutorials/docs/bot-global.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/docs/bot-intro.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/docs/bot-intro.html",
-          "hash": "MQbMUJdWIREsdinFKx92xBqfoSdWelcCjjFBY5nDRj0="
+          "relative_path": "products/dmflow/tutorials/docs/bot-intro.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/docs/bot-log.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/docs/bot-log.html",
-          "hash": "ucsrLkz0PnNIvKraz6vLa7xXM9yS5lwb93aqR4itLrs="
+          "relative_path": "products/dmflow/tutorials/docs/bot-log.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/docs/bot-published.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/docs/bot-published.html",
-          "hash": "/QGjnOn+dR2l69KptLA6/MczUSb/NR1x9RW9jXULWv4="
+          "relative_path": "products/dmflow/tutorials/docs/bot-published.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/docs/bot-resource.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/docs/bot-resource.html",
-          "hash": "B+dadFfTmaGm4zBV5VVTE9Q0DHPKPygu7fmz1NZhGDU="
+          "relative_path": "products/dmflow/tutorials/docs/bot-resource.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -218,281 +165,225 @@
       "source_relative_path": "products/dmflow/tutorials/docs/bot-restapi.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/docs/bot-restapi.html",
-          "hash": "u5b7dsSm/HdjoCu/X3MzMN55s5H6J/iEuuve37+BCcY="
+          "relative_path": "products/dmflow/tutorials/docs/bot-restapi.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/docs/bot-setting.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/docs/bot-setting.html",
-          "hash": "AoLEJlAeIrQzy8B6q/z9hL3pEwpMQ3114elUovkExHg="
+          "relative_path": "products/dmflow/tutorials/docs/bot-setting.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/docs/bot-template.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/docs/bot-template.html",
-          "hash": "2Am64UigteeLazzVw18ltbGvTS/KhhbDlB+JDhdO9zo="
+          "relative_path": "products/dmflow/tutorials/docs/bot-template.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/docs/custom-dicts.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/docs/custom-dicts.html",
-          "hash": "O20jrOh6rvAky+sbhS0S8oAuqOv68gPEtGaYYnM+OTk="
+          "relative_path": "products/dmflow/tutorials/docs/custom-dicts.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/docs/domain-intro.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/docs/domain-intro.html",
-          "hash": "v0WZodFwntvekTCQibp/hlKwguMmha9O2RgHTv9e3S4="
+          "relative_path": "products/dmflow/tutorials/docs/domain-intro.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
+      "type": "Conceptual",
+      "source_relative_path": "products/dmflow/tutorials/docs/embedded-web.md",
+      "output": {
+        ".html": {
+          "relative_path": "products/dmflow/tutorials/docs/embedded-web.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/docs/fbmessenger.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/docs/fbmessenger.html",
-          "hash": "k5yg8JyoFfNXIDT3DmpuqzyPqzrmSH5qvIcSUKtLIvw="
+          "relative_path": "products/dmflow/tutorials/docs/fbmessenger.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/docs/index.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/docs/index.html",
-          "hash": "Bx+gVjHjUZ42F7bbFhypQlqVo6nGD8h3d3eJ08SKuC8="
+          "relative_path": "products/dmflow/tutorials/docs/index.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/docs/intent-intro.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/docs/intent-intro.html",
-          "hash": "59H4OCwFipBw2em/AvtkSXohoAGT0fOjE0mE/sVNS2s="
+          "relative_path": "products/dmflow/tutorials/docs/intent-intro.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/docs/line.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/docs/line.html",
-          "hash": "kmcVsuzvHcp1ElZWgZIdlBMOR5gynxJnE6CgdOocW+8="
+          "relative_path": "products/dmflow/tutorials/docs/line.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/docs/qa-intro.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/docs/qa-intro.html",
-          "hash": "aMe92E5h6afJuuQZU+oaULRljBG4pw3KG4RRx3s2PLA="
+          "relative_path": "products/dmflow/tutorials/docs/qa-intro.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/docs/sys-dicts.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/docs/sys-dicts.html",
-          "hash": "lntpWAjHZ84VKk+uw4ELx8Q3DfXYk5jkhYNGR1tQHQc="
+          "relative_path": "products/dmflow/tutorials/docs/sys-dicts.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/docs/telegram.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/docs/telegram.html",
-          "hash": "V7FwaycwqVOgBS//gmffXDiVTZiZ36RblsYRqdo5YuI="
+          "relative_path": "products/dmflow/tutorials/docs/telegram.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
+      "type": "Toc",
+      "source_relative_path": "products/dmflow/tutorials/docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "products/dmflow/tutorials/docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "products/dmflow/tutorials/docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/index.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/index.html",
-          "hash": "4udq2G7bwNUylvvV7nKK//Vl/uNC/iMwDnZ51W+KzL8="
+          "relative_path": "products/dmflow/tutorials/index.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/intro/deploy-test.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/intro/deploy-test.html",
-          "hash": "7aLyIrjQH+G0jnEIPiNSlsACOponY01641CqjJh7hHw="
+          "relative_path": "products/dmflow/tutorials/intro/deploy-test.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/intro/dict-create.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/intro/dict-create.html",
-          "hash": "Jv/61tXZa92WINPQDvTv0YGM7To04gq4CmXWdcJwhco="
+          "relative_path": "products/dmflow/tutorials/intro/dict-create.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/intro/distinct-content.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/intro/distinct-content.html",
-          "hash": "8gBKXiCv/z+OmM76eUhV4/J0erl+TdlV8bVXjQbs0iQ="
+          "relative_path": "products/dmflow/tutorials/intro/distinct-content.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/intro/domain-create.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/intro/domain-create.html",
-          "hash": "9Bsw37jqIZuWFJxfa/a89ARwLGL5lR8KfsxCw6knifE="
+          "relative_path": "products/dmflow/tutorials/intro/domain-create.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/intro/entity-logical.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/intro/entity-logical.html",
-          "hash": "0PhyUXssvu5KDkwM++pVii0ZenVRfb+GGPlCKiliF60="
+          "relative_path": "products/dmflow/tutorials/intro/entity-logical.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
       "type": "Conceptual",
       "source_relative_path": "products/dmflow/tutorials/intro/index.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/tutorials/intro/index.html",
-          "hash": "b+pMdM2MP+bqcoo/HU/vmqfzx4ZaRlgSSsAIUm18fO8="
+          "relative_path": "products/dmflow/tutorials/intro/index.html"
         }
       },
-      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "products/dmflow/tutorials/intro/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "products/dmflow/tutorials/intro/toc.html"
+        },
+        ".json": {
+          "relative_path": "products/dmflow/tutorials/intro/toc.json"
+        }
+      },
       "version": ""
     },
     {
@@ -500,11 +391,9 @@
       "source_relative_path": "products/dmflow/version/index.md",
       "output": {
         ".html": {
-          "relative_path": "products/dmflow/version/index.html",
-          "hash": "k4RF5u1i4BiRhWQ9s/W5r7edBtkr8VN7/kvKRf07tm4="
+          "relative_path": "products/dmflow/version/index.html"
         }
       },
-      "is_incremental": false,
       "version": ""
     },
     {
@@ -512,57 +401,15 @@
       "source_relative_path": "toc.yml",
       "output": {
         ".html": {
-          "relative_path": "toc.html",
-          "hash": "N4r2I9lHBDVVeVRDMfBOcgz1v6Bm+UGaPuswWC0ZqcU="
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
         }
       },
-      "is_incremental": false,
       "version": ""
     }
   ],
-  "incremental_info": [
-    {
-      "status": {
-        "can_incremental": true,
-        "incrementalPhase": "build",
-        "total_file_count": 0,
-        "skipped_file_count": 0
-      },
-      "processors": {
-        "ConceptualDocumentProcessor": {
-          "can_incremental": true,
-          "incrementalPhase": "build",
-          "total_file_count": 32,
-          "skipped_file_count": 32
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        },
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build",
-          "total_file_count": 0,
-          "skipped_file_count": 0
-        }
-      }
-    },
-    {
-      "status": {
-        "can_incremental": false,
-        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
-        "incrementalPhase": "postProcessing",
-        "total_file_count": 0,
-        "skipped_file_count": 0
-      },
-      "processors": {}
-    }
-  ],
-  "version_info": {},
   "groups": [
     {
       "xrefmap": "xrefmap.yml"

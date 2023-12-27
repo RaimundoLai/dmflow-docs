@@ -9,14 +9,11 @@ description: "API的用途是以程式碼搜尋、修改和刪除DmFlow內部資
 
 每一個請求都需要攜帶Authorization.
 
-組成為<METHOD><URL_PATH><QUERY_STRING><REQUEST_BODY>:<CLIENT_ID>:<TIME_STAMP>:<RANDOM_VALUE>
+組成為<CLIENT_ID>:<TIME_STAMP>:<NONCE>
 
-- METHOD:分為GET、POST、PATCH、PUT、DELETE(大寫)
-- QUERY_STRING:根據key從小排到大，若key相同則排序value。
-- REQUEST_BODY:如果METHOD為POST、PATCH、PUT時，可能會有REQUEST_DATA，如果沒有則不放文字。
 - CLIENT_ID:DMFlow提供的CLIENT_ID
 - TIMESTAMP:當前時間，用來判斷是否有過期。
-- RANDOM:用於判斷此操作有沒有重複做，一般用UUID即可。
+- NONCE:一般可以同樣用TIMESTAMP來注入，或是UUID也行
 
 Postman pre script 參考。
 
@@ -25,37 +22,11 @@ var uuid = require('uuid');
 const secretKey = 'a60207f4d8abf6ee7bf14ecaa69fbb310310784abdae354fadd4939eda95e54c';
 const clientId = '6d7ffe73-e922-4011-9057-606fc42966d8';
 
-const isJsonContent = pm.request.headers.get('Content-Type') === 'application/json';
-
-let requestData = pm.request.method.toUpperCase() + pm.request.url.getPath();
-
-const queryString = pm.request.url.query;
-if (queryString) {
-    const queryParams = queryString.toObject();
-    const sortedParams = Object.entries(queryParams)
-        .sort(([key1, value1], [key2, value2]) => key1.localeCompare(key2));
-    const queryStringBuilder = [];
-    sortedParams.forEach(([paramName, paramValues]) => {
-        if (!Array.isArray(paramValues)) {
-            paramValues = [paramValues];
-        }
-        paramValues.sort();
-        paramValues.forEach((value) => {
-            queryStringBuilder.push(`${paramName}=${value}`);
-        });
-    });
-
-    requestData += queryStringBuilder.join('&')
-}
-if (isJsonContent) {
-    requestData += request.data;
-}
-
 const timestamp = Math.floor(Date.now() / 1000);
 const randomValue = uuid.v4();
-requestData += (':' + clientId + ':' + timestamp + ':' + randomValue);
+requestData += (clientId + ':' + timestamp + ':' + randomValue);
 const signature = CryptoJS.HmacSHA256(requestData, secretKey).toString(CryptoJS.enc.Hex);
-var map = { 'signature': 'sha256=' + signature, 'clientId': clientId, 'timestamp': timestamp, 'random': randomValue };
+var map = { 'signature': 'sha256=' + signature, 'clientId': clientId, 'timestamp': timestamp, 'nonce': randomValue };
 var words = CryptoJS.enc.Utf8.parse(JSON.stringify(map));
 var base64 = CryptoJS.enc.Base64.stringify(words);
 pm.environment.set('auth', 'Bearer ' + base64);
@@ -1225,6 +1196,11 @@ REQUEST JSON
 | error                             | 當回應碼不為0的時候產生的錯誤訊息
 
 # 最後更新時間
+
+2023/07/12
+
+刪除API signature Query和Payload的複雜計算
+
 2023/06/20
 
 - 刪除所有API需要appId的參數，一律以系統內部設置為主。

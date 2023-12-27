@@ -1,32 +1,32 @@
 ﻿<!DOCTYPE html>
 <!--[if IE]><![endif]-->
 <html>
-  
+
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>DmFlow &#30693;&#35672;&#24235;&#20171;&#32057; | DmFlow | Communeify </title>
+    <title>DmFlow 知識庫介紹 | DmFlow | Communeify </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="DmFlow &#30693;&#35672;&#24235;&#20171;&#32057; | DmFlow | Communeify ">
-    <meta name="description" content="&#30693;&#35672;&#24235;&#21253;&#21547;&#21839;&#31572;&#23565;&#20197;&#21450;&#34920;&#26684;&#21839;&#31572;&#65292;&#20197;&#19979;&#23559;&#26371;&#20171;&#32057;&#20841;&#32773;&#30340;&#23450;&#32681;&#20197;&#21450;&#29992;&#36884;&#12290;">
-    <meta name="generator" content="docfx 2.58.9.0">
+    <meta name="title" content="DmFlow 知識庫介紹 | DmFlow | Communeify ">
+    <meta name="description" content="知識庫包含問答對以及表格問答，以下將會介紹兩者的定義以及用途。">
+    <meta name="generator" content="docfx ">
     <meta name="google-site-verification" content="wackHW3mx9OzoWNdH73Ucfx-Tgn27NaVqlQ-dzKaBfw">
-    
+  
     <link rel="shortcut icon" href="../../../../images/favicon.ico">
     <meta property="docfx:appTitle" content="Communeify">
-    <link rel="stylesheet" href="../../../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../../../styles/docfx.vendor.min.css">
     <link rel="stylesheet" href="../../../../styles/docfx.css">
     <link rel="stylesheet" href="../../../../styles/main.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> 
     <meta property="docfx:navrel" content="../../../../toc.html">
     <meta property="docfx:tocrel" content="../../toc.html">
-    
-    
-    
+  
+  
+  
   </head>  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
-        
+
         <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -36,7 +36,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              
+
               <a class="navbar-brand" href="../../../../index.html">
                 <img id="logo" class="svg" src="../../../../images/logo.svg" alt="">
               </a>
@@ -50,7 +50,7 @@
             </div>
           </div>
         </nav>
-        
+
         <div class="subnav navbar navbar-default">
           <div class="container hide-when-search" id="breadcrumb">
             <ul class="breadcrumb">
@@ -60,7 +60,7 @@
         </div>
       </header>
       <div role="main" class="container body-content hide-when-search">
-        
+
         <div class="sidenav hide-when-search">
           <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
           <div class="sidetoggle collapse" id="sidetoggle">
@@ -196,7 +196,7 @@
 <p>listOutput</p>
 <pre><code>${%listOutput(#context.order,'${#br}第${#index}筆:日期${#item.date}, 金額為:${#item.money};' ,'1')}
 </code></pre>
-<p>在這個範例中，您需要將第一個參數設置為回傳的陣列數值。第二個參數則是一個字串，其中${#br}代表換行符號，${#index}代表目前迴圈的索引值，${#item.date}和${#item.money}分別代表每個項目的日期和金額屬性。</p>
+<p>在這個範例中，您需要將第一個參數設置為回傳的陣列數值。第二個參數則是一個字串，其中${#br}代表換行符號，<span class="math">\({#index}代表目前迴圈的索引值，\)</span>{#item.date}和${#item.money}分別代表每個項目的日期和金額屬性。</p>
 <p>藉由使用這個優化後的指令，您可以方便地生成具有特定格式的列表，以便於顯示和使用所需的數值資訊。</p>
 <p>透過下圖選擇資源，並呼叫該資源得到JSON回應為</p>
 <pre><code>{
@@ -218,9 +218,9 @@
 <p><img src="../../../../../../images/tw/domain-resource-param.png" alt="知識庫資源" title="知識庫資源"></p>
 <p>模板原本輸出</p>
 <blockquote>
-<p>舒適度:${#context.comfortable}，溫度${#context.temperature}度c
+<p>舒適度:<span class="math">\({#context.comfortable}，溫度\)</span>{#context.temperature}度c
 時間${%extractTime(#context.datetime,'yyyy年MM月dd日HH:mm','')}
-${%listOutput(#context.next_d,'${#br}第${#index}筆:日期${#item.date}, 下雨機率:${#item.rain_per}%;' ,'1')}</p>
+<span class="math">\({%listOutput(#context.next_d,'\)</span>{#br}第${#index}筆:日期${#item.date}, 下雨機率:${#item.rain_per}%;' ,'1')}</p>
 </blockquote>
 <p>模板替代輸出</p>
 <blockquote>
@@ -245,24 +245,28 @@ ${%listOutput(#context.next_d,'${#br}第${#index}筆:日期${#item.date}, 下雨
 <li>增加表格問答以及問答對的基本解釋</li>
 <li>將item.br以及item.index更改為br以及index。</li>
 </ul>
+
 </article>
           </div>
-          
+
           <div class="hidden-sm col-md-2" role="complementary">
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/RaimundoLai/dmflow-docs/blob/master/lang/tw/products/dmflow/tutorials/docs/qa-intro.md/#L1" class="contribution-link">Edit this page</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-                <h5>In This Article</h5>
+                <h5>In this article</h5>
                 <div></div>
               </nav>
             </div>
           </div>
         </div>
       </div>
-      
+
       <footer>
         <div class="grad-bottom"></div>
         <div class="footer">
@@ -270,13 +274,13 @@ ${%listOutput(#context.next_d,'${#br}第${#index}筆:日期${#item.date}, 下雨
             <span class="pull-right">
               <a href="#top">Back to top</a>
             </span>
-            <span>Copyright © <script>document.write(new Date().getFullYear());</script> Communeify</span>
-            
+      <span>Copyright © <script>document.write(new Date().getFullYear());</script> Communeify</span>
+      
           </div>
         </div>
       </footer>
     </div>
-    <script type="text/javascript" src="../../../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../../../styles/docfx.vendor.min.js"></script>
     <script type="text/javascript" src="../../../../styles/docfx.js"></script>
     <script type="text/javascript" src="../../../../styles/main.js"></script>
     <style>
@@ -335,7 +339,7 @@ ${%listOutput(#context.next_d,'${#br}第${#index}筆:日期${#item.date}, 下雨
           cookiePrivacyElement.textContent = selectLang === 'en' ? privacyEN : privacyTW;
     	  cookiePrivacyElement.href = selectLang === 'en' ? '/en/privacy.html' : '/tw/privacy.html';
     	}
-    
+
         function createCookie(name,value,days) {
             var expires = "";
             if (days) {
@@ -360,12 +364,12 @@ ${%listOutput(#context.next_d,'${#br}第${#index}筆:日期${#item.date}, 下雨
         }
     	function isEuCountry(language) {
           var euCountries = ['de', 'fr', 'it', 'es', 'pt', 'nl', 'sv', 'fi', 'da'];
-      
+  
           var countryCode = language.substring(0, 2).toLowerCase();
           return euCountries.includes(countryCode);
         }
     	var isEuUser = isEuCountry(navigator.language || navigator.userLanguage);
-    
+
         if(readCookie('cookie-notice-dismissed')=='true') {
             addAnalytics();
         } else if(!isEuUser) {
@@ -379,6 +383,6 @@ ${%listOutput(#context.next_d,'${#br}第${#index}筆:日期${#item.date}, 下雨
             document.getElementById('cookie-notice').style.display = 'none';
             location.reload();
         });
-    
+
     </script>  </body>
 </html>
