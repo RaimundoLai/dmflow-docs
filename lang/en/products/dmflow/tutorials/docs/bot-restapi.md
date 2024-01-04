@@ -7,30 +7,9 @@ description: "The API is designed for programmatically searching, modifying, and
 
 ## Authorization
 
-Every request needs to include the Authorization header.
+Proceed directly to the 'Key List' for the robot and 'API Management' for the domain. Copy directly by selecting the copy option next to the key. 
 
-The composition is as follows: <CLIENT_ID>:<TIME_STAMP>:<NONCE>
-
-- CLIENT_ID: The CLIENT_ID provided by DMFlow.
-- TIMESTAMP: The current time used for checking expiration.
-- RANDOM_VALUE: Used to check if the operation is repeated. UUID is commonly used.
-
-Here is a reference for the Postman pre-script.
-
-```
-var uuid = require('uuid');
-const secretKey = 'a60207f4d8abf6ee7bf14ecaa69fbb310310784abdae354fadd4939eda95e54c';
-const clientId = '6d7ffe73-e922-4011-9057-606fc42966d8';
-
-const timestamp = Math.floor(Date.now() / 1000);
-const randomValue = uuid.v4();
-requestData += (clientId + ':' + timestamp + ':' + randomValue);
-const signature = CryptoJS.HmacSHA256(requestData, secretKey).toString(CryptoJS.enc.Hex);
-var map = { 'signature': 'sha256=' + signature, 'clientId': clientId, 'timestamp': timestamp, 'nonce': randomValue };
-var words = CryptoJS.enc.Utf8.parse(JSON.stringify(map));
-var base64 = CryptoJS.enc.Base64.stringify(words);
-pm.environment.set('auth', 'Bearer ' + base64);
-```
+{{auth}}=Bearer <api token>
 
 
 ## Bot Details

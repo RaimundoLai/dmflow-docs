@@ -15,3 +15,4 @@ description: 辭典、知識庫、領域、機器人、API、Facebook粉絲頁�
 | Facebook粉絲頁設定   |[連結](../../tutorials/docs/fbmessenger.html)
 | LINE開發設定         |[連結](../../tutorials/docs/line.html)
 | Telegram開發設定     |[連結](../../tutorials/docs/telegram.html)
+| 内嵌網頁設定         |[連結](../../tutorials/docs/embedded-web.html)

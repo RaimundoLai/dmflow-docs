@@ -5,13 +5,14 @@ description: Dictionary, Knowledge Base, Domains, Bots, API, Facebook Page Setti
 
 # Table of Contents
 
-| Title                 | Link
-|---------------------- |-------------------------------------------
-| Dictionary            |[Link](../../tutorials/docs/sys-dicts.html)
-| Knowledge Base        |[Link](../../tutorials/docs/qa-intro.html)
-| Domains               |[Link](../../tutorials/docs/domain-intro.html)
-| Chatbots              |[Link](../../tutorials/docs/bot-intro.html)
-| API                   |[Link](../../tutorials/docs/bot-restapi.html)
-| Facebook Page Settings|[Link](../../tutorials/docs/fbmessenger.html)
-| LINE Development      |[Link](../../tutorials/docs/line.html)
-| Telegram Development  |[Link](../../tutorials/docs/telegram.html)
+| Title                    | Link
+|----------------------    |-------------------------------------------
+| Dictionary               |[Link](../../tutorials/docs/sys-dicts.html)
+| Knowledge Base           |[Link](../../tutorials/docs/qa-intro.html)
+| Domains                  |[Link](../../tutorials/docs/domain-intro.html)
+| Chatbots                 |[Link](../../tutorials/docs/bot-intro.html)
+| API                      |[Link](../../tutorials/docs/bot-restapi.html)
+| Facebook Page Settings   |[Link](../../tutorials/docs/fbmessenger.html)
+| LINE Development         |[Link](../../tutorials/docs/line.html)
+| Telegram Development     |[Link](../../tutorials/docs/telegram.html)
+| Embedded Web Development |[Link](../../tutorials/docs/embedded-web.html)

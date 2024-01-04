@@ -7,30 +7,9 @@ description: "API的用途是以程式碼搜尋、修改和刪除DmFlow內部資
 
 ## Authorization
 
-每一個請求都需要攜帶Authorization.
+直接進行機器人的"密鑰列表"和領域的"API管理"，顯示密鑰旁邊有個複製直接複製即可。
 
-組成為<CLIENT_ID>:<TIME_STAMP>:<NONCE>
-
-- CLIENT_ID:DMFlow提供的CLIENT_ID
-- TIMESTAMP:當前時間，用來判斷是否有過期。
-- NONCE:一般可以同樣用TIMESTAMP來注入，或是UUID也行
-
-Postman pre script 參考。
-
-```
-var uuid = require('uuid');
-const secretKey = 'a60207f4d8abf6ee7bf14ecaa69fbb310310784abdae354fadd4939eda95e54c';
-const clientId = '6d7ffe73-e922-4011-9057-606fc42966d8';
-
-const timestamp = Math.floor(Date.now() / 1000);
-const randomValue = uuid.v4();
-requestData += (clientId + ':' + timestamp + ':' + randomValue);
-const signature = CryptoJS.HmacSHA256(requestData, secretKey).toString(CryptoJS.enc.Hex);
-var map = { 'signature': 'sha256=' + signature, 'clientId': clientId, 'timestamp': timestamp, 'nonce': randomValue };
-var words = CryptoJS.enc.Utf8.parse(JSON.stringify(map));
-var base64 = CryptoJS.enc.Base64.stringify(words);
-pm.environment.set('auth', 'Bearer ' + base64);
-```
+{{auth}}=Bearer <api token> 
 
 ## 機器人詳情
 
