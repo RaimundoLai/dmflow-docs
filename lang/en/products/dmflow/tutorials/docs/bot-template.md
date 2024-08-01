@@ -1,5 +1,5 @@
 ---
-title: DmFlow Bot Templates | DmFlow
+title: DMflow Bot Templates | DMflow
 description: Dialogue Template Used to connect with other platforms for multi-channel conversation interactions. Memory Template Used to store permanent or temporary information for future use or reference. These two templates effectively handle and manage the content in conversations, providing richer responses for chatbots.
 ---
 
@@ -38,7 +38,7 @@ The chatbot can send text messages containing plain text content to users. This 
 - Suggested Options: Quick replies can provide users with a set of option buttons that they can directly click to answer or perform corresponding operations, offering a more convenient way of interaction.
 - Quick Actions: Quick replies can also be used to trigger specific actions or commands, such as subscription, search, reservation, etc. Users can directly click the buttons to perform the corresponding actions, saving input steps and time.
 
-![DmFlow Quick Replies Display](../../../../../../images/en/bot-template-line-quick-r.png "DmFlow Quick Replies Display")
+![DMflow Quick Replies Display](../../../../../../images/en/bot-template-line-quick-r.png "DMflow Quick Replies Display")
 
 - 1.Icon Beside Text: This refers to the small icon displayed beside the text or button, providing additional visual cues or identification. These icons can be used to differentiate different button options, enhancing user understanding and interaction experience.
 - 2.Object Trigger Actions: Location, Photo Carousel (scrolling through stored images on mobile), Open Window, Return Value, Camera, Time Picker, Message Text.
@@ -51,15 +51,15 @@ The chatbot can send text messages containing plain text content to users. This 
 
 The chatbot can send images to users, allowing you to send image files for users to view the content.
 
-![DmFlow Upload Image](../../../../../../images/en/bot-template-upload-image.png "DmFlow Upload Image")
+![DMflow Upload Image](../../../../../../images/en/bot-template-upload-image.png "DMflow Upload Image")
 
-- Image Format: DmFlow supports JPEG and PNG formats for images.
-- Image Size: The uploaded image size is limited to 1MB [according to DmFlow system display-based].
-- Thumbnail Size: When displaying thumbnails, the image size is limited to 1MB [according to DmFlow system display-based]. This is to ensure that thumbnails can be loaded and displayed quickly.
+- Image Format: DMflow supports JPEG and PNG formats for images.
+- Image Size: The uploaded image size is limited to 1MB [according to DMflow system display-based].
+- Thumbnail Size: When displaying thumbnails, the image size is limited to 1MB [according to DMflow system display-based]. This is to ensure that thumbnails can be loaded and displayed quickly.
 
 Image URL: The URL of the image must use the HTTPS protocol to ensure security. The URL supports up to 10MB.
 
-Upload Image: Users can provide the URL of the image for upload. As long as there is a valid image URL, DmFlow can upload and use the image.
+Upload Image: Users can provide the URL of the image for upload. As long as there is a valid image URL, DMflow can upload and use the image.
 
 - 1.Rotate Left: Rotate the image vertically to the left.
 - 2.Rotate Right: Rotate the image vertically to the right.
@@ -78,7 +78,7 @@ Upload Image: Users can provide the URL of the image for upload. As long as ther
 
 The bot can send video messages to users, allowing you to send video files for users to watch the content.
 
-![DmFlow Video Message](../../../../../../images/en/bot-template-line-video-s.png "DmFlow Video Message")
+![DMflow Video Message](../../../../../../images/en/bot-template-line-video-s.png "DMflow Video Message")
 
 - URL Usage: In a reply message, only URLs can be used to reference images or videos. This means you can provide URLs for images or videos for the bot to display them in the conversation.
 - Video Support: When referencing videos, only MP4 format videos are supported. This means you need to provide the URL of an MP4 format video file.
@@ -91,7 +91,7 @@ Please adhere to these restrictions and requirements to ensure that images and v
 
 The bot can send audio messages to users, allowing users to listen to the audio content you send.
 
-![DmFlow Audio Message](../../../../../../images/en/bot-template-line-audio-s.png "DmFlow Audio Message")
+![DMflow Audio Message](../../../../../../images/en/bot-template-line-audio-s.png "DMflow Audio Message")
 
 - URL Usage: In a reply message, only URLs can be used to reference audio files. This means you can provide the URL of an audio file for the bot to play the audio in the conversation.
 - Audio Support: When referencing audio, only M4A format audio files are supported. This means you need to provide the URL of an M4A format audio file.
@@ -101,22 +101,22 @@ The bot can send audio messages to users, allowing users to listen to the audio 
 Please adhere to these restrictions and requirements to ensure that the audio plays correctly and complies with relevant security standards.
 
 #### Imagemap Message
-![DmFlow Imagemap Message](../../../../../../images/en/bot-template-line-imagemap-s.png "DmFlow Imagemap Message")
+![DMflow Imagemap Message](../../../../../../images/en/bot-template-line-imagemap-s.png "DMflow Imagemap Message")
 
 <a href="https://tw.linebiz.com/manual/line-official-account/oa-manager-richmessage/" target="_blank">Official Documentation for LINE Imagemap Message</a>
 
 - 1.URL Limitation: In a reply message, the URL size is limited to below 10MB. This means that the URL you provide must point to a resource with a file size below 10MB. Additionally, for security and user privacy protection, the provided URL must use the HTTPS protocol.
-  - DmFlow Image Upload Limitation: On the DmFlow platform, the uploaded image size is limited to within 1MB (with DmFlow system display being the primary). This means that the images you upload on the DmFlow platform will be limited to a size below 1MB. Please ensure that the images you upload comply with this limitation.
+  - DMflow Image Upload Limitation: On the DMflow platform, the uploaded image size is limited to within 1MB (with DMflow system display being the primary). This means that the images you upload on the DMflow platform will be limited to a size below 1MB. Please ensure that the images you upload comply with this limitation.
 - 2.Alternative Text: When a user receives an image carousel message, the alternative text is displayed when the image fails to load. This can be a text describing the image content or providing relevant information. The purpose of alternative text is to provide an alternative content to users when the image cannot be displayed.
 - 3.[Imagemap Message Video](#imagemap-message-video)
 - 4.[Imagemap Message Action](#imagemap-message-action)
 
 #### Imagemap Message Video
 
-![DmFlow Imagemap Video](../../../../../../images/en/bot-template-line-imagemap-video.png "DmFlow Imagemap Video")
+![DMflow Imagemap Video](../../../../../../images/en/bot-template-line-imagemap-video.png "DMflow Imagemap Video")
 
-- 1.Video Limitation: Currently, the DmFlow platform does not support directly uploading videos. Therefore, videos can only be provided using URLs. When providing videos through URLs, the supported video format is MP4, and the size limit is within 200MB. Additionally, the provided video URL must use the HTTPS protocol.
-- 2.Image Preview: In terms of image preview, DmFlow supports image sizes up to 1MB. Please ensure that the provided image complies with this limitation.
+- 1.Video Limitation: Currently, the DMflow platform does not support directly uploading videos. Therefore, videos can only be provided using URLs. When providing videos through URLs, the supported video format is MP4, and the size limit is within 200MB. Additionally, the provided video URL must use the HTTPS protocol.
+- 2.Image Preview: In terms of image preview, DMflow supports image sizes up to 1MB. Please ensure that the provided image complies with this limitation.
 - 3.Horizontal Position: The horizontal position refers to the left-right position of the image or video within the message. The value of this position must be greater than 0, indicating the position counted from the left.
 - 4.Vertical Position: The vertical position refers to the top-bottom position of the image or video within the message. The value of this position must be greater than 0, indicating the position counted from the top.
 - 5.Video Width: Video width refers to the width dimension of the video displayed in the message.
@@ -129,7 +129,7 @@ Include [Imagemap Message Text](#imagemap-message-text) and [Imagemap Message Li
 
 #### Imagemap Message Text
 
-![DmFlow Imagemap Text](../../../../../../images/en/bot-template-line-imagemap-t-text.png "DmFlow Imagemap Text")
+![DMflow Imagemap Text](../../../../../../images/en/bot-template-line-imagemap-t-text.png "DMflow Imagemap Text")
 
 - 1.Calculated from the Top: It means that the vertical position of the element within the message is calculated from the top. Smaller values indicate that the element is closer to the top of the message.
 - 2.Calculated from the Left: It means that the horizontal position of the element within the message is calculated from the left. Smaller values indicate that the element is closer to the left side of the message.
@@ -141,7 +141,7 @@ Include [Imagemap Message Text](#imagemap-message-text) and [Imagemap Message Li
 
 #### Imagemap Message Link
 
-![DmFlow Imagemap Link](../../../../../../images/en/bot-template-line-imagemap-t-link.png "DmFlow Imagemap Link")
+![DMflow Imagemap Link](../../../../../../images/en/bot-template-line-imagemap-t-link.png "DMflow Imagemap Link")
 
 - 1.Calculated from the Top: It means that the vertical position of the element within the message is calculated from the top. Smaller values indicate that the element is closer to the top of the message.
 - 2.Note: When the client has accessibility features, a note function can be provided, such as voice reminders to assist users with special needs.
@@ -163,7 +163,7 @@ The red arrows and pointing box are alignment aids. The video is represented by 
 
 #### Image Carousel
 
-![DmFlow Image Carousel](../../../../../../images/en/bot-template-line-imagecard-s.png "DmFlow Image Carousel")
+![DMflow Image Carousel](../../../../../../images/en/bot-template-line-imagecard-s.png "DMflow Image Carousel")
 
 - Text displayed when the image carousel cannot be displayed on the desktop version.
 - Template selection: "Image Carousel Module"
@@ -174,7 +174,7 @@ Include [Trigger Action Text](#trigger-action-text), [Trigger Action Postback](#
 
 #### Trigger Action Text
 
-![DmFlow Trigger Action - Text](../../../../../../images/en/bot-template-line-imagecard-s-t-text.png "DmFlow Trigger Action - Text")
+![DMflow Trigger Action - Text](../../../../../../images/en/bot-template-line-imagecard-s-t-text.png "DMflow Trigger Action - Text")
 - 1.Text displayed on the text button in the image.
 - 2.Text returned when the button is clicked.
 
@@ -184,11 +184,11 @@ Include [Trigger Action Text](#trigger-action-text), [Trigger Action Postback](#
 - 1.Text displayed on the text button in the image: When setting a text button on the image, you can specify the text to be displayed for each button. This text will appear on the image to guide users to take corresponding actions or obtain more information.
 - 2.Message type: Text or Event. In the conversation, you can use text or events as the message type. Text messages are used to directly show text content to users, while events trigger corresponding actions or processes.
 - 3.Details of text: It only contains the text for text details. For event details, they depend on the type of event set, such as interrupt events, ignore events, start events, end events, or wake-up events. To learn more about using return values, please refer to the [usage of postback values.](../../tutorials/docs/bot-template.html#Postback%20Value)。
-- 5.Text inquiry: Through the conversation, you can ask users for text content and pass it to DmFlow for further processing. This allows you to interact with users in a conversational manner and perform subsequent operations based on their answers.
+- 5.Text inquiry: Through the conversation, you can ask users for text content and pass it to DMflow for further processing. This allows you to interact with users in a conversational manner and perform subsequent operations based on their answers.
 - 6.When the user clicks this text button, the displayed text on their LINE client: When the user clicks the text button, the corresponding text content will be displayed on the user's LINE client. This allows you to provide relevant information or instructions to the user.
 
 #### Postback Value
-Represents the data passed to DmFlow when the button is clicked. The key thing to understand is the event details:
+Represents the data passed to DMflow when the button is clicked. The key thing to understand is the event details:
 - 1.Interrupt event: When the user clicks the interrupt event, the conversation will directly jump to the specified scene. This can be used to interrupt the current conversation flow and guide the user to a specific scene or sub-flow.
 - 2.Ignore event: When the user clicks the ignore event, no response will be sent in the conversation. This is usually used to display specific data or information without triggering a backend response or other actions. It is useful for providing static content or displaying informational prompts.
 - 3.Start event: When the user clicks the start event, the current conversation can be restarted. This will reset the conversation state, allowing the user to restart the conversation flow and interact from the beginning.
@@ -197,7 +197,7 @@ Represents the data passed to DmFlow when the button is clicked. The key thing t
 
 #### Trigger Action Link
 
-![DmFlow Trigger Action - Link](../../../../../../images/en/bot-template-link.png "DmFlow Trigger Action - Link")
+![DMflow Trigger Action - Link](../../../../../../images/en/bot-template-link.png "DMflow Trigger Action - Link")
 - 1.Text displayed on the text button in the image: When you add text buttons on the image, these buttons will display the specified text. The text displayed when users click these buttons will be passed to the corresponding part of the conversation flow to trigger the corresponding actions or responses.
 - 2.Webview popped up on mobile devices: When users click a button in an image message, and the trigger action for that button is to open a window, if users click the button on a mobile device, a webview will pop up displaying the specified web page content. This webview can be displayed within the LINE client on the mobile device, allowing users to browse the web without leaving LINE.
 - 3.Web page opened in a new browser window on non-mobile devices: When users click a button in an image message, and the trigger action for that button is to open a window, if users click the button on a non-mobile device (such as a computer or tablet), the specified web page will be opened in a new browser window. This allows users to view and interact with the specified web page content in a separate browser window.
@@ -212,7 +212,7 @@ Represents the data passed to DmFlow when the button is clicked. The key thing t
 
 #### Confirm Template
 
-![DmFlow Confirm Template](../../../../../../images/en/bot-template-line-confirm-s.png "DmFlow Confirm Template")
+![DMflow Confirm Template](../../../../../../images/en/bot-template-line-confirm-s.png "DMflow Confirm Template")
 - 1.Template selection: "Confirm Template": This is a predefined template used in conversations to display interactive confirmation questions and options. You can choose this template to create a message that includes a yes-or-no question and related options to guide users in making a choice.
 - 2.Confirmation question with two options: In the "Confirm Template," you can set a binary question, offering two options for users to choose from. Users can select one of the options as their answer. The purpose of this question is to gather user preferences or choices between the two options.
 - 3.Trigger actions for each option: In the "Confirm Template," each option can be configured with a trigger action. The trigger action defines the action to be taken when the user selects a particular option. You can configure trigger actions based on your business requirements, such as sending a specific reply message, jumping to another scene, or invoking an API. For more information on trigger actions, you can refer to the [Trigger Actions](#trigger-actions) section.
@@ -227,7 +227,7 @@ Represents the data passed to DmFlow when the button is clicked. The key thing t
 
 #### Button Template
 
-![DmFlow Button Template](../../../../../../images/en/bot-template-line-buttons-s.png "DmFlow Button Template")
+![DMflow Button Template](../../../../../../images/en/bot-template-line-buttons-s.png "DMflow Button Template")
 
 - 1.Template selection: "Button Template": This is a default template used to display messages with button options. You can choose this template to create a message that includes buttons for users to click and perform corresponding actions.
 - 2.Title: The title can be placed based on the preview.
@@ -257,7 +257,7 @@ Represents the data passed to DmFlow when the button is clicked. The key thing t
 
 #### Carousel Template
 
-![DmFlow Carousel Template](../../../../../../images/en/bot-template-line-card-s.png "DmFlow Carousel Template")
+![DMflow Carousel Template](../../../../../../images/en/bot-template-line-card-s.png "DMflow Carousel Template")
 - 1.Choose the "Carousel Template" module.
 - 2.Image carousel field, same as [Button Template](#button-template), but can support multiple items.
 - 3.[Image aspect ratio](#image-aspect-ratio)
@@ -273,7 +273,7 @@ Represents the data passed to DmFlow when the button is clicked. The key thing t
 
 #### Text and Other Messages
 
-![DmFlow Messenger Text Message](../../../../../../images/en/bot-template-ms-text-s.png "DmFlow Messenger Text Message")
+![DMflow Messenger Text Message](../../../../../../images/en/bot-template-ms-text-s.png "DMflow Messenger Text Message")
 
 Text and images (uploadable, within 1MB), while others such as videos, audios, and files only support URL links.
 
@@ -283,7 +283,7 @@ Text and images (uploadable, within 1MB), while others such as videos, audios, a
 
 #### Generic Template
 
-![DmFlow Generic Template](../../../../../../images/en/bot-template-ms-temp-s.png "DmFlow Generic Template")
+![DMflow Generic Template](../../../../../../images/en/bot-template-ms-temp-s.png "DMflow Generic Template")
 
 - 1.Horizontal: 16:9, Square: 1:1
 - 2.Title, placement can be understood based on the preview.
@@ -303,7 +303,7 @@ Text and images (uploadable, within 1MB), while others such as videos, audios, a
 
 Link Elements
 
-![DmFlow Link](../../../../../../images/en/bot-template-ms-link-f.png "DmFlow Link")
+![DMflow Link](../../../../../../images/en/bot-template-ms-link-f.png "DMflow Link")
 
 - 1.URL link
 - 2.URL name
@@ -313,7 +313,7 @@ Link Elements (extension)
 
 <a href="https://developers.facebook.com/docs/messenger-platform/webview/extensions/" target="_blank">Add Messenger Extension SDK</a>
 
-![DmFlow Messenger Link](../../../../../../images/en/bot-template-ms-linkext-f.png "DmFlow Messenger Link")
+![DMflow Messenger Link](../../../../../../images/en/bot-template-ms-linkext-f.png "DMflow Messenger Link")
 
 - 1.URL link
 - 2.URL name
@@ -322,7 +322,7 @@ Link Elements (extension)
 
 #### Button Template
 
-![DmFlow Button Template](../../../../../../images/en/bot-template-ms-buttons-s.png "DmFlow Button Template")
+![DMflow Button Template](../../../../../../images/en/bot-template-ms-buttons-s.png "DMflow Button Template")
 
 - 1.Ask a question.
 - 2.Button elements include [Link Elements extension](#link-elements-extension) and [Action - Return Value](#trigger-action-postback).
@@ -389,3 +389,10 @@ The memory template is divided into User Parameters, User Tags, Bot Config, and 
 
 # Continue Reading
 - [Bot Global Settings](../../tutorials/docs/bot-global.html)
+
+## Contact Information
+
+Email: <service@dmflow.chat>
+
+DMflow.chat Official website: [DMflow.chat](https://www.dmflow.chat/en/)
+(We changed our domain to www.dmflow.chat on 2024-05-18)

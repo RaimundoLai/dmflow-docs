@@ -4,7 +4,7 @@
     "changefreq": "weekly",
     "priority": 1.0
   },
-  "source_base_path": "D:/workspace/doc_obotera/docfx_project/lang/tw",
+  "source_base_path": "D:/workspace/dmflow-docs/lang/tw",
   "xrefmap": "xrefmap.yml",
   "files": [
     {

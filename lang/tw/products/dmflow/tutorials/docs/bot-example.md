@@ -1,6 +1,6 @@
 ---
-title: DmFlow 機器人範例 | DmFlow
-description: 在DmFlow平台，如何簡單設計招募機器人步驟。
+title: DMflow 機器人範例 | DMflow
+description: 在DMflow平台，如何簡單設計招募機器人步驟。
 ---
 
 # 機器人範例
@@ -37,7 +37,7 @@ description: 在DmFlow平台，如何簡單設計招募機器人步驟。
 
 這樣就建立了一個問答對庫並連結到問答對領域「hire_faq」。您可以根據需求繼續新增其他的問答對和領域。
 
-![DmFlow機器人平台問答對](../../../../../../images/tw/bot-example-faq-exp.png "DmFlow問答對")
+![DMflow機器人平台問答對](../../../../../../images/tw/bot-example-faq-exp.png "DMflow問答對")
 
 
 ### 步驟二 建立意圖
@@ -68,7 +68,7 @@ description: 在DmFlow平台，如何簡單設計招募機器人步驟。
 | college    | @ANY          | 就讀大學
 | department | @ANY          | 系所
 
-![DmFlow機器人平台的basic_info詞槽](../../../../../../images/tw/bot-example-basic-info-slots.png "DmFlow的basic_info詞槽")
+![DMflow機器人平台的basic_info詞槽](../../../../../../images/tw/bot-example-basic-info-slots.png "DMflow的basic_info詞槽")
 
 interview為一些基本問題，需要的實體為
 
@@ -82,7 +82,7 @@ interview為一些基本問題，需要的實體為
 | hire_reason  | @ANY          | 聘用原因
 | resign_bool  | @ANY          | 是否有離職
 
-![DmFlow機器人平台的interview意圖](../../../../../../images/tw/bot-example-interview-int.png "DmFlow的interview意圖")
+![DMflow機器人平台的interview意圖](../../../../../../images/tw/bot-example-interview-int.png "DMflow的interview意圖")
 
 resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職過，會加以詢問離職原因。
 
@@ -90,18 +90,18 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 |-------          | ---------     |------
 | resign_reason   | @ANY          | 離職原因
 
-![DmFlow機器人平台添加resign_reason](../../../../../../images/tw/bot-example-interview-resign.png "DmFlow添加resign_reason")
+![DMflow機器人平台添加resign_reason](../../../../../../images/tw/bot-example-interview-resign.png "DMflow添加resign_reason")
 
 當完成意圖們後，記得進入發布做生產發布，才能供給機器人流程使用。
 
-![DmFlow機器人平台發布hire_int](../../../../../../images/tw/bot-example-hire-int-published.png "DmFlow發布hire_int")
+![DMflow機器人平台發布hire_int](../../../../../../images/tw/bot-example-hire-int-published.png "DMflow發布hire_int")
 
 假設需要測試，可在basic_info中的說法填寫「基本資料」，interview中的說法填寫「自我介紹」。
 
 測試頁面輸入「基本資料」或是「自我介紹」即可測試。
 
 
-![DmFlow機器人平台的hire_int測試](../../../../../../images/tw/bot-example-hire-int-test.png "DmFlow的hire_int測試")
+![DMflow機器人平台的hire_int測試](../../../../../../images/tw/bot-example-hire-int-test.png "DMflow的hire_int測試")
 
 ### 步驟三 機器人流程建置
 
@@ -112,13 +112,13 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 - email 當完成基本資料以及測試後，會需要對方提供email。
 - score 則為JAVA試驗成績。
 
-![](../../../../../../images/tw/bot-example-memory-temp.png "DmFlow記憶模板範例")
+![](../../../../../../images/tw/bot-example-memory-temp.png "DMflow記憶模板範例")
 
 3.進入全局設定 -> 領域，將 "hire_int" 和 "hire_faq" 加入並啟用。
 
 4.進入全局設定 -> 場景，新建 "job_openning"、"java_test" 和 "describe_java" 三個場景。
 
-![](../../../../../../images/tw/bot-example-scene-add.png "DmFlow場景範例")
+![](../../../../../../images/tw/bot-example-scene-add.png "DMflow場景範例")
 
 5.開始設計對話流程，根據以下步驟進行：
 
@@ -133,23 +133,23 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 >
 > 福利待遇
 
-![DmFlow機器人平台招聘範例](../../../../../../images/tw/bot-example-help.png "DmFlow機器人平台招聘範例")
+![DMflow機器人平台招聘範例](../../../../../../images/tw/bot-example-help.png "DMflow機器人平台招聘範例")
 
   - 3.將開始節點與回覆節點連接起來，並設定分支條件為 "intent 等於 greeting"。
 
-![DmFlow機器人分支intent等於greeting](../../../../../../images/tw/bot-example-is-greeting.png "DmFlow機器人分支intent等於greeting")
+![DMflow機器人分支intent等於greeting](../../../../../../images/tw/bot-example-is-greeting.png "DMflow機器人分支intent等於greeting")
 
   - 4.新增一個調用節點，選擇 "hire_faq"。將上一個回覆節點 (請問您需要什麼幫忙...) 節點連接到此節點，並選擇 "無條件" 分支條件。
 
-![DmFlow機器人呼叫hire-faq範例](../../../../../../images/tw/bot-example-call-hire-faq.png "DmFlow機器人呼叫hire-faq範例")
+![DMflow機器人呼叫hire-faq範例](../../../../../../images/tw/bot-example-call-hire-faq.png "DMflow機器人呼叫hire-faq範例")
 
   - 5.新增一個情境節點，選擇跳轉至回覆節點 [請問您需要什麼幫忙...]，並與調用節點 "hire_faq" 連接，選擇 "無條件" 分支條件。
 
-![DmFlow機器人招聘範例](../../../../../../images/tw/bot-example-jump-help.png "DmFlow機器人招聘範例")
+![DMflow機器人招聘範例](../../../../../../images/tw/bot-example-jump-help.png "DMflow機器人招聘範例")
 
 6.根據上述步驟，我們已經完成了 "Main" 情境的設置。
 
-![DmFlow機器人招聘範例](../../../../../../images/tw/bot-example-help-end.png "DmFlow機器人招聘範例")
+![DMflow機器人招聘範例](../../../../../../images/tw/bot-example-help-end.png "DMflow機器人招聘範例")
 
 說明
 
@@ -164,11 +164,11 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 >
 >  介紹JAVA工程師
 
-![DmFlow機器人如何設計job_openning](../../../../../../images/tw/bot-example-job-opening-start.png "DmFlow如何設計job_openning")
+![DMflow機器人如何設計job_openning](../../../../../../images/tw/bot-example-job-opening-start.png "DMflow如何設計job_openning")
 
 8.新增節點"調用節點"，選擇hire_faq。並將上一個start節點跟此節點連線選擇"無條件"。
 
-![DmFlow如何設計job_openning](../../../../../../images/tw/bot-example-job-opening-call-hire_faq.png "DmFlow如何設計job_openning")
+![DMflow如何設計job_openning](../../../../../../images/tw/bot-example-job-opening-call-hire_faq.png "DMflow如何設計job_openning")
 
 說明
 
@@ -176,15 +176,15 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 
 9.進入describe_java的情境，在開始節點的詢問填寫以下。
 
-> JAVA工程師目的在於維護與開發DmFlow相關產品。
+> JAVA工程師目的在於維護與開發DMflow相關產品。
 >
 > 面試JAVA工程師
 
-![DmFlow如何設計describe](../../../../../../images/tw/bot-example-describe-java-start.png "DmFlow如何設計describe")
+![DMflow如何設計describe](../../../../../../images/tw/bot-example-describe-java-start.png "DMflow如何設計describe")
 
 10.新增節點"調用節點"，選擇hire_faq。並將上一個start節點跟此節點連線選擇"無條件"。
 
-![DmFlow如何設計describe](../../../../../../images/tw/bot-example-describe-java-call-hire_faq.png "DmFlow如何設計describe")
+![DMflow如何設計describe](../../../../../../images/tw/bot-example-describe-java-call-hire_faq.png "DMflow如何設計describe")
 
 11.進入java_test的情境，在開始節點的詢問填寫以下。從java_test情境我們可以介紹流程如何取代意圖或是知識庫。
 
@@ -192,17 +192,17 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 >
 > 請輸入"準備好了"開始。
 
-![DmFlow如何設計test](../../../../../../images/tw/bot-example-java-test-start.png "DmFlow如何設計test")
+![DMflow如何設計test](../../../../../../images/tw/bot-example-java-test-start.png "DMflow如何設計test")
 
 12.將流程分為三大區塊分為個人資料、面試基本問答，以及測驗。
 
 下圖紅框是個人資料，藍框是基本問答。
 
-![DmFlow如何設計test](../../../../../../images/tw/bot-example-java-test-flow.png "DmFlow如何設計test")
+![DMflow如何設計test](../../../../../../images/tw/bot-example-java-test-flow.png "DMflow如何設計test")
 
 下圖是測驗的全流程圖。
 
-![DmFlow如何設計test](../../../../../../images/tw/bot-example-java-test-flow-all.png "DmFlow如何設計test")
+![DMflow如何設計test](../../../../../../images/tw/bot-example-java-test-flow-all.png "DMflow如何設計test")
 
 13.先新增回覆節點，輸入以下文字。，並連結start節點，條件可以選擇無條件或是有條件query=準備好了。
 
@@ -210,11 +210,11 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 >
 > 輸入"準備好了"開始
 
-![DmFlow如何設計interview](../../../../../../images/tw/bot-example-java-test-first-reply.png "DmFlow如何設計interview")
+![DMflow如何設計interview](../../../../../../images/tw/bot-example-java-test-first-reply.png "DMflow如何設計interview")
 
 14.建立"調用節點"，領域選擇hire_int，意圖選擇basic_info。與先前的"[1/3]面試"連線條件可以選擇無條件或是有條件query=準備好了。
 
-![DmFlow如何設計interview](../../../../../../images/tw/bot-example-java-test-all-001.png "DmFlow如何設計interview")
+![DMflow如何設計interview](../../../../../../images/tw/bot-example-java-test-all-001.png "DMflow如何設計interview")
 
 15.建立"回覆節點"，輸入以下文字。與調用節點[收集個人資料]做無條件連線。
 
@@ -222,21 +222,21 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 >
 > 輸入"準備好了"開始問答
 
-![DmFlow範例圖片](../../../../../../images/tw/bot-example-java-test-all-002.png "DmFlow範例圖片")
+![DMflow範例圖片](../../../../../../images/tw/bot-example-java-test-all-002.png "DMflow範例圖片")
 
 16.建立"調用節點"，領域選擇hire_int，意圖選擇interview。與先前的"[2/3]面試"連線條件可以選擇無條件或是有條件query=準備好了。
 
-![DmFlow範例圖片](../../../../../../images/tw/bot-example-java-test-all-003.png "DmFlow範例圖片")
+![DMflow範例圖片](../../../../../../images/tw/bot-example-java-test-all-003.png "DMflow範例圖片")
 
 17.建立"回覆節點"，輸入以下文字。與調用節點[介紹個人特色]做無條件連線。
 
 > 我們將考你一些關於JAVA的問題，請輸入"準備好了"開始作答。
 
-![DmFlow範例圖片](../../../../../../images/tw/bot-example-java-test-all-004.png "DmFlow範例圖片")
+![DMflow範例圖片](../../../../../../images/tw/bot-example-java-test-all-004.png "DMflow範例圖片")
 
 18.新增"變數節點"，並將score歸零，並與先前節點連線，條件為無條件。
 
-![DmFlow範例圖片](../../../../../../images/tw/bot-example-java-test-all-005.png "DmFlow範例圖片")
+![DMflow範例圖片](../../../../../../images/tw/bot-example-java-test-all-005.png "DMflow範例圖片")
 
 19.分別創建題目，題目為選選擇題，答對了加分，答錯繼續下一題。先建立"回覆節點"並跟先前"變數節點"連線，條件為無條件，回覆節點可採取選擇按鈕方式則不用用戶輸入訊息。
 
@@ -252,12 +252,12 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 >
 > 我不知道
 
-![DmFlow測試圖片](../../../../../../images/tw/bot-example-java-test-all-006.png "DmFlow測試圖片")
+![DMflow測試圖片](../../../../../../images/tw/bot-example-java-test-all-006.png "DMflow測試圖片")
 
 20.當正確答案等於[query|等於|constant|生產鏈模式]時，進入加分"變數節點"，並與前面"回覆節點"一起無條件連接到下一題。
 
-![DmFlow測試圖片](../../../../../../images/tw/bot-example-java-test-all-007.png "DmFlow測試圖片")
-![DmFlow測試圖片](../../../../../../images/tw/bot-example-java-test-all-008.png "DmFlow測試圖片")
+![DMflow測試圖片](../../../../../../images/tw/bot-example-java-test-all-007.png "DMflow測試圖片")
+![DMflow測試圖片](../../../../../../images/tw/bot-example-java-test-all-008.png "DMflow測試圖片")
 
 21.第二題到第四題重複步驟19-20分別是
 
@@ -307,17 +307,17 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 
 > 你總共得到了 分數為: ${#session.score} / 6分，測驗已結束，我們會再通知您，可否填寫您的email
 
-![DmFlow測試圖片](../../../../../../images/tw/bot-example-java-test-all-009.png "DmFlow測試圖片")
+![DMflow測試圖片](../../../../../../images/tw/bot-example-java-test-all-009.png "DMflow測試圖片")
 
 23.新增變數節點儲存email
 
-![DmFlow測試圖片](../../../../../../images/tw/bot-example-java-test-all-010.png "DmFlow測試圖片")
+![DMflow測試圖片](../../../../../../images/tw/bot-example-java-test-all-010.png "DMflow測試圖片")
 
 24.並在最後新增回覆節點，文字如下，且必須關閉"等待用戶回覆"。關閉等待用戶回覆目的是這句話算是結束，如果開啟則會等待用戶問話。
 
 > 感謝您的填寫，我們會盡快給你答覆。
 
-![DmFlow測試圖片](../../../../../../images/tw/bot-example-java-test-all-011.png "DmFlow測試圖片")
+![DMflow測試圖片](../../../../../../images/tw/bot-example-java-test-all-011.png "DMflow測試圖片")
 
 ### 完成
 
@@ -325,15 +325,23 @@ resign_bool為可選意圖，目的只是為了假設應聘者選取了有離職
 
 當完成設置後，別忘了點選[1]儲存或[2]更新。
 
-![DmFlow保存流程](../../../../../../images/tw/bot-example-java-test-all-012.png "DmFlow保存流程")
+![DMflow保存流程](../../../../../../images/tw/bot-example-java-test-all-012.png "DMflow保存流程")
 
 並打開保存->編輯->勾選是否發布->更新，完成後就可以進行對話測試了。
 
-![DmFlow流程測試](../../../../../../images/tw/bot-example-java-test-all-013.png "DmFlow流程測試")
+![DMflow流程測試](../../../../../../images/tw/bot-example-java-test-all-013.png "DMflow流程測試")
 
 開始測試。
 
-![DmFlow流程測試](../../../../../../images/tw/bot-example-java-test-all-014.png "DmFlow流程測試")
+![DMflow流程測試](../../../../../../images/tw/bot-example-java-test-all-014.png "DMflow流程測試")
 
 # 接著讀
 - [日誌](../../tutorials/docs/bot-log.html)
+
+
+## 聯絡資訊
+
+信箱: <service@dmflow.chat>
+
+DMflow.chat 官網: [DMflow.chat](https://www.dmflow.chat)
+(於2024-05-18更改網域至[DMflow.chat](https://www.dmflow.chat)，此文檔將不再維護請至[DMflow.chat文檔](https://docs.dmflow.chat)查看新版文檔)

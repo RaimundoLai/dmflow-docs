@@ -1,6 +1,6 @@
 ---
-title: DmFlow Intent Introduction | DmFlow
-description: Using machine learning and natural language processing techniques, DmFlow can analyze and understand the conversations entered by users, identifying their intents. This helps the chatbot quickly grasp user needs and provide appropriate responses or perform corresponding actions.
+title: DMflow Intent Introduction | DMflow
+description: Using machine learning and natural language processing techniques, DMflow can analyze and understand the conversations entered by users, identifying their intents. This helps the chatbot quickly grasp user needs and provide appropriate responses or perform corresponding actions.
 use_mermaid: true
 ---
 
@@ -129,3 +129,10 @@ Entering "$" will provide a prompt. The syntax is the same as the previous templ
 
 # Continue Reading
 - [Bot Introduction](../../tutorials/docs/bot-intro.html)
+
+## Contact Information
+
+Email: <service@dmflow.chat>
+
+DMflow.chat Official website: [DMflow.chat](https://www.dmflow.chat/en/)
+(We changed our domain to www.dmflow.chat on 2024-05-18)

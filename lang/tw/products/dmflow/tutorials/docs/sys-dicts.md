@@ -1,5 +1,5 @@
 ---
-title: DmFlow 引用辭典 | DmFlow
+title: DMflow 引用辭典 | DMflow
 description: 支援預設辭典。
 ---
 
@@ -16,3 +16,11 @@ description: 支援預設辭典。
 - [自定義辭典](../../tutorials/docs/custom-dicts.html)
 
 # 最後更新時間
+
+
+## 聯絡資訊
+
+信箱: <service@dmflow.chat>
+
+DMflow.chat 官網: [DMflow.chat](https://www.dmflow.chat)
+(於2024-05-18更改網域至[DMflow.chat](https://www.dmflow.chat)，此文檔將不再維護請至[DMflow.chat文檔](https://docs.dmflow.chat)查看新版文檔)

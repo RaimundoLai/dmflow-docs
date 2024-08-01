@@ -1,5 +1,5 @@
 ---
-title: DmFlow 機器人日誌 | DmFlow
+title: DMflow 機器人日誌 | DMflow
 description: 日誌細分為歷史紀錄和統計，旨在提供用戶資訊並彌補機器人的不足之處。透過日誌功能，您可以深入了解用戶互動，並以此為基礎改進對話機器人的效能。
 ---
 
@@ -8,7 +8,7 @@ description: 日誌細分為歷史紀錄和統計，旨在提供用戶資訊並�
 
 ## 歷史紀錄
 
-![DmFlow歷史紀錄](../../../../../../images/tw/bot-log-view.png "DmFlow歷史紀錄")
+![DMflow歷史紀錄](../../../../../../images/tw/bot-log-view.png "DMflow歷史紀錄")
 
 - 點[1]可以根據欄位過濾使用者。如圖二。
 - 點[2]顯示使用者列表。
@@ -17,14 +17,14 @@ description: 日誌細分為歷史紀錄和統計，旨在提供用戶資訊並�
 - 點[5]顯示該使用者圖片[目前僅平台支援才有圖片]
 - 點[6]顯示使用者欄位以及標籤次數[圖三]。
 
-![DmFlow歷史紀錄過濾](../../../../../../images/tw/bot-log-filter.png "DmFlow歷史紀錄過濾")
+![DMflow歷史紀錄過濾](../../../../../../images/tw/bot-log-filter.png "DMflow歷史紀錄過濾")
 
 圖二
 
 - 1.包含標籤，同時包含這些標籤才會顯示使用者。
 - 3.欄位查詢，字串都以關鍵字查詢，數字以及時間日期都是以數字做查詢。
 
-![DmFlow歷史紀錄過濾](../../../../../../images/tw/bot-log-tag.png "DmFlow歷史紀錄過濾")
+![DMflow歷史紀錄過濾](../../../../../../images/tw/bot-log-tag.png "DMflow歷史紀錄過濾")
 
 圖三
 
@@ -32,7 +32,7 @@ description: 日誌細分為歷史紀錄和統計，旨在提供用戶資訊並�
 
 ## 統計
 
-![DmFlow統計](../../../../../../images/tw/bot-log-chart.png "DmFlow統計")
+![DMflow統計](../../../../../../images/tw/bot-log-chart.png "DMflow統計")
 - 1.顯示總用戶人數。
 - 2.顯示該時段新加入的用戶。
 - 3.顯示該時段有在使用的用戶。
@@ -42,3 +42,11 @@ description: 日誌細分為歷史紀錄和統計，旨在提供用戶資訊並�
 
 # 接著讀
 - [廣播](../../tutorials/docs/bot-broadcast.html)
+
+
+## 聯絡資訊
+
+信箱: <service@dmflow.chat>
+
+DMflow.chat 官網: [DMflow.chat](https://www.dmflow.chat)
+(於2024-05-18更改網域至[DMflow.chat](https://www.dmflow.chat)，此文檔將不再維護請至[DMflow.chat文檔](https://docs.dmflow.chat)查看新版文檔)

@@ -1,5 +1,5 @@
 ---
-title: DmFlow Bot Resource Management | DmFlow
+title: DMflow Bot Resource Management | DMflow
 description: In a conversation flow, resource nodes are used to manage the use of resources and connect to external APIs to facilitate the interaction of business logic.
 ---
 
@@ -52,3 +52,10 @@ JSON Path Examples: Suppose the response is {"city":"Taipei", "obj":{"apple":"Ap
 
 # 接著讀
 - [Bot Dialogue Flow](../../tutorials/docs/bot-flow.html)
+
+## Contact Information
+
+Email: <service@dmflow.chat>
+
+DMflow.chat Official website: [DMflow.chat](https://www.dmflow.chat/en/)
+(We changed our domain to www.dmflow.chat on 2024-05-18)

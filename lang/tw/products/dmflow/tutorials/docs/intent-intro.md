@@ -1,5 +1,5 @@
 ---
-title: DmFlow 意圖介紹 | DmFlow
+title: DMflow 意圖介紹 | DMflow
 description: 使用機器學習和自然語言處理技術，可以對用戶輸入的對話進行分析和理解，識別出用戶的意圖。這有助於機器人快速理解用戶的需求，並針對具體的意圖提供適當的回答或執行相應的操作。
 use_mermaid: true
 ---
@@ -133,3 +133,11 @@ graph TB
 # 最後更新時間
 2023/05/22
 - 刪除依賴意圖
+
+
+## 聯絡資訊
+
+信箱: <service@dmflow.chat>
+
+DMflow.chat 官網: [DMflow.chat](https://www.dmflow.chat)
+(於2024-05-18更改網域至[DMflow.chat](https://www.dmflow.chat)，此文檔將不再維護請至[DMflow.chat文檔](https://docs.dmflow.chat)查看新版文檔)

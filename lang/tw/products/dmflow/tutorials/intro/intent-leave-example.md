@@ -1,6 +1,6 @@
 ---
-title: Communeify DmFlow 意圖範例，設計一個請假系統
-description: 設計和實現請假系統的步驟，使用 Communeify DmFlow 平台，構建一個自動化的假期申請系統。用戶可以輕鬆提交請假請求，並獲得自動處理和記錄假期信息的功能。
+title: DMflow.chat 意圖範例，設計一個請假系統
+description: 設計和實現請假系統的步驟，使用 DMflow.chat 平台，構建一個自動化的假期申請系統。用戶可以輕鬆提交請假請求，並獲得自動處理和記錄假期信息的功能。
 use_mermaid: true
 ---
 
@@ -339,9 +339,9 @@ notify是指要不要通知主管。
 | success   | success
 
 
-![DmFlow 領域完成資源](../../../../../../images/tw/line-accountlink/line-al-fulfill-resource.png "DmFlow 領域完成資源")
+![DMflow 領域完成資源](../../../../../../images/tw/line-accountlink/line-al-fulfill-resource.png "DMflow 領域完成資源")
 
-# 回到DmFlow做流程
+# 回到DMflow做流程
 
 1.可以先在config.lineToken 新增line token，以Bearer xxxx(此範例未將Bearer拆開)
 
@@ -398,7 +398,7 @@ notify是指要不要通知使用者審核已經過了。
 
 5.新增allowed_leave 場景
 
-![DmFlow allowed_leave場景](../../../../../../images/tw/line-accountlink/line-al-dmflow-allowed_leave.png "DmFlow allowed_leave場景")
+![DMflow allowed_leave場景](../../../../../../images/tw/line-accountlink/line-al-dmflow-allowed_leave.png "DMflow allowed_leave場景")
 
 ID 3 資源節點
 
@@ -453,10 +453,18 @@ ID 3->ID 8 條件節點
 
 使用者要求請假
 
-![DmFlow 使用者要求請假](../../../../../../images/tw/line-accountlink/line-al-leave-request-preview.jpg "DmFlow 使用者要求請假")
+![DMflow 使用者要求請假](../../../../../../images/tw/line-accountlink/line-al-leave-request-preview.jpg "DMflow 使用者要求請假")
 
 審核者畫面
 
-![DmFlow 審核者畫面](../../../../../../images/tw/line-accountlink/line-al-leave-response-preview.jpg "DmFlow 審核者畫面")
+![DMflow 審核者畫面](../../../../../../images/tw/line-accountlink/line-al-leave-response-preview.jpg "DMflow 審核者畫面")
 
 > 最後若是此範例完畢，記得管理部屬作業將該程序封存，讓程序下線，避免已經綁定信用卡的使用者造成不必要的費用問題。
+
+
+## 聯絡資訊
+
+信箱: <service@dmflow.chat>
+
+DMflow.chat 官網: [DMflow.chat](https://www.dmflow.chat)
+(於2024-05-18更改網域至[DMflow.chat](https://www.dmflow.chat)，此文檔將不再維護請至[DMflow.chat文檔](https://docs.dmflow.chat)查看新版文檔)

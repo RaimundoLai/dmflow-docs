@@ -1,11 +1,11 @@
 ---
-title: DmFlow Domain Introduction | DmFlow
-description: The DmFlow domain is defined as a choice among Q&A pairs, table Q&A, or intent creation. It provides various rich functionalities that can be utilized by Q&A pairs, table Q&A, and intent invocation.
+title: DMflow Domain Introduction | DMflow
+description: The DMflow domain is defined as a choice among Q&A pairs, table Q&A, or intent creation. It provides various rich functionalities that can be utilized by Q&A pairs, table Q&A, and intent invocation.
 ---
 
 # Domain Introduction
 
-The DmFlow domain is defined as a choice among Q&A pairs, table Q&A, or intent creation. It provides various rich functionalities that can be utilized by Q&A pairs, table Q&A, and intent invocation.
+The DMflow domain is defined as a choice among Q&A pairs, table Q&A, or intent creation. It provides various rich functionalities that can be utilized by Q&A pairs, table Q&A, and intent invocation.
 
 ## Intents
 
@@ -50,3 +50,10 @@ This historical record functionality allows you to conveniently view conversatio
 
 # Continue Reading
 - [Intents](../../tutorials/docs/intent-intro.html)
+
+## Contact Information
+
+Email: <service@dmflow.chat>
+
+DMflow.chat Official website: [DMflow.chat](https://www.dmflow.chat/en/)
+(We changed our domain to www.dmflow.chat on 2024-05-18)

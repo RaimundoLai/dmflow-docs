@@ -1,6 +1,6 @@
 ---
-title: "透過 DmFlow 內嵌網頁提升使用者互動"
-description: "探索 DmFlow 內嵌網頁的無縫整合，提供外掛和滿版兩種選擇。客製化顏色、抬頭和連結，搭配安全的 HTTPS 控制訊息頻率。增強使用者互動和留存率。複製生成的腳本，貼上您的網站，即可體驗與觀眾更深入的溝通。立即試用！"
+title: "透過 DMflow 內嵌網頁提升使用者互動"
+description: "探索 DMflow 內嵌網頁的無縫整合，提供外掛和滿版兩種選擇。客製化顏色、抬頭和連結，搭配安全的 HTTPS 控制訊息頻率。增強使用者互動和留存率。複製生成的腳本，貼上您的網站，即可體驗與觀眾更深入的溝通。立即試用！"
 use_mermaid: false
 ---
 
@@ -49,3 +49,10 @@ zh_TW、zh_CN、en_US...
 ```
 藉由以上指南，您可以更專業地運用內嵌網頁功能於您的網站。
 
+
+## 聯絡資訊
+
+信箱: <service@dmflow.chat>
+
+DMflow.chat 官網: [DMflow.chat](https://www.dmflow.chat)
+(於2024-05-18更改網域至[DMflow.chat](https://www.dmflow.chat)，此文檔將不再維護請至[DMflow.chat文檔](https://docs.dmflow.chat)查看新版文檔)

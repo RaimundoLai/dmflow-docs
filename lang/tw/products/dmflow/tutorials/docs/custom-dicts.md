@@ -1,5 +1,5 @@
 ---
-title: DmFlow 自定義辭典 | DmFlow
+title: DMflow 自定義辭典 | DMflow
 description: 自定義辭典用於存儲一般詞彙的標準詞和同義詞以及正則表示法。
 ---
 
@@ -67,3 +67,11 @@ description: 自定義辭典用於存儲一般詞彙的標準詞和同義詞以�
 2023/05/22
 
 - 新增正則表示法介紹
+
+
+## 聯絡資訊
+
+信箱: <service@dmflow.chat>
+
+DMflow.chat 官網: [DMflow.chat](https://www.dmflow.chat)
+(於2024-05-18更改網域至[DMflow.chat](https://www.dmflow.chat)，此文檔將不再維護請至[DMflow.chat文檔](https://docs.dmflow.chat)查看新版文檔)

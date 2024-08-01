@@ -1,11 +1,11 @@
 ---
-title: DmFlow Introduction | DmFlow
-description: Everything you need to know when using the DmFlow product.
+title: DMflow Introduction | DMflow
+description: Everything you need to know when using the DMflow product.
 ---
 
-# DmFlow
+# DMflow
  
-Everything you need to know when using the DmFlow product.
+Everything you need to know when using the DMflow product.
 
 ## Documentation
 Understanding the contents of these documents will help you quickly and efficiently grasp the relevant knowledge.
@@ -21,7 +21,8 @@ If you encounter any difficulties while using the product, you can refer to this
 
 ## Contact Information
 
-Contact Email：<service@communeify.com>
+Email: <service@dmflow.chat>
 
-Communeify Official Website: [Communeify.com](https://communeify.com/en/)
+DMflow.chat Official website: [DMflow.chat](https://www.dmflow.chat/en/)
+(We changed our domain to www.dmflow.chat on 2024-05-18)
  

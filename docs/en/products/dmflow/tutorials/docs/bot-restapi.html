@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>DmFlow Bot API | DmFlow | Communeify </title>
+    <title>DMflow Bot API | DMflow | Communeify </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="DmFlow Bot API | DmFlow | Communeify ">
-    <meta name="description" content="The API is designed for programmatically searching, modifying, and deleting internal data within DmFlow. With the API, you can interact with DmFlow data in a programmatic way, enabling seamless integration and automated data management. Boost efficiency, enhance productivity, and unlock the full potential of internal data in DmFlow.">
+    <meta name="title" content="DMflow Bot API | DMflow | Communeify ">
+    <meta name="description" content="The API is designed for programmatically searching, modifying, and deleting internal data within DMflow. With the API, you can interact with DMflow data in a programmatic way, enabling seamless integration and automated data management. Boost efficiency, enhance productivity, and unlock the full potential of internal data in DMflow.">
     <meta name="generator" content="docfx ">
     <meta name="google-site-verification" content="wackHW3mx9OzoWNdH73Ucfx-Tgn27NaVqlQ-dzKaBfw">
   
@@ -73,27 +73,8 @@
 <h1 id="bot-api">Bot API</h1>
 
 <h2 id="authorization">Authorization</h2>
-<p>Every request needs to include the Authorization header.</p>
-<p>The composition is as follows: &lt;CLIENT_ID&gt;:&lt;TIME_STAMP&gt;:<nonce></nonce></p>
-<ul>
-<li>CLIENT_ID: The CLIENT_ID provided by DMFlow.</li>
-<li>TIMESTAMP: The current time used for checking expiration.</li>
-<li>RANDOM_VALUE: Used to check if the operation is repeated. UUID is commonly used.</li>
-</ul>
-<p>Here is a reference for the Postman pre-script.</p>
-<pre><code>var uuid = require('uuid');
-const secretKey = 'a60207f4d8abf6ee7bf14ecaa69fbb310310784abdae354fadd4939eda95e54c';
-const clientId = '6d7ffe73-e922-4011-9057-606fc42966d8';
-
-const timestamp = Math.floor(Date.now() / 1000);
-const randomValue = uuid.v4();
-requestData += (clientId + ':' + timestamp + ':' + randomValue);
-const signature = CryptoJS.HmacSHA256(requestData, secretKey).toString(CryptoJS.enc.Hex);
-var map = { 'signature': 'sha256=' + signature, 'clientId': clientId, 'timestamp': timestamp, 'nonce': randomValue };
-var words = CryptoJS.enc.Utf8.parse(JSON.stringify(map));
-var base64 = CryptoJS.enc.Base64.stringify(words);
-pm.environment.set('auth', 'Bearer ' + base64);
-</code></pre>
+<p>Proceed directly to the 'Key List' for the robot and 'API Management' for the domain. Copy directly by selecting the copy option next to the key.</p>
+<p>{{auth}}=Bearer <api token=""></api></p>
 <h2 id="bot-details">Bot Details</h2>
 <p>To retrieve the name, description, and time zone of the bot, you can make a GET request to the appropriate endpoint.</p>
 <p>GET /_api/v1/bot/info</p>
@@ -230,7 +211,7 @@ pm.environment.set('auth', 'Bearer ' + base64);
 <td>payload</td>
 <td>v</td>
 <td>OBJECT</td>
-<td>The message sent to DmFlow.</td>
+<td>The message sent to DMflow.</td>
 </tr>
 </tbody>
 </table>
@@ -1228,7 +1209,7 @@ GET /_api/v1/bot/faqs</p>
 </tr>
 <tr>
 <td>data.users[0].id</td>
-<td>User's DmFlow ID</td>
+<td>User's DMflow ID</td>
 </tr>
 <tr>
 <td>data.users[0].userId</td>
@@ -1313,7 +1294,7 @@ GET /_api/v1/bot/faqs</p>
 </tr>
 </tbody>
 </table>
-<h4 id="method-2-using-the-dmflow-id">Method 2: Using the DmFlow ID</h4>
+<h4 id="method-2-using-the-dmflow-id">Method 2: Using the DMflow ID</h4>
 <p>GET /_api/v1/bot/users/_id/{id}</p>
 <table>
 <thead>
@@ -1411,7 +1392,7 @@ GET /_api/v1/bot/faqs</p>
 </tr>
 <tr>
 <td>data.id</td>
-<td>User's DmFlow ID</td>
+<td>User's DMflow ID</td>
 </tr>
 <tr>
 <td>data.userId</td>
@@ -2015,6 +1996,10 @@ GET /_api/v1/bot/faqs</p>
 </tr>
 </tbody>
 </table>
+<h2 id="contact-information">Contact Information</h2>
+<p>Email: <a href="mailto:service@dmflow.chat">service@dmflow.chat</a></p>
+<p>DMflow.chat Official website: <a href="https://www.dmflow.chat/en/">DMflow.chat</a>
+(We changed our domain to <a href="http://www.dmflow.chat">www.dmflow.chat</a> on 2024-05-18)</p>
 
 </article>
           </div>

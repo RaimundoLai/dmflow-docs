@@ -1,5 +1,5 @@
 ---
-title: DmFlow 廣播介紹 | DmFlow
+title: DMflow 廣播介紹 | DMflow
 description: 廣播用於向使用者群體發送批量訊息。它可以被廣泛應用於再行銷、推廣活動、通知更新等方面。
 ---
 
@@ -19,14 +19,14 @@ description: 廣播用於向使用者群體發送批量訊息。它可以被廣�
 
 ## 介紹
 
-![DmFlow廣播瀏覽圖](../../../../../../images/tw/bot-broadcast-intro.png "DmFlow廣播瀏覽圖")
+![DMflow廣播瀏覽圖](../../../../../../images/tw/bot-broadcast-intro.png "DMflow廣播瀏覽圖")
 
 1. 渠道目前支援LINE、Messenger、Telegram
 2. 標籤為dev(開發版)以及prod(生產版)
   - 開發版為測試版。
 3. 過濾型態：
   - 過濾條件：可根據標籤以及最後交互時間去過濾要傳送的使用者。
-  - 自行註冊：運用資源節點去跟DmFlow的API做交互，可以讓使用者自行註冊事件。
+  - 自行註冊：運用資源節點去跟DMflow的API做交互，可以讓使用者自行註冊事件。
 4. 發布對象：使用者以及群組
 　- 群組：僅能使用LINE、Telegram，會發佈到所選擇的群組。
 5. 查詢該過濾或註冊的使用者人數。
@@ -36,3 +36,11 @@ description: 廣播用於向使用者群體發送批量訊息。它可以被廣�
 
 # 接著讀
 - [發布](../../tutorials/docs/bot-published.html)
+
+
+## 聯絡資訊
+
+信箱: <service@dmflow.chat>
+
+DMflow.chat 官網: [DMflow.chat](https://www.dmflow.chat)
+(於2024-05-18更改網域至[DMflow.chat](https://www.dmflow.chat)，此文檔將不再維護請至[DMflow.chat文檔](https://docs.dmflow.chat)查看新版文檔)

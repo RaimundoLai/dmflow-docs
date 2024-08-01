@@ -1,6 +1,6 @@
 ---
-title: "Enhance User Interaction through Embedded Web Pages with DmFlow"
-description: "Explore seamless integration of embedded web pages with DmFlow, offering options for plugins and full-screen display. Customize colors, headers, and links, coupled with secure HTTPS for message frequency control. Boost user interaction and retention. Copy the generated script, paste it into your website, and experience deeper communication with your audience. Try it now!"
+title: "Enhance User Interaction through Embedded Web Pages with DMflow"
+description: "Explore seamless integration of embedded web pages with DMflow, offering options for plugins and full-screen display. Customize colors, headers, and links, coupled with secure HTTPS for message frequency control. Boost user interaction and retention. Copy the generated script, paste it into your website, and experience deeper communication with your audience. Try it now!"
 use_mermaid: false
 ---
 
@@ -49,3 +49,10 @@ zh_TW, zh_CN, en_US, ...
 ```
 
 With this guide, you can professionally leverage the embedded web page feature on your website.
+
+## Contact Information
+
+Email: <service@dmflow.chat>
+
+DMflow.chat Official website: [DMflow.chat](https://www.dmflow.chat/en/)
+(We changed our domain to www.dmflow.chat on 2024-05-18)

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>DmFlow Bot Dialogue Flow | DmFlow | Communeify </title>
+    <title>DMflow Bot Dialogue Flow | DMflow | Communeify </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="DmFlow Bot Dialogue Flow | DmFlow | Communeify ">
+    <meta name="title" content="DMflow Bot Dialogue Flow | DMflow | Communeify ">
     <meta name="description" content="Using basic flow-based conversation helps overcome the limitations of domain-driven conversations and provides more flexibility and breadth in conversation handling capabilities. This ensures suitable responses for various user inputs and scenario requirements, enhancing the usability and extensibility of the conversational AI system.">
     <meta name="generator" content="docfx ">
     <meta name="google-site-verification" content="wackHW3mx9OzoWNdH73Ucfx-Tgn27NaVqlQ-dzKaBfw">
@@ -81,7 +81,7 @@
 <li>Visual Representation: The use of a graphical interface provides an intuitive understanding of the relationships and positions between nodes. Through visualization, users can have a clearer understanding of the structure and logic of the conversation flow.</li>
 <li>Drag-and-Drop Nodes: Compared to traditional command-line interface (CLI) coding for chatbots, the design of drag-and-drop nodes is more user-friendly. Users can directly drag and drop nodes and configure their properties without the need for coding, making it convenient and easy to build conversation flows.</li>
 </ul>
-<p><img src="../../../../../../images/en/bot-flow-image.png" alt="DmFlow Flow" title="DmFlow Flow"></p>
+<p><img src="../../../../../../images/en/bot-flow-image.png" alt="DMflow Flow" title="DMflow Flow"></p>
 <ul>
 <li>1.New Process: Allows resetting the current flow, restoring all settings to their original state, including scenarios and nodes.</li>
 <li>2.Save: Provides functionality to add and load versioned flows, allowing saving and managing different versions of the flow.</li>
@@ -96,7 +96,7 @@
 <li>13.Node Settings: Used to configure various properties of different nodes, such as resources, replies, scenarios, variables, and collection, to customize and configure the behavior and logic of the conversation flow.</li>
 </ul>
 <h2 id="save">Save</h2>
-<p><img src="../../../../../../images/en/bot-flow-version.png" alt="DmFlow Version View" title="DmFlow Version View"></p>
+<p><img src="../../../../../../images/en/bot-flow-version.png" alt="DMflow Version View" title="DMflow Version View"></p>
 <ul>
 <li>1.Add New Version: This feature allows creating a new version for updating and modifying the conversation flow.</li>
 <li>2.Version Properties: When creating a new version, you can fill in properties such as version name, status, update reason, preloading, and publishing settings.
@@ -117,7 +117,7 @@
 <h3 id="publishing">Publishing</h3>
 <p>Publishing: When the &quot;Publish&quot; option is selected in your version, it means that the version will be published as a &quot;development version&quot; for testing purposes. Development versions are typically used for testing new features, bug fixes, or other development work. By marking a version as a &quot;development version,&quot; you can differentiate between test versions and official production versions, ensuring the stability of the production version.</p>
 <h2 id="testing">Testing</h2>
-<p><img src="../../../../../../images/en/bot-flow-test.png" alt="DmFlow Bot Test" title="DmFlow Bot Test"></p>
+<p><img src="../../../../../../images/en/bot-flow-test.png" alt="DMflow Bot Test" title="DMflow Bot Test"></p>
 <ul>
 <li>1.Enter Query: In the testing interface, you can input the query or prompt you want to test to check the response of the conversation flow.</li>
 <li>2.Test Scene Context: You can directly test the conversation flow of specific scenarios, allowing you to simulate the interaction between users and the bot in specific contexts.</li>
@@ -130,7 +130,7 @@
 <h1 id="node-introduction">Node Introduction</h1>
 <h2 id="start-node">Start Node</h2>
 <p>As the global node for the scenario, it affects all nodes within the flow.<br>
-<img src="../../../../../../images/en/bot-flow-start.png" alt="DmFlow Start Node" title="DmFlow Start Node"></p>
+<img src="../../../../../../images/en/bot-flow-start.png" alt="DMflow Start Node" title="DMflow Start Node"></p>
 <ul>
 <li>1.Query Node: Used for the initial greeting or opening question. It serves as the starting point of the conversation flow, where you can set the initial prompt or question.</li>
 <li>2.Mode Node: Divided into general mode and awakening mode. Awakening mode requires the user to input a specific &quot;awakening phrase&quot; to proceed to the subsequent flow.</li>
@@ -140,7 +140,7 @@
 </ul>
 <h2 id="resource-node">Resource Node</h2>
 <p>This node is used to call external resources and perform business logic operations. You can configure the relevant properties and parameters of the resource node for resource invocation.
-<img src="../../../../../../images/en/bot-flow-resource.png" alt="DmFlow resource node" title="DmFlow resource node"></p>
+<img src="../../../../../../images/en/bot-flow-resource.png" alt="DMflow resource node" title="DMflow resource node"></p>
 <ul>
 <li>1.Parameter Prefix: Parameters set within the node can use different prefixes, including config (bot parameters), constant (constants), conversation (single-turn conversation), session (multi-turn conversation), sys_user (system user parameters), and user (user parameters). These prefixes are used to differentiate different types of parameters for ease of use within the node.</li>
 <li>2.Return Value Prefix: When the resource node completes its call and obtains a return value, the data of the return value can be stored in different prefixes, including conversation (single-turn conversation), session (multi-turn conversation), and user (user parameters). This allows the return value to be saved into the appropriate variables as needed for subsequent use.</li>
@@ -231,7 +231,7 @@
 <p>If the obtained value is &quot;test&quot; , the injected value into conversation.test will be &quot;test&quot;.</p>
 <h2 id="reply-node">Reply Node</h2>
 <p>In the reply node, you can use it to ask questions or provide answers.<br>
-<img src="../../../../../../images/en/bot-flow-reply.png" alt="DmFlow Reply Node" title="DmFlow Reply Node"></p>
+<img src="../../../../../../images/en/bot-flow-reply.png" alt="DMflow Reply Node" title="DMflow Reply Node"></p>
 <ul>
 <li>1.In this selection, you can choose the type of question. Currently, only a simple question type is supported.</li>
 <li>2.This is the textual expression of the question. The supported option is &quot;Random,&quot; which means you can set multiple different expressions for the question, and the system will randomly select one each time it is used.</li>
@@ -243,7 +243,7 @@
 </ul>
 <h2 id="scene-node">Scene Node</h2>
 <p>Characteristics of the Scene node.<br>
-<img src="../../../../../../images/en/bot-flow-scene.png" alt="DmFlow Scene Node" title="DmFlow Scene Node"></p>
+<img src="../../../../../../images/en/bot-flow-scene.png" alt="DMflow Scene Node" title="DMflow Scene Node"></p>
 <ul>
 <li><p>1.The scene has the following options:</p>
 <ul>
@@ -261,7 +261,7 @@
 </ul>
 <h2 id="variable-node">Variable Node</h2>
 <p>The Variable Node is used to assign values to variable templates and allows for parameter variation.<br></p>
-<p><img src="../../../../../../images/en/bot-flow-var.png" alt="DmFlow Variable Node" title="DmFlow Variable Node"></p>
+<p><img src="../../../../../../images/en/bot-flow-var.png" alt="DMflow Variable Node" title="DMflow Variable Node"></p>
 <h3 id="operation-type">Operation Type</h3>
 <ul>
 <li>Variable: Selecting this operation allows you to set variables for a single session or user.</li>
@@ -286,7 +286,7 @@
 </ul>
 <h2 id="collect-node">Collect Node</h2>
 <p>The Collect Node is used to simplify the collection of intent-based slots.<br>
-<img src="../../../../../../images/en/bot-flow-collect.png" alt="DmFlow Collect Node" title="DmFlow Collect Node"></p>
+<img src="../../../../../../images/en/bot-flow-collect.png" alt="DMflow Collect Node" title="DMflow Collect Node"></p>
 <ul>
 <li>1.Set the question to collect the user's answer, which is used to collect specific intent-based slots.</li>
 <li>2.Specify the maximum number of failures allowed when the user's response does not match the specified intent-based slot. Exceeding this number will trigger a fallback.</li>
@@ -314,6 +314,10 @@
 <ul>
 <li><a href="../../tutorials/docs/bot-example.html">Bot Example</a></li>
 </ul>
+<h2 id="contact-information">Contact Information</h2>
+<p>Email: <a href="mailto:service@dmflow.chat">service@dmflow.chat</a></p>
+<p>DMflow.chat Official website: <a href="https://www.dmflow.chat/en/">DMflow.chat</a>
+(We changed our domain to <a href="http://www.dmflow.chat">www.dmflow.chat</a> on 2024-05-18)</p>
 
 </article>
           </div>

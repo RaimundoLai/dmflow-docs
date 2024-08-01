@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>DmFlow Applying for Facebook API | DmFlow | Communeify </title>
+    <title>DMflow Applying for Facebook API | DMflow | Communeify </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="DmFlow Applying for Facebook API | DmFlow | Communeify ">
-    <meta name="description" content="DmFlow integrates with the Facebook server via API to publish the chatbot to Messenger and provide it to users for interaction.">
+    <meta name="title" content="DMflow Applying for Facebook API | DMflow | Communeify ">
+    <meta name="description" content="DMflow integrates with the Facebook server via API to publish the chatbot to Messenger and provide it to users for interaction.">
     <meta name="generator" content="docfx ">
     <meta name="google-site-verification" content="wackHW3mx9OzoWNdH73Ucfx-Tgn27NaVqlQ-dzKaBfw">
   
@@ -73,21 +73,21 @@
 <h1 id="applying-for-facebook-api">Applying for Facebook API</h1>
 
 <h1 id="architecture">Architecture</h1>
-<p>DmFlow integrates with the Facebook server via API to publish the chatbot to Messenger and provide it to users for interaction.</p>
+<p>DMflow integrates with the Facebook server via API to publish the chatbot to Messenger and provide it to users for interaction.</p>
 <pre><code class="lang-mermaid">sequenceDiagram
     participant User
     participant MESSENGER SERVER
-    participant DmFlow
+    participant DMflow
 
     User-&gt;&gt;MESSENGER SERVER: Sends a message
-    MESSENGER SERVER-&gt;&gt;DmFlow: HTTP POST to webhook
-    DmFlow--&gt;&gt;MESSENGER SERVER: HTTP 200 OK
-    Note over DmFlow: Process and generate response
-    DmFlow-&gt;&gt;MESSENGER SERVER: Reply message
+    MESSENGER SERVER-&gt;&gt;DMflow: HTTP POST to webhook
+    DMflow--&gt;&gt;MESSENGER SERVER: HTTP 200 OK
+    Note over DMflow: Process and generate response
+    DMflow-&gt;&gt;MESSENGER SERVER: Reply message
     MESSENGER SERVER--&gt;&gt;User: Sends the response
 </code></pre>
 <h2 id="facebook-server">Facebook Server</h2>
-<p>Facebook provides various services that allow data exchange with DmFlow through API to communicate with Facebook's platform.</p>
+<p>Facebook provides various services that allow data exchange with DMflow through API to communicate with Facebook's platform.</p>
 <h2 id="api">API</h2>
 <p>API stands for Application Programming Interface, which specifies the rules for communication between software applications.</p>
 <h2 id="getting-started">Getting Started</h2>
@@ -95,21 +95,25 @@
 <h2 id="application-creation">Application Creation</h2>
 <p>First, go to the Facebook Developers website and access &quot;Apps&quot;</p>
 <p><a href="https://developers.facebook.com/apps/">Apps</a>is shown in the image below. Click on &quot;Create App&quot; to proceed.</p>
-<p><img src="../../../../../../images/en/messenger-001.png" alt="DmFlow Integration with Messenger" title="DmFlow Integration with Messenger"></p>
+<p><img src="../../../../../../images/en/messenger-001.png" alt="DMflow Integration with Messenger" title="DMflow Integration with Messenger"></p>
 <p>Choose the purpose of the application (usually for commercial use) and provide basic information, such as APP Name and App Contact Email. Both can be saved and modified later.</p>
-<p><img src="../../../../../../images/en/messenger-002.png" alt="DmFlow Integration with Messenger" title="DmFlow Integration with Messenger"></p>
+<p><img src="../../../../../../images/en/messenger-002.png" alt="DMflow Integration with Messenger" title="DMflow Integration with Messenger"></p>
 <p>Once created, as shown in Image 1, click on the newly created application to enter the Dashboard. Go to &quot;Settings&quot; -&gt; &quot;Basic.&quot;</p>
-<p><img src="../../../../../../images/en/messenger-003.png" alt="DmFlow Integration with Messenger" title="DmFlow Integration with Messenger"></p>
+<p><img src="../../../../../../images/en/messenger-003.png" alt="DMflow Integration with Messenger" title="DMflow Integration with Messenger"></p>
 <p>The Application ID is referred to as &quot;APP ID,&quot; and the Application Secret is the &quot;APP SECRET.&quot;</p>
 <h2 id="configuration">Configuration</h2>
-<p><img src="../../../../../../images/en/messenger-004.png" alt="DmFlow Integration with Messenger" title="DmFlow Integration with Messenger"></p>
+<p><img src="../../../../../../images/en/messenger-004.png" alt="DMflow Integration with Messenger" title="DMflow Integration with Messenger"></p>
 <p>Navigate to Products -&gt; Messenger -&gt; Settings to find the &quot;Access Tokens&quot; [PAGE ACCESS TOKEN]. Click on [3]. If you haven't created a Facebook Page, click on [2] to create one.</p>
-<p><img src="../../../../../../images/en/messenger-006.png" alt="DmFlow Integration with Messenger" title="DmFlow Integration with Messenger"></p>
-<p>Click on [1] to edit &quot;Callback URL&quot; and provide the &quot;Callback URL&quot; and &quot;Verify Token&quot; [you can generate it automatically in DmFlow -&gt; Bot -&gt; Publish -&gt; Keys]. Then, click [3] as shown in the image below to enable the required permissions.</p>
-<p><img src="../../../../../../images/en/messenger-005.png" alt="DmFlow Integration with Messenger" title="DmFlow Integration with Messenger"></p>
+<p><img src="../../../../../../images/en/messenger-006.png" alt="DMflow Integration with Messenger" title="DMflow Integration with Messenger"></p>
+<p>Click on [1] to edit &quot;Callback URL&quot; and provide the &quot;Callback URL&quot; and &quot;Verify Token&quot; [you can generate it automatically in DMflow -&gt; Bot -&gt; Publish -&gt; Keys]. Then, click [3] as shown in the image below to enable the required permissions.</p>
+<p><img src="../../../../../../images/en/messenger-005.png" alt="DMflow Integration with Messenger" title="DMflow Integration with Messenger"></p>
 <h2 id="review">Review</h2>
 <p>To allow other users to access the chatbot, you need to publish and review the &quot;pages_messaging&quot; permission under Advanced Access for the Facebook Page.</p>
 <p><img src="../../../../../../images/en/messenger-007.png" alt=""></p>
+<h2 id="contact-information">Contact Information</h2>
+<p>Email: <a href="mailto:service@dmflow.chat">service@dmflow.chat</a></p>
+<p>DMflow.chat Official website: <a href="https://www.dmflow.chat/en/">DMflow.chat</a>
+(We changed our domain to <a href="http://www.dmflow.chat">www.dmflow.chat</a> on 2024-05-18)</p>
 
 </article>
           </div>

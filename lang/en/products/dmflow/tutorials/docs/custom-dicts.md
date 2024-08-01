@@ -1,5 +1,5 @@
 ---
-title: DmFlow Custom Dictionaries| DmFlow
+title: DMflow Custom Dictionaries| DMflow
 description: Custom dictionaries are used to store standard terms, synonyms, and regular expressions for general vocabulary.
 ---
 
@@ -63,3 +63,9 @@ If you need a dictionary for email addresses, which cannot be represented by a s
 # Continue Reading
 - [Knowledge Base Introduction](../../tutorials/docs/qa-intro.html)
 
+## Contact Information
+
+Email: <service@dmflow.chat>
+
+DMflow.chat Official website: [DMflow.chat](https://www.dmflow.chat/en/)
+(We changed our domain to www.dmflow.chat on 2024-05-18)

@@ -1,6 +1,6 @@
 ---
-title: DmFlow 機器人API | DmFlow
-description: "API的用途是以程式碼搜尋、修改和刪除DmFlow內部資料。透過API，您可以以程式化的方式與DmFlow資料進行互動，實現無縫整合和自動化的資料管理。提高效率、增強生產力，充分發揮DmFlow內部資料的應用潛力。"
+title: DMflow 機器人API | DMflow
+description: "API的用途是以程式碼搜尋、修改和刪除DMflow內部資料。透過API，您可以以程式化的方式與DMflow資料進行互動，實現無縫整合和自動化的資料管理。提高效率、增強生產力，充分發揮DMflow內部資料的應用潛力。"
 ---
 
 # 機器人API
@@ -78,7 +78,7 @@ REQUEST JSON
 | userId        |   v   | STRING | 由呼叫方自行定義，可使用uuid
 | type          |   v   | ENUM   | event、text、attachment
 | scene         |   x   | STRING | 此為填寫場景名稱，預設為Main，當填寫後會根據情境節點中的"回到主情境"對應。詳情請參考"機器人流程"。
-| payload       |   v   | OBJECT | 傳給DmFlow的訊息
+| payload       |   v   | OBJECT | 傳給DMflow的訊息
 
 #### payload
 
@@ -799,7 +799,7 @@ RESPONSE JSON
 | data.users[0].updateTime                | 更新日期(秒)
 | data.users[0].createdTime               | 創建日期(秒)
 | data.users[0].hasImage                  | 是否有圖片，platform為line跟messenger有
-| data.users[0].id                        | 使用者DmFlow id
+| data.users[0].id                        | 使用者DMflow id
 | data.users[0].userId                    | 使用者的platform id
 | data.users[0].platform                  | 分為line、messenger、api、telegram
 | data.users[0].enabled                   | 是否啟用，如果line被blocked時將會關閉
@@ -816,7 +816,7 @@ RESPONSE JSON
 
 ### 獲取使用者
 
-第一種userId是客戶產生的ID，第二種查詢是以DmFlow分發的ID做查詢
+第一種userId是客戶產生的ID，第二種查詢是以DMflow分發的ID做查詢
 
 #### 第一種
 
@@ -898,7 +898,7 @@ RESPONSE JSON
 | data.updateTime                | 更新日期(秒)
 | data.createdTime               | 創建日期(秒)
 | data.hasImage                  | 是否有圖片，platform為line跟messenger有
-| data.id                        | 使用者DmFlow id
+| data.id                        | 使用者DMflow id
 | data.userId                    | 使用者的platform id
 | data.platform                  | 分為line、messenger、api、telegram
 | data.enabled                   | 是否啟用，如果line被blocked時將會關閉
@@ -1187,3 +1187,11 @@ REQUEST JSON
 2023/05/23
 
 - 新增"使用者註冊事件"
+
+
+## 聯絡資訊
+
+信箱: <service@dmflow.chat>
+
+DMflow.chat 官網: [DMflow.chat](https://www.dmflow.chat)
+(於2024-05-18更改網域至[DMflow.chat](https://www.dmflow.chat)，此文檔將不再維護請至[DMflow.chat文檔](https://docs.dmflow.chat)查看新版文檔)

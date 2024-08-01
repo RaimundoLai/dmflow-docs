@@ -1,13 +1,13 @@
 ---
-title: DmFlow Introduction | DmFlow
-description: Welcome to the DmFlow documentation, where you can learn more about how this platform can meet your needs.
+title: DMflow Introduction | DMflow
+description: Welcome to the DMflow documentation, where you can learn more about how this platform can meet your needs.
 ---
 
-# DmFlow
-Welcome to the DmFlow documentation, where you can learn more about how this platform can meet your needs.
+# DMflow
+Welcome to the DMflow documentation, where you can learn more about how this platform can meet your needs.
 
 ## Documentation
-Explore the following resources to quickly and efficiently familiarize yourself with DmFlow:
+Explore the following resources to quickly and efficiently familiarize yourself with DMflow:
 
 - [Getting Started Tutorial](tutorials/intro/index.md): Create a question-and-answer bot instance in no time.
 - [Detailed Documentation](tutorials/docs/index.md): Dive deeper into the platform's features and functionalities.
@@ -21,6 +21,7 @@ No questions have been collected at the moment.
 
 ## Contact Information
 
-Email: <service@communeify.com>
+Email: <service@dmflow.chat>
 
-Communeify Official website: [Communeify.com](https://communeify.com/en/)
+DMflow.chat Official website: [DMflow.chat](https://www.dmflow.chat/en/)
+(We changed our domain to www.dmflow.chat on 2024-05-18)

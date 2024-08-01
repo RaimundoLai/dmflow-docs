@@ -1,11 +1,11 @@
 ---
-title: Communeify DmFlow 真人客服-讓機器人躍升為有情有義的對話夥伴
-description: 如何在 DmFlow 中將機器人轉換成真人客服。透過 DmFlow 平台，瞭解如何結合自動化機器人與真人客服功能，提供更加人性化和互動性強的對話體驗。
+title: Communeify DMflow 真人客服-讓機器人躍升為有情有義的對話夥伴
+description: 如何在 DMflow 中將機器人轉換成真人客服。透過 DMflow 平台，瞭解如何結合自動化機器人與真人客服功能，提供更加人性化和互動性強的對話體驗。
 ---
 
 # 真人客服-讓機器人躍升為有情有義的對話夥伴
 
-如何在 DmFlow 中將機器人轉換成真人客服。透過 DmFlow 平台，瞭解如何結合自動化機器人與真人客服功能，提供更加人性化和互動性強的對話體驗。
+如何在 DMflow 中將機器人轉換成真人客服。透過 DMflow 平台，瞭解如何結合自動化機器人與真人客服功能，提供更加人性化和互動性強的對話體驗。
 
 ## 使用Messenger渠道
 
@@ -123,13 +123,13 @@ Parameter
 ```
 
 
-![DmFlow Messenger真人客服範例](../../../../../../images/tw/example-human-thread.gif "DmFlow Messenger真人客服範例")
+![DMflow Messenger真人客服範例](../../../../../../images/tw/example-human-thread.gif "DMflow Messenger真人客服範例")
 
 ![Messenger真人客服範例](../../../../../../images/tw/example-human-messenger.png "Messenger真人客服範例")
 
 其中判斷可以再加上rangeTime去判斷工作時間，也可以外接API做客服佇列、是否在線上等等。
 
-![DmFlow rangeTime](../../../../../../images/tw/example-date-format.png "DmFlow rangeTime")
+![DMflow rangeTime](../../../../../../images/tw/example-date-format.png "DMflow rangeTime")
 
 ## 使用API
 
@@ -145,7 +145,7 @@ Parameter
 
 可直接在LINE OA設定。不過記得用戶需要再"情境節點-聆聽"才能讓用戶不觸發機器人自動回話。
 
-![DmFlow 真人客服](../../../../../../images/tw/line-deskhelp.png "DmFlow LINE 真人客服")
+![DMflow 真人客服](../../../../../../images/tw/line-deskhelp.png "DMflow LINE 真人客服")
 
 ### Telegram
 
@@ -227,7 +227,7 @@ Parameter
 
 在依以下機器人動態圖作範例，即可做出簡單的Telegram真人客服。
 
-![DmFlow Telegram真人客服範例](../../../../../../images/tw/example-telegram-human.gif "DmFlow Telegram真人客服範例")
+![DMflow Telegram真人客服範例](../../../../../../images/tw/example-telegram-human.gif "DMflow Telegram真人客服範例")
 
 以下是實際畫面。
 
@@ -237,8 +237,10 @@ Parameter
 
 就可以做出簡單的真人問答系統。當然，可進一步搭配API做出查詢訊息、查找FAQ等等。
 
-# 了解更多
 
-[Communeify官方](https://communeify.com/)
+## 聯絡資訊
 
-- 進入官網後，可以線上直接回覆，或是可以有問題可以從信箱問<service@communeify.com>
+信箱: <service@dmflow.chat>
+
+DMflow.chat 官網: [DMflow.chat](https://www.dmflow.chat)
+(於2024-05-18更改網域至[DMflow.chat](https://www.dmflow.chat)，此文檔將不再維護請至[DMflow.chat文檔](https://docs.dmflow.chat)查看新版文檔)

@@ -1,5 +1,5 @@
 ---
-title: DmFlow Bot Introduction | DmFlow
+title: DMflow Bot Introduction | DMflow
 description: The chatbot section includes dialogue flow, logs, publishing, and settings.In the dialogue flow, you can design and configure the flow and logic of conversations. The log feature is used to record and track the history and statistical data of conversations. The publishing feature is used to deploy and release the chatbot to different branches. The settings section provides relevant configurations such as time zone, URL whitelist, and other chatbot settings.The combination of these features makes chatbot development and management more convenient and flexible, allowing you to easily design, track, and adjust your conversational chatbot.
 ---
 
@@ -67,3 +67,10 @@ The publishing feature is used to release the production version of the chatbot 
 The settings feature is used to integrate channels, configure URL whitelists, adjust time zones, and delete chatbots. It provides a convenient interface for managing and configuring these functionalities to meet your specific needs.
 
 - [MORE](../../tutorials/docs/bot-setting.html)
+
+## Contact Information
+
+Email: <service@dmflow.chat>
+
+DMflow.chat Official website: [DMflow.chat](https://www.dmflow.chat/en/)
+(We changed our domain to www.dmflow.chat on 2024-05-18)

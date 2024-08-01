@@ -1,6 +1,6 @@
 ---
-title: DmFlow Bot API | DmFlow
-description: "The API is designed for programmatically searching, modifying, and deleting internal data within DmFlow. With the API, you can interact with DmFlow data in a programmatic way, enabling seamless integration and automated data management. Boost efficiency, enhance productivity, and unlock the full potential of internal data in DmFlow."
+title: DMflow Bot API | DMflow
+description: "The API is designed for programmatically searching, modifying, and deleting internal data within DMflow. With the API, you can interact with DMflow data in a programmatic way, enabling seamless integration and automated data management. Boost efficiency, enhance productivity, and unlock the full potential of internal data in DMflow."
 ---
 
 # Bot API
@@ -79,7 +79,7 @@ REQUEST JSON
 | userId        |   v         | STRING | Defined by the caller, can use UUID.
 | type          |   v         | ENUM   | event、text、attachment
 | scene         |   x         | STRING | The name of the scene. Default is "Main". If specified, it will correspond to the "Return to Main Scene" in the context node. For more details, refer to "Bot Flow".
-| payload       |   v         | OBJECT | The message sent to DmFlow.
+| payload       |   v         | OBJECT | The message sent to DMflow.
 
 #### payload
 
@@ -628,7 +628,7 @@ RESPONSE JSON
 | data.users[0].updateTime                | Update time (in seconds)
 | data.users[0].createdTime               | Creation time (in seconds)
 | data.users[0].hasImage                  | Indicates if the user has an image (available for line and messenger)
-| data.users[0].id                        | User's DmFlow ID
+| data.users[0].id                        | User's DMflow ID
 | data.users[0].userId                    | User's platform ID
 | data.users[0].platform                  | Platform options: line, messenger, api, telegram
 | data.users[0].enabled                   | Indicates if the user is enabled. If the user is blocked on Line, it will be disabled.
@@ -661,7 +661,7 @@ GET /_api/v1/bot/users/{userId}?platform=messenger
 | ------------- | -------
 | platform      | Platform options: line, messenger, api, telegram/_api/v1/bot/info.
 
-#### Method 2: Using the DmFlow ID
+#### Method 2: Using the DMflow ID
 
 GET /_api/v1/bot/users/_id/{id}
 
@@ -729,7 +729,7 @@ RESPONSE JSON
 | data.updateTime                | Update time (in seconds)
 | data.createdTime               | Creation time (in seconds)
 | data.hasImage                  | Indicates if the user has an image (available for line and messenger)
-| data.id                        | User's DmFlow ID
+| data.id                        | User's DMflow ID
 | data.userId                    | User's platform ID
 | data.platform                  | Platform options: line, messenger, api, telegram
 | data.enabled                   | Indicates if the user is enabled. If the user is blocked on Line, it will be disabled.
@@ -1004,3 +1004,11 @@ REQUEST JSON
 | --------------------------------- | --------------------------------
 | rc                                | Response code. 0 => successful response, non-zero for errors
 | error                             | Error message generated when the response code is non-zero
+
+
+## Contact Information
+
+Email: <service@dmflow.chat>
+
+DMflow.chat Official website: [DMflow.chat](https://www.dmflow.chat/en/)
+(We changed our domain to www.dmflow.chat on 2024-05-18)

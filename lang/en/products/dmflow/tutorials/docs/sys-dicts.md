@@ -1,5 +1,5 @@
 ---
-title: DmFlow Dictionary Reference | DmFlow
+title: DMflow Dictionary Reference | DMflow
 description: Supports referencing dictionaries.
 ---
 
@@ -16,4 +16,11 @@ Currently supported dictionaries in the system:
 
 # Continue Reading
 - [Dictionary - Custom Dictionaries](../../tutorials/docs/custom-dicts.html)
+
+## Contact Information
+
+Email: <service@dmflow.chat>
+
+DMflow.chat Official website: [DMflow.chat](https://www.dmflow.chat/en/)
+(We changed our domain to www.dmflow.chat on 2024-05-18)
 

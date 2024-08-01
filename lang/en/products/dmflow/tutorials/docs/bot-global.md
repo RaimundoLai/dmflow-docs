@@ -1,5 +1,5 @@
 ---
-title: DmFlow Bot Global Settings | DmFlow
+title: DMflow Bot Global Settings | DMflow
 description: The configuration of a conversation flow refers to setting up enabled domains, scenes, and generic responses in a conversational bot to ensure that the bot can understand and answer questions correctly in interactions with users.
 ---
 
@@ -62,3 +62,10 @@ Responses inherited by every scene.
 
 # Continue Reading
 - [Bot Resource Management](../../tutorials/docs/bot-resource.html)
+
+## Contact Information
+
+Email: <service@dmflow.chat>
+
+DMflow.chat Official website: [DMflow.chat](https://www.dmflow.chat/en/)
+(We changed our domain to www.dmflow.chat on 2024-05-18)

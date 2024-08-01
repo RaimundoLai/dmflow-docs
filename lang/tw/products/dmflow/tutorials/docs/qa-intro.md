@@ -1,5 +1,5 @@
 ---
-title: DmFlow 知識庫介紹 | DmFlow
+title: DMflow 知識庫介紹 | DMflow
 description: 知識庫包含問答對以及表格問答，以下將會介紹兩者的定義以及用途。
 ---
 
@@ -148,3 +148,10 @@ ${%listOutput(#context.order,'${#br}第${#index}筆:日期${#item.date}, 金額�
 - 增加表格問答以及問答對的基本解釋
 - 將item.br以及item.index更改為br以及index。
 
+
+## 聯絡資訊
+
+信箱: <service@dmflow.chat>
+
+DMflow.chat 官網: [DMflow.chat](https://www.dmflow.chat)
+(於2024-05-18更改網域至[DMflow.chat](https://www.dmflow.chat)，此文檔將不再維護請至[DMflow.chat文檔](https://docs.dmflow.chat)查看新版文檔)

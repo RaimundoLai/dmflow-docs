@@ -1,6 +1,6 @@
 ---
-title: DmFlow 範例-目錄 | DmFlow
-description: DmFlow 範例-目錄
+title: DMflow 範例-目錄 | DMflow
+description: DMflow 範例-目錄
 ---
 
 # 目錄
@@ -14,3 +14,11 @@ description: DmFlow 範例-目錄
 | 表格問答範例-汽車    | 2023-07-03 |                 | [連結](../../tutorials/intro/tableqa-car-example.html)
 | 意圖範例-請假系統    | 2023-07-05 |                 | [連結](../../tutorials/intro/intent-leave-example.html)
 | LINE帳號連接         | 2023-07-05 |                 | [連結](../../tutorials/intro/line-accountlink.html)
+
+
+## 聯絡資訊
+
+信箱: <service@dmflow.chat>
+
+DMflow.chat 官網: [DMflow.chat](https://www.dmflow.chat)
+(於2024-05-18更改網域至[DMflow.chat](https://www.dmflow.chat)，此文檔將不再維護請至[DMflow.chat文檔](https://docs.dmflow.chat)查看新版文檔)

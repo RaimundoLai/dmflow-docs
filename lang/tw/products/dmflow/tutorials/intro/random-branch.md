@@ -1,6 +1,6 @@
 ---
-title: Communeify DmFlow 隨機分支用於用戶回應、A/B測試和抽籤抽獎的多功能工具
-description: DmFlow 應用於用戶回應、A/B測試和抽籤抽獎等用途。隨機分支為你的業務帶來多元化的回應方式，同時可用於進行A/B測試，讓你快速評估不同策略的效果。此外，它還可用於抽籤、抽獎等活動，增添趣味性和互動性。發揮隨機分支的潛力，提升用戶體驗，推動業務增長。
+title: DMflow.chat 隨機分支用於用戶回應、A/B測試和抽籤抽獎的多功能工具
+description: DMflow 應用於用戶回應、A/B測試和抽籤抽獎等用途。隨機分支為你的業務帶來多元化的回應方式，同時可用於進行A/B測試，讓你快速評估不同策略的效果。此外，它還可用於抽籤、抽獎等活動，增添趣味性和互動性。發揮隨機分支的潛力，提升用戶體驗，推動業務增長。
 ---
 
 # 隨機分支-用於用戶回應、A/B測試和抽籤抽獎的多功能工具
@@ -12,12 +12,14 @@ description: DmFlow 應用於用戶回應、A/B測試和抽籤抽獎等用途。
 藉由型態為百分比的時候，可以自定義百分比由1-100，從同一個點出線的百分比會進行統計，舉例第一個百分比為60，第二個為30，第三個為10，則總共為100，第一個節點機率為0.6，第二個為0.3，第三個為0.1，計算方式分別為為60/100，30/100，10/100。
 
 
-![DmFlow 隨機分支範例](../../../../../../images/tw/random-branch-example.gif "DmFlow 隨機分支範例")
+![DMflow 隨機分支範例](../../../../../../images/tw/random-branch-example.gif "DMflow 隨機分支範例")
 
 範例用作30、30、30也就是各為30/90的機率。
 
-# 了解更多
 
-[Communeify官方](https://communeify.com/)
+## 聯絡資訊
 
-- 進入官網後，可以線上直接回覆，或是可以有問題可以從信箱問<service@communeify.com>
+信箱: <service@dmflow.chat>
+
+DMflow.chat 官網: [DMflow.chat](https://www.dmflow.chat)
+(於2024-05-18更改網域至[DMflow.chat](https://www.dmflow.chat)，此文檔將不再維護請至[DMflow.chat文檔](https://docs.dmflow.chat)查看新版文檔)

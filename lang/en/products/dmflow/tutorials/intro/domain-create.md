@@ -1,6 +1,6 @@
 ---
-title: DmFlow Intent Example-Creating Intent Domains | DmFlow
-description: DmFlow Intent Example-Creating Intent Domains
+title: DMflow Intent Example-Creating Intent Domains | DMflow
+description: DMflow Intent Example-Creating Intent Domains
 ---
 
 
@@ -15,3 +15,10 @@ Create intents for "cancel_meeting", "invite_members", "modify_meeting_time", an
 
 # NEXT
 - [Entity Logical Thinking](../../tutorials/intro/entity-logical.html)
+
+## Contact Information
+
+Email: <service@dmflow.chat>
+
+DMflow.chat Official website: [DMflow.chat](https://www.dmflow.chat/en/)
+(We changed our domain to www.dmflow.chat on 2024-05-18)

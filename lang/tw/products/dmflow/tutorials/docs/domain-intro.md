@@ -1,11 +1,11 @@
 ---
-title: DmFlow 領域介紹 | DmFlow
-description: DmFlow領域的定義在於連接問答對、表格問答，或是創建意圖，為三選一，領域提供很多豐富的功能，可以供問答對以及表格問答和意圖調用。
+title: DMflow 領域介紹 | DMflow
+description: DMflow領域的定義在於連接問答對、表格問答，或是創建意圖，為三選一，領域提供很多豐富的功能，可以供問答對以及表格問答和意圖調用。
 ---
 
 # 領域介紹
 
-DmFlow領域的定義在於連接問答對、表格問答，或是創建意圖，為三選一，領域提供很多豐富的功能，可以供問答對以及表格問答和意圖調用。
+DMflow領域的定義在於連接問答對、表格問答，或是創建意圖，為三選一，領域提供很多豐富的功能，可以供問答對以及表格問答和意圖調用。
 
 ## 意圖
 
@@ -75,3 +75,11 @@ DmFlow領域的定義在於連接問答對、表格問答，或是創建意圖�
 
 - 移除不必要的圖片解說
 - 新增介紹領域及意圖
+
+
+## 聯絡資訊
+
+信箱: <service@dmflow.chat>
+
+DMflow.chat 官網: [DMflow.chat](https://www.dmflow.chat)
+(於2024-05-18更改網域至[DMflow.chat](https://www.dmflow.chat)，此文檔將不再維護請至[DMflow.chat文檔](https://docs.dmflow.chat)查看新版文檔)

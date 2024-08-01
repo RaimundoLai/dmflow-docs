@@ -1,13 +1,13 @@
 ---
-title: DmFlow Intent Example-Entity Logical Thinking | DmFlow
-description: DmFlow Intent Example-Entity Logical Thinking
+title: DMflow Intent Example-Entity Logical Thinking | DMflow
+description: DMflow Intent Example-Entity Logical Thinking
 ---
 
 # Entity Logical Thinking
 
 When creating the following intents, it is helpful to consider the entities required for these intents. Entities will be the data we collect. See the image below:
 
-![DmFlow Intent Example-Entity Logical Thinking](../../../../../../images/en/intro-003.png "DmFlow Intent Example-Entity Logical Thinking")
+![DMflow Intent Example-Entity Logical Thinking](../../../../../../images/en/intro-003.png "DMflow Intent Example-Entity Logical Thinking")
 
 We can divide them into the following entities:
 
@@ -17,3 +17,10 @@ We can divide them into the following entities:
 
 # NEXT
 - [Building Requirement Dictionaries](../../tutorials/intro/dict-create.html)
+
+## Contact Information
+
+Email: <service@dmflow.chat>
+
+DMflow.chat Official website: [DMflow.chat](https://www.dmflow.chat/en/)
+(We changed our domain to www.dmflow.chat on 2024-05-18)

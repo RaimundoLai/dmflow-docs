@@ -1,5 +1,5 @@
 ---
-title: DmFlow Knowledge Base Introduction | DmFlow
+title: DMflow Knowledge Base Introduction | DMflow
 description: The knowledge base consists of Question-Answer (QA) pairs and tabular QA. The following will introduce the definitions and applications of both.
 ---
 
@@ -109,4 +109,9 @@ If the passed values are not filled or an error occurs, the parameter values wil
 ## Continue Reading
 - [Domain Introduction](../../tutorials/docs/domain-intro.html)
 
+## Contact Information
 
+Email: <service@dmflow.chat>
+
+DMflow.chat Official website: [DMflow.chat](https://www.dmflow.chat/en/)
+(We changed our domain to www.dmflow.chat on 2024-05-18)

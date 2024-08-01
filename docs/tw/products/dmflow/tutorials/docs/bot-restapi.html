@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>DmFlow 機器人API | DmFlow | Communeify </title>
+    <title>DMflow 機器人API | DMflow | Communeify </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="DmFlow 機器人API | DmFlow | Communeify ">
-    <meta name="description" content="API的用途是以程式碼搜尋、修改和刪除DmFlow內部資料。透過API，您可以以程式化的方式與DmFlow資料進行互動，實現無縫整合和自動化的資料管理。提高效率、增強生產力，充分發揮DmFlow內部資料的應用潛力。">
+    <meta name="title" content="DMflow 機器人API | DMflow | Communeify ">
+    <meta name="description" content="API的用途是以程式碼搜尋、修改和刪除DMflow內部資料。透過API，您可以以程式化的方式與DMflow資料進行互動，實現無縫整合和自動化的資料管理。提高效率、增強生產力，充分發揮DMflow內部資料的應用潛力。">
     <meta name="generator" content="docfx ">
     <meta name="google-site-verification" content="wackHW3mx9OzoWNdH73Ucfx-Tgn27NaVqlQ-dzKaBfw">
   
@@ -73,27 +73,8 @@
 <h1 id="機器人api">機器人API</h1>
 
 <h2 id="authorization">Authorization</h2>
-<p>每一個請求都需要攜帶Authorization.</p>
-<p>組成為&lt;CLIENT_ID&gt;:&lt;TIME_STAMP&gt;:<nonce></nonce></p>
-<ul>
-<li>CLIENT_ID:DMFlow提供的CLIENT_ID</li>
-<li>TIMESTAMP:當前時間，用來判斷是否有過期。</li>
-<li>NONCE:一般可以同樣用TIMESTAMP來注入，或是UUID也行</li>
-</ul>
-<p>Postman pre script 參考。</p>
-<pre><code>var uuid = require('uuid');
-const secretKey = 'a60207f4d8abf6ee7bf14ecaa69fbb310310784abdae354fadd4939eda95e54c';
-const clientId = '6d7ffe73-e922-4011-9057-606fc42966d8';
-
-const timestamp = Math.floor(Date.now() / 1000);
-const randomValue = uuid.v4();
-requestData += (clientId + ':' + timestamp + ':' + randomValue);
-const signature = CryptoJS.HmacSHA256(requestData, secretKey).toString(CryptoJS.enc.Hex);
-var map = { 'signature': 'sha256=' + signature, 'clientId': clientId, 'timestamp': timestamp, 'nonce': randomValue };
-var words = CryptoJS.enc.Utf8.parse(JSON.stringify(map));
-var base64 = CryptoJS.enc.Base64.stringify(words);
-pm.environment.set('auth', 'Bearer ' + base64);
-</code></pre>
+<p>直接進行機器人的&quot;密鑰列表&quot;和領域的&quot;API管理&quot;，顯示密鑰旁邊有個複製直接複製即可。</p>
+<p>{{auth}}=Bearer <api token=""></api></p>
 <h2 id="機器人詳情">機器人詳情</h2>
 <p>擷取機器人內的名稱、描述以及時區。</p>
 <p>GET /_api/v1/bot/info</p>
@@ -230,7 +211,7 @@ pm.environment.set('auth', 'Bearer ' + base64);
 <td>payload</td>
 <td>v</td>
 <td>OBJECT</td>
-<td>傳給DmFlow的訊息</td>
+<td>傳給DMflow的訊息</td>
 </tr>
 </tbody>
 </table>
@@ -1522,7 +1503,7 @@ pm.environment.set('auth', 'Bearer ' + base64);
 </tr>
 <tr>
 <td>data.users[0].id</td>
-<td>使用者DmFlow id</td>
+<td>使用者DMflow id</td>
 </tr>
 <tr>
 <td>data.users[0].userId</td>
@@ -1575,7 +1556,7 @@ pm.environment.set('auth', 'Bearer ' + base64);
 </tbody>
 </table>
 <h3 id="獲取使用者">獲取使用者</h3>
-<p>第一種userId是客戶產生的ID，第二種查詢是以DmFlow分發的ID做查詢</p>
+<p>第一種userId是客戶產生的ID，第二種查詢是以DMflow分發的ID做查詢</p>
 <h4 id="第一種">第一種</h4>
 <p>GET /_api/v1/bot/users/{userId}?platform=messenger</p>
 <table>
@@ -1704,7 +1685,7 @@ pm.environment.set('auth', 'Bearer ' + base64);
 </tr>
 <tr>
 <td>data.id</td>
-<td>使用者DmFlow id</td>
+<td>使用者DMflow id</td>
 </tr>
 <tr>
 <td>data.userId</td>
@@ -2319,6 +2300,10 @@ pm.environment.set('auth', 'Bearer ' + base64);
 <ul>
 <li>新增&quot;使用者註冊事件&quot;</li>
 </ul>
+<h2 id="聯絡資訊">聯絡資訊</h2>
+<p>信箱: <a href="mailto:service@dmflow.chat">service@dmflow.chat</a></p>
+<p>DMflow.chat 官網: <a href="https://www.dmflow.chat">DMflow.chat</a>
+(於2024-05-18更改網域至<a href="https://www.dmflow.chat">DMflow.chat</a>，此文檔將不再維護請至<a href="https://docs.dmflow.chat">DMflow.chat文檔</a>查看新版文檔)</p>
 
 </article>
           </div>

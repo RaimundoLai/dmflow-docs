@@ -1,5 +1,5 @@
 ---
-title: DmFlow Broadcasting | DmFlow
+title: DMflow Broadcasting | DMflow
 description: Broadcasting is used to send bulk messages to a group of users. It can be widely used for marketing, promotional activities, update notifications, and more. Here are some features and use cases of the broadcasting functionality.
 ---
 
@@ -19,14 +19,14 @@ Broadcasting is used to send bulk messages to a group of users. It can be widely
 
 ## Introduction
 
-![DmFlow real broadcast Image](../../../../../../images/en/bot-broadcast-intro.png "DmFlow real broadcast Image")
+![DMflow real broadcast Image](../../../../../../images/en/bot-broadcast-intro.png "DMflow real broadcast Image")
 
 1. Channels currently supported: LINE, Messenger, Telegram.
 2. Branches: Dev (development version) and Prod (production version).
   - Dev is for testing purposes.
 3. Filtering Options:
   - Filter Conditions: Users can be filtered based on tags and last interaction time to determine the recipients of the broadcast.
-  - Self-registration: By using resource nodes to interact with DmFlow's API, users can register events themselves.
+  - Self-registration: By using resource nodes to interact with DMflow's API, users can register events themselves.
 4. Recipients: Users and groups.
 　- Groups: Only available for LINE and Telegram, broadcasts will be sent to the selected groups.
 5. Display the number of users matching the filtering or registration criteria.
@@ -36,3 +36,10 @@ Broadcasting is used to send bulk messages to a group of users. It can be widely
 
 # Continue Reading
 - [Publishing](../../tutorials/docs/bot-published.html)
+
+## Contact Information
+
+Email: <service@dmflow.chat>
+
+DMflow.chat Official website: [DMflow.chat](https://www.dmflow.chat/en/)
+(We changed our domain to www.dmflow.chat on 2024-05-18)

@@ -1,5 +1,5 @@
 ---
-title: DmFlow 全局設定 | DmFlow
+title: DMflow 全局設定 | DMflow
 description: 對話流程的設定是指在對話機器人中設定啟用的領域、場景和通用回答，以確保機器人在與使用者的對話中能夠正確理解和回答問題。
 ---
 
@@ -80,3 +80,11 @@ description: 對話流程的設定是指在對話機器人中設定啟用的領�
 2023/05/22
 
 - 移除表格問答以及問答隊的平台選擇。
+
+
+## 聯絡資訊
+
+信箱: <service@dmflow.chat>
+
+DMflow.chat 官網: [DMflow.chat](https://www.dmflow.chat)
+(於2024-05-18更改網域至[DMflow.chat](https://www.dmflow.chat)，此文檔將不再維護請至[DMflow.chat文檔](https://docs.dmflow.chat)查看新版文檔)

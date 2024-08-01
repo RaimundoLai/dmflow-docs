@@ -1,5 +1,5 @@
 ---
-title: DmFlow 機器人模板 | DmFlow
+title: DMflow 機器人模板 | DMflow
 description:對話模板-用於連接其他平台的對話回覆，以實現多渠道的對話互動。記憶模板-用於儲存永久或臨時的資訊，以便後續使用或引用。這兩種模板可以根據您的需求，有效地處理和管理對話中的內容，為對話機器人提供更豐富的回應。
 ---
 
@@ -37,7 +37,7 @@ description:對話模板-用於連接其他平台的對話回覆，以實現多�
 - 提示選項：使用快速回覆可以向用戶提供一些選項按鈕，用戶可以直接點擊選項來回答或執行相應的操作，提供更便捷的互動方式。
 - 快速操作：快速回覆也可以用於觸發特定的操作或指令，例如訂閱功能、查詢功能、預約功能等，用戶可以直接點擊按鈕來執行相應的操作，節省輸入的步驟和時間。
 
-![DmFlow快速回覆顯示](../../../../../../images/tw/bot-template-line-quick-r.png "DmFlow快速回覆顯示")
+![DMflow快速回覆顯示](../../../../../../images/tw/bot-template-line-quick-r.png "DMflow快速回覆顯示")
 
 - 1.文字旁邊的icon：這是指在文字或按鈕旁邊顯示的小圖示，用於提供額外的視覺提示或識別。這些圖示可以用於區分不同的按鈕選項，增強用戶的理解和互動體驗。
 - 2.物件觸發動作：地點、相片片捲(手機儲存圖片)、開啟視窗、回傳值、相機、時間選擇器、訊息文字。
@@ -50,15 +50,15 @@ description:對話模板-用於連接其他平台的對話回覆，以實現多�
 
 機器人可以發送圖片給使用者。這使得您可以傳送圖片檔案，讓使用者可以查看圖片的內容。
 
-![DmFlow上傳圖片](../../../../../../images/tw/bot-template-upload-image.png "DmFlow上傳圖片")
+![DMflow上傳圖片](../../../../../../images/tw/bot-template-upload-image.png "DMflow上傳圖片")
 
-- 圖片格式：DmFlow 支援 JPEG 和 PNG 格式的圖片。
-- 圖片大小：上傳的圖片大小限制為1MB[以DmFlow系統顯示為主]以內。
-- 縮圖大小：當顯示縮圖時，圖片大小限制為 1MB[以DmFlow系統顯示為主]以內。這是為了確保縮圖能夠快速加載和顯示。
+- 圖片格式：DMflow 支援 JPEG 和 PNG 格式的圖片。
+- 圖片大小：上傳的圖片大小限制為1MB[以DMflow系統顯示為主]以內。
+- 縮圖大小：當顯示縮圖時，圖片大小限制為 1MB[以DMflow系統顯示為主]以內。這是為了確保縮圖能夠快速加載和顯示。
 
 圖片網址：圖片的網址必須使用 HTTPS 協定，以確保安全性，網址支援10MB。
 
-上傳圖片：使用者可以提供圖片的網址進行上傳。只要有有效的圖片網址，DmFlow 就可以將圖片上傳並使用。
+上傳圖片：使用者可以提供圖片的網址進行上傳。只要有有效的圖片網址，DMflow 就可以將圖片上傳並使用。
 
 - 1.垂直向左：將圖片垂直旋轉到左側。
 - 2.垂直向右：將圖片垂直旋轉到右側。
@@ -77,7 +77,7 @@ description:對話模板-用於連接其他平台的對話回覆，以實現多�
 
 機器人可以發送影片給使用者。這使得您可以傳送影片檔案，讓使用者可以觀看影片內容。
 
-![DmFlow影片訊息](../../../../../../images/tw/bot-template-line-video-s.png "DmFlow影片訊息")
+![DMflow影片訊息](../../../../../../images/tw/bot-template-line-video-s.png "DMflow影片訊息")
 
 - 使用網址：在回覆訊息中，僅能使用網址來引用圖片或影片。這表示你可以提供圖片或影片的網址，讓機器人在對話中顯示它們。
 - 影片支援：當引用影片時，僅支援使用 MP4 格式的影片。這意味著你需要提供 MP4 格式的影片檔案的網址。
@@ -90,7 +90,7 @@ description:對話模板-用於連接其他平台的對話回覆，以實現多�
 
 機器人可以發送語音訊息給使用者。使用者可以聆聽您發送的語音內容。
 
-![DmFlow語音訊息](../../../../../../images/tw/bot-template-line-audio-s.png "DmFlow語音訊息")
+![DMflow語音訊息](../../../../../../images/tw/bot-template-line-audio-s.png "DMflow語音訊息")
 
 - 使用網址：在回覆訊息中，僅能使用網址來引用語音檔案。這表示你可以提供語音檔案的網址，讓機器人在對話中播放語音。
 - 語音支援：當引用語音時，僅支援使用 M4A 格式的語音檔案。這意味著你需要提供 M4A 格式的語音檔案的網址。
@@ -100,21 +100,21 @@ description:對話模板-用於連接其他平台的對話回覆，以實現多�
 請注意遵守這些限制和要求，以確保語音能正確播放並符合相關的安全標準。
 
 #### 圖文訊息
-![DmFlow圖文訊息](../../../../../../images/tw/bot-template-line-imagemap-s.png "DmFlow圖文訊息")
+![DMflow圖文訊息](../../../../../../images/tw/bot-template-line-imagemap-s.png "DMflow圖文訊息")
 
 <a href="https://tw.linebiz.com/manual/line-official-account/oa-manager-richmessage/" target="_blank">LINE官方圖文訊息介紹</a>
 - 1.網址限制：在回覆訊息中，網址的大小限制為10MB以下。這表示你所提供的網址必須指向檔案大小在10MB以下的資源。同時，為了安全性和保護使用者的隱私，提供的網址必須使用 HTTPS 協定。
-  - DmFlow上傳圖片限制：在 DmFlow 平台上，上傳的圖片大小限制為1MB[以DmFlow系統顯示為主]以內。這表示你在 DmFlow 平台上上傳的圖片將被限制在1MB以下的大小。請確保你上傳的圖片符合此限制。
+  - DMflow上傳圖片限制：在 DMflow 平台上，上傳的圖片大小限制為1MB[以DMflow系統顯示為主]以內。這表示你在 DMflow 平台上上傳的圖片將被限制在1MB以下的大小。請確保你上傳的圖片符合此限制。
 - 2.替代文字：當使用者收到圖文訊息時，替代文字是顯示在圖片無法載入時所顯示的文字。這可以是一段描述圖片內容或提供相關資訊的文字。替代文字的目的是在圖片無法顯示時提供一個替代的內容給使用者。
 - 3.[圖文訊息-影片](../../tutorials/docs/bot-template.html#圖文訊息-影片)
 - 4.[圖文訊息-觸發動作](../../tutorials/docs/bot-template.html#圖文訊息-觸發動作)
 
 #### 圖文訊息-影片
 
-![DmFlow圖文影片](../../../../../../images/tw/bot-template-line-imagemap-video.png "DmFlow圖文影片")
+![DMflow圖文影片](../../../../../../images/tw/bot-template-line-imagemap-video.png "DMflow圖文影片")
 
-- 1.影片限制：目前 DmFlow 平台尚未支援直接上傳影片功能，因此只能使用網址來提供影片。在使用網址提供影片時，支援的影片格式為 MP4，且大小限制在200MB以內。同時，提供的影片網址必須使用 HTTPS 協定。
-- 2.圖片預覽：在預覽圖片方面，DmFlow支援的圖片大小限制為1MB以內。請確保提供的圖片符合此限制。
+- 1.影片限制：目前 DMflow 平台尚未支援直接上傳影片功能，因此只能使用網址來提供影片。在使用網址提供影片時，支援的影片格式為 MP4，且大小限制在200MB以內。同時，提供的影片網址必須使用 HTTPS 協定。
+- 2.圖片預覽：在預覽圖片方面，DMflow支援的圖片大小限制為1MB以內。請確保提供的圖片符合此限制。
 - 3.水平位置：水平位置是指圖片或影片在訊息中的左右位置。該位置的值必須大於0，表示從左邊開始計算的位置。
 - 4.垂直位置：垂直位置是指圖片或影片在訊息中的上下位置。該位置的值必須大於0，表示從上方開始計算的位置。
 - 5.影片寬度：影片寬度指的是訊息中所顯示的影片的寬度尺寸。
@@ -127,7 +127,7 @@ description:對話模板-用於連接其他平台的對話回覆，以實現多�
 
 #### 圖文訊息-訊息文字
 
-![DmFlow圖文文字](../../../../../../images/tw/bot-template-line-imagemap-t-text.png "DmFlow圖文文字")
+![DMflow圖文文字](../../../../../../images/tw/bot-template-line-imagemap-t-text.png "DMflow圖文文字")
 
 - 1.由上方開始位置計算：指的是元素在訊息中的垂直位置是由上方開始計算的。這意味著較小的數值表示元素離訊息頂部較近。
 - 2.由左方開始位置計算：指的是元素在訊息中的水平位置是由左方開始計算的。這意味著較小的數值表示元素離訊息左側較近。
@@ -139,7 +139,7 @@ description:對話模板-用於連接其他平台的對話回覆，以實現多�
 
 #### 圖文訊息-開啟視窗
 
-![DmFlow圖文連結](../../../../../../images/tw/bot-template-line-imagemap-t-link.png "DmFlow圖文連結")
+![DMflow圖文連結](../../../../../../images/tw/bot-template-line-imagemap-t-link.png "DMflow圖文連結")
 
 - 1.由上方開始位置計算：指的是元素在訊息中的垂直位置是由上方開始計算的。較小的數值表示元素距離訊息頂部較近。
 - 2.備註：當客戶端具有輔助功能時，可以提供備註功能，例如進行語音提醒，以協助特殊需求的使用者。
@@ -161,7 +161,7 @@ description:對話模板-用於連接其他平台的對話回覆，以實現多�
 
 #### 圖片輪播
 
-![DmFlow圖片輪播](../../../../../../images/tw/bot-template-line-imagecard-s.png "DmFlow圖片輪播")
+![DMflow圖片輪播](../../../../../../images/tw/bot-template-line-imagecard-s.png "DMflow圖片輪播")
 
 - 1.當電腦版無法顯示的時候顯示的文字。
 - 2.模板選擇「圖片輪播模組」
@@ -171,20 +171,20 @@ description:對話模板-用於連接其他平台的對話回覆，以實現多�
 包含[觸發動作-訊息文字](../../tutorials/docs/bot-template.html#觸發動作-訊息文字)、[觸發動作-回傳值](../../tutorials/docs/bot-template.html#觸發動作-回傳值)、[觸發動作-開啟視窗](../../tutorials/docs/bot-template.html#觸發動作-開啟視窗)
 
 #### 觸發動作-訊息文字
-![DmFlow觸發動作](../../../../../../images/tw/bot-template-line-imagecard-s-t-text.png "DmFlow觸發動作")
+![DMflow觸發動作](../../../../../../images/tw/bot-template-line-imagecard-s-t-text.png "DMflow觸發動作")
 - 1.圖片上的文字按鈕顯示之文字。
 - 2.當點擊按鈕後回傳的文字。
 
 #### 觸發動作-回傳值
-![DmFlow回傳值](../../../../../../images/tw/bot-template-postback.png "DmFlow回傳值")
+![DMflow回傳值](../../../../../../images/tw/bot-template-postback.png "DMflow回傳值")
 - 1.圖片上的文字按鈕顯示之文字，在圖片上設置文字按鈕時，您可以為每個按鈕指定要顯示的文字。這些文字將出現在圖片上，以引導用戶進行相應的操作或獲取更多資訊。
 - 2.訊息型態分為文字以及事件，在對話中，您可以使用文字或事件作為訊息的型態。文字訊息用於直接向用戶展示文本內容，而事件則觸發相應的動作或處理。
 - 3.文字的細項僅有文字，事件的細項包括打斷事件、忽略事件、開始事件、結束事件、喚醒事件，在訊息中，文字細節僅包含要顯示的文字內容。而事件細節則根據不同的事件類型進行設置，例如打斷事件、忽略事件、開始事件、結束事件、喚醒事件等。詳細了解回傳值的使用，請參考連結[回傳值的使用](../../tutorials/docs/bot-template.html#回傳值)。
-- 5.文字的詢問：透過對話，您可以向用戶提問文字內容，並將其作為用戶的回答傳遞給DmFlow進一步處理。這樣您可以與用戶進行對話互動，並根據他們的回答進行後續操作。
+- 5.文字的詢問：透過對話，您可以向用戶提問文字內容，並將其作為用戶的回答傳遞給DMflow進一步處理。這樣您可以與用戶進行對話互動，並根據他們的回答進行後續操作。
 - 6.當用戶點此文字按鈕後，將會顯示在自己的LINE客戶端上的文字：當用戶點擊文字按鈕時，相應的文字內容將顯示在用戶的LINE客戶端上。這使您可以進一步提供用戶所需的相關資訊或指示。
 
 #### 回傳值
-代表點擊該按鍵時會傳給DmFlow的數據，主要需要了解的是事件的細稱：
+代表點擊該按鍵時會傳給DMflow的數據，主要需要了解的是事件的細稱：
 - 1.打斷事件：當用戶點擊打斷事件時，對話將直接跳轉到您所指定的場景。這可以用於中斷當前的對話流程，並使用戶進入特定的場景或子流程。
 - 2.忽略事件：當用戶點擊忽略事件時，對話不會回復任何話語。這通常用於僅顯示特定數據或信息，而無需引起後台回復或觸發其他動作。這對於提供靜態內容或僅顯示提示信息非常有用。
 - 3.開始事件：當用戶點擊開始事件時，可以重新開始當前的對話。這將重置對話狀態，使得用戶可以重新進行對話流程，從頭開始進行交互。
@@ -193,7 +193,7 @@ description:對話模板-用於連接其他平台的對話回覆，以實現多�
 
 #### 觸發動作-開啟視窗
 
-![DmFlow觸發連結](../../../../../../images/tw/bot-template-link.png "DmFlow觸發連結")
+![DMflow觸發連結](../../../../../../images/tw/bot-template-link.png "DMflow觸發連結")
 - 1.圖片上的文字按鈕顯示之文字：當您在圖片上添加文字按鈕時，這些按鈕將顯示您指定的文字。用戶在點擊這些按鈕時，所顯示的文字將被傳遞給對話流程中的相應部分，以觸發相應的操作或回應。
 - 2.手機裝置跳出的webview：當用戶點擊圖文訊息中的某個按鈕，並且該按鈕的觸發動作為開啟視窗時，如果用戶在手機裝置上點擊該按鈕，將會彈出一個 webview，顯示指定的網頁內容。這個 webview 可以在手機的 LINE 客戶端內顯示，讓用戶在不離開 LINE 的情況下進行網頁瀏覽。
 - 3.非手機裝置跳出的網頁：當用戶點擊圖文訊息中的某個按鈕，並且該按鈕的觸發動作為開啟視窗時，如果用戶在非手機裝置（如電腦或平板）上點擊該按鈕，將會在新的瀏覽器窗口中打開指定的網頁。這樣的操作允許用戶在獨立的瀏覽器窗口中查看和操作指定的網頁內容。
@@ -208,7 +208,7 @@ description:對話模板-用於連接其他平台的對話回覆，以實現多�
 
 #### 確認範本
 
-![DmFlow確認範本](../../../../../../images/tw/bot-template-line-confirm-s.png "DmFlow確認範本")
+![DMflow確認範本](../../../../../../images/tw/bot-template-line-confirm-s.png "DMflow確認範本")
 - 1.模板選擇「確認範本」：這是一種在對話中使用的預定義模板，用於顯示確認問題和選項的交互。您可以選擇該模板來創建一個包含確定性問題和相關選項的消息，以引導用戶進行選擇。
 - 2.確認問題為二選一之詢問：在「確認範本」中，您可以設置一個二選一的問題，即提供兩個選項供用戶選擇。用戶可以從提供的選項中選擇一個作為回答。這種問題的目的是獲取用戶對於兩個選項中的偏好或選擇的答案。
 - 3.：在「確認範本」中，每個選項都可以配置一個觸發動作。觸發動作定義了當用戶選擇了某個選項後應採取的操作。您可以根據業務需求配置觸發動作，例如發送一條特定的回覆消息，跳轉到另一個場景，調用API等。更多關於觸發動作的詳細資訊，您可以前往[觸發動作](../../tutorials/docs/bot-template.html#觸發動作)了解。
@@ -223,7 +223,7 @@ description:對話模板-用於連接其他平台的對話回覆，以實現多�
 
 #### 按鈕範本
 
-![DmFlow按鈕範本](../../../../../../images/tw/bot-template-line-buttons-s.png "DmFlow按鈕範本")
+![DMflow按鈕範本](../../../../../../images/tw/bot-template-line-buttons-s.png "DMflow按鈕範本")
 
 - 1.模板選擇「按鈕範本」：這是一種預設模板，用於顯示具有按鈕選項的訊息。您可以選擇此模板來創建一個包含按鈕的訊息，用戶可以點擊按鈕執行相應的操作。
 - 2.標題，可根據預覽了解放置位置。
@@ -253,7 +253,7 @@ description:對話模板-用於連接其他平台的對話回覆，以實現多�
 
 #### 輪播範本
 
-![DmFlow輪播範本](../../../../../../images/tw/bot-template-line-card-s.png "DmFlow輪播範本")
+![DMflow輪播範本](../../../../../../images/tw/bot-template-line-card-s.png "DMflow輪播範本")
 - 1.模板選擇"輪播模組"
 - 2.圖片輪播欄位，同[按鈕範本](../../tutorials/docs/bot-template.html#按鈕範本)，只是可以支援複數。
 - 3.[圖片比例](../../tutorials/docs/bot-template.html#圖片比例)
@@ -269,7 +269,7 @@ description:對話模板-用於連接其他平台的對話回覆，以實現多�
 
 #### 文字及其他訊息
 
-![DmFlow文字訊息](../../../../../../images/tw/bot-template-ms-text-s.png "DmFlow文字訊息")
+![DMflow文字訊息](../../../../../../images/tw/bot-template-ms-text-s.png "DMflow文字訊息")
 
 文字以及圖片(可上傳，1mb以內)，其他如影片、音訊、檔案都僅支援網址連接。
 
@@ -279,7 +279,7 @@ description:對話模板-用於連接其他平台的對話回覆，以實現多�
 
 #### 一般範本
 
-![DmFlow一般範本](../../../../../../images/tw/bot-template-ms-temp-s.png "DmFlow一般範本")
+![DMflow一般範本](../../../../../../images/tw/bot-template-ms-temp-s.png "DMflow一般範本")
 
 - 1.horizontal:16:9, square:1:1
 - 2.標題，可根據預覽了解放置位置。
@@ -299,7 +299,7 @@ description:對話模板-用於連接其他平台的對話回覆，以實現多�
 
 連結元件
 
-![DmFlow連結](../../../../../../images/tw/bot-template-ms-link-f.png "DmFlow連結")
+![DMflow連結](../../../../../../images/tw/bot-template-ms-link-f.png "DMflow連結")
 
 - 1.網址連結
 - 2.網址名稱
@@ -309,7 +309,7 @@ description:對話模板-用於連接其他平台的對話回覆，以實現多�
 
 <a href="https://developers.facebook.com/docs/messenger-platform/webview/extensions/" target="_blank">加入 Messenger 擴充套件 SDK</a>
 
-![DmFlow連結](../../../../../../images/tw/bot-template-ms-linkext-f.png "DmFlow連結")
+![DMflow連結](../../../../../../images/tw/bot-template-ms-linkext-f.png "DMflow連結")
 
 - 1.網址連結
 - 2.網址名稱
@@ -318,7 +318,7 @@ description:對話模板-用於連接其他平台的對話回覆，以實現多�
 
 #### 按鈕範本
 
-![DmFlow按鈕範本](../../../../../../images/tw/bot-template-ms-buttons-s.png "DmFlow按鈕範本")
+![DMflow按鈕範本](../../../../../../images/tw/bot-template-ms-buttons-s.png "DMflow按鈕範本")
 
 - 1.詢問問題。
 - 2.按鈕元件包含[連結元件、連結元件(extension)](../../tutorials/docs/bot-template.html#連結元件連結元件extension)以及[觸發動作-回傳值](../../tutorials/docs/bot-template.html#觸發動作-回傳值)。
@@ -394,3 +394,11 @@ Telegram提供以下是一些基本功能，通常在訊息發送功能中提供
 - 新增Telegram解說
 - 移除postback包含場景的填寫。
 - 新增事件-喚醒事件
+
+
+## 聯絡資訊
+
+信箱: <service@dmflow.chat>
+
+DMflow.chat 官網: [DMflow.chat](https://www.dmflow.chat)
+(於2024-05-18更改網域至[DMflow.chat](https://www.dmflow.chat)，此文檔將不再維護請至[DMflow.chat文檔](https://docs.dmflow.chat)查看新版文檔)

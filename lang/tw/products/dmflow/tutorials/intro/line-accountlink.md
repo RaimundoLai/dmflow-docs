@@ -1,6 +1,6 @@
 ---
-title: Communeify DmFlow LINE帳號連接
-description: 了解如何在Communeify DmFlow中連接LINE帳號，透過LINE Messaging API實現即時通訊和互動功能。建立強大的LINE聊天機器人，提供個人化的使用者體驗，加強與用戶的互動。
+title: DMflow.chat LINE帳號連接
+description: 了解如何在DMflow.chat中連接LINE帳號，透過LINE Messaging API實現即時通訊和互動功能。建立強大的LINE聊天機器人，提供個人化的使用者體驗，加強與用戶的互動。
 use_mermaid: true
 ---
 
@@ -11,17 +11,17 @@ use_mermaid: true
 大致流程如下：
 ``` mermaid
 sequenceDiagram
-    User->>DmFlow: 您好
-    DmFlow-->>User: 您好，您尚未綁定帳號
-    User->>DmFlow: 綁定帳號
-    DmFlow-->>User: 提供綁定帳號網址
+    User->>DMflow: 您好
+    DMflow-->>User: 您好，您尚未綁定帳號
+    User->>DMflow: 綁定帳號
+    DMflow-->>User: 提供綁定帳號網址
     User->>Login: 點擊綁定帳號網址
     User->>Login: 輸入帳號密碼
     Login-->>User: 資訊正確提供LINE帳號連接網址
     User->>Login: 點擊LINE帳號連接網址
     Login->>LINE: 告訴LINE這個使用者要綁定
-    LINE-->>DmFlow: accountLink event
-    DmFlow->>User: 告知使用者已經綁定帳號
+    LINE-->>DMflow: accountLink event
+    DMflow->>User: 告知使用者已經綁定帳號
 ```
 
 ## 步驟一：建立需求的檔案
@@ -104,7 +104,7 @@ function doGet(request) {
 | -------- | -------- | ----- | --------
 | howard   | 123456   |
 
-根據網址，即可拿到你的Spreadsheet的ID，記得如果只要使用Login頁面，可以將存取只能給自己使用，但因為此範例最後面需要用到DmFlow的資源節點，所以需要開放給所有知道連結的人。
+根據網址，即可拿到你的Spreadsheet的ID，記得如果只要使用Login頁面，可以將存取只能給自己使用，但因為此範例最後面需要用到DMflow的資源節點，所以需要開放給所有知道連結的人。
 ```
 https://docs.google.com/spreadsheets/d/{{你的Spreadsheet ID}}/edit#gid=0
 ```
@@ -255,7 +255,7 @@ function createNonce(length) {
 有兩種方式寫入userId
 
 - 1.直接在轉login的頁面的時候，可以直接攜帶userId
-- 2.透過DmFlow資源節點去觸發寫入userId
+- 2.透過DMflow資源節點去觸發寫入userId
 
 在此舉立第二種範例。
 
@@ -304,11 +304,11 @@ function doPost(e) {
 
 於是可以先新增部屬作業。
 
-## 步驟四：回到DmFlow做設定
+## 步驟四：回到DMflow做設定
 
 我們先來看最終成果圖。
 
-![DmFlow LINE帳號連接成果圖](../../../../../../images/tw/line-accountlink/line-al-dmflow.png "DmFlow LINE帳號連接成果圖")
+![DMflow LINE帳號連接成果圖](../../../../../../images/tw/line-accountlink/line-al-dmflow.png "DMflow LINE帳號連接成果圖")
 
 - 首先現在"使用者參數"新增一個nonce作為是否已經連接帳號的根據。並在"機器人參數"新增lineToken，數值為Bearer {{line access token}}
 
@@ -352,9 +352,9 @@ RESPONSE
 填寫完後點擊新增或修改，重進一次修改資源，可以點擊測試直接測試該資源。
 ```
 
-- 回到DmFlow圖形
+- 回到DMflow圖形
 
-每個節點的用途可以從這裡了解。[DmFlow 機器人對話流程](../../tutorials/docs/bot-flow.html)
+每個節點的用途可以從這裡了解。[DMflow 機器人對話流程](../../tutorials/docs/bot-flow.html)
 
 ID 4 回覆節點
 用途：為了回覆使用者未綁定帳號的問句。
@@ -403,7 +403,7 @@ user nonce 字串取代 前綴:conversation,目標:_message.payload.nonce
 ```
 
 ID 8 -> ID 16 條件節點
-用途：當前端登入完成且完成帳號連結後，LINE Server會提供給DmFlow 事件為Account Link的事件。
+用途：當前端登入完成且完成帳號連結後，LINE Server會提供給DMflow 事件為Account Link的事件。
 ```
 條件為
   conversation._message.type = constant accountLink
@@ -459,26 +459,33 @@ ID 13 回覆節點
 
 ## 步驟五：測試
 
-在LINE整合填寫Channel ID和secret和access token，可參考[DmFlow LINE整合](../../tutorials/docs/line.html)
+在LINE整合填寫Channel ID和secret和access token，可參考[DMflow LINE整合](../../tutorials/docs/line.html)
 
-並根據開發版、生產版做發布即可測試。可參考[DmFlow 發布](../../tutorials/docs/bot-published.html)
+並根據開發版、生產版做發布即可測試。可參考[DMflow 發布](../../tutorials/docs/bot-published.html)
 
 成果：
 
-![LINE帳號連接](../../../../../../images/tw/line-accountlink/line-al-preview.jpg "DmFlow LINE帳號連接")
+![LINE帳號連接](../../../../../../images/tw/line-accountlink/line-al-preview.jpg "DMflow LINE帳號連接")
 
 點擊連結後跳去登入頁面。
  
-![Login頁面](../../../../../../images/tw/line-accountlink/line-al-login.jpg "DmFlow Login頁面")
+![Login頁面](../../../../../../images/tw/line-accountlink/line-al-login.jpg "DMflow Login頁面")
 
 登入成功後顯示Account Link的連結
 
-![Login成功](../../../../../../images/tw/line-accountlink/line-al-success.jpg "DmFlow Login成功")
+![Login成功](../../../../../../images/tw/line-accountlink/line-al-success.jpg "DMflow Login成功")
 
-點完連結後，會出現連接畫面，此時LINE Server會丟account Link event給DmFlow，DmFlow會顯示以綁定帳號。
+點完連結後，會出現連接畫面，此時LINE Server會丟account Link event給DMflow，DMflow會顯示以綁定帳號。
 
 ![Login後呼叫LINE](../../../../../../images/tw/line-accountlink/line-al-connect.jpg "Login後呼叫LINE")
 
 > 最後若是此範例完畢，記得管理部屬作業將該程序封存，讓程序下線，避免已經綁定信用卡的使用者造成不必要的費用問題。
 
 
+
+## 聯絡資訊
+
+信箱: <service@dmflow.chat>
+
+DMflow.chat 官網: [DMflow.chat](https://www.dmflow.chat)
+(於2024-05-18更改網域至[DMflow.chat](https://www.dmflow.chat)，此文檔將不再維護請至[DMflow.chat文檔](https://docs.dmflow.chat)查看新版文檔)
