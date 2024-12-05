@@ -71,7 +71,7 @@
       "cleanupCacheHistory":false,
       "disableGitFeatures":false,
 		"sitemap": {
-			"baseUrl": "https://docs.communeify.com",
+			"baseUrl": "https://docs-on-prem.dmflow.chat",
 			"changefreq": "weekly",
 			"priority": 1.0
 		}

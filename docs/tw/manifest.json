@@ -1,6 +1,6 @@
 {
   "sitemap": {
-    "baseUrl": "https://docs.communeify.com/tw/",
+    "baseUrl": "https://docs-on-prem.dmflow.chat/tw/",
     "changefreq": "weekly",
     "priority": 1.0
   },

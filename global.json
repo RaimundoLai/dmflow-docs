@@ -1,7 +1,7 @@
 {
-     "_appTitle": "Communeify",
+     "_appTitle": "DMflow Docs On-premise",
 	 "_appLogoPath": "images/logo.svg",
      "_appFaviconPath": "images/favicon.ico",
-	 "_appFooter": "<span>Copyright © <script>document.write(new Date().getFullYear());</script> Communeify</span>",
+	 "_appFooter": "<span>Copyright © <script>document.write(new Date().getFullYear());</script> DMflow Docs On-premise</span>",
 	 "google_analytics_id": "G-VDL6P3EXCQ"
 }
